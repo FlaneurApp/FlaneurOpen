@@ -22,7 +22,7 @@ pod "FlaneurOpen"
 
 ## Author
 
-Flâneur, flaneurdev@bootstragram.com
+Flâneur.
 
 ## License
 
