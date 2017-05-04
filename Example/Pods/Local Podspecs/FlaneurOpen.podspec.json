@@ -1,0 +1,27 @@
+{
+  "name": "FlaneurOpen",
+  "version": "0.1.0",
+  "summary": "A short description of FlaneurOpen.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/dirtyhenry/FlaneurOpen",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "dirtyhenry": "dirtyhenry@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/dirtyhenry/FlaneurOpen.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "FlaneurOpen/Classes/**/*",
+  "dependencies": {
+    "SDWebImage": [
+      "~> 3.8"
+    ]
+  }
+}

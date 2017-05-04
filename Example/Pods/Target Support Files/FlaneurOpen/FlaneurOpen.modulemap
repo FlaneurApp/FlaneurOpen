@@ -1,0 +1,6 @@
+framework module FlaneurOpen {
+  umbrella header "FlaneurOpen-umbrella.h"
+
+  export *
+  module * { export * }
+}

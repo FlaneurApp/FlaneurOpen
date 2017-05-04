@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00D943611EBB338E00631E8E /* MapDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D943601EBB338E00631E8E /* MapDemoViewController.swift */; };
 		096796B8726B0663216F1061 /* Pods_FlaneurOpen_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3541623AD9DDC3BAADDEDF9C /* Pods_FlaneurOpen_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -28,8 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00D943601EBB338E00631E8E /* MapDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapDemoViewController.swift; sourceTree = "<group>"; };
 		3541623AD9DDC3BAADDEDF9C /* Pods_FlaneurOpen_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlaneurOpen_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		35B0B3EE0E9D700673CD9554 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		35B0B3EE0E9D700673CD9554 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		3EB35ABFE6B0CAB6E6124123 /* Pods-FlaneurOpen_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlaneurOpen_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlaneurOpen_Tests/Pods-FlaneurOpen_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		4961D0E5936A11B1F3DEB27A /* Pods_FlaneurOpen_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlaneurOpen_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* FlaneurOpen_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlaneurOpen_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,8 +47,8 @@
 		7AFD04225B7E7BE454A20D6B /* Pods-FlaneurOpen_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlaneurOpen_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlaneurOpen_Example/Pods-FlaneurOpen_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		8BB2795F214A99FA77F62C50 /* Pods-FlaneurOpen_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlaneurOpen_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlaneurOpen_Tests/Pods-FlaneurOpen_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A853C1FC5DB1F804DDD45A54 /* Pods-FlaneurOpen_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlaneurOpen_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlaneurOpen_Example/Pods-FlaneurOpen_Example.release.xcconfig"; sourceTree = "<group>"; };
-		C629C7F975D976337583A949 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		CE41E78656DB3776694008DB /* FlaneurOpen.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = FlaneurOpen.podspec; path = ../FlaneurOpen.podspec; sourceTree = "<group>"; };
+		C629C7F975D976337583A949 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		CE41E78656DB3776694008DB /* FlaneurOpen.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = FlaneurOpen.podspec; path = ../FlaneurOpen.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				00D943601EBB338E00631E8E /* MapDemoViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -362,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				00D943611EBB338E00631E8E /* MapDemoViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

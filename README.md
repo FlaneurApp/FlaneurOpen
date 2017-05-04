@@ -27,3 +27,7 @@ dirtyhenry, dirtyhenry@gmail.com
 ## License
 
 FlaneurOpen is available under the MIT license. See the LICENSE file for more info.
+
+## Credits
+
+[Icons from Glyphish](http://www.glyphish.com).
