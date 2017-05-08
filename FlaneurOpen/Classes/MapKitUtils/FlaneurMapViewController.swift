@@ -39,6 +39,9 @@ public class FlaneurMapViewController: UIViewController {
     @IBOutlet public weak var mapView: MKMapView?
     public var delegate: FlaneurMapViewDelegate?
     public var mapItems: [FlaneurMapItem] = []
+    public var annotationImage: UIImage? = UIImage(named: "FlaneurMapViewControllerAnnotationImage")
+    public var rightCalloutImage: UIImage? = UIImage(named: "FlaneurMapViewControllerRightCalloutImage")
+    public var leftCalloutPlaceholderImage: UIImage? = UIImage(named: "FlaneurMapViewControllerLeftCalloutPlaceholderImage")
 
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -75,7 +78,7 @@ extension FlaneurMapViewController: MKMapViewDelegate {
 
             let annotationView = MKAnnotationView(annotation: myAnnotation, reuseIdentifier: annotationIdentifier)
             annotationView.canShowCallout = true
-            annotationView.image = UIImage(named: "sample-908-target")
+            annotationView.image = annotationImage
 
             let imageView = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: 35.0, height: 35.0))
             imageView.contentMode = .scaleAspectFill
@@ -85,16 +88,16 @@ extension FlaneurMapViewController: MKMapViewDelegate {
             if let image = myAnnotation.mapItem.mapItemThumbnailImage {
                 imageView.image = image
             } else if let imageURL = myAnnotation.mapItem.mapItemThumbnailURL {
-                imageView.sd_setImage(with: imageURL, placeholderImage: UIImage(named: "sample-908-target"))
+                imageView.sd_setImage(with: imageURL, placeholderImage: leftCalloutPlaceholderImage)
+            } else {
+                imageView.image = leftCalloutPlaceholderImage
             }
 
             annotationView.leftCalloutAccessoryView = imageView
 
             let calloutButton = UIButton(type: .detailDisclosure)
-            // TODO calloutButton.tintColor =
-            let calloutIcon = UIImage(named: "sample-321-like")?.withRenderingMode(.alwaysTemplate)
+            calloutButton.setImage(self.rightCalloutImage, for: .normal)
             calloutButton.imageView?.contentMode = .scaleAspectFit
-            calloutButton.setImage(calloutIcon, for: .normal)
             calloutButton.frame = CGRect(x: 0.0, y: 0.0, width: 10.0, height: 10.0)
             annotationView.rightCalloutAccessoryView = calloutButton
 

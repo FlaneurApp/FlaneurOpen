@@ -8,7 +8,7 @@
 
 import UIKit
 import FlaneurOpen
-import CoreLocation
+import MapKit
 
 struct DemoMapItem: FlaneurMapItem {
     var mapItemThumbnailImage: UIImage? = nil
@@ -50,6 +50,8 @@ class MapDemoViewController: UIViewController, FlaneurMapViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        UIButton.appearance(whenContainedInInstancesOf: [MKAnnotationView.self]).tintColor = .green
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,6 +66,9 @@ class MapDemoViewController: UIViewController, FlaneurMapViewDelegate {
         if segue.identifier == "mapViewEmbed" {
             self.mapViewController = segue.destination as? FlaneurMapViewController
             self.mapViewController?.delegate = self
+            self.mapViewController?.annotationImage = UIImage(named: "sample-908-target")
+            self.mapViewController?.rightCalloutImage = UIImage(named: "sample-321-like")?.withRenderingMode(.alwaysTemplate)
+            self.mapViewController?.leftCalloutPlaceholderImage = UIImage(named: "sample-908-target")
             self.mapViewController?.mapItems = [
                 DemoMapItem(mapItemThumbnailImage: nil, coordinate2D: CLLocationCoordinate2DMake(48.841389, 2.253056), title: "Parc des Princes", address: "24 Rue du Commandant-Guilbaud", thumbnailURL: URL(string: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Paris_Parc_des_Princes_1.jpg/260px-Paris_Parc_des_Princes_1.jpg")!),
                 DemoMapItem(mapItemThumbnailImage: nil, coordinate2D: CLLocationCoordinate2DMake(45.765248,  4.981871), title: "Parc Olympique lyonnais", address: "10 avenue Simone-Veil", thumbnailURL: URL(string: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Parc_OL.jpg/260px-Parc_OL.jpg")!)
