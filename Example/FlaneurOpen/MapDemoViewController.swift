@@ -10,13 +10,25 @@ import UIKit
 import FlaneurOpen
 import MapKit
 
-struct DemoMapItem: FlaneurMapItem {
+class DemoMapItem: FlaneurMapItem {
     var mapItemThumbnailImage: UIImage? = nil
 
     let coordinate2D: CLLocationCoordinate2D
     let title: String
     let address: String
     let thumbnailURL: URL
+
+    init(mapItemThumbnailImage: UIImage?,
+         coordinate2D: CLLocationCoordinate2D,
+         title: String,
+         address: String,
+         thumbnailURL: URL) {
+        self.mapItemThumbnailImage = mapItemThumbnailImage
+        self.coordinate2D = coordinate2D
+        self.title = title
+        self.address = address
+        self.thumbnailURL = thumbnailURL
+    }
 
     var mapItemCoordinate2D: CLLocationCoordinate2D {
         get {

@@ -9,7 +9,7 @@
 import MapKit
 import SDWebImage
 
-public protocol FlaneurMapItem {
+@objc public protocol FlaneurMapItem {
     var mapItemCoordinate2D: CLLocationCoordinate2D { get }
     var mapItemTitle: String? { get }
     var mapItemAddress: String? { get }
