@@ -46,7 +46,12 @@ public class FlaneurMapViewController: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
 
-        //mapView = MKMapView(frame: .zero)
+        if mapView == nil {
+            mapView = MKMapView(frame: CGRect(origin: .zero,
+                                              size: self.view.frame.size))
+            self.view.addSubview(mapView!)
+        }
+
         if let myView = mapView {
             // Functional config of the map view
             myView.showsUserLocation = true

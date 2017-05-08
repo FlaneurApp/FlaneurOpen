@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -40,13 +39,25 @@
                                             <segue destination="C8N-zY-lDq" kind="show" id="sSI-Ec-PDq"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ool-ZC-Ib6">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Nvl-sT-hr4" style="IBUITableViewCellStyleDefault" id="ool-ZC-Ib6">
                                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ool-ZC-Ib6" id="EsM-x7-njf">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Map without storyboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Nvl-sT-hr4">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Nzg-gJ-M3b" kind="show" id="1da-ja-LyQ"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Ghg-Uy-ZoJ">
                                         <rect key="frame" x="0.0" y="88" width="375" height="44"/>
@@ -109,10 +120,31 @@
                             <constraint firstItem="vgF-4m-EOf" firstAttribute="leading" secondItem="ShV-LV-BZj" secondAttribute="leading" id="kBX-K9-F75"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="containerView" destination="0lD-Yj-1kf" id="lvt-aZ-8po"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gaC-ld-nho" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="542" y="-348"/>
+        </scene>
+        <!--Map Demo View Controller-->
+        <scene sceneID="6aX-Bd-nOr">
+            <objects>
+                <viewController id="Nzg-gJ-M3b" customClass="MapDemoViewController" customModule="FlaneurOpen_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6do-FE-vWS"/>
+                        <viewControllerLayoutGuide type="bottom" id="n9O-ZL-VG2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bil-Xs-wXK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7yV-Hp-i6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="784" y="-80"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ohb-lq-XXH">
