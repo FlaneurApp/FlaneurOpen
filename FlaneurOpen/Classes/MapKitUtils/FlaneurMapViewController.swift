@@ -17,7 +17,7 @@ import SDWebImage
     var mapItemThumbnailImage: UIImage? { get }
 }
 
-public protocol FlaneurMapViewDelegate {
+@objc public protocol FlaneurMapViewDelegate {
     func flaneurMapViewControllerDidSelect(mapItem: FlaneurMapItem)
 }
 

@@ -3,7 +3,7 @@ This application makes use of the following third party libraries:
 
 ## FlaneurOpen
 
-Copyright (c) 2017 dirtyhenry <dirtyhenry@gmail.com>
+Copyright (c) 2017 Flâneur <flaneurdev@bootstragram.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
