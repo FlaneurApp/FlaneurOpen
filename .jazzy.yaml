@@ -1,0 +1,14 @@
+author: Flâneur
+module: FlaneurOpen
+github_url: https://github.com/FlaneurApp/FlaneurOpen
+documentation: Guides/*.md
+clean: true
+author_url: http://flaneurapp.com
+podspec: FlaneurOpen.podspec
+
+# Uncomment the following to get Objective-C documentation
+# Jazzy does not support documenting Swift AND Objective-C yet
+# objc: true
+# sdk: iphoneos
+# umbrella_header: Tripper/CustomViews/Common/Flaneur-Bridging-Header.h
+# framework_root: Tripper
