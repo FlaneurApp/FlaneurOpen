@@ -57,7 +57,7 @@ class FlaneurMapAnnotation: MKPointAnnotation {
 /// ## Overview
 ///
 /// A map view controller bla bla bla
-public class FlaneurMapViewController: UIViewController {
+open class FlaneurMapViewController: UIViewController {
     /// The map view (useful only if a Storyboard is used)
     @IBOutlet public weak var mapView: MKMapView?
 
@@ -81,7 +81,7 @@ public class FlaneurMapViewController: UIViewController {
     // MARK: - UIViewController life cycle
 
     /// Overriden
-    override public func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
 
         if mapView == nil {
@@ -98,7 +98,7 @@ public class FlaneurMapViewController: UIViewController {
     }
 
     /// Overriden
-    override public func viewDidAppear(_ animated: Bool) {
+    override open func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         reloadAnnotations()
     }
