@@ -9,15 +9,32 @@
 import MapKit
 import SDWebImage
 
+/// The protocol to implement for an object to be able to be displayed on 
+/// a `FlaneurMapViewController` instance.
 @objc public protocol FlaneurMapItem {
+    /// The coordinate of the item
     var mapItemCoordinate2D: CLLocationCoordinate2D { get }
+
+    /// The title to display by the annotation for the item.
     var mapItemTitle: String? { get }
+
+    /// The address to display by the annotation for the item.
     var mapItemAddress: String? { get }
+
+    /// The URL of the image to display by the annotation for the item.
+    /// This property won't be used if `mapItemThumbnailImage` is set.
     var mapItemThumbnailURL: URL? { get }
+
+    /// The image to display by the annotation for the item.
+    /// This property has priority over `mapItemThumbnailURL`.
     var mapItemThumbnailImage: UIImage? { get }
 }
 
+/// The protocol to implement to get callbacks from a `FlaneurMapViewController` instance.
 @objc public protocol FlaneurMapViewDelegate {
+    /// Tells the delegate that the specified map item's annotation callout was tapped.
+    ///
+    /// - Parameter mapItem: the map item for which the annotation was tapped
     func flaneurMapViewControllerDidSelect(mapItem: FlaneurMapItem)
 }
 
@@ -35,14 +52,35 @@ class FlaneurMapAnnotation: MKPointAnnotation {
     }
 }
 
+/// Utility class to display a map view with annotations with very little effort.
+///
+/// ## Overview
+///
+/// A map view controller bla bla bla
 public class FlaneurMapViewController: UIViewController {
+    /// The map view (useful only if a Storyboard is used)
     @IBOutlet public weak var mapView: MKMapView?
+
+    /// The delegate
     public var delegate: FlaneurMapViewDelegate?
+
+    /// The items to display on the map
     public var mapItems: [FlaneurMapItem] = []
+
+    /// The image diplayed
     public var annotationImage: UIImage? = UIImage(named: "FlaneurMapViewControllerAnnotationImage")
+
+    // MARK: - Customizing annotations
+
+    /// The right image to display on the annotation for each item
     public var rightCalloutImage: UIImage? = UIImage(named: "FlaneurMapViewControllerRightCalloutImage")
+
+    /// The left image to display on the annotation for each item
     public var leftCalloutPlaceholderImage: UIImage? = UIImage(named: "FlaneurMapViewControllerLeftCalloutPlaceholderImage")
 
+    // MARK: - UIViewController life cycle
+
+    /// Overriden
     override public func viewDidLoad() {
         super.viewDidLoad()
 
@@ -59,6 +97,7 @@ public class FlaneurMapViewController: UIViewController {
         }
     }
 
+    /// Overriden
     override public func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         reloadAnnotations()
@@ -74,6 +113,7 @@ public class FlaneurMapViewController: UIViewController {
 }
 
 extension FlaneurMapViewController: MKMapViewDelegate {
+    /// Overriden
     public func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if annotation is MKUserLocation {
             return nil
@@ -110,6 +150,7 @@ extension FlaneurMapViewController: MKMapViewDelegate {
         }
     }
 
+    /// Overriden
     public func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         if let annotation = view.annotation as? FlaneurMapAnnotation {
             delegate?.flaneurMapViewControllerDidSelect(mapItem: annotation.mapItem)
