@@ -32,7 +32,7 @@ open class LoadingCollectionViewCell: UICollectionViewCell {
     let spinner = UIActivityIndicatorView(activityIndicatorStyle: .gray)
 
     override public init(frame: CGRect) {
-        super.init(frame: .zero)
+        super.init(frame: frame)
         configureToInitialLoadingState()
     }
     
