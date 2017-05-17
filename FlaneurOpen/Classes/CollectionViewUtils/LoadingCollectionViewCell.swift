@@ -29,7 +29,8 @@ public extension Result {
 }
 
 open class LoadingCollectionViewCell: UICollectionViewCell {
-    let spinner = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+    // TODO: maybe this should be publicly read only?
+    public let spinner = UIActivityIndicatorView(activityIndicatorStyle: .gray)
 
     override public init(frame: CGRect) {
         super.init(frame: frame)
