@@ -16,12 +16,15 @@
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
   "source_files": "FlaneurOpen/Classes/**/*",
   "dependencies": {
     "SDWebImage": [
       "~> 3.8"
+    ],
+    "IGListKit": [
+      "~> 3.0"
     ]
   }
 }

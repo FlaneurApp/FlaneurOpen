@@ -29,7 +29,7 @@ MapKit extension, etc.
   s.source           = { :git => 'https://github.com/FlaneurApp/FlaneurOpen.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'FlaneurOpen/Classes/**/*'
 
@@ -42,4 +42,5 @@ MapKit extension, etc.
   # s.dependency 'AFNetworking', '~> 2.3'
 
   s.dependency 'SDWebImage', '~> 3.8'
+  s.dependency 'IGListKit', '~> 3.0'
 end
