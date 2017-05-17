@@ -36,7 +36,7 @@ open class LoadingCollectionViewCell: UICollectionViewCell {
         super.init(frame: frame)
         configureToInitialLoadingState()
     }
-    
+
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -57,8 +57,9 @@ open class LoadingCollectionViewCell: UICollectionViewCell {
     }
 
     public func configure<A>(load: (@escaping (Result<A>) -> ()) -> (),
-                   build: @escaping (Result<A>) -> UICollectionViewCell) {
-
+                          build: @escaping (Result<A>) -> UICollectionViewCell) {
+        // TODO: this call might not be necessary since the prepareForReuse func
+        // was overriden.
         configureToInitialLoadingState()
 
         load() { [weak self] result in
@@ -103,6 +104,14 @@ open class LoadingCollectionViewCell: UICollectionViewCell {
                                multiplier: 1.0,
                                constant: 0.0)
             ])
+    }
+
+    override open func prepareForReuse() {
+        super.prepareForReuse()
+
+        // Without this overriden function, the spinner would stop animating when reused.
+        // Cf. http://stackoverflow.com/questions/28737772/uiactivityindicatorview-stops-animating-in-uitableviewcell
+        configureToInitialLoadingState()
     }
 }
 
