@@ -6,7 +6,7 @@ PODS:
     - FBSnapshotTestCase/Core
   - FlaneurOpen (0.1.0):
     - IGListKit (~> 3.0)
-    - SDWebImage (~> 3.8)
+    - SDWebImage (~> 4.0)
   - IGListKit (3.0.0):
     - IGListKit/Default (= 3.0.0)
   - IGListKit/Default (3.0.0):
@@ -20,9 +20,9 @@ PODS:
     - Nimble
     - Quick
   - Quick (1.0.0)
-  - SDWebImage (3.8.2):
-    - SDWebImage/Core (= 3.8.2)
-  - SDWebImage/Core (3.8.2)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
 
 DEPENDENCIES:
   - FBSnapshotTestCase
@@ -37,12 +37,12 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  FlaneurOpen: c085910eb14413ea3a5c295c23843341e5885071
+  FlaneurOpen: 3a8d9cfe6883a731a46960a785e93a72d0c2f246
   IGListKit: 9eab6856a15fa25ad72018ff9d9eb2178c240fff
   Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
   Nimble-Snapshots: e743439f26c2fa99d8f7e0d7c01c99bcb40aa6f2
   Quick: 8024e4a47e6cc03a9d5245ef0948264fc6d27cff
-  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
 
 PODFILE CHECKSUM: 3ae918b4b4c1206009e8e15874a407bcab97a967
 

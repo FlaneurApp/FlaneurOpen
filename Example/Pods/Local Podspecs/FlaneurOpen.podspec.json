@@ -21,7 +21,7 @@
   "source_files": "FlaneurOpen/Classes/**/*",
   "dependencies": {
     "SDWebImage": [
-      "~> 3.8"
+      "~> 4.0"
     ],
     "IGListKit": [
       "~> 3.0"

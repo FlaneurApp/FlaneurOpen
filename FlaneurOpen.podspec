@@ -41,6 +41,6 @@ MapKit extension, etc.
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 
-  s.dependency 'SDWebImage', '~> 3.8'
+  s.dependency 'SDWebImage', '~> 4.0'
   s.dependency 'IGListKit', '~> 3.0'
 end
