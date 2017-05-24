@@ -5,6 +5,11 @@ platform :ios, '9.0'
 target 'FlaneurOpen_Example' do
   pod 'FlaneurOpen', :path => '../'
 
+  # Google Places API
+  pod 'GooglePlaces'
+  pod 'GooglePlacePicker'
+  pod 'GoogleMaps'
+
   target 'FlaneurOpen_Tests' do
     inherit! :search_paths
 
