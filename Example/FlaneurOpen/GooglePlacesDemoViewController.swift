@@ -58,7 +58,7 @@ class GooglePlacesDemoViewController: UIViewController {
     }
 
     func appendLog(_ logMessage: String) {
-        consoleTextView.text = consoleTextView.text + logMessage
+        consoleTextView.text = consoleTextView.text + "\n---\n" + logMessage
     }
 
     @IBAction func searchAction(_ sender: Any) {
@@ -74,7 +74,7 @@ class GooglePlacesDemoViewController: UIViewController {
                                                         }
 
                                                         if let results = results {
-                                                            self.log("Found results")
+                                                            self.log("Found \(results.count) results")
                                                             for result in results {
                                                                 self.appendLog("Result \(result.attributedFullText) with placeID \(result.placeID)")
                                                             }

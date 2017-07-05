@@ -38,7 +38,7 @@ import SDWebImage
     func flaneurMapViewControllerDidSelect(mapItem: FlaneurMapItem)
 }
 
-class FlaneurMapAnnotation: MKPointAnnotation {
+public class FlaneurMapAnnotation: MKPointAnnotation {
     let mapItem: FlaneurMapItem
 
     init(mapItem: FlaneurMapItem) {
