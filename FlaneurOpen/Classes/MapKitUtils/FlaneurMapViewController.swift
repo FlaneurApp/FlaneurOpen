@@ -39,7 +39,7 @@ import SDWebImage
 }
 
 public class FlaneurMapAnnotation: MKPointAnnotation {
-    let mapItem: FlaneurMapItem
+    public let mapItem: FlaneurMapItem
 
     public init(mapItem: FlaneurMapItem) {
         self.mapItem = mapItem
