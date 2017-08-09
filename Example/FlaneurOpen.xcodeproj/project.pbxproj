@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		002E9D321ED5E13D0046326C /* GooglePlacesDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002E9D311ED5E13D0046326C /* GooglePlacesDemoViewController.swift */; };
 		00880B9B1EC3502A00AD5B64 /* ListKitDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00880B9A1EC3502A00AD5B64 /* ListKitDemoViewController.swift */; };
+		009DAAEB1F3B795F0051E258 /* FlaneurOpenSecretInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 009DAAEA1F3B795F0051E258 /* FlaneurOpenSecretInfo.plist */; };
 		00D943611EBB338E00631E8E /* MapDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D943601EBB338E00631E8E /* MapDemoViewController.swift */; };
 		00DAAB7F1ECC5D9B00E40141 /* DemoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00DAAB7E1ECC5D9B00E40141 /* DemoCollectionViewCell.xib */; };
 		096796B8726B0663216F1061 /* Pods_FlaneurOpen_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3541623AD9DDC3BAADDEDF9C /* Pods_FlaneurOpen_Tests.framework */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		002E9D311ED5E13D0046326C /* GooglePlacesDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlacesDemoViewController.swift; sourceTree = "<group>"; };
 		00880B9A1EC3502A00AD5B64 /* ListKitDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListKitDemoViewController.swift; sourceTree = "<group>"; };
+		009DAAEA1F3B795F0051E258 /* FlaneurOpenSecretInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FlaneurOpenSecretInfo.plist; sourceTree = SOURCE_ROOT; };
 		00D943601EBB338E00631E8E /* MapDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapDemoViewController.swift; sourceTree = "<group>"; };
 		00DAAB7E1ECC5D9B00E40141 /* DemoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoCollectionViewCell.xib; sourceTree = "<group>"; };
 		3541623AD9DDC3BAADDEDF9C /* Pods_FlaneurOpen_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlaneurOpen_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +132,7 @@
 		607FACD31AFB9204008FA782 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				009DAAEA1F3B795F0051E258 /* FlaneurOpenSecretInfo.plist */,
 				607FACD41AFB9204008FA782 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -261,6 +264,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				009DAAEB1F3B795F0051E258 /* FlaneurOpenSecretInfo.plist in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,

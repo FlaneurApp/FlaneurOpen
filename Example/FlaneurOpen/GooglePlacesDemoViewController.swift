@@ -18,10 +18,22 @@ class GooglePlacesDemoViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        if GMSPlacesClient.provideAPIKey("---") {
-            debugPrint("OK")
+        if let plist = Bundle.main.path(forResource: "FlaneurOpenSecretInfo", ofType: "plist") {
+            if let myProperties = NSDictionary(contentsOfFile: plist) {
+                if let googlePlacesAPIKey = myProperties.object(forKey: "GooglePlacesFlaneurOpenAPIKey") as? String {
+                    if GMSPlacesClient.provideAPIKey(googlePlacesAPIKey) {
+                        debugPrint("OK")
+                    } else {
+                        debugPrint("NOK -- Unauthorized")
+                    }
+                } else {
+                    debugPrint("NOK -- Couldn't find the specified key")
+                }
+            } else {
+                debugPrint("NOK -- Couldn't parse file at path", plist)
+            }
         } else {
-            debugPrint("NOK -- Unauthorized")
+            debugPrint("NOK -- Couldn't find file. Did you run the script from the README?")
         }
     }
 

@@ -11,6 +11,14 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+### Google Maps API Key
+
+This application requires a Google Maps API Key. It will be read from a file at
+`Example/FlaneurOpenSecretInfo.plist`. For security reasons, this file does not
+exist in this repository. To create it, please set your API Key as `GOOGLE_PLACES_FLANEUR_API_KEY`
+in your environment variables and run the script `./createAPIKeysPlist.sh` from
+the `Example` directory.
+
 ## Installation
 
 FlaneurOpen is available through [CocoaPods](http://cocoapods.org). To install
