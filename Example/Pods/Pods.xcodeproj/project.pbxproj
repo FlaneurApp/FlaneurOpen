@@ -63,7 +63,7 @@
 		3509162C93C42B9929597FCA92D35790 /* HaveValidSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E13B4310386D491DADF086563D871A /* HaveValidSnapshot.swift */; };
 		35DD05FD595A6FE7F5A0692D12E319DC /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE0B4778FD594C9EAD1C10A17F245D4 /* UIImage+Diff.m */; };
 		379777446B6F416BADC3D3040E8DAED2 /* UIView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AA792A111CA3E210DB0DD23C26196B97 /* UIView+WebCache.m */; };
-		3885581A6AC983397334579E66698BAB /* FlaneurOpen-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EA02CA3593729C5C98035F454D549320 /* FlaneurOpen-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3885581A6AC983397334579E66698BAB /* FlaneurOpen-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 194A6DA95EE0BCA570B0530AC585D6CA /* FlaneurOpen-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38EDE5CD9714D946DC1AF93C4A3AC205 /* IGListAdapterInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 62F800568E069B7D1FC6C6692AC92AB9 /* IGListAdapterInternal.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		3915DBB4731CB17B255A7FE86E240B6E /* CwlCatchBadInstruction.m in Sources */ = {isa = PBXBuildFile; fileRef = BB5B490E8F9DF91AEED1ECE051FF0EF9 /* CwlCatchBadInstruction.m */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		3A4BECD4F3311C49E391FEEA854B85D8 /* IGListExperiments.h in Headers */ = {isa = PBXBuildFile; fileRef = F17CFAE567B698E24E179FA992B3262B /* IGListExperiments.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -110,7 +110,7 @@
 		68FBA995085EBC52579E0EB233B8079B /* IGListIndexPathResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A5D3B34F898BD5C857FC5BFD412D15D /* IGListIndexPathResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		69DA8B003216466C60F029CBD79897F1 /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C889F7D0E37289B4E7639881C07FD3 /* UIImage+Compare.m */; };
 		6ABDB3D9C4FEB58F40B01363BECB091C /* IGListScrollDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 5610C1532BD249CDA7FC52850476BBA8 /* IGListScrollDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6AD63D88971EBAE61711BB60F0EC5DE0 /* FlaneurMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255B966A5BA1D1B7D73CB2AC8E9858FD /* FlaneurMapViewController.swift */; };
+		6AD63D88971EBAE61711BB60F0EC5DE0 /* FlaneurMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117994CB1CE5827236DF314847712BDC /* FlaneurMapViewController.swift */; };
 		6B0B52E307A04FF1C0BDAC2AF94BAB80 /* IGListAdapterUpdater.m in Sources */ = {isa = PBXBuildFile; fileRef = 410625774291523C98AC69F97301702D /* IGListAdapterUpdater.m */; };
 		6C9B6A0EE749B1EBF94CE0E9C0F660FD /* SDWebImage-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AD3F8E74A5A903F8C386D193C076A101 /* SDWebImage-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6CCD3929CD77EC681AE9794BAC08E5C7 /* IGListCollectionViewLayoutInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 019EA6C4013584984F9936532E0D43FB /* IGListCollectionViewLayoutInternal.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -145,7 +145,7 @@
 		841FF232C33C7D49C58CEFDBE7EEB92B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D55F40D436D603EBA7E21039245EFD90 /* UIKit.framework */; };
 		84CDA0F134EAE1A984719B34AA7769B9 /* IGListDiff.h in Headers */ = {isa = PBXBuildFile; fileRef = D1938D5684BCE768F3B28CCDEE0594CC /* IGListDiff.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8507F4BF7437EB40A3626EDCC68BFF6D /* Contain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF536323C75E903C77CFA690E3F16034 /* Contain.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		8644929C7C2C7863774682D6CFDA7980 /* FlaneurOpen-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D2E93BD7EA57671A9CF48290ECAFF67B /* FlaneurOpen-dummy.m */; };
+		8644929C7C2C7863774682D6CFDA7980 /* FlaneurOpen-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 41FA40FDCFB0BD8CD4F19AE109298664 /* FlaneurOpen-dummy.m */; };
 		8654571F855691C23B7B8E61B2141944 /* EndWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C31986DC3E0DFB9223B3EA32BF6C7F8 /* EndWith.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		867B546C8A79499B9E148ED58222B9EF /* ExampleHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EE9BBD2E4D267ED7CB7733330CF5F5 /* ExampleHooks.swift */; };
 		86AFD8DC60F5700BAE333F82779D1C43 /* IGListDisplayHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = B390385FAC77C157D6DF439617FAD00E /* IGListDisplayHandler.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -272,7 +272,7 @@
 		F34942E51901BC7AE1F2009478D52524 /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 726CBE7C49FE5DB9ED01529E253931E3 /* SDWebImageDownloader.m */; };
 		F3CB9D21928005EC09167CCE951215A5 /* IGListAdapter+UICollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B7226AF134F490C8BDD978CAF61059A /* IGListAdapter+UICollectionView.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F4A1B7A059AAA6727EB70E58E09332A4 /* CwlCatchException.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0620F9745F35B7480F335270B5E139 /* CwlCatchException.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		F50DB61D31D3355E1579F5BE4F198B56 /* LoadingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E15E04B573CAB304A13615DB713EEE /* LoadingCollectionViewCell.swift */; };
+		F50DB61D31D3355E1579F5BE4F198B56 /* LoadingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C02EBF6A42B071944A2C839EE6467DA /* LoadingCollectionViewCell.swift */; };
 		F60D221B548716DF35193FC2CF244676 /* BeAKindOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D63C8480A0E7AAACAE57611DB869949 /* BeAKindOf.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		F693D0A9E0D05F815A85DC258E75AF8D /* CurrentTestCaseTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = F928E07391924FF25FAA8F66E73B4439 /* CurrentTestCaseTracker.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F86F88FC7F2C26AD486C077F493B5923 /* IGListAdapterProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD52AEAB57A672FCD687ABB55EF41E2 /* IGListAdapterProxy.m */; };
@@ -386,16 +386,18 @@
 		036D4C73B2471EEA5F1A250A205C9A8D /* Nimble-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nimble-prefix.pch"; sourceTree = "<group>"; };
 		06370791CBBEFBFE4E06046279566296 /* FlaneurOpen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FlaneurOpen.framework; path = FlaneurOpen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0655217375D3DD914289F714CEDAC9C8 /* IGListKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = IGListKit.modulemap; sourceTree = "<group>"; };
-		0790B8E3345F4047FE22929462409480 /* GooglePlaces.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = Frameworks/GooglePlaces.framework/Versions/A/Resources/GooglePlaces.bundle; sourceTree = "<group>"; };
 		07D656D000BDAE84907924FA7FB7A313 /* SDImageCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCache.m; path = SDWebImage/SDImageCache.m; sourceTree = "<group>"; };
 		087B73CBAF9821836BE9AEB2FDFFA65C /* IGListSectionController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListSectionController.h; path = Source/IGListSectionController.h; sourceTree = "<group>"; };
 		0AFAF43D8F4FA6258FC5AC605DF6DFA6 /* IGListReloadIndexPath.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IGListReloadIndexPath.m; path = Source/Internal/IGListReloadIndexPath.m; sourceTree = "<group>"; };
 		0B49F1FB634F39F39CAA48DEDA5BD11B /* IGListBindingSectionControllerSelectionDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListBindingSectionControllerSelectionDelegate.h; path = Source/IGListBindingSectionControllerSelectionDelegate.h; sourceTree = "<group>"; };
 		0C26FBDB1BE658A819E26F2D1B925A8E /* XCTestObservationCenter+Register.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "XCTestObservationCenter+Register.m"; path = "Sources/NimbleObjectiveC/XCTestObservationCenter+Register.m"; sourceTree = "<group>"; };
 		0C31986DC3E0DFB9223B3EA32BF6C7F8 /* EndWith.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EndWith.swift; path = Sources/Nimble/Matchers/EndWith.swift; sourceTree = "<group>"; };
+		0C53173509F743918DEA86F2E3250BEF /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		0C67E2477873B1D821401B22E8701E0C /* IGListWorkingRangeHandler.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = IGListWorkingRangeHandler.mm; path = Source/Internal/IGListWorkingRangeHandler.mm; sourceTree = "<group>"; };
+		0CFE98DC90923A7F3C5D419A8DDCFB10 /* GooglePlacePicker.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlacePicker.bundle; path = Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle; sourceTree = "<group>"; };
 		0D92682E5D925182C05B2F60EBCB4EC7 /* NSString+QCKSelectorName.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+QCKSelectorName.h"; path = "Sources/QuickObjectiveC/NSString+QCKSelectorName.h"; sourceTree = "<group>"; };
 		10AF1BC32C56B19410BCDB90DBDEB6D0 /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+MultiFormat.h"; path = "SDWebImage/UIImage+MultiFormat.h"; sourceTree = "<group>"; };
+		117994CB1CE5827236DF314847712BDC /* FlaneurMapViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FlaneurMapViewController.swift; sourceTree = "<group>"; };
 		1351AF982A7D5FE85D2C57350F88884C /* FBSnapshotTestCase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-umbrella.h"; sourceTree = "<group>"; };
 		135A16926A02D2684F3F648334434673 /* World+DSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "World+DSL.swift"; path = "Sources/Quick/DSL/World+DSL.swift"; sourceTree = "<group>"; };
 		13C31BAB31E9C2DC8E58ECC172C2F90B /* BeNil.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeNil.swift; path = Sources/Nimble/Matchers/BeNil.swift; sourceTree = "<group>"; };
@@ -404,6 +406,7 @@
 		159FA4B9FD99BDC2FA313DC14D2D1367 /* IGListDebugger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListDebugger.h; path = Source/Internal/IGListDebugger.h; sourceTree = "<group>"; };
 		171E704BEA0D8BB7961CC81DA251A352 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
 		18595D1610DD1CDD6DAB28558C3CF7C0 /* Nimble-Snapshots-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Nimble-Snapshots-dummy.m"; sourceTree = "<group>"; };
+		194A6DA95EE0BCA570B0530AC585D6CA /* FlaneurOpen-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FlaneurOpen-umbrella.h"; sourceTree = "<group>"; };
 		19616D4F464AF5C39B4E1604B1F6412F /* Nimble-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Nimble-dummy.m"; sourceTree = "<group>"; };
 		1A082E1E28464D6CFEA9BD9AC0FE4672 /* IGListReloadDataUpdater.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IGListReloadDataUpdater.m; path = Source/IGListReloadDataUpdater.m; sourceTree = "<group>"; };
 		1A915EB526E58168B5B7B5CF0671CCA3 /* UIImageView+HighlightedWebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+HighlightedWebCache.h"; path = "SDWebImage/UIImageView+HighlightedWebCache.h"; sourceTree = "<group>"; };
@@ -420,7 +423,6 @@
 		23F9947754BAC78414045E0FC91CF09A /* World.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = World.h; path = Sources/QuickObjectiveC/World.h; sourceTree = "<group>"; };
 		248FB4D320D2104C4266C98104105E5C /* SDImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCache.h; path = SDWebImage/SDImageCache.h; sourceTree = "<group>"; };
 		24B7EE51273DA05CE5FFFA8720C8457A /* IGListKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IGListKit.framework; path = IGListKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		255B966A5BA1D1B7D73CB2AC8E9858FD /* FlaneurMapViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FlaneurMapViewController.swift; sourceTree = "<group>"; };
 		26CC48BE611CF304A04BFD1CDFAC0E35 /* IGListReloadDataUpdater.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListReloadDataUpdater.h; path = Source/IGListReloadDataUpdater.h; sourceTree = "<group>"; };
 		27CA279B5A6DA5CE9F00843BC1AFD54C /* UIImage+MultiFormat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+MultiFormat.m"; path = "SDWebImage/UIImage+MultiFormat.m"; sourceTree = "<group>"; };
 		28464DD55875B8B73AA97DEB381B082E /* IGListMoveIndex.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IGListMoveIndex.m; path = Source/Common/IGListMoveIndex.m; sourceTree = "<group>"; };
@@ -432,6 +434,7 @@
 		2BC2B650F13EED0F9F20086318DC2A70 /* NSData+ImageContentType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+ImageContentType.m"; path = "SDWebImage/NSData+ImageContentType.m"; sourceTree = "<group>"; };
 		2BC9AC7A9CADF3127C87984260B89BF9 /* IGListSectionController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IGListSectionController.m; path = Source/IGListSectionController.m; sourceTree = "<group>"; };
 		2CD52AEAB57A672FCD687ABB55EF41E2 /* IGListAdapterProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IGListAdapterProxy.m; path = Source/Internal/IGListAdapterProxy.m; sourceTree = "<group>"; };
+		2D388BE0A3A9EC1D4D3D95FDB2FC530C /* FlaneurOpen.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FlaneurOpen.xcconfig; sourceTree = "<group>"; };
 		2D5A418251B3171BE9DF0C5432F23423 /* UIView+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+WebCache.h"; path = "SDWebImage/UIView+WebCache.h"; sourceTree = "<group>"; };
 		2D63C8480A0E7AAACAE57611DB869949 /* BeAKindOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeAKindOf.swift; path = Sources/Nimble/Matchers/BeAKindOf.swift; sourceTree = "<group>"; };
 		2F833539A597CB1126BA7F63A2B74712 /* UIImage+GIF.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+GIF.m"; path = "SDWebImage/UIImage+GIF.m"; sourceTree = "<group>"; };
@@ -448,7 +451,7 @@
 		36D5C8B459A29DA4AC9AFDF6374BDFD2 /* IGListDiffKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListDiffKit.h; path = Source/Common/IGListDiffKit.h; sourceTree = "<group>"; };
 		36E6EC065966ACFDAF3A6AAA7BE735BA /* AsyncMatcherWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsyncMatcherWrapper.swift; path = Sources/Nimble/Matchers/AsyncMatcherWrapper.swift; sourceTree = "<group>"; };
 		3796B346904D64048D520D71B14803A3 /* FBSnapshotTestCase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.xcconfig; sourceTree = "<group>"; };
-		3962B1986802B2D3DA537E37F0A44396 /* FlaneurOpen.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FlaneurOpen.xcconfig; sourceTree = "<group>"; };
+		39A0B87A5DD48A16CAA8D49CB1B95E94 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AE25A8F288C41CE50621A2836C7BEBC /* IGListAdapterUpdater.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListAdapterUpdater.h; path = Source/IGListAdapterUpdater.h; sourceTree = "<group>"; };
 		3B9473C2F654B349E6F4BBBB9B961948 /* World.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = World.swift; path = Sources/Quick/World.swift; sourceTree = "<group>"; };
 		3C42BB8FCB5DF26171203E6F75E6DC4F /* Pods-FlaneurOpen_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FlaneurOpen_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -460,6 +463,7 @@
 		40A575ABECBA3B83E3841BB3A9FA5317 /* IGListDiff.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = IGListDiff.mm; path = Source/Common/IGListDiff.mm; sourceTree = "<group>"; };
 		40EBA232B490755C708074E96D2EA3AE /* PostNotification.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PostNotification.swift; path = Sources/Nimble/Matchers/PostNotification.swift; sourceTree = "<group>"; };
 		410625774291523C98AC69F97301702D /* IGListAdapterUpdater.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IGListAdapterUpdater.m; path = Source/IGListAdapterUpdater.m; sourceTree = "<group>"; };
+		41FA40FDCFB0BD8CD4F19AE109298664 /* FlaneurOpen-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FlaneurOpen-dummy.m"; sourceTree = "<group>"; };
 		42F301C4B0C638DBC88589A26931EBEA /* Nimble_Snapshots.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Nimble_Snapshots.framework; path = "Nimble-Snapshots.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		432B9B7D79FC20CDDF54A5B61C1AE1BE /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+WebCacheOperation.m"; path = "SDWebImage/UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		44CE4AC2F174F7F1FE34A739CEDCA17B /* NSData+ImageContentType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+ImageContentType.h"; path = "SDWebImage/NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -468,6 +472,7 @@
 		468BF3991DA4F638CB251A4F08B6648A /* SDWebImage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SDWebImage-dummy.m"; sourceTree = "<group>"; };
 		4824B4153B42F7ADED6BBBDAD769DA7F /* QuickSpec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QuickSpec.h; path = Sources/QuickObjectiveC/QuickSpec.h; sourceTree = "<group>"; };
 		486D4A2A7EA3D58D6B83BD4A02A13AF9 /* DSL+Wait.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DSL+Wait.swift"; path = "Sources/Nimble/DSL+Wait.swift"; sourceTree = "<group>"; };
+		4C02EBF6A42B071944A2C839EE6467DA /* LoadingCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoadingCollectionViewCell.swift; sourceTree = "<group>"; };
 		4CBAB8B7336BAE5D24DF3FD7D69A757F /* IGListBatchUpdateData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListBatchUpdateData.h; path = Source/Common/IGListBatchUpdateData.h; sourceTree = "<group>"; };
 		4CDAE9BFE45344C3A427103DFC56A1F4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		4D4017FEC9C4B62A40940ED3B6DA3E2A /* CwlCatchBadInstruction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CwlCatchBadInstruction.h; path = Sources/Lib/CwlPreconditionTesting/CwlPreconditionTesting/CwlCatchBadInstruction.h; sourceTree = "<group>"; };
@@ -487,20 +492,17 @@
 		5610C1532BD249CDA7FC52850476BBA8 /* IGListScrollDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListScrollDelegate.h; path = Source/IGListScrollDelegate.h; sourceTree = "<group>"; };
 		564D3403252B3127186875E89E66E072 /* AllPass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AllPass.swift; path = Sources/Nimble/Matchers/AllPass.swift; sourceTree = "<group>"; };
 		56E3B9A1B89FB5B596501DB127752741 /* BeLogical.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeLogical.swift; path = Sources/Nimble/Matchers/BeLogical.swift; sourceTree = "<group>"; };
-		57513AF7997A10FEBC1C177F700C0151 /* FlaneurOpen.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = FlaneurOpen.modulemap; sourceTree = "<group>"; };
 		576265C516E746F98C0B744EA580AF4E /* Async.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Async.swift; path = Sources/Nimble/Utils/Async.swift; sourceTree = "<group>"; };
 		5822409E38D5A7D29D55E33C0C41199D /* MatcherProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatcherProtocols.swift; path = Sources/Nimble/Matchers/MatcherProtocols.swift; sourceTree = "<group>"; };
 		589825F42EE6F61004D3E1187017D534 /* NimbleXCTestHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NimbleXCTestHandler.swift; path = Sources/Nimble/Adapters/NimbleXCTestHandler.swift; sourceTree = "<group>"; };
 		58B2DB7D77990EE5C25E6E86DA6F9FBA /* RaisesException.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RaisesException.swift; path = Sources/Nimble/Matchers/RaisesException.swift; sourceTree = "<group>"; };
 		5966191503A714A561322298F022E477 /* NSImage+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSImage+WebCache.h"; path = "SDWebImage/NSImage+WebCache.h"; sourceTree = "<group>"; };
 		5B060E84DD68A700ECA1B9352A5A2431 /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
-		5C23837552B7B724426E9557A4F65EA5 /* FlaneurOpen-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FlaneurOpen-prefix.pch"; sourceTree = "<group>"; };
 		5C4E42F91BC90B93380CC3052F9366B3 /* Pods-FlaneurOpen_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FlaneurOpen_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5D2562733A081D700A200163B6DD488A /* Pods-FlaneurOpen_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FlaneurOpen_Example-resources.sh"; sourceTree = "<group>"; };
 		5D94C8F3975599D2BE4B8ACF9C5C1B0F /* QuickSelectedTestSuiteBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QuickSelectedTestSuiteBuilder.swift; path = Sources/Quick/QuickSelectedTestSuiteBuilder.swift; sourceTree = "<group>"; };
 		5E0D19946643E805F51DB2605203B36B /* IGListKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListKit.h; path = Source/IGListKit.h; sourceTree = "<group>"; };
 		5E74DF5860F69AFCB269B4946FF752C1 /* NMBObjCMatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NMBObjCMatcher.swift; path = Sources/Nimble/Adapters/NMBObjCMatcher.swift; sourceTree = "<group>"; };
-		5EF868B09FDCCF9887705C44DEE6B21D /* GooglePlacePicker.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlacePicker.bundle; path = Frameworks/GooglePlacePicker.framework/Versions/A/Resources/GooglePlacePicker.bundle; sourceTree = "<group>"; };
 		5F82A1F7DCD091133EECA8C18EF37169 /* FailureMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FailureMessage.swift; path = Sources/Nimble/FailureMessage.swift; sourceTree = "<group>"; };
 		60BBF57B8D8CC65CF51063DF9E17ADCF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61AB28460F79832F02FED55DEBE2D399 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -524,6 +526,7 @@
 		71B75AA369853DAE4353318D515F129E /* Pods-FlaneurOpen_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FlaneurOpen_Example-frameworks.sh"; sourceTree = "<group>"; };
 		726CBE7C49FE5DB9ED01529E253931E3 /* SDWebImageDownloader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloader.m; path = SDWebImage/SDWebImageDownloader.m; sourceTree = "<group>"; };
 		728EAE6E8FE0AAE784265F5F47A29E94 /* NSImage+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSImage+WebCache.m"; path = "SDWebImage/NSImage+WebCache.m"; sourceTree = "<group>"; };
+		72FD9B59D21EB14475C7F8F695F1BE39 /* FlaneurOpen.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = FlaneurOpen.modulemap; sourceTree = "<group>"; };
 		737FF5C32B1C50442857387D5F6381AA /* UIImageView+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+WebCache.h"; path = "SDWebImage/UIImageView+WebCache.h"; sourceTree = "<group>"; };
 		7492C6D04EB255D11429797CBF285260 /* SDWebImageDecoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDecoder.h; path = SDWebImage/SDWebImageDecoder.h; sourceTree = "<group>"; };
 		750A6CA1A7954337DD64657B559E2D01 /* QCKDSL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QCKDSL.m; path = Sources/QuickObjectiveC/DSL/QCKDSL.m; sourceTree = "<group>"; };
@@ -531,6 +534,7 @@
 		75ED87BB86C63D1B88E74F94EAD41836 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76B902EACE21E60F8679270DD971B994 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+WebCacheOperation.h"; path = "SDWebImage/UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		7732C01E05C07038D79AEB9D8958A23A /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
+		7779CF2AC1FCB25567952F9C0B393239 /* GooglePlaces.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle; sourceTree = "<group>"; };
 		78A9998D8799F6D7A52857E42AA5179F /* UIImage+Snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Snapshot.h"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.h"; sourceTree = "<group>"; };
 		7A2FC9A6A59060B10EC19ACBA1E86367 /* UICollectionView+IGListBatchUpdateData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UICollectionView+IGListBatchUpdateData.m"; path = "Source/Internal/UICollectionView+IGListBatchUpdateData.m"; sourceTree = "<group>"; };
 		7A5D3B34F898BD5C857FC5BFD412D15D /* IGListIndexPathResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListIndexPathResult.h; path = Source/Common/IGListIndexPathResult.h; sourceTree = "<group>"; };
@@ -592,7 +596,6 @@
 		A67C8668DC0473590678C6D90A4D7926 /* Pods-FlaneurOpen_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FlaneurOpen_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		A70AEE9F94F70C000D14CB20E939CF6F /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
 		A86A6827EB8D0DB07EAA898B83166FBB /* SDImageCacheConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCacheConfig.h; path = SDWebImage/SDImageCacheConfig.h; sourceTree = "<group>"; };
-		A9E15E04B573CAB304A13615DB713EEE /* LoadingCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoadingCollectionViewCell.swift; sourceTree = "<group>"; };
 		AA792A111CA3E210DB0DD23C26196B97 /* UIView+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+WebCache.m"; path = "SDWebImage/UIView+WebCache.m"; sourceTree = "<group>"; };
 		AB1E92DF0BEFE94CEAD65AAC82B06B56 /* SuiteHooks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SuiteHooks.swift; path = Sources/Quick/Hooks/SuiteHooks.swift; sourceTree = "<group>"; };
 		ABE6FCB9868983190738FB0F34F6B2F2 /* CwlDarwinDefinitions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlDarwinDefinitions.swift; path = Sources/Lib/CwlPreconditionTesting/CwlPreconditionTesting/CwlDarwinDefinitions.swift; sourceTree = "<group>"; };
@@ -635,6 +638,7 @@
 		C8036372750ABF2805BE5EE3934EE0DB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		CA46C6AFAEB76BA222FF748CFBB0072F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB014E400E4F2736B81C64325ABAF5CC /* QuickConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QuickConfiguration.h; path = Sources/QuickObjectiveC/Configuration/QuickConfiguration.h; sourceTree = "<group>"; };
+		CB690EF942BCDD9158EBB232BF3FE64B /* FlaneurOpen-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FlaneurOpen-prefix.pch"; sourceTree = "<group>"; };
 		CBF36864B7B8488F89E9C3CD1CEAE5FA /* IGListMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListMacros.h; path = Source/Common/IGListMacros.h; sourceTree = "<group>"; };
 		CC5D6320282F1A1288C70B14FB89E7BA /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
 		CC69B598066ACBCAAF9CC2EB68BC5D8A /* Stringers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stringers.swift; path = Sources/Nimble/Utils/Stringers.swift; sourceTree = "<group>"; };
@@ -654,7 +658,6 @@
 		D22EE37E666A1B64496177B3C3F2F292 /* AssertionDispatcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssertionDispatcher.swift; path = Sources/Nimble/Adapters/AssertionDispatcher.swift; sourceTree = "<group>"; };
 		D28A3B11B1245D1C0A380B702FE73D92 /* IGListIndexPathResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IGListIndexPathResult.m; path = Source/Common/IGListIndexPathResult.m; sourceTree = "<group>"; };
 		D2AF6D43A559A3A7AAD6F2F77D8D7CC6 /* IGListBatchUpdateState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListBatchUpdateState.h; path = Source/Internal/IGListBatchUpdateState.h; sourceTree = "<group>"; };
-		D2E93BD7EA57671A9CF48290ECAFF67B /* FlaneurOpen-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FlaneurOpen-dummy.m"; sourceTree = "<group>"; };
 		D34D4EB1D9A5AE9F7C1C766C078CEC0C /* Pods-FlaneurOpen_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-FlaneurOpen_Tests.modulemap"; sourceTree = "<group>"; };
 		D40B8A82DA7F3718B28FE251B495DF15 /* NSBundle+CurrentTestBundle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSBundle+CurrentTestBundle.swift"; path = "Sources/Quick/NSBundle+CurrentTestBundle.swift"; sourceTree = "<group>"; };
 		D55F40D436D603EBA7E21039245EFD90 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -670,16 +673,13 @@
 		DFC629C1A42019A643C52696B7D19542 /* DSL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DSL.m; path = Sources/NimbleObjectiveC/DSL.m; sourceTree = "<group>"; };
 		E0BF6E60A4354333E27D643B5299622D /* BeIdenticalTo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeIdenticalTo.swift; path = Sources/Nimble/Matchers/BeIdenticalTo.swift; sourceTree = "<group>"; };
 		E147ABF05AB3ADA67AD4DF0288D2DA00 /* FBSnapshotTestCasePlatform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCasePlatform.h; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.h; sourceTree = "<group>"; };
-		E216DF4F0039E4A72BCA0FDAB0F19112 /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		E219B1685003E8B35FF3942B682EF1D3 /* IGListStackedSectionControllerInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListStackedSectionControllerInternal.h; path = Source/Internal/IGListStackedSectionControllerInternal.h; sourceTree = "<group>"; };
 		E30A001C1825A538897A37A22C3E7284 /* UICollectionView+IGListBatchUpdateData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UICollectionView+IGListBatchUpdateData.h"; path = "Source/Internal/UICollectionView+IGListBatchUpdateData.h"; sourceTree = "<group>"; };
-		E4D822E1D077DCDE646785EF0625A329 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5A79F6E4CA97B88035D7037969D5D34 /* IGListMoveIndex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListMoveIndex.h; path = Source/Common/IGListMoveIndex.h; sourceTree = "<group>"; };
 		E73D6827179C28F26E02FBC997A4B1B3 /* IGListSupplementaryViewSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListSupplementaryViewSource.h; path = Source/IGListSupplementaryViewSource.h; sourceTree = "<group>"; };
 		E77CDA0CC08192004D2D28BC93C60A43 /* ExampleGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExampleGroup.swift; path = Sources/Quick/ExampleGroup.swift; sourceTree = "<group>"; };
 		E7E13B4310386D491DADF086563D871A /* HaveValidSnapshot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HaveValidSnapshot.swift; sourceTree = "<group>"; };
 		E8202ACE96D9718B3DA051C3EE8D5EB2 /* GooglePlacePicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlacePicker.framework; path = Frameworks/GooglePlacePicker.framework; sourceTree = "<group>"; };
-		EA02CA3593729C5C98035F454D549320 /* FlaneurOpen-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FlaneurOpen-umbrella.h"; sourceTree = "<group>"; };
 		EB29DA7051E065832A949559A2E41100 /* BeVoid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeVoid.swift; path = Sources/Nimble/Matchers/BeVoid.swift; sourceTree = "<group>"; };
 		EB63EAA5AB5B7AC0C5FDD9979BDA309D /* BeGreaterThan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeGreaterThan.swift; path = Sources/Nimble/Matchers/BeGreaterThan.swift; sourceTree = "<group>"; };
 		EC55EEE7001F0723D4B7227DF8DE934E /* UIApplication+StrictKeyWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+StrictKeyWindow.h"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.h"; sourceTree = "<group>"; };
@@ -850,15 +850,6 @@
 			name = Core;
 			sourceTree = "<group>";
 		};
-		1E89C8E1F281AF774138900470E96A3E /* CollectionViewUtils */ = {
-			isa = PBXGroup;
-			children = (
-				A9E15E04B573CAB304A13615DB713EEE /* LoadingCollectionViewCell.swift */,
-			);
-			name = CollectionViewUtils;
-			path = CollectionViewUtils;
-			sourceTree = "<group>";
-		};
 		28E353F58142C979D3CE70ED78535D77 /* Nimble-Snapshots */ = {
 			isa = PBXGroup;
 			children = (
@@ -881,22 +872,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/IGListKit";
-			sourceTree = "<group>";
-		};
-		3358E3FA1A2AECC910D8FDCE4E7AC41E /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				EAC9CB592CF6CC18E9FF4BA445A89933 /* FlaneurOpen */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		36A917F9E5F7014B393529A50851FA6A /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				0790B8E3345F4047FE22929462409480 /* GooglePlaces.bundle */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 		36C4281F680812938A0DFCB240229EA9 /* GoogleMaps */ = {
@@ -947,11 +922,27 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		47D1AAB37623EB790BE15E6996F9997E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0C53173509F743918DEA86F2E3250BEF /* GoogleMaps.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		4CEC1CA01D09C30E350BC94572CD0A30 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D917B281A701D2C7688BECF2B637ED00 /* FlaneurOpen */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
 		4DBFF0BB9086E90ACCEDE94DDCC43E1F /* GooglePlacePicker */ = {
 			isa = PBXGroup;
 			children = (
 				039FE41A69D16A4E892F845953774F97 /* Frameworks */,
-				82A37EA70FD5C028FFD0E3DA8837118A /* Resources */,
+				BD1517D3BEDEE84E3FF0BE8FA8F9534F /* Resources */,
 			);
 			name = GooglePlacePicker;
 			path = GooglePlacePicker;
@@ -968,14 +959,6 @@
 				E470AE6CDEB7FCE2ADAB1C9EF7BE8A30 /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		58A73238061AB135E517891034A1A1FE /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				E216DF4F0039E4A72BCA0FDAB0F19112 /* GoogleMaps.bundle */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 		6728EBC270FA143E23CEAD829068FA9D /* SwiftSupport */ = {
@@ -1080,15 +1063,6 @@
 			name = Diffing;
 			sourceTree = "<group>";
 		};
-		76FF2BEFB0BC9326EE79F1BB7EB386E9 /* FlaneurOpen */ = {
-			isa = PBXGroup;
-			children = (
-				B8B4E96E874B5ED90247FBA43DA21C8D /* Classes */,
-			);
-			name = FlaneurOpen;
-			path = FlaneurOpen;
-			sourceTree = "<group>";
-		};
 		7742CD2489F4C95F6713D9A0852BB57B /* FBSnapshotTestCase */ = {
 			isa = PBXGroup;
 			children = (
@@ -1118,7 +1092,7 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				3358E3FA1A2AECC910D8FDCE4E7AC41E /* Development Pods */,
+				4CEC1CA01D09C30E350BC94572CD0A30 /* Development Pods */,
 				5466AB90D892AE7C48369DC0CDC47152 /* Frameworks */,
 				AA2471809088989FA214E8FA533ECC02 /* Pods */,
 				3EC027A4D63973C2AE4CBF0309783386 /* Products */,
@@ -1133,14 +1107,6 @@
 				BF92EAA3D5A6C2D7DA532D649CE90440 /* Pods-FlaneurOpen_Tests */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		82A37EA70FD5C028FFD0E3DA8837118A /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				5EF868B09FDCCF9887705C44DEE6B21D /* GooglePlacePicker.bundle */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 		8E3A0DDEB54C268E495DB0DD512D371B /* Pods-FlaneurOpen_Example */ = {
@@ -1161,22 +1127,22 @@
 			path = "Target Support Files/Pods-FlaneurOpen_Example";
 			sourceTree = "<group>";
 		};
-		980C56CC9F122D7974F846E7D3225CBC /* MapKitUtils */ = {
-			isa = PBXGroup;
-			children = (
-				255B966A5BA1D1B7D73CB2AC8E9858FD /* FlaneurMapViewController.swift */,
-			);
-			name = MapKitUtils;
-			path = MapKitUtils;
-			sourceTree = "<group>";
-		};
 		98BDD778F94BEDA2CB1F680758FEA921 /* Maps */ = {
 			isa = PBXGroup;
 			children = (
 				ADEB822819C6A2440BF0D89B306D02B1 /* Frameworks */,
-				58A73238061AB135E517891034A1A1FE /* Resources */,
+				47D1AAB37623EB790BE15E6996F9997E /* Resources */,
 			);
 			name = Maps;
+			sourceTree = "<group>";
+		};
+		A14F1FEEB1EA3697AF0BECFC82754570 /* MapKitUtils */ = {
+			isa = PBXGroup;
+			children = (
+				117994CB1CE5827236DF314847712BDC /* FlaneurMapViewController.swift */,
+			);
+			name = MapKitUtils;
+			path = FlaneurOpen/Classes/MapKitUtils;
 			sourceTree = "<group>";
 		};
 		A25AB6204E60059D7EA52F0E29F48A35 /* SDWebImage */ = {
@@ -1353,14 +1319,12 @@
 			name = Core;
 			sourceTree = "<group>";
 		};
-		B8B4E96E874B5ED90247FBA43DA21C8D /* Classes */ = {
+		BD1517D3BEDEE84E3FF0BE8FA8F9534F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1E89C8E1F281AF774138900470E96A3E /* CollectionViewUtils */,
-				980C56CC9F122D7974F846E7D3225CBC /* MapKitUtils */,
+				0CFE98DC90923A7F3C5D419A8DDCFB10 /* GooglePlacePicker.bundle */,
 			);
-			name = Classes;
-			path = Classes;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		BF92EAA3D5A6C2D7DA532D649CE90440 /* Pods-FlaneurOpen_Tests */ = {
@@ -1385,7 +1349,7 @@
 			isa = PBXGroup;
 			children = (
 				443B4A948D3DB1FD5B356DC33CE6493D /* Frameworks */,
-				36A917F9E5F7014B393529A50851FA6A /* Resources */,
+				C8275F4AD66E9159B12C73A4EB05A0E3 /* Resources */,
 			);
 			name = GooglePlaces;
 			path = GooglePlaces;
@@ -1430,18 +1394,23 @@
 			path = Quick;
 			sourceTree = "<group>";
 		};
-		D4BC5EE77A403932407BEF0D219D9549 /* Support Files */ = {
+		C8275F4AD66E9159B12C73A4EB05A0E3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				57513AF7997A10FEBC1C177F700C0151 /* FlaneurOpen.modulemap */,
-				3962B1986802B2D3DA537E37F0A44396 /* FlaneurOpen.xcconfig */,
-				D2E93BD7EA57671A9CF48290ECAFF67B /* FlaneurOpen-dummy.m */,
-				5C23837552B7B724426E9557A4F65EA5 /* FlaneurOpen-prefix.pch */,
-				EA02CA3593729C5C98035F454D549320 /* FlaneurOpen-umbrella.h */,
-				E4D822E1D077DCDE646785EF0625A329 /* Info.plist */,
+				7779CF2AC1FCB25567952F9C0B393239 /* GooglePlaces.bundle */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/FlaneurOpen";
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D917B281A701D2C7688BECF2B637ED00 /* FlaneurOpen */ = {
+			isa = PBXGroup;
+			children = (
+				EEC453CEF663A7A6172CF81755EB4960 /* CollectionViewUtils */,
+				A14F1FEEB1EA3697AF0BECFC82754570 /* MapKitUtils */,
+				F757A017846573F3963207E47D0C2DB1 /* Support Files */,
+			);
+			name = FlaneurOpen;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		E470AE6CDEB7FCE2ADAB1C9EF7BE8A30 /* iOS */ = {
@@ -1498,14 +1467,13 @@
 			name = Core;
 			sourceTree = "<group>";
 		};
-		EAC9CB592CF6CC18E9FF4BA445A89933 /* FlaneurOpen */ = {
+		EEC453CEF663A7A6172CF81755EB4960 /* CollectionViewUtils */ = {
 			isa = PBXGroup;
 			children = (
-				76FF2BEFB0BC9326EE79F1BB7EB386E9 /* FlaneurOpen */,
-				D4BC5EE77A403932407BEF0D219D9549 /* Support Files */,
+				4C02EBF6A42B071944A2C839EE6467DA /* LoadingCollectionViewCell.swift */,
 			);
-			name = FlaneurOpen;
-			path = ../..;
+			name = CollectionViewUtils;
+			path = FlaneurOpen/Classes/CollectionViewUtils;
 			sourceTree = "<group>";
 		};
 		F0091B5501423DD4C20767BE87EDACA9 /* Frameworks */ = {
@@ -1514,6 +1482,20 @@
 				171E704BEA0D8BB7961CC81DA251A352 /* GoogleMapsBase.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F757A017846573F3963207E47D0C2DB1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				72FD9B59D21EB14475C7F8F695F1BE39 /* FlaneurOpen.modulemap */,
+				2D388BE0A3A9EC1D4D3D95FDB2FC530C /* FlaneurOpen.xcconfig */,
+				41FA40FDCFB0BD8CD4F19AE109298664 /* FlaneurOpen-dummy.m */,
+				CB690EF942BCDD9158EBB232BF3FE64B /* FlaneurOpen-prefix.pch */,
+				194A6DA95EE0BCA570B0530AC585D6CA /* FlaneurOpen-umbrella.h */,
+				39A0B87A5DD48A16CAA8D49CB1B95E94 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/FlaneurOpen";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2187,40 +2169,42 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0FFEDF616C104B3AAD578FE031F39471 /* Release */ = {
+		055423804E2352C9E11BCF74F87E9AC2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8896BE7608060C469716472BDCF2744C /* IGListKit.xcconfig */;
+			baseConfigurationReference = 3796B346904D64048D520D71B14803A3 /* FBSnapshotTestCase.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/IGListKit/IGListKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/IGListKit/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FBSnapshotTestCase/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/IGListKit/IGListKit.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = IGListKit;
+				MODULEMAP_FILE = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = FBSnapshotTestCase;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		106249B706A081EAEE9EA5FE9C0BE078 /* Debug */ = {
+		0568DB5C803198ACDE53763799D8A2C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 93DDD5116CAB8B320AFEFCD8A32CEC32 /* Nimble-Snapshots.xcconfig */;
 			buildSettings = {
@@ -2246,7 +2230,7 @@
 				PRODUCT_NAME = Nimble_Snapshots;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2254,6 +2238,76 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		09E9A2A10D94881E21A18728511C269B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3796B346904D64048D520D71B14803A3 /* FBSnapshotTestCase.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FBSnapshotTestCase/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = FBSnapshotTestCase;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		154B124413ABF61AEB1C53D3BF6E5DF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC4634A28517BC0C1EAA5DA408C40495 /* Nimble.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Nimble/Nimble-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Nimble/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Nimble/Nimble.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Nimble;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		18A6C914E63E0C596D8770855BB89C71 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -2293,7 +2347,110 @@
 			};
 			name = Release;
 		};
-		1A1899539842714EBB45CA67B4F52248 /* Release */ = {
+		1E55D654847A01B5952666A69717EDB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDDC47C0230E44CCED47E0E653D5DA82 /* SDWebImage.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SDWebImage/SDWebImage-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SDWebImage/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SDWebImage/SDWebImage.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SDWebImage;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		22EBB21EB40D3DD69BF2D2300F066E6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D388BE0A3A9EC1D4D3D95FDB2FC530C /* FlaneurOpen.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FlaneurOpen/FlaneurOpen-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FlaneurOpen/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FlaneurOpen/FlaneurOpen.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = FlaneurOpen;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		29678316CE24C626A5BE5D23F3660F88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8896BE7608060C469716472BDCF2744C /* IGListKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/IGListKit/IGListKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/IGListKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/IGListKit/IGListKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = IGListKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2EF0AEC63985B78D25DD1DB2F2783BD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BC4634A28517BC0C1EAA5DA408C40495 /* Nimble.xcconfig */;
 			buildSettings = {
@@ -2302,7 +2459,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -2315,51 +2472,52 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Nimble/Nimble.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = Nimble;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		25D1D70A7C6DB76DA6B82BED1DD45870 /* Release */ = {
+		32D8BAF1EB9EDFD61474687CAA8A2D91 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 93DDD5116CAB8B320AFEFCD8A32CEC32 /* Nimble-Snapshots.xcconfig */;
+			baseConfigurationReference = 8896BE7608060C469716472BDCF2744C /* IGListKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Nimble-Snapshots/Nimble-Snapshots-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Nimble-Snapshots/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/IGListKit/IGListKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/IGListKit/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Nimble-Snapshots/Nimble-Snapshots.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Nimble_Snapshots;
+				MODULEMAP_FILE = "Target Support Files/IGListKit/IGListKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = IGListKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		40F9ED9F6817FCBB3E3924F2D18357FB /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -2399,42 +2557,42 @@
 			};
 			name = Release;
 		};
-		464ED09E722C2B744F42F5C9596787B9 /* Debug */ = {
+		5742912001981B953B25EA15378D6395 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BC4634A28517BC0C1EAA5DA408C40495 /* Nimble.xcconfig */;
+			baseConfigurationReference = A5166360713087536AB7075621832665 /* Quick.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Nimble/Nimble-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Nimble/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Quick/Quick-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Quick/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Nimble/Nimble.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Nimble;
+				MODULEMAP_FILE = "Target Support Files/Quick/Quick.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Quick;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		4E487F173E6C9664F4E9E26B9635D23C /* Debug */ = {
+		97803B46811A9BDB5E70FA1303AFBFFE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -2478,45 +2636,12 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		50F891F314632A65C5017AC064516632 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3962B1986802B2D3DA537E37F0A44396 /* FlaneurOpen.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/FlaneurOpen/FlaneurOpen-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FlaneurOpen/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/FlaneurOpen/FlaneurOpen.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = FlaneurOpen;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		71FEA799B857F141CA4FEE40135C699C /* Debug */ = {
+		A49A9405ECB36A6D19CDE6E6F7F877B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A5166360713087536AB7075621832665 /* Quick.xcconfig */;
 			buildSettings = {
@@ -2542,7 +2667,7 @@
 				PRODUCT_NAME = Quick;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2551,9 +2676,9 @@
 			};
 			name = Debug;
 		};
-		A385B9B0F55899B161D413A294AB58D3 /* Release */ = {
+		BCD7D420CDA909BC26117FAFEF2C4740 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A5166360713087536AB7075621832665 /* Quick.xcconfig */;
+			baseConfigurationReference = 93DDD5116CAB8B320AFEFCD8A32CEC32 /* Nimble-Snapshots.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -2567,16 +2692,17 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Quick/Quick-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Quick/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Nimble-Snapshots/Nimble-Snapshots-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Nimble-Snapshots/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Quick/Quick.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Nimble-Snapshots/Nimble-Snapshots.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Quick;
+				PRODUCT_NAME = Nimble_Snapshots;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2584,74 +2710,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		AF84B76D4A548199E7C5004109795AE8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BDDC47C0230E44CCED47E0E653D5DA82 /* SDWebImage.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SDWebImage/SDWebImage-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SDWebImage/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SDWebImage/SDWebImage.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SDWebImage;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		BD5CB3691FE92843589F6AF6BCC8DFD5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3796B346904D64048D520D71B14803A3 /* FBSnapshotTestCase.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FBSnapshotTestCase/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = FBSnapshotTestCase;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		BDD0139D6EB93FA375F887ABD62DAB2E /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -2736,38 +2794,39 @@
 			};
 			name = Debug;
 		};
-		D0885A90437C29B58BFD14EF3711968B /* Debug */ = {
+		C399A45654FDCCCE3567F7C82B271DCE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8896BE7608060C469716472BDCF2744C /* IGListKit.xcconfig */;
+			baseConfigurationReference = BDDC47C0230E44CCED47E0E653D5DA82 /* SDWebImage.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/IGListKit/IGListKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/IGListKit/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SDWebImage/SDWebImage-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SDWebImage/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/IGListKit/IGListKit.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = IGListKit;
+				MODULEMAP_FILE = "Target Support Files/SDWebImage/SDWebImage.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SDWebImage;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		D43DC8C50EB5857DE3EA3F5D047DC62E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -2808,76 +2867,9 @@
 			};
 			name = Debug;
 		};
-		DF4DC4D6806C9E0E2F945A6EB404F98D /* Release */ = {
+		D69DFF5BC96F6107401F22DB1498B023 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BDDC47C0230E44CCED47E0E653D5DA82 /* SDWebImage.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SDWebImage/SDWebImage-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SDWebImage/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SDWebImage/SDWebImage.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SDWebImage;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		F6DBA53A4511720174B84279A5CEB561 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3796B346904D64048D520D71B14803A3 /* FBSnapshotTestCase.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FBSnapshotTestCase/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = FBSnapshotTestCase;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		FC2E9C0B8AA2A2A6BCE23FD5775C7707 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3962B1986802B2D3DA537E37F0A44396 /* FlaneurOpen.xcconfig */;
+			baseConfigurationReference = 2D388BE0A3A9EC1D4D3D95FDB2FC530C /* FlaneurOpen.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -2901,7 +2893,7 @@
 				PRODUCT_NAME = FlaneurOpen;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2916,7 +2908,7 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4E487F173E6C9664F4E9E26B9635D23C /* Debug */,
+				97803B46811A9BDB5E70FA1303AFBFFE /* Debug */,
 				BDD0139D6EB93FA375F887ABD62DAB2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -2925,8 +2917,8 @@
 		4E22DA1EB006F61B02F6ED8EF4BCC24E /* Build configuration list for PBXNativeTarget "IGListKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D0885A90437C29B58BFD14EF3711968B /* Debug */,
-				0FFEDF616C104B3AAD578FE031F39471 /* Release */,
+				32D8BAF1EB9EDFD61474687CAA8A2D91 /* Debug */,
+				29678316CE24C626A5BE5D23F3660F88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2934,8 +2926,8 @@
 		4F2BA93ABE887AA9F782056A31C5DE76 /* Build configuration list for PBXNativeTarget "FlaneurOpen" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FC2E9C0B8AA2A2A6BCE23FD5775C7707 /* Debug */,
-				50F891F314632A65C5017AC064516632 /* Release */,
+				D69DFF5BC96F6107401F22DB1498B023 /* Debug */,
+				22EBB21EB40D3DD69BF2D2300F066E6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2952,8 +2944,8 @@
 		97AA06538C80F8E4F2EF1D73F785728C /* Build configuration list for PBXNativeTarget "SDWebImage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AF84B76D4A548199E7C5004109795AE8 /* Debug */,
-				DF4DC4D6806C9E0E2F945A6EB404F98D /* Release */,
+				1E55D654847A01B5952666A69717EDB5 /* Debug */,
+				C399A45654FDCCCE3567F7C82B271DCE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2961,8 +2953,8 @@
 		B1DBAFB75A3AF98C8C6B0863BDC7A2E3 /* Build configuration list for PBXNativeTarget "Nimble" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				464ED09E722C2B744F42F5C9596787B9 /* Debug */,
-				1A1899539842714EBB45CA67B4F52248 /* Release */,
+				2EF0AEC63985B78D25DD1DB2F2783BD0 /* Debug */,
+				154B124413ABF61AEB1C53D3BF6E5DF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2970,8 +2962,8 @@
 		B2CF48C4811FB90BE2D6CCB918151034 /* Build configuration list for PBXNativeTarget "Quick" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				71FEA799B857F141CA4FEE40135C699C /* Debug */,
-				A385B9B0F55899B161D413A294AB58D3 /* Release */,
+				A49A9405ECB36A6D19CDE6E6F7F877B6 /* Debug */,
+				5742912001981B953B25EA15378D6395 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2988,8 +2980,8 @@
 		C66A1B267D216CB4D55A3D65B735E42A /* Build configuration list for PBXNativeTarget "Nimble-Snapshots" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				106249B706A081EAEE9EA5FE9C0BE078 /* Debug */,
-				25D1D70A7C6DB76DA6B82BED1DD45870 /* Release */,
+				0568DB5C803198ACDE53763799D8A2C7 /* Debug */,
+				BCD7D420CDA909BC26117FAFEF2C4740 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2997,8 +2989,8 @@
 		F28097D43AF5CD8DA838ABD52A053790 /* Build configuration list for PBXNativeTarget "FBSnapshotTestCase" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BD5CB3691FE92843589F6AF6BCC8DFD5 /* Debug */,
-				F6DBA53A4511720174B84279A5CEB561 /* Release */,
+				055423804E2352C9E11BCF74F87E9AC2 /* Debug */,
+				09E9A2A10D94881E21A18728511C269B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
