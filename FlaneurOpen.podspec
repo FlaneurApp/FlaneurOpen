@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FlaneurOpen'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A collection of convenient classes for Swift iOS development.'
 
 # This description is used to generate tags and improve search results.
@@ -40,7 +40,5 @@ MapKit extension, etc.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
-
-  s.dependency 'SDWebImage', '~> 4.0'
-  s.dependency 'IGListKit', '~> 3.0'
+  s.dependency 'Kingfisher', '~> 3.0'
 end

@@ -1,6 +1,6 @@
 {
   "name": "FlaneurOpen",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "A collection of convenient classes for Swift iOS development.",
   "description": "A collection of convenient classes for Swift iOS development, including\nMapKit extension, etc.",
   "homepage": "https://github.com/FlaneurApp/FlaneurOpen",
@@ -13,17 +13,14 @@
   },
   "source": {
     "git": "https://github.com/FlaneurApp/FlaneurOpen.git",
-    "tag": "0.1.0"
+    "tag": "0.1.1"
   },
   "platforms": {
     "ios": "9.0"
   },
   "source_files": "FlaneurOpen/Classes/**/*",
   "dependencies": {
-    "SDWebImage": [
-      "~> 4.0"
-    ],
-    "IGListKit": [
+    "Kingfisher": [
       "~> 3.0"
     ]
   }

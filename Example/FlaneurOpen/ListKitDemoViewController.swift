@@ -9,7 +9,6 @@
 import UIKit
 import IGListKit
 import FlaneurOpen
-import SDWebImage
 
 class DemoCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!

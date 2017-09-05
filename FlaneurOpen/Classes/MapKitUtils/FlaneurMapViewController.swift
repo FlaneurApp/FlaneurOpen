@@ -7,7 +7,7 @@
 //
 
 import MapKit
-import SDWebImage
+import Kingfisher
 
 /// The protocol to implement for an object to be able to be displayed on 
 /// a `FlaneurMapViewController` instance.
@@ -133,7 +133,7 @@ extension FlaneurMapViewController: MKMapViewDelegate {
             if let image = myAnnotation.mapItem.mapItemThumbnailImage {
                 imageView.image = image
             } else if let imageURL = myAnnotation.mapItem.mapItemThumbnailURL {
-                imageView.sd_setImage(with: imageURL, placeholderImage: leftCalloutPlaceholderImage)
+                imageView.kf.setImage(with: imageURL, placeholder: leftCalloutPlaceholderImage)
             } else {
                 imageView.image = leftCalloutPlaceholderImage
             }
