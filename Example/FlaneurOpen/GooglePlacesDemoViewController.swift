@@ -88,7 +88,7 @@ class GooglePlacesDemoViewController: UIViewController {
                                                         if let results = results {
                                                             self.log("Found \(results.count) results")
                                                             for result in results {
-                                                                self.appendLog("Result \(result.attributedFullText) with placeID \(result.placeID)")
+                                                                self.appendLog("Result \(result.attributedFullText) with placeID \(String(describing: result.placeID))")
                                                             }
                                                         }
             }

@@ -59,7 +59,7 @@ class MySectionController: ListSectionController {
                 }
 
                 return myCell
-            case .error(let error):
+            case .error(_):
                 myCell.imageView.image = #imageLiteral(resourceName: "sample-305-palm-tree")
                 return myCell
             }
