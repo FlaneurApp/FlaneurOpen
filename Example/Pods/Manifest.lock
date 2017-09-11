@@ -4,7 +4,7 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - FlaneurOpen (0.1.1):
+  - FlaneurOpen (0.2.0):
     - Kingfisher (~> 3.0)
   - GoogleMaps (2.4.0):
     - GoogleMaps/Maps (= 2.4.0)
@@ -16,11 +16,11 @@ PODS:
     - GooglePlaces (= 2.4.0)
   - GooglePlaces (2.4.0):
     - GoogleMaps/Base (= 2.4.0)
-  - IGListKit (3.0.0):
-    - IGListKit/Default (= 3.0.0)
-  - IGListKit/Default (3.0.0):
+  - IGListKit (3.1.1):
+    - IGListKit/Default (= 3.1.1)
+  - IGListKit/Default (3.1.1):
     - IGListKit/Diffing
-  - IGListKit/Diffing (3.0.0)
+  - IGListKit/Diffing (3.1.1)
   - Kingfisher (3.10.4)
   - Nimble (5.1.1)
   - Nimble-Snapshots (4.4.0):
@@ -48,11 +48,11 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  FlaneurOpen: 4a2b9102c9035f305c77cc30d1dcd3fcca1c4b69
+  FlaneurOpen: 4e0b033535e3e38222c72ea4748eb7f48d76988e
   GoogleMaps: 8436ab5d1c25e36915b2f7416d0c8e3fa2e76c61
   GooglePlacePicker: 755f10343d71280c7b016823e73fbae9625dfa8a
   GooglePlaces: aafe5990fa7951e98e078761bbdaaf236d7e0c65
-  IGListKit: 9eab6856a15fa25ad72018ff9d9eb2178c240fff
+  IGListKit: cb97f405ae43e59fe1da74271e19427ec20d3c07
   Kingfisher: dc3a4983e86d2dfa89513664983a82340c11a289
   Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
   Nimble-Snapshots: e743439f26c2fa99d8f7e0d7c01c99bcb40aa6f2

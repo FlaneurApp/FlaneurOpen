@@ -107,7 +107,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="FlaneurNavigationBar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b9Z-pd-AEc">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="FlaneurNavigationBar Demo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b9Z-pd-AEc">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -118,6 +118,26 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="97R-Pm-lCJ" kind="show" id="Vj6-FX-sNA"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Nsk-2P-KiB" style="IBUITableViewCellStyleDefault" id="Z7P-KY-cLb">
+                                        <rect key="frame" x="0.0" y="220" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z7P-KY-cLb" id="RyR-jJ-eed">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="CollectionView Demo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Nsk-2P-KiB">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="9Hw-bs-ua8" kind="show" id="WqO-Rn-BVx"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -288,6 +308,24 @@
             </objects>
             <point key="canvasLocation" x="1369" y="-143"/>
         </scene>
+        <!--Filtered Collection View Demo View Controller-->
+        <scene sceneID="hqY-1Q-wY7">
+            <objects>
+                <viewController id="9Hw-bs-ua8" customClass="FilteredCollectionViewDemoViewController" customModule="FlaneurOpen_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ex8-bg-eg6"/>
+                        <viewControllerLayoutGuide type="bottom" id="bU4-4a-taU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0LO-NQ-elK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dpp-1e-Wxz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-314" y="579"/>
+        </scene>
         <!--List Kit Demo View Controller-->
         <scene sceneID="tzE-Cm-B44">
             <objects>
@@ -369,7 +407,7 @@
         <scene sceneID="ohb-lq-XXH">
             <objects>
                 <navigationController id="sCv-A8-Rm8" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Chc-du-Ulb">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Chc-du-Ulb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
