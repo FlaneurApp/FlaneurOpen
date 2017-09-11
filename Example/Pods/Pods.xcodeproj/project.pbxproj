@@ -362,7 +362,7 @@
 /* Begin PBXFileReference section */
 		0046FDE3AD8DF694FA649082908A1AD0 /* Pods-FlaneurOpen_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FlaneurOpen_Example-umbrella.h"; sourceTree = "<group>"; };
 		00A36F271F61648A00F05418 /* FlaneurNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlaneurNavigationBar.swift; path = "FlaneurOpen/Classes/Custom UIView/FlaneurNavigationBar.swift"; sourceTree = "<group>"; };
-		00A36F2B1F61A8D300F05418 /* UILabel+Flaneur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Flaneur.swift"; sourceTree = "<group>"; };
+		00A36F2B1F61A8D300F05418 /* UILabel+Flaneur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UILabel+Flaneur.swift"; path = "FlaneurOpen/Classes/Extensions/UILabel+Flaneur.swift"; sourceTree = "<group>"; };
 		0118F24D52557A083D7C3BDDCEBB7AD4 /* IGListBatchUpdates.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListBatchUpdates.h; path = Source/Internal/IGListBatchUpdates.h; sourceTree = "<group>"; };
 		01408EB1F33EAAB98DE3647E22219AFE /* ThreadHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThreadHelper.swift; path = Sources/ThreadHelper.swift; sourceTree = "<group>"; };
 		01433BFD6C73DFA2A7AF8F732D2B7130 /* Quick.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Quick.xcconfig; sourceTree = "<group>"; };
