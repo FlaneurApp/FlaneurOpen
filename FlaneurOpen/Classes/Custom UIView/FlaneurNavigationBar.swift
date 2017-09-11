@@ -116,6 +116,7 @@ final public class FlaneurNavigationBar: UIView {
 
             // Setting up button
             leftButton.imageView?.contentMode = .scaleAspectFit
+            leftButton.imageView?.tintColor = .black
             leftButton.setImage(leftAction.image, for: .normal)
             leftButton.showsTouchWhenHighlighted = true
             leftButton.isUserInteractionEnabled = true
@@ -152,6 +153,7 @@ final public class FlaneurNavigationBar: UIView {
 
                 // Setting up button
                 newRightButton.imageView?.contentMode = .scaleAspectFit
+                newRightButton.imageView?.tintColor = .black
                 newRightButton.setImage(rightAction.image, for: .normal)
                 newRightButton.showsTouchWhenHighlighted = true
                 newRightButton.isUserInteractionEnabled = true
@@ -181,7 +183,7 @@ final public class FlaneurNavigationBar: UIView {
         }
 
         // Setting up title
-        titleLabel.flaneurText(title, letterSpacing: -2.0)
+        self.setTitle(title)
         titleLabel.numberOfLines = 1
         titleLabel.sizeToFit()
         addSubview(titleLabel)
@@ -209,6 +211,13 @@ final public class FlaneurNavigationBar: UIView {
                            attribute: .centerY,
                            multiplier: 1.0,
                            constant: 0.0).isActive = true
+    }
+
+    /// Sets the title.
+    ///
+    /// - Parameter title: The string to set as the title displayed in the center of the navigation bar.
+    public func setTitle(_ title: String) {
+        titleLabel.flaneurText(title, letterSpacing: 2.0)
     }
 
     // MARK: - Actions

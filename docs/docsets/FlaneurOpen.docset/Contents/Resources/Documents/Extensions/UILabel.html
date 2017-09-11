@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>FlaneurMapAnnotation Class Reference</title>
+    <title>UILabel Extension Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Class/FlaneurMapAnnotation" class="dashAnchor"></a>
-    <a title="FlaneurMapAnnotation Class Reference"></a>
+    <a name="//apple_ref/swift/Extension/UILabel" class="dashAnchor"></a>
+    <a title="UILabel Extension Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">FlaneurOpen Docs</a> (65% documented)</p>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">FlaneurOpen Reference</a>
         <img id="carat" src="../img/carat.png" />
-        FlaneurMapAnnotation Class Reference
+        UILabel Extension Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -85,9 +85,8 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>FlaneurMapAnnotation</h1>
-            <p>Undocumented</p>
-
+            <h1>UILabel</h1>
+            
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -95,9 +94,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC11FlaneurOpen20FlaneurMapAnnotation7mapItemPS_14FlaneurMapItem_"></a>
-                    <a name="//apple_ref/swift/Property/mapItem" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC11FlaneurOpen20FlaneurMapAnnotation7mapItemPS_14FlaneurMapItem_">mapItem</a>
+                    <a name="/s:FE11FlaneurOpenCSo7UILabel11flaneurTextFTSS13letterSpacingV12CoreGraphics7CGFloat_T_"></a>
+                    <a name="//apple_ref/swift/Method/flaneurText(_:letterSpacing:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE11FlaneurOpenCSo7UILabel11flaneurTextFTSS13letterSpacingV12CoreGraphics7CGFloat_T_">flaneurText(_:letterSpacing:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -105,27 +104,47 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Utility function to display a label with a custom letter spacing value.</p>
 
                       </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:FC11FlaneurOpen20FlaneurMapAnnotationcFT7mapItemPS_14FlaneurMapItem__S0_"></a>
-                    <a name="//apple_ref/swift/Method/init(mapItem:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC11FlaneurOpen20FlaneurMapAnnotationcFT7mapItemPS_14FlaneurMapItem__S0_">init(mapItem:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">flaneurText</span><span class="p">(</span><span class="n">_</span> <span class="nv">text</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">letterSpacing</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">)</span></code></pre>
 
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>text</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the text to be displayed by the label</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>letterSpacing</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the letter spacing to use. <code>0.0</code> is the default. Positive values will expand the text. Negative values will condense the text.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
