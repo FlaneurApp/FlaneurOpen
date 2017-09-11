@@ -10,6 +10,7 @@
 		002E9D321ED5E13D0046326C /* GooglePlacesDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002E9D311ED5E13D0046326C /* GooglePlacesDemoViewController.swift */; };
 		00880B9B1EC3502A00AD5B64 /* ListKitDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00880B9A1EC3502A00AD5B64 /* ListKitDemoViewController.swift */; };
 		009DAAEB1F3B795F0051E258 /* FlaneurOpenSecretInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 009DAAEA1F3B795F0051E258 /* FlaneurOpenSecretInfo.plist */; };
+		00A36F2A1F618F3400F05418 /* FlaneurNavigationBarDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A36F291F618F3400F05418 /* FlaneurNavigationBarDemoViewController.swift */; };
 		00D943611EBB338E00631E8E /* MapDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D943601EBB338E00631E8E /* MapDemoViewController.swift */; };
 		00DAAB7F1ECC5D9B00E40141 /* DemoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00DAAB7E1ECC5D9B00E40141 /* DemoCollectionViewCell.xib */; };
 		096796B8726B0663216F1061 /* Pods_FlaneurOpen_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3541623AD9DDC3BAADDEDF9C /* Pods_FlaneurOpen_Tests.framework */; };
@@ -36,6 +37,7 @@
 		002E9D311ED5E13D0046326C /* GooglePlacesDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlacesDemoViewController.swift; sourceTree = "<group>"; };
 		00880B9A1EC3502A00AD5B64 /* ListKitDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListKitDemoViewController.swift; sourceTree = "<group>"; };
 		009DAAEA1F3B795F0051E258 /* FlaneurOpenSecretInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FlaneurOpenSecretInfo.plist; sourceTree = SOURCE_ROOT; };
+		00A36F291F618F3400F05418 /* FlaneurNavigationBarDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlaneurNavigationBarDemoViewController.swift; sourceTree = "<group>"; };
 		00D943601EBB338E00631E8E /* MapDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapDemoViewController.swift; sourceTree = "<group>"; };
 		00DAAB7E1ECC5D9B00E40141 /* DemoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoCollectionViewCell.xib; sourceTree = "<group>"; };
 		3541623AD9DDC3BAADDEDF9C /* Pods_FlaneurOpen_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlaneurOpen_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +121,7 @@
 				00D943601EBB338E00631E8E /* MapDemoViewController.swift */,
 				00880B9A1EC3502A00AD5B64 /* ListKitDemoViewController.swift */,
 				002E9D311ED5E13D0046326C /* GooglePlacesDemoViewController.swift */,
+				00A36F291F618F3400F05418 /* FlaneurNavigationBarDemoViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				00DAAB7E1ECC5D9B00E40141 /* DemoCollectionViewCell.xib */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
@@ -230,6 +233,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = P76F9A8U26;
 						LastSwiftMigration = 0820;
 					};
 					607FACE41AFB9204008FA782 = {
@@ -411,6 +415,7 @@
 				00D943611EBB338E00631E8E /* MapDemoViewController.swift in Sources */,
 				00880B9B1EC3502A00AD5B64 /* ListKitDemoViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				00A36F2A1F618F3400F05418 /* FlaneurNavigationBarDemoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,6 +549,7 @@
 			baseConfigurationReference = 7AFD04225B7E7BE454A20D6B /* Pods-FlaneurOpen_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = P76F9A8U26;
 				INFOPLIST_FILE = FlaneurOpen/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -559,6 +565,7 @@
 			baseConfigurationReference = A853C1FC5DB1F804DDD45A54 /* Pods-FlaneurOpen_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = P76F9A8U26;
 				INFOPLIST_FILE = FlaneurOpen/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

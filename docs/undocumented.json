@@ -1,0 +1,110 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/FlaneurOpen/Classes/CollectionViewUtils/LoadingCollectionViewCell.swift",
+      "line": null,
+      "symbol": "Result",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/FlaneurOpen/Classes/CollectionViewUtils/LoadingCollectionViewCell.swift",
+      "line": 11,
+      "symbol": "Result",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/FlaneurOpen/Classes/CollectionViewUtils/LoadingCollectionViewCell.swift",
+      "line": 12,
+      "symbol": "Result.success",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/FlaneurOpen/Classes/CollectionViewUtils/LoadingCollectionViewCell.swift",
+      "line": 13,
+      "symbol": "Result.error",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/FlaneurOpen/Classes/CollectionViewUtils/LoadingCollectionViewCell.swift",
+      "line": 17,
+      "symbol": "Result.init(_:or:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/FlaneurOpen/Classes/CollectionViewUtils/LoadingCollectionViewCell.swift",
+      "line": 25,
+      "symbol": "Result.value",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/FlaneurOpen/Classes/CollectionViewUtils/LoadingCollectionViewCell.swift",
+      "line": 31,
+      "symbol": "LoadingCollectionViewCell",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/FlaneurOpen/Classes/CollectionViewUtils/LoadingCollectionViewCell.swift",
+      "line": 33,
+      "symbol": "LoadingCollectionViewCell.spinner",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/FlaneurOpen/Classes/CollectionViewUtils/LoadingCollectionViewCell.swift",
+      "line": 35,
+      "symbol": "LoadingCollectionViewCell.init(frame:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/FlaneurOpen/Classes/CollectionViewUtils/LoadingCollectionViewCell.swift",
+      "line": 40,
+      "symbol": "LoadingCollectionViewCell.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/FlaneurOpen/Classes/CollectionViewUtils/LoadingCollectionViewCell.swift",
+      "line": 59,
+      "symbol": "LoadingCollectionViewCell.configure(load:build:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/FlaneurOpen/Classes/CollectionViewUtils/LoadingCollectionViewCell.swift",
+      "line": 109,
+      "symbol": "LoadingCollectionViewCell.prepareForReuse()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/FlaneurOpen/Classes/MapKitUtils/FlaneurMapViewController.swift",
+      "line": 41,
+      "symbol": "FlaneurMapAnnotation",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/FlaneurOpen/Classes/MapKitUtils/FlaneurMapViewController.swift",
+      "line": 42,
+      "symbol": "FlaneurMapAnnotation.mapItem",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/FlaneurOpen/Classes/MapKitUtils/FlaneurMapViewController.swift",
+      "line": 44,
+      "symbol": "FlaneurMapAnnotation.init(mapItem:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen"
+}

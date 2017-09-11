@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>FlaneurNavigationBar Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/FlaneurNavigationBar" class="dashAnchor"></a>
+    <a title="FlaneurNavigationBar Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">FlaneurOpen Docs</a> (63% documented)</p>
+        <p class="header-right"><a href="https://github.com/FlaneurApp/FlaneurOpen"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">FlaneurOpen Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        FlaneurNavigationBar Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/FlaneurMapAnnotation.html">FlaneurMapAnnotation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlaneurMapViewController.html">FlaneurMapViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlaneurNavigationBar.html">FlaneurNavigationBar</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LoadingCollectionViewCell.html">LoadingCollectionViewCell</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/Result.html">Result</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/FlaneurMapItem.html">FlaneurMapItem</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlaneurMapViewDelegate.html">FlaneurMapViewDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/FlaneurNavigationBarAction.html">FlaneurNavigationBarAction</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>FlaneurNavigationBar</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">FlaneurNavigationBar</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+
+                </div>
+              </div>
+            <p>A visual control aiming to reproduce the visual aspect of a <code>UINavigationBar</code>, with a custom height size,
+but without the functional part requiring a <code>UINavigationController</code>.</p>
+<h2 id='overview' class='heading'>Overview</h2>
+
+<p>A <code>FlaneurNavigationBar</code> is a bar, typically displayed at the top of the window, containing buttons that
+can be easily customized with blocks. The primary components are a left button, a title, and an optional 
+array of right buttons. You must use a flaneur navigation bar as a standalone object. It has no compatibility
+whatsoever with a navigation controller object.</p>
+<h2 id='using-a-flaneurnavigationbar' class='heading'>Using a FlaneurNavigationBar</h2>
+
+<p>If you&rsquo;re using a storyboard to instanciate your views, you should try to use a height of 66 pt.
+After placing the view, you can configure its content programmatically:</p>
+<pre class="highlight plaintext"><code>@IBOutlet weak var navigationBar: FlaneurNavigationBar!
+
+let leftAction = FlaneurNavigationBarAction(image: ...) { _ in
+    ...
+}
+
+self.navigationBar.configure(title: ...,
+                             leftAction: myLeftAction)
+</code></pre>
+<h2 id='customizing-the-appearance-of-the-bar-via-code-uiappearance-code' class='heading'>Customizing the appearance of the bar via <code>UIAppearance</code></h2>
+
+<p>You can customize the appearance of a <code>FlaneurNavigationBar</code> via <code>UIAppearance</code> so that it has a consistent
+appearance in your app with unique lines of code. </p>
+
+<p>For instance, the following code makes the title of the bar use the Futura font everywhere in your app:</p>
+<pre class="highlight plaintext"><code>UILabel.appearance(whenContainedInInstancesOf: [FlaneurNavigationBar.self]).font = UIFont(name: "Futura-Medium", size: 16.0)
+</code></pre>
+<h2 id='demo' class='heading'>Demo</h2>
+
+<p>The FlaneurOpen demo app includes a demo for <code>FlaneurNavigationBar</code>. Cf. <code>FlaneurNavigationBarDemoViewController</code>.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC11FlaneurOpen20FlaneurNavigationBarcFT5frameVSC6CGRect_S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(frame:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC11FlaneurOpen20FlaneurNavigationBarcFT5frameVSC6CGRect_S0_">init(frame:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes and returns a newly allocated navigation bar object with the specified frame rectangle.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">override</span> <span class="nf">init</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>frame</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The frame rectangle for the view, measured in points.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC11FlaneurOpen20FlaneurNavigationBarcFT5coderCSo7NSCoder_GSqS0__"></a>
+                    <a name="//apple_ref/swift/Method/init(coder:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC11FlaneurOpen20FlaneurNavigationBarcFT5coderCSo7NSCoder_GSqS0__">init(coder:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns an object initialized from data in a given unarchiver.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">required</span> <span class="nf">init</span><span class="p">?(</span><span class="nv">coder</span><span class="p">:</span> <span class="kt">NSCoder</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>coder</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An unarchiver object.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Configuring%20the%20bar"></a>
+                <a name="//apple_ref/swift/Section/Configuring the bar" class="dashAnchor"></a>
+                <a href="#/Configuring%20the%20bar">
+                  <h3 class="section-name">Configuring the bar</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC11FlaneurOpen20FlaneurNavigationBar9configureFT5titleSS10leftActionGSqVS_26FlaneurNavigationBarAction_12rightActionsGSqGSaS1____T_"></a>
+                    <a name="//apple_ref/swift/Method/configure(title:leftAction:rightActions:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC11FlaneurOpen20FlaneurNavigationBar9configureFT5titleSS10leftActionGSqVS_26FlaneurNavigationBarAction_12rightActionsGSqGSaS1____T_">configure(title:leftAction:rightActions:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Configures the bar with content. </p>
+
+<p>This method should only be called once per instance.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                          <span class="nv">leftAction</span><span class="p">:</span> <span class="kt"><a href="../Structs/FlaneurNavigationBarAction.html">FlaneurNavigationBarAction</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                          <span class="nv">rightActions</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/FlaneurNavigationBarAction.html">FlaneurNavigationBarAction</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>title</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The string to set as the title displayed in the center of the navigation bar.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>leftAction</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An optional custom action. The associated control will be displayed on the left edge of the navigation bar.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rightActions</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An optional array of custom actions. The associated controls will be displayed on the right edge of the navigation bar. The first item will be the closest from the right edge (ie controls will be displayed right-to-left)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="http://flaneurapp.com" target="_blank" rel="external">Flâneur</a>. All rights reserved. (Last updated: 2017-09-11)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
