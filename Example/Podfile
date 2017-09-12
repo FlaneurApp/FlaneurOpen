@@ -10,9 +10,6 @@ target 'FlaneurOpen_Example' do
   pod 'GooglePlacePicker'
   pod 'GoogleMaps'
 
-  # IGListKit for managing collection views
-  pod 'IGListKit'
-
   target 'FlaneurOpen_Tests' do
     inherit! :search_paths
 

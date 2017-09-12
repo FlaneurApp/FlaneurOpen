@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>FlaneurNavigationBar Class Reference</title>
+    <title>FlaneurCollectionContainerView Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Class/FlaneurNavigationBar" class="dashAnchor"></a>
-    <a title="FlaneurNavigationBar Class Reference"></a>
+    <a name="//apple_ref/swift/Class/FlaneurCollectionContainerView" class="dashAnchor"></a>
+    <a title="FlaneurCollectionContainerView Class Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">FlaneurOpen Docs</a> (66% documented)</p>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">FlaneurOpen Reference</a>
         <img id="carat" src="../img/carat.png" />
-        FlaneurNavigationBar Class Reference
+        FlaneurCollectionContainerView Class Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -97,45 +97,14 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>FlaneurNavigationBar</h1>
+            <h1>FlaneurCollectionContainerView</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">FlaneurNavigationBar</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">FlaneurCollectionContainerView</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
 
                 </div>
               </div>
-            <p>A visual control aiming to reproduce the visual aspect of a <code>UINavigationBar</code>, with a custom height size,
-but without the functional part requiring a <code>UINavigationController</code>.</p>
-<h2 id='overview' class='heading'>Overview</h2>
-
-<p>A <code>FlaneurNavigationBar</code> is a bar, typically displayed at the top of the window, containing buttons that
-can be easily customized with blocks. The primary components are a left button, a title, and an optional 
-array of right buttons. You must use a flaneur navigation bar as a standalone object. It has no compatibility
-whatsoever with a navigation controller object.</p>
-<h2 id='using-a-flaneurnavigationbar' class='heading'>Using a FlaneurNavigationBar</h2>
-
-<p>If you&rsquo;re using a storyboard to instanciate your views, you should try to use a height of 66 pt.
-After placing the view, you can configure its content programmatically:</p>
-<pre class="highlight plaintext"><code>@IBOutlet weak var navigationBar: FlaneurNavigationBar!
-
-let leftAction = FlaneurNavigationBarAction(image: ...) { _ in
-    ...
-}
-
-self.navigationBar.configure(title: ...,
-                             leftAction: myLeftAction)
-</code></pre>
-<h2 id='customizing-the-appearance-of-the-bar-via-code-uiappearance-code' class='heading'>Customizing the appearance of the bar via <code>UIAppearance</code></h2>
-
-<p>You can customize the appearance of a <code>FlaneurNavigationBar</code> via <code>UIAppearance</code> so that it has a consistent
-appearance in your app with unique lines of code. </p>
-
-<p>For instance, the following code makes the title of the bar use the Futura font everywhere in your app:</p>
-<pre class="highlight plaintext"><code>UILabel.appearance(whenContainedInInstancesOf: [FlaneurNavigationBar.self]).font = UIFont(name: "Futura-Medium", size: 16.0)
-</code></pre>
-<h2 id='demo' class='heading'>Demo</h2>
-
-<p>The FlaneurOpen demo app includes a demo for <code>FlaneurNavigationBar</code>. Cf. <code>FlaneurNavigationBarDemoViewController</code>.</p>
+            <p>TODO</p>
 
           </section>
           <section class="section task-group-section">
@@ -144,9 +113,9 @@ appearance in your app with unique lines of code. </p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC11FlaneurOpen20FlaneurNavigationBarcFT5frameVSC6CGRect_S0_"></a>
-                    <a name="//apple_ref/swift/Method/init(frame:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC11FlaneurOpen20FlaneurNavigationBarcFT5frameVSC6CGRect_S0_">init(frame:)</a>
+                    <a name="/s:vC11FlaneurOpen30FlaneurCollectionContainerView8delegateGSqPS_38FlaneurCollectionContainerViewDelegate__"></a>
+                    <a name="//apple_ref/swift/Property/delegate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC11FlaneurOpen30FlaneurCollectionContainerView8delegateGSqPS_38FlaneurCollectionContainerViewDelegate__">delegate</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -154,7 +123,35 @@ appearance in your app with unique lines of code. </p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Initializes and returns a newly allocated navigation bar object with the specified frame rectangle.</p>
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">FlaneurCollectionContainerView</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC11FlaneurOpen30FlaneurCollectionContainerViewcFT5frameVSC6CGRect_S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(frame:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC11FlaneurOpen30FlaneurCollectionContainerViewcFT5frameVSC6CGRect_S0_">init(frame:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes and returns a newly allocated collection container object
+with the specified frame rectangle.</p>
 
                       </div>
                       <div class="declaration">
@@ -190,9 +187,9 @@ appearance in your app with unique lines of code. </p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC11FlaneurOpen20FlaneurNavigationBarcFT5coderCSo7NSCoder_GSqS0__"></a>
+                    <a name="/s:FC11FlaneurOpen30FlaneurCollectionContainerViewcFT5coderCSo7NSCoder_GSqS0__"></a>
                     <a name="//apple_ref/swift/Method/init(coder:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC11FlaneurOpen20FlaneurNavigationBarcFT5coderCSo7NSCoder_GSqS0__">init(coder:)</a>
+                    <a class="token" href="#/s:FC11FlaneurOpen30FlaneurCollectionContainerViewcFT5coderCSo7NSCoder_GSqS0__">init(coder:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -247,9 +244,9 @@ appearance in your app with unique lines of code. </p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC11FlaneurOpen20FlaneurNavigationBar9configureFT5titleSS10leftActionGSqVS_26FlaneurNavigationBarAction_12rightActionsGSqGSaS1____T_"></a>
-                    <a name="//apple_ref/swift/Method/configure(title:leftAction:rightActions:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC11FlaneurOpen20FlaneurNavigationBar9configureFT5titleSS10leftActionGSqVS_26FlaneurNavigationBarAction_12rightActionsGSqGSaS1____T_">configure(title:leftAction:rightActions:)</a>
+                    <a name="/s:FC11FlaneurOpen30FlaneurCollectionContainerView9configureFT14viewControllerCSo16UIViewController5itemsGSaPSo12ListDiffable___T_"></a>
+                    <a name="//apple_ref/swift/Method/configure(viewController:items:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC11FlaneurOpen30FlaneurCollectionContainerView9configureFT14viewControllerCSo16UIViewController5itemsGSaPSo12ListDiffable___T_">configure(viewController:items:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -257,18 +254,15 @@ appearance in your app with unique lines of code. </p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Configures the bar with content. </p>
-
-<p>This method should only be called once per instance.</p>
+                        <p>TODO</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-                          <span class="nv">leftAction</span><span class="p">:</span> <span class="kt"><a href="../Structs/FlaneurNavigationBarAction.html">FlaneurNavigationBarAction</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-                          <span class="nv">rightActions</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/FlaneurNavigationBarAction.html">FlaneurNavigationBarAction</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="nv">viewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span>
+                          <span class="nv">items</span><span class="p">:</span> <span class="p">[</span><span class="kt">ListDiffable</span><span class="p">])</span></code></pre>
 
                         </div>
                       </div>
@@ -279,36 +273,24 @@ appearance in your app with unique lines of code. </p>
                             <tr>
                               <td>
                                 <code>
-                                <em>title</em>
+                                <em>viewController</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The string to set as the title displayed in the center of the navigation bar.</p>
+                                  <p>TODO</p>
                                 </div>
                               </td>
                             </tr>
                             <tr>
                               <td>
                                 <code>
-                                <em>leftAction</em>
+                                <em>items</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>An optional custom action. The associated control will be displayed on the left edge of the navigation bar.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>rightActions</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>An optional array of custom actions. The associated controls will be displayed on the right edge of the navigation bar. The first item will be the closest from the right edge (ie controls will be displayed right-to-left)</p>
+                                  <p>TODO</p>
                                 </div>
                               </td>
                             </tr>
@@ -318,12 +300,23 @@ appearance in your app with unique lines of code. </p>
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/ListAdapterDataSource%20Extension"></a>
+                <a name="//apple_ref/swift/Section/ListAdapterDataSource Extension" class="dashAnchor"></a>
+                <a href="#/ListAdapterDataSource%20Extension">
+                  <h3 class="section-name">ListAdapterDataSource Extension</h3>
+                </a>
+              </div>
+              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC11FlaneurOpen20FlaneurNavigationBar8setTitleFSST_"></a>
-                    <a name="//apple_ref/swift/Method/setTitle(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC11FlaneurOpen20FlaneurNavigationBar8setTitleFSST_">setTitle(_:)</a>
+                    <a name="/s:FC11FlaneurOpen30FlaneurCollectionContainerView7objectsFT3forCSo11ListAdapter_GSaPSo12ListDiffable__"></a>
+                    <a name="//apple_ref/swift/Method/objects(for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC11FlaneurOpen30FlaneurCollectionContainerView7objectsFT3forCSo11ListAdapter_GSaPSo12ListDiffable__">objects(for:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -331,14 +324,14 @@ appearance in your app with unique lines of code. </p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Sets the title.</p>
+                        <p>Cf. <code>IGListKit</code> documentation</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setTitle</span><span class="p">(</span><span class="n">_</span> <span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">objects</span><span class="p">(</span><span class="k">for</span> <span class="nv">listAdapter</span><span class="p">:</span> <span class="kt">ListAdapter</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">ListDiffable</span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
@@ -349,17 +342,133 @@ appearance in your app with unique lines of code. </p>
                             <tr>
                               <td>
                                 <code>
-                                <em>title</em>
+                                <em>listAdapter</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The string to set as the title displayed in the center of the navigation bar.</p>
+                                  <p>listAdapter</p>
                                 </div>
                               </td>
                             </tr>
                           </tbody>
                         </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>items</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC11FlaneurOpen30FlaneurCollectionContainerView11listAdapterFTCSo11ListAdapter20sectionControllerForP__CSo21ListSectionController"></a>
+                    <a name="//apple_ref/swift/Method/listAdapter(_:sectionControllerFor:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC11FlaneurOpen30FlaneurCollectionContainerView11listAdapterFTCSo11ListAdapter20sectionControllerForP__CSo21ListSectionController">listAdapter(_:sectionControllerFor:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Cf. <code>IGListKit</code> documentation</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">listAdapter</span><span class="p">(</span><span class="n">_</span> <span class="nv">listAdapter</span><span class="p">:</span> <span class="kt">ListAdapter</span><span class="p">,</span> <span class="n">sectionControllerFor</span> <span class="nv">object</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ListSectionController</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>listAdapter</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>listAdapter</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>object</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>object</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>a <code>FilterableSectionController</code> instance for the object</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC11FlaneurOpen30FlaneurCollectionContainerView9emptyViewFT3forCSo11ListAdapter_GSqCSo6UIView_"></a>
+                    <a name="//apple_ref/swift/Method/emptyView(for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC11FlaneurOpen30FlaneurCollectionContainerView9emptyViewFT3forCSo11ListAdapter_GSqCSo6UIView_">emptyView(for:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Cf. <code>IGListKit</code> documentation</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">emptyView</span><span class="p">(</span><span class="k">for</span> <span class="nv">listAdapter</span><span class="p">:</span> <span class="kt">ListAdapter</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UIView</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>listAdapter</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>listAdapter</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>a white large animated spinner</p>
                       </div>
                     </section>
                   </div>

@@ -22,6 +22,9 @@
   "dependencies": {
     "Kingfisher": [
       "~> 3.0"
+    ],
+    "IGListKit": [
+      "~> 3.0"
     ]
   }
 }

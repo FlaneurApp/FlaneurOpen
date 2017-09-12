@@ -85,6 +85,41 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/FlaneurOpen/Classes/Custom UIView/FlaneurCollectionContainerView.swift",
+      "line": 26,
+      "symbol": "FlaneurCollectionContainerViewDelegate",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/FlaneurOpen/Classes/Custom UIView/FlaneurCollectionContainerView.swift",
+      "line": 27,
+      "symbol": "FlaneurCollectionContainerViewDelegate.collectionContainerViewDidSelectItem(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/FlaneurOpen/Classes/Custom UIView/FlaneurCollectionContainerView.swift",
+      "line": 48,
+      "symbol": "FlaneurCollectionContainerView.delegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/FlaneurOpen/Classes/Custom UIView/FlaneurCollectionContainerView.swift",
+      "line": 215,
+      "symbol": "ListAdapter.collectionView(_:layout:insetForSectionAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/FlaneurOpen/Classes/Custom UIView/FlaneurCollectionContainerView.swift",
+      "line": 219,
+      "symbol": "ListAdapter.collectionView(_:layout:minimumInteritemSpacingForSectionAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/FlaneurOpen/Classes/MapKitUtils/FlaneurMapViewController.swift",
       "line": 41,
       "symbol": "FlaneurMapAnnotation",

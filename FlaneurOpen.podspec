@@ -39,6 +39,8 @@ MapKit extension, etc.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
-  s.dependency 'Kingfisher', '~> 3.0'
+
+  # Dependencies
+  s.dependency 'Kingfisher', '~> 3.0' # Asynchronous image downloads
+  s.dependency 'IGListKit', '~> 3.0' #IGListKit for managing collection views
 end
