@@ -77,7 +77,7 @@ final public class FlaneurCollectionContainerView: UIView {
         return view
     }()
 
-    var adapter: ListAdapter!
+    var adapter: FlaneurCollectionListAdapter!
 
     public var delegate: FlaneurCollectionContainerViewDelegate? = nil
 
@@ -124,7 +124,7 @@ final public class FlaneurCollectionContainerView: UIView {
 
         // Init the adapter
         adapter = {
-            return ListAdapter(updater: ListAdapterUpdater(),
+            return FlaneurCollectionListAdapter(updater: ListAdapterUpdater(),
                                viewController: viewController,
                                workingRangeSize: 1)
         }()
@@ -263,7 +263,11 @@ class FilterableSectionController: ListSectionController {
     }
 }
 
-extension ListAdapter: UICollectionViewDelegateFlowLayout {
+class FlaneurCollectionListAdapter: ListAdapter {
+
+}
+
+extension FlaneurCollectionListAdapter: UICollectionViewDelegateFlowLayout {
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsetsMake(borderWidth / 2.0, 0, borderWidth / 2.0, 0)
     }
