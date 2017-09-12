@@ -10,7 +10,7 @@ import UIKit
 import FlaneurOpen
 import IGListKit
 
-class FilterableLocation: FlaneurDiffable {
+@objc class FilterableLocation: NSObject, FlaneurDiffable, ListDiffable {
     let id: String
     let name: String
     let categories: [String]
@@ -59,26 +59,73 @@ class FilteredCollectionViewDemoViewController: UIViewController {
         FilterableLocation(id: "8", name: "Los Angeles", categories:  ["États-Unis", "Amériques"]),
         FilterableLocation(id: "9", name: "Buenos Aires", categories: ["Argentine",  "Amériques"]),
         FilterableLocation(id: "10", name: "Brasilia", categories:    ["Brésil",     "Amériques"]),
-        FilterableLocation(id: "11", name: "Dakar", categories:       ["Sénagal",    "Afrique"]),
-        FilterableLocation(id: "21", name: "Paris", categories:        ["France",     "Europe"]),
-        FilterableLocation(id: "22", name: "Bordeaux", categories:     ["France",     "Europe"]),
-        FilterableLocation(id: "23", name: "Madrid", categories:       ["Espagne",    "Europe"]),
-        FilterableLocation(id: "24", name: "Barcelone", categories:    ["Espagne",    "Europe"]),
-        FilterableLocation(id: "25", name: "Tokyo", categories:        ["Japon",      "Asie"]),
-        FilterableLocation(id: "26", name: "Ozaka", categories:        ["Japon",      "Asie"]),
-        FilterableLocation(id: "27", name: "New York", categories:     ["États-Unis", "Amériques"]),
-        FilterableLocation(id: "28", name: "Los Angeles", categories:  ["États-Unis", "Amériques"]),
-        FilterableLocation(id: "29", name: "Buenos Aires", categories: ["Argentine",  "Amériques"]),
-        FilterableLocation(id: "30", name: "Brasilia", categories:    ["Brésil",     "Amériques"]),
-        FilterableLocation(id: "31", name: "Dakar", categories:       ["Sénagal",    "Afrique"]),
+        FilterableLocation(id: "11", name: "Dakar", categories:       ["Sénégal",    "Afrique"]),
+        FilterableLocation(id: "21", name: "Nantes", categories:        ["France",     "Europe"]),
+        FilterableLocation(id: "22", name: "Marseille", categories:     ["France",     "Europe"]),
+        FilterableLocation(id: "23", name: "Gijon", categories:       ["Espagne",    "Europe"]),
+        FilterableLocation(id: "24", name: "Valencia", categories:    ["Espagne",    "Europe"]),
+        FilterableLocation(id: "25", name: "Nagano", categories:        ["Japon",      "Asie"]),
+        FilterableLocation(id: "26", name: "Fukushima", categories:        ["Japon",      "Asie"]),
+        FilterableLocation(id: "27", name: "Boston", categories:     ["États-Unis", "Amériques"]),
+        FilterableLocation(id: "28", name: "Houston", categories:  ["États-Unis", "Amériques"]),
+        FilterableLocation(id: "29", name: "Rosario", categories: ["Argentine",  "Amériques"]),
+        FilterableLocation(id: "30", name: "Rio de Janeiro", categories:    ["Brésil",     "Amériques"]),
+        FilterableLocation(id: "31", name: "Saint-Louis", categories:       ["Sénégal",    "Afrique"]),
     ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .orange
 
+        self.navigationItem.title = "Filtered Collection Demo"
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(presentActions))
+
+
+        for item in allItems {
+            debugPrint("item: ", item)
+            debugPrint("ListDiffable: ", (item as? ListDiffable ?? "false"))
+        }
+
         collectionViewContainer.configure(viewController: self, items: allItems)
         collectionViewContainer.delegate = self
+    }
+
+    @IBAction func presentActions(_ sender: Any? = nil) {
+        let alertVC = UIAlertController(title: "Pick your option",
+                                        message: "Toto",
+                                        preferredStyle: .actionSheet)
+
+        let showAllAction = UIAlertAction(title: "Show all", style: .default) { _ in
+            self.collectionViewContainer.filter = { element in
+                return true
+            }
+        }
+        let filterFranceAction = UIAlertAction(title: "Show France", style: .default) { _ in
+            self.collectionViewContainer.filter = { element in
+                if let object = element as? FilterableLocation {
+                    return object.categories.contains("France")
+                } else {
+                    return false
+                }
+            }
+        }
+        let filterSpainAction = UIAlertAction(title: "Show Spain", style: .default) { _ in
+            self.collectionViewContainer.filter = { element in
+                if let object = element as? FilterableLocation {
+                    return object.categories.contains("Espagne")
+                } else {
+                    return false
+                }
+            }
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in
+            self.dismiss(animated: true)
+        }
+
+        for action in [showAllAction, filterFranceAction, filterSpainAction, cancelAction] {
+            alertVC.addAction(action)
+        }
+        self.present(alertVC, animated: true)
     }
 }
 

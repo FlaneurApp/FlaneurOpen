@@ -46,6 +46,14 @@ final public class FlaneurCollectionContainerView: UIView {
     var adapter: ListAdapter!
     var items: [ListDiffable] = []
     public var delegate: FlaneurCollectionContainerViewDelegate? = nil
+    public var filter: ((ListDiffable) -> Bool) = { _ in true } {
+        didSet {
+            debugPrint("didSet shit")
+            adapter.performUpdates(animated: true) { completed in
+                debugPrint("FlaneurCollectionContainerView completed animated updates")
+            }
+        }
+    }
 
     /// Initializes and returns a newly allocated collection container object
     /// with the specified frame rectangle.
@@ -75,7 +83,6 @@ final public class FlaneurCollectionContainerView: UIView {
                           items: [ListDiffable]) {
         // This prevents an automatic 64pt offset for the status bar + navigation bar.
         viewController.automaticallyAdjustsScrollViewInsets = false
-
 
         self.items = items
 
@@ -147,7 +154,7 @@ extension FlaneurCollectionContainerView: ListAdapterDataSource {
     /// - Parameter listAdapter: listAdapter
     /// - Returns: items
     public func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
-        return items
+        return items.filter(self.filter)
     }
 
     /// Cf. `IGListKit` documentation
