@@ -51,8 +51,8 @@ class FilteredCollectionViewDemoViewController: UIViewController {
     let allItems = [
         FilterableLocation(id: "1", name: "Paris", categories:        ["France",     "Europe"]),
         FilterableLocation(id: "2", name: "Bordeaux", categories:     ["France",     "Europe"]),
-        FilterableLocation(id: "3", name: "Madrid", categories:       ["Espagne",    "Europe"]),
-        FilterableLocation(id: "4", name: "Barcelone", categories:    ["Espagne",    "Europe"]),
+        FilterableLocation(id: "3", name: "Madrid", categories:       ["Spain",    "Europe"]),
+        FilterableLocation(id: "4", name: "Barcelone", categories:    ["Spain",    "Europe"]),
         FilterableLocation(id: "5", name: "Tokyo", categories:        ["Japon",      "Asie"]),
         FilterableLocation(id: "6", name: "Ozaka", categories:        ["Japon",      "Asie"]),
         FilterableLocation(id: "7", name: "New York", categories:     ["États-Unis", "Amériques"]),
@@ -62,8 +62,8 @@ class FilteredCollectionViewDemoViewController: UIViewController {
         FilterableLocation(id: "11", name: "Dakar", categories:       ["Sénégal",    "Afrique"]),
         FilterableLocation(id: "21", name: "Nantes", categories:        ["France",     "Europe"]),
         FilterableLocation(id: "22", name: "Marseille", categories:     ["France",     "Europe"]),
-        FilterableLocation(id: "23", name: "Gijon", categories:       ["Espagne",    "Europe"]),
-        FilterableLocation(id: "24", name: "Valencia", categories:    ["Espagne",    "Europe"]),
+        FilterableLocation(id: "23", name: "Gijon", categories:       ["Spain",    "Europe"]),
+        FilterableLocation(id: "24", name: "Valencia", categories:    ["Spain",    "Europe"]),
         FilterableLocation(id: "25", name: "Nagano", categories:        ["Japon",      "Asie"]),
         FilterableLocation(id: "26", name: "Fukushima", categories:        ["Japon",      "Asie"]),
         FilterableLocation(id: "27", name: "Boston", categories:     ["États-Unis", "Amériques"]),
@@ -96,27 +96,25 @@ class FilteredCollectionViewDemoViewController: UIViewController {
                                         preferredStyle: .actionSheet)
 
         let showAllAction = UIAlertAction(title: "Show all", style: .default) { _ in
-            self.collectionViewContainer.filter = { element in
-                return true
-            }
+            self.collectionViewContainer.filters = []
         }
         let filterFranceAction = UIAlertAction(title: "Show France", style: .default) { _ in
-            self.collectionViewContainer.filter = { element in
+            self.collectionViewContainer.filters = [FlaneurCollectionFilter(name: "France") { element in
                 if let object = element as? FilterableLocation {
                     return object.categories.contains("France")
                 } else {
                     return false
                 }
-            }
+            }]
         }
         let filterSpainAction = UIAlertAction(title: "Show Spain", style: .default) { _ in
-            self.collectionViewContainer.filter = { element in
+            self.collectionViewContainer.filters = [FlaneurCollectionFilter(name: "Spain") { element in
                 if let object = element as? FilterableLocation {
-                    return object.categories.contains("Espagne")
+                    return object.categories.contains("Spain")
                 } else {
                     return false
                 }
-            }
+                }]
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in
             self.dismiss(animated: true)

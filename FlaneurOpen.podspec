@@ -33,9 +33,9 @@ MapKit extension, etc.
 
   s.source_files = 'FlaneurOpen/Classes/**/*'
 
-  # s.resource_bundles = {
-  #   'FlaneurOpen' => ['FlaneurOpen/Assets/*.png']
-  # }
+  s.resource_bundles = {
+    'FlaneurOpen' => ['FlaneurOpen/Assets/*.xib']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

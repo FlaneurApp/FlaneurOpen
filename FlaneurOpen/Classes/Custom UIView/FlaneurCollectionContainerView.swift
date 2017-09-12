@@ -23,8 +23,42 @@ public protocol FlaneurDiffable: ListDiffable {
     func configureCell(cell: UICollectionViewCell)
 }
 
+@objc class FlaneurFilterCollectionItem: NSObject, FlaneurDiffable, ListDiffable {
+    let nibName = "FlaneurFilterCollectionViewCell"
+    let filterName: String
+    init(filterName: String) {
+        self.filterName = filterName
+    }
+
+    func configureCell(cell: UICollectionViewCell) {
+        // ...
+    }
+
+    func diffIdentifier() -> NSObjectProtocol {
+        return NSString(string: filterName)
+    }
+
+    func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
+        if let otherFilter = object as? FlaneurFilterCollectionItem {
+            return self.filterName == otherFilter.filterName
+        } else {
+            return false
+        }
+    }
+}
+
 public protocol FlaneurCollectionContainerViewDelegate {
     func collectionContainerViewDidSelectItem(_ item: Any)
+}
+
+public struct FlaneurCollectionFilter {
+    let name: String
+    let filter: ((ListDiffable) -> Bool)
+
+    public init(name: String, filter: @escaping ((ListDiffable) -> Bool)) {
+        self.name = name
+        self.filter = filter
+    }
 }
 
 /// TODO
@@ -46,12 +80,9 @@ final public class FlaneurCollectionContainerView: UIView {
     var adapter: ListAdapter!
     var items: [ListDiffable] = []
     public var delegate: FlaneurCollectionContainerViewDelegate? = nil
-    public var filter: ((ListDiffable) -> Bool) = { _ in true } {
+    public var filters: [FlaneurCollectionFilter] = [] {
         didSet {
-            debugPrint("didSet shit")
-            adapter.performUpdates(animated: true) { completed in
-                debugPrint("FlaneurCollectionContainerView completed animated updates")
-            }
+            adapter.performUpdates(animated: true)
         }
     }
 
@@ -154,7 +185,14 @@ extension FlaneurCollectionContainerView: ListAdapterDataSource {
     /// - Parameter listAdapter: listAdapter
     /// - Returns: items
     public func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
-        return items.filter(self.filter)
+        var filterNames: [FlaneurDiffable] = []
+        var filteredItems = items
+
+        for filter in self.filters {
+            filterNames.append(FlaneurFilterCollectionItem(filterName: filter.name))
+            filteredItems = filteredItems.filter(filter.filter)
+        }
+        return filterNames + filteredItems
     }
 
     /// Cf. `IGListKit` documentation
