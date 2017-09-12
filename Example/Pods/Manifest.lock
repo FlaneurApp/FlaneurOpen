@@ -22,7 +22,7 @@ PODS:
   - IGListKit/Default (3.1.1):
     - IGListKit/Diffing
   - IGListKit/Diffing (3.1.1)
-  - Kingfisher (3.12.2)
+  - Kingfisher (3.13.0)
   - Nimble (5.1.1)
   - Nimble-Snapshots (4.4.0):
     - Nimble-Snapshots/Core (= 4.4.0)
@@ -48,12 +48,12 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  FlaneurOpen: 67855f2679c167b28cb1a4736f061383e9019297
+  FlaneurOpen: 9f266a434dddf6fc03a2c831f75f3c1f16301d29
   GoogleMaps: 8436ab5d1c25e36915b2f7416d0c8e3fa2e76c61
   GooglePlacePicker: 755f10343d71280c7b016823e73fbae9625dfa8a
   GooglePlaces: aafe5990fa7951e98e078761bbdaaf236d7e0c65
   IGListKit: cb97f405ae43e59fe1da74271e19427ec20d3c07
-  Kingfisher: 320626678acadfcf47008b3c6841cd882050737b
+  Kingfisher: 7eebf6000ac64401839f10da37f21eefa7d88970
   Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
   Nimble-Snapshots: e743439f26c2fa99d8f7e0d7c01c99bcb40aa6f2
   Quick: 8024e4a47e6cc03a9d5245ef0948264fc6d27cff

@@ -86,35 +86,56 @@
     },
     {
       "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/FlaneurOpen/Classes/Custom UIView/FlaneurCollectionContainerView.swift",
-      "line": 26,
+      "line": 50,
       "symbol": "FlaneurCollectionContainerViewDelegate",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/FlaneurOpen/Classes/Custom UIView/FlaneurCollectionContainerView.swift",
-      "line": 27,
+      "line": 51,
       "symbol": "FlaneurCollectionContainerViewDelegate.collectionContainerViewDidSelectItem(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/FlaneurOpen/Classes/Custom UIView/FlaneurCollectionContainerView.swift",
-      "line": 48,
+      "line": 54,
+      "symbol": "FlaneurCollectionFilter",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/FlaneurOpen/Classes/Custom UIView/FlaneurCollectionContainerView.swift",
+      "line": 58,
+      "symbol": "FlaneurCollectionFilter.init(name:filter:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/FlaneurOpen/Classes/Custom UIView/FlaneurCollectionContainerView.swift",
+      "line": 82,
       "symbol": "FlaneurCollectionContainerView.delegate",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/FlaneurOpen/Classes/Custom UIView/FlaneurCollectionContainerView.swift",
-      "line": 215,
+      "line": 83,
+      "symbol": "FlaneurCollectionContainerView.filters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/FlaneurOpen/Classes/Custom UIView/FlaneurCollectionContainerView.swift",
+      "line": 260,
       "symbol": "ListAdapter.collectionView(_:layout:insetForSectionAt:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/FlaneurOpen/Classes/Custom UIView/FlaneurCollectionContainerView.swift",
-      "line": 219,
+      "line": 264,
       "symbol": "ListAdapter.collectionView(_:layout:minimumInteritemSpacingForSectionAt:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

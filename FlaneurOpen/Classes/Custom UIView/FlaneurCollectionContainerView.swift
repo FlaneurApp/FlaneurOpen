@@ -192,7 +192,7 @@ extension FlaneurCollectionContainerView: ListAdapterDataSource {
             filterNames.append(FlaneurFilterCollectionItem(filterName: filter.name))
             filteredItems = filteredItems.filter(filter.filter)
         }
-        return filterNames + filteredItems
+        return /*filterNames +*/ filteredItems
     }
 
     /// Cf. `IGListKit` documentation
