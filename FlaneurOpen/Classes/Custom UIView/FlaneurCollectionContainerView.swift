@@ -78,9 +78,16 @@ final public class FlaneurCollectionContainerView: UIView {
     }()
 
     var adapter: ListAdapter!
-    var items: [ListDiffable] = []
+
     public var delegate: FlaneurCollectionContainerViewDelegate? = nil
+
     public var filters: [FlaneurCollectionFilter] = [] {
+        didSet {
+            adapter.performUpdates(animated: true)
+        }
+    }
+
+    public var items: [ListDiffable] = [] {
         didSet {
             adapter.performUpdates(animated: true)
         }
@@ -115,14 +122,14 @@ final public class FlaneurCollectionContainerView: UIView {
         // This prevents an automatic 64pt offset for the status bar + navigation bar.
         viewController.automaticallyAdjustsScrollViewInsets = false
 
-        self.items = items
-
         // Init the adapter
         adapter = {
             return ListAdapter(updater: ListAdapterUpdater(),
                                viewController: viewController,
                                workingRangeSize: 1)
         }()
+
+        self.items = items
 
         // Setup constraint
         let padding: CGFloat = 0.0
