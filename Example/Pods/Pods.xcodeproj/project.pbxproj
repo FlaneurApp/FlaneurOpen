@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00F43BB01F6AE71F00064FD5 /* FlaneurCollectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F43BAF1F6AE71F00064FD5 /* FlaneurCollectionItem.swift */; };
+		00F43BB21F6AE80600064FD5 /* FlaneurCollectionFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F43BB11F6AE80600064FD5 /* FlaneurCollectionFilter.swift */; };
+		00F43BB41F6AE98C00064FD5 /* FlaneurCollectionWithBorderListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F43BB31F6AE98C00064FD5 /* FlaneurCollectionWithBorderListAdapter.swift */; };
+		00F43BB61F6AEB8A00064FD5 /* FlaneurCollectionItemSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F43BB51F6AEB8A00064FD5 /* FlaneurCollectionItemSectionController.swift */; };
 		01669E26A967414EA010DD38FC1E3B49 /* IGListAdapterUpdater.m in Sources */ = {isa = PBXBuildFile; fileRef = 8699C12C8B085109CAD8BB15F13AE2BA /* IGListAdapterUpdater.m */; };
 		024C65162B861F3CC092D8E9FFEE6645 /* UIButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999B2567040461832F8F626F26F6AD4D /* UIButton+Kingfisher.swift */; };
 		02E7B5ACA0FE85E3717516DE909368C4 /* IGListSingleSectionController.h in Headers */ = {isa = PBXBuildFile; fileRef = 024316087C18F97208692F708D1B25EE /* IGListSingleSectionController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -84,7 +88,7 @@
 		4647B4889669D5F1E0A7A1C2ECFDFD68 /* QuickSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB11EE25302C6DF9CE73814C7156997 /* QuickSpec.m */; };
 		469E9C3ED9FD6009F7C9AAF9E537E212 /* Nimble.h in Headers */ = {isa = PBXBuildFile; fileRef = 90B77158C526A092460858E9F6D2A429 /* Nimble.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		48A924DB5696B379B06C152F7258002A /* IGListReloadDataUpdater.m in Sources */ = {isa = PBXBuildFile; fileRef = 585ADE0E5A60DD7925CD489534F3E3DA /* IGListReloadDataUpdater.m */; };
-		4A8288E59C4D158C812913CC8DE71F59 /* FlaneurCollectionContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106F98E9269195C4ECB3F9E1E781D3AC /* FlaneurCollectionContainerView.swift */; };
+		4A8288E59C4D158C812913CC8DE71F59 /* FlaneurCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106F98E9269195C4ECB3F9E1E781D3AC /* FlaneurCollectionView.swift */; };
 		4DA3808C04E905679B5D1763FBAA92DF /* IGListSingleSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99C9B7B83E51F55AFF524ECF4B48D083 /* IGListSingleSectionController.m */; };
 		4F3F103945CC52D0A3B8A891BB0E21C4 /* RaisesException.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80FDFBED948DFB6A25FE2AC459ED6DD /* RaisesException.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		4FEB34672824B33CFA9182A31FFC1F46 /* FBSnapshotTestCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA329B35A8989F1CC66577D3DB5C623 /* FBSnapshotTestCase.framework */; };
@@ -116,7 +120,6 @@
 		67FBC20E220A98D25D0ABF0E3F5D2F1B /* Pods-FlaneurOpen_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0046FDE3AD8DF694FA649082908A1AD0 /* Pods-FlaneurOpen_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		680079FE05EE6455F543C2481B2166D8 /* IGListCollectionViewLayoutInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 853181BA3D1BEE7EBE0D25FD98D77560 /* IGListCollectionViewLayoutInternal.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		69DA8B003216466C60F029CBD79897F1 /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = ADFFE9382F99C94C8E13AFA3AB152320 /* UIImage+Compare.m */; };
-		6C6A47F8063D4B753532BF7991648526 /* FlaneurFilterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC347FCAB26E50FFEFABBF359B952441 /* FlaneurFilterCollectionViewCell.xib */; };
 		6CDBA48C3A8621E4EE1DAFFE240F0D82 /* CwlCatchBadInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FE1F1A29D2EEF1BA34411D638441E4 /* CwlCatchBadInstruction.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		6E397D9FB11A47E48D70287D734B12B2 /* BeLessThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA5B9805B2F764E0F7DD8D2C2654939 /* BeLessThan.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		6EC60DB545AEF2D3F595D11DFFCA96D1 /* IGListBindingSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF39D71F4EB634575BB7AC8A546B8DAA /* IGListBindingSectionController.m */; };
@@ -387,30 +390,34 @@
 		0076DD0FABBBF740E8DFCA4F3C54DFC0 /* MatchError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatchError.swift; path = Sources/Nimble/Matchers/MatchError.swift; sourceTree = "<group>"; };
 		00BE9AFE4CCE88BB4AEE0B90CBB79E1B /* IGListSectionMap.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IGListSectionMap.m; path = Source/Internal/IGListSectionMap.m; sourceTree = "<group>"; };
 		00EF69A9BD8C2B1E23CE557E8C95EE9B /* HaveValidSnapshot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HaveValidSnapshot.swift; sourceTree = "<group>"; };
+		00F43BAF1F6AE71F00064FD5 /* FlaneurCollectionItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlaneurCollectionItem.swift; path = FlaneurOpen/Classes/Protocols/FlaneurCollectionItem.swift; sourceTree = "<group>"; };
+		00F43BB11F6AE80600064FD5 /* FlaneurCollectionFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlaneurCollectionFilter.swift; path = "FlaneurOpen/Classes/Filterable Collection View/FlaneurCollectionFilter.swift"; sourceTree = "<group>"; };
+		00F43BB31F6AE98C00064FD5 /* FlaneurCollectionWithBorderListAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlaneurCollectionWithBorderListAdapter.swift; path = "FlaneurOpen/Classes/Filterable Collection View/FlaneurCollectionWithBorderListAdapter.swift"; sourceTree = "<group>"; };
+		00F43BB51F6AEB8A00064FD5 /* FlaneurCollectionItemSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlaneurCollectionItemSectionController.swift; path = "FlaneurOpen/Classes/Filterable Collection View/FlaneurCollectionItemSectionController.swift"; sourceTree = "<group>"; };
 		010C81162F8F92DED56037FD9ABDB58C /* IGListDebugger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListDebugger.h; path = Source/Internal/IGListDebugger.h; sourceTree = "<group>"; };
 		01C57EC2FE6E100E2B7665C2282BF716 /* ImagePrefetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImagePrefetcher.swift; path = Sources/ImagePrefetcher.swift; sourceTree = "<group>"; };
 		024316087C18F97208692F708D1B25EE /* IGListSingleSectionController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListSingleSectionController.h; path = Source/IGListSingleSectionController.h; sourceTree = "<group>"; };
 		02F38FDBEB594902E0D6FD18DC29EEE6 /* IGListStackedSectionController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IGListStackedSectionController.m; path = Source/IGListStackedSectionController.m; sourceTree = "<group>"; };
 		04A04FC4AFDC467995971BA60CFFB7FB /* KingfisherManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherManager.swift; path = Sources/KingfisherManager.swift; sourceTree = "<group>"; };
 		05A93473FE3617E543B9B11631A6CFD6 /* IGListCollectionViewLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListCollectionViewLayout.h; path = Source/IGListCollectionViewLayout.h; sourceTree = "<group>"; };
-		06DE6419BAB52605A0A51025E9057E5F /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Nimble.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		06DE6419BAB52605A0A51025E9057E5F /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E2B6A21C019187B62DCBC10D076DAE /* MatcherProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatcherProtocols.swift; path = Sources/Nimble/Matchers/MatcherProtocols.swift; sourceTree = "<group>"; };
 		0A5C58F5E954A7B0DDD0970EDBE78090 /* FlaneurOpen-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FlaneurOpen-umbrella.h"; sourceTree = "<group>"; };
 		0A75BEF2B09C6AE812D0633D828C211C /* Match.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Match.swift; path = Sources/Nimble/Matchers/Match.swift; sourceTree = "<group>"; };
 		0B8FA8FCF5A9B49E1631ABF280CB3F60 /* PrettySyntax.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PrettySyntax.swift; sourceTree = "<group>"; };
 		0BF57D729027E563DF464971EF9E12C4 /* CacheSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CacheSerializer.swift; path = Sources/CacheSerializer.swift; sourceTree = "<group>"; };
-		0E3222C78C4C1ACC9A203B9AF7151CB3 /* FlaneurOpen.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FlaneurOpen.bundle; path = FlaneurOpen.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E3222C78C4C1ACC9A203B9AF7151CB3 /* FlaneurOpen.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlaneurOpen.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E4E68B778886367A65E09B201453B32 /* NMBExceptionCapture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NMBExceptionCapture.h; path = Sources/NimbleObjectiveC/NMBExceptionCapture.h; sourceTree = "<group>"; };
 		0EBFB9558BCED5929496A55B0A84EA85 /* IGListScrollDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListScrollDelegate.h; path = Source/IGListScrollDelegate.h; sourceTree = "<group>"; };
 		0FC1CA633ED73265831FEB9C6859BEA1 /* IGListStackedSectionControllerInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListStackedSectionControllerInternal.h; path = Source/Internal/IGListStackedSectionControllerInternal.h; sourceTree = "<group>"; };
 		10012B083FBBA2ACE041604BAC22C7C3 /* LoadingCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoadingCollectionViewCell.swift; sourceTree = "<group>"; };
-		106F98E9269195C4ECB3F9E1E781D3AC /* FlaneurCollectionContainerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FlaneurCollectionContainerView.swift; sourceTree = "<group>"; };
+		106F98E9269195C4ECB3F9E1E781D3AC /* FlaneurCollectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FlaneurCollectionView.swift; path = "FlaneurOpen/Classes/Custom UIView/FlaneurCollectionView.swift"; sourceTree = "<group>"; };
 		1166E11A7729C22267E161394C8598F2 /* IGListAdapterUpdater.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListAdapterUpdater.h; path = Source/IGListAdapterUpdater.h; sourceTree = "<group>"; };
 		1226A409D04FD26B4D523F68EEC949FE /* QuickSelectedTestSuiteBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QuickSelectedTestSuiteBuilder.swift; path = Sources/Quick/QuickSelectedTestSuiteBuilder.swift; sourceTree = "<group>"; };
 		132143AFFDC1E86B16BA8569B6E83904 /* Nimble-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nimble-umbrella.h"; sourceTree = "<group>"; };
 		13F068A84A45DD2623801BDA1EB99F7B /* IGListAdapterUpdaterDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListAdapterUpdaterDelegate.h; path = Source/IGListAdapterUpdaterDelegate.h; sourceTree = "<group>"; };
 		17B82C69F267D8FA8AF504931039DECD /* Example.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Example.swift; path = Sources/Quick/Example.swift; sourceTree = "<group>"; };
-		18205DE6A7CC3E8830104937B60F95EC /* FlaneurOpen.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = FlaneurOpen.modulemap; sourceTree = "<group>"; };
+		18205DE6A7CC3E8830104937B60F95EC /* FlaneurOpen.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FlaneurOpen.modulemap; sourceTree = "<group>"; };
 		1AB28D80D7920BE292E1C3892FA71537 /* HooksPhase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HooksPhase.swift; path = Sources/Quick/Hooks/HooksPhase.swift; sourceTree = "<group>"; };
 		1B0518991C044F3E74752D24137E3DF5 /* IGListAdapterDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListAdapterDataSource.h; path = Source/IGListAdapterDataSource.h; sourceTree = "<group>"; };
 		1B872E9E221404F33F51E3AA60604BB6 /* FlaneurMapViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FlaneurMapViewController.swift; sourceTree = "<group>"; };
@@ -444,7 +451,7 @@
 		390B55A4F9CF1DAE48BFA8BD909D4F08 /* IGListExperiments.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListExperiments.h; path = Source/Common/IGListExperiments.h; sourceTree = "<group>"; };
 		39FBFAB7E52E5515490612AE8195B19B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A7B3FEB970F55F700E1D9AF5EBCD388 /* World.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = World.h; path = Sources/QuickObjectiveC/World.h; sourceTree = "<group>"; };
-		3AD48F686751525AFF5D18C5ACEB78CD /* IGListDiff.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = IGListDiff.mm; path = Source/Common/IGListDiff.mm; sourceTree = "<group>"; };
+		3AD48F686751525AFF5D18C5ACEB78CD /* IGListDiff.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = IGListDiff.mm; path = Source/Common/IGListDiff.mm; sourceTree = "<group>"; };
 		3C0DCF1E4E177D2AB6EBBF753E2F4D76 /* BeLogical.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeLogical.swift; path = Sources/Nimble/Matchers/BeLogical.swift; sourceTree = "<group>"; };
 		3C42BB8FCB5DF26171203E6F75E6DC4F /* Pods-FlaneurOpen_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FlaneurOpen_Example.release.xcconfig"; sourceTree = "<group>"; };
 		3CCC15910792FCBBD376C67E44CE917C /* Nimble-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nimble-prefix.pch"; sourceTree = "<group>"; };
@@ -452,9 +459,9 @@
 		3DA0EDE2E559357886A2949743CC7D13 /* ThrowError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThrowError.swift; path = Sources/Nimble/Matchers/ThrowError.swift; sourceTree = "<group>"; };
 		3E09C5DF1EBF8C27BB9E2F6BAD6D5FC5 /* IGListIndexPathResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IGListIndexPathResult.m; path = Source/Common/IGListIndexPathResult.m; sourceTree = "<group>"; };
 		3E58F4BA1E16511259E4CFD5B31FAB84 /* IGListBatchUpdateData+DebugDescription.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IGListBatchUpdateData+DebugDescription.h"; path = "Source/Internal/IGListBatchUpdateData+DebugDescription.h"; sourceTree = "<group>"; };
-		406AF2D3C2FDB054583F7EEF429B0CE8 /* IGListWorkingRangeHandler.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = IGListWorkingRangeHandler.mm; path = Source/Internal/IGListWorkingRangeHandler.mm; sourceTree = "<group>"; };
+		406AF2D3C2FDB054583F7EEF429B0CE8 /* IGListWorkingRangeHandler.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = IGListWorkingRangeHandler.mm; path = Source/Internal/IGListWorkingRangeHandler.mm; sourceTree = "<group>"; };
 		40C4ADF90915C09909C9F6F7C4BB689D /* CurrentTestCaseTracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CurrentTestCaseTracker.h; path = Sources/NimbleObjectiveC/CurrentTestCaseTracker.h; sourceTree = "<group>"; };
-		440466FF46F25DBD9DE7271C84CBE694 /* mach_excServer.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mach_excServer.c; path = Sources/Lib/CwlPreconditionTesting/CwlPreconditionTesting/mach_excServer.c; sourceTree = "<group>"; };
+		440466FF46F25DBD9DE7271C84CBE694 /* mach_excServer.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mach_excServer.c; path = Sources/Lib/CwlPreconditionTesting/CwlPreconditionTesting/mach_excServer.c; sourceTree = "<group>"; };
 		458E35D3AE4DBB1DDA2434CC15619D3F /* IGListBatchUpdates.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListBatchUpdates.h; path = Source/Internal/IGListBatchUpdates.h; sourceTree = "<group>"; };
 		4666DD47DDC5C290CFF5E38E820C32E0 /* Configuration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Configuration.swift; path = Sources/Quick/Configuration/Configuration.swift; sourceTree = "<group>"; };
 		46F6AF8CFD7F7DB3D248205D808E252F /* IGListAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListAdapter.h; path = Source/IGListAdapter.h; sourceTree = "<group>"; };
@@ -480,7 +487,7 @@
 		5268753E4F52CB45BEF1F90734A48631 /* Pods-FlaneurOpen_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FlaneurOpen_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		52DE855E447A2DEE9F69727FE0E9CEAA /* AdapterProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AdapterProtocols.swift; path = Sources/Nimble/Adapters/AdapterProtocols.swift; sourceTree = "<group>"; };
 		5389741860F5B45BF132069CFD6CA097 /* CwlCatchException.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CwlCatchException.h; path = Sources/Lib/CwlPreconditionTesting/CwlCatchException/CwlCatchException/CwlCatchException.h; sourceTree = "<group>"; };
-		545792057157C7CBF6F6916F0ABBFC28 /* Kingfisher.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Kingfisher.modulemap; sourceTree = "<group>"; };
+		545792057157C7CBF6F6916F0ABBFC28 /* Kingfisher.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Kingfisher.modulemap; sourceTree = "<group>"; };
 		54880D39CB1DA43EC68135D2D7A6016F /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54A9324C01A494099F4F958D0A5731C3 /* IGListAdapterProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IGListAdapterProxy.m; path = Source/Internal/IGListAdapterProxy.m; sourceTree = "<group>"; };
 		54B48AF47470C05E43EEF29EF66AB0E5 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
@@ -488,7 +495,7 @@
 		5559805A2DDACC1B2DD7A2130CA8290A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55AE085923F483E3BEDF1A3C04194DB5 /* DSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DSL.swift; path = Sources/Quick/DSL/DSL.swift; sourceTree = "<group>"; };
 		56C74F1A59381C2202A4A8BEE0A30EE9 /* Quick.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Quick.h; path = Sources/QuickObjectiveC/Quick.h; sourceTree = "<group>"; };
-		57213EE053A060C5AA8059D47F2FF22F /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Quick.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		57213EE053A060C5AA8059D47F2FF22F /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5764BA4005814A1FEDD353309A02CAB6 /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
 		585ADE0E5A60DD7925CD489534F3E3DA /* IGListReloadDataUpdater.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IGListReloadDataUpdater.m; path = Source/IGListReloadDataUpdater.m; sourceTree = "<group>"; };
 		59B953CEE6FCE8C47EF4BDB24542C642 /* ResourceBundle-FlaneurOpen-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-FlaneurOpen-Info.plist"; sourceTree = "<group>"; };
@@ -496,7 +503,7 @@
 		5A99327E8CEFB05CB67AB70DFA7A4896 /* NMBExceptionCapture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NMBExceptionCapture.m; path = Sources/NimbleObjectiveC/NMBExceptionCapture.m; sourceTree = "<group>"; };
 		5BA40F4EF5794DC70670BF37112FA1C9 /* IGListMoveIndexInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListMoveIndexInternal.h; path = Source/Common/Internal/IGListMoveIndexInternal.h; sourceTree = "<group>"; };
 		5BB7AC45E6C80C5381A0AB1B8C1A8147 /* IGListStackedSectionController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListStackedSectionController.h; path = Source/IGListStackedSectionController.h; sourceTree = "<group>"; };
-		5C0837AC445179E66BE627740DD6F791 /* Nimble.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Nimble.modulemap; sourceTree = "<group>"; };
+		5C0837AC445179E66BE627740DD6F791 /* Nimble.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Nimble.modulemap; sourceTree = "<group>"; };
 		5C4E42F91BC90B93380CC3052F9366B3 /* Pods-FlaneurOpen_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FlaneurOpen_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5CC824DE6021520008FCCF4450DC0C0E /* IGListDebugger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IGListDebugger.m; path = Source/Internal/IGListDebugger.m; sourceTree = "<group>"; };
 		5CC83C429AB45264414A331C5BC24CCD /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCase.h; path = FBSnapshotTestCase/FBSnapshotTestCase.h; sourceTree = "<group>"; };
@@ -506,7 +513,7 @@
 		5DF98B54F231C13AC30DB8979D33FA4B /* Nimble-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Nimble-dummy.m"; sourceTree = "<group>"; };
 		5EB426EA6B704B1BBA51992BF95F8DA3 /* IGListIndexSetResultInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListIndexSetResultInternal.h; path = Source/Common/Internal/IGListIndexSetResultInternal.h; sourceTree = "<group>"; };
 		5FC7CB1B02CAE329BAA9C06A7BD98958 /* Contain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Contain.swift; path = Sources/Nimble/Matchers/Contain.swift; sourceTree = "<group>"; };
-		60CB4C8169899EB5E6B2B9947BA32DBE /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Kingfisher.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		60CB4C8169899EB5E6B2B9947BA32DBE /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61689559659956EAA97004DF77C78F3D /* IGListSectionController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListSectionController.h; path = Source/IGListSectionController.h; sourceTree = "<group>"; };
 		63836FB45CA4C6CE5ECA3171EE8A6A19 /* Closures.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Closures.swift; path = Sources/Quick/Hooks/Closures.swift; sourceTree = "<group>"; };
 		63A28492B08D89B84596CA9660E6C015 /* IGListBindingSectionControllerDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListBindingSectionControllerDataSource.h; path = Source/IGListBindingSectionControllerDataSource.h; sourceTree = "<group>"; };
@@ -546,7 +553,7 @@
 		80679391792C797B9EEA51D51D2B07D2 /* UILabel+Flaneur.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UILabel+Flaneur.swift"; sourceTree = "<group>"; };
 		822CDFBAA642B008CA9D523BAC71DEBF /* IGListMoveIndexPathInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListMoveIndexPathInternal.h; path = Source/Common/Internal/IGListMoveIndexPathInternal.h; sourceTree = "<group>"; };
 		8429F7A428AC4854A00FA474114FF438 /* UIImage+Snapshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Snapshot.m"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.m"; sourceTree = "<group>"; };
-		8443EABC57322B4195A05EF2C6FAA1AD /* IGListCollectionViewLayout.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = IGListCollectionViewLayout.mm; path = Source/IGListCollectionViewLayout.mm; sourceTree = "<group>"; };
+		8443EABC57322B4195A05EF2C6FAA1AD /* IGListCollectionViewLayout.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = IGListCollectionViewLayout.mm; path = Source/IGListCollectionViewLayout.mm; sourceTree = "<group>"; };
 		853181BA3D1BEE7EBE0D25FD98D77560 /* IGListCollectionViewLayoutInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListCollectionViewLayoutInternal.h; path = Source/Internal/IGListCollectionViewLayoutInternal.h; sourceTree = "<group>"; };
 		8539BF14C25B25B0463ABF408B685589 /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Frameworks/GooglePlaces.framework; sourceTree = "<group>"; };
 		8699C12C8B085109CAD8BB15F13AE2BA /* IGListAdapterUpdater.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IGListAdapterUpdater.m; path = Source/IGListAdapterUpdater.m; sourceTree = "<group>"; };
@@ -559,14 +566,14 @@
 		8CA5B9805B2F764E0F7DD8D2C2654939 /* BeLessThan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeLessThan.swift; path = Sources/Nimble/Matchers/BeLessThan.swift; sourceTree = "<group>"; };
 		8D9718DB9A60DB55685A26A88D2831E2 /* Filter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = Sources/Filter.swift; sourceTree = "<group>"; };
 		8DF60E5C7572FD13041ABE4F6F0715B7 /* World+DSL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "World+DSL.h"; path = "Sources/QuickObjectiveC/DSL/World+DSL.h"; sourceTree = "<group>"; };
-		8E314997CB363E5C6A1B8C36814C04F7 /* IGListBatchUpdateData.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = IGListBatchUpdateData.mm; path = Source/Common/IGListBatchUpdateData.mm; sourceTree = "<group>"; };
+		8E314997CB363E5C6A1B8C36814C04F7 /* IGListBatchUpdateData.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = IGListBatchUpdateData.mm; path = Source/Common/IGListBatchUpdateData.mm; sourceTree = "<group>"; };
 		8EBD42E0BFB2580DFAA20C987039833B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FE5B4B2AA76C6F1AAFEF7A96D2AA16D /* Pods-FlaneurOpen_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FlaneurOpen_Tests-umbrella.h"; sourceTree = "<group>"; };
 		9053750ABBF0393FCC0894A94916243C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90B77158C526A092460858E9F6D2A429 /* Nimble.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Nimble.h; path = Sources/Nimble/Nimble.h; sourceTree = "<group>"; };
 		9178FE0A81B64A95703636F6FD52B139 /* IGListBatchUpdateData+DebugDescription.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IGListBatchUpdateData+DebugDescription.m"; path = "Source/Internal/IGListBatchUpdateData+DebugDescription.m"; sourceTree = "<group>"; };
 		91EDBCC88C8A95CF1B50A2D06EFA7CDB /* IGListKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IGListKit-dummy.m"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		93F6217784A9A54200F4BEEC7F66626A /* mach_excServer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mach_excServer.h; path = Sources/Lib/CwlPreconditionTesting/CwlPreconditionTesting/mach_excServer.h; sourceTree = "<group>"; };
 		955756A39A94D396A2E52BE6D1008EBC /* IGListAssert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListAssert.h; path = Source/Common/IGListAssert.h; sourceTree = "<group>"; };
 		9593271E67FDE7FC098E0D2C459C209A /* IGListBindingSectionController+DebugDescription.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IGListBindingSectionController+DebugDescription.m"; path = "Source/Internal/IGListBindingSectionController+DebugDescription.m"; sourceTree = "<group>"; };
@@ -585,13 +592,13 @@
 		9C5A601F3CFEDAC63CABDB93461A5DC6 /* IGListDebuggingUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IGListDebuggingUtilities.m; path = Source/Internal/IGListDebuggingUtilities.m; sourceTree = "<group>"; };
 		9DACA511B9335100400799AD0CB6601C /* DSL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DSL.m; path = Sources/NimbleObjectiveC/DSL.m; sourceTree = "<group>"; };
 		9DC7C131E8CD42EA4DB2571B21DB89A2 /* Pods-FlaneurOpen_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FlaneurOpen_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9DEC57418449E0A45A747A1004AF457E /* IGListKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = IGListKit.modulemap; sourceTree = "<group>"; };
+		9DEC57418449E0A45A747A1004AF457E /* IGListKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = IGListKit.modulemap; sourceTree = "<group>"; };
 		9E0FCAED287649CDB768F94FF3F545E6 /* Functional.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Functional.swift; path = Sources/Nimble/Utils/Functional.swift; sourceTree = "<group>"; };
 		9EE1FC7C59DBF99C652673269A9BD417 /* IGListSectionMap+DebugDescription.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IGListSectionMap+DebugDescription.m"; path = "Source/Internal/IGListSectionMap+DebugDescription.m"; sourceTree = "<group>"; };
 		9F33C02602B8206B43190C67045706E5 /* FailureMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FailureMessage.swift; path = Sources/Nimble/FailureMessage.swift; sourceTree = "<group>"; };
 		A11CBA22E499BD251BA16BA8656AAEA3 /* GooglePlacePicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlacePicker.framework; path = Frameworks/GooglePlacePicker.framework; sourceTree = "<group>"; };
 		A120EAD46942B3C53BD7437E055D04E2 /* IGListIndexPathResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListIndexPathResult.h; path = Source/Common/IGListIndexPathResult.h; sourceTree = "<group>"; };
-		A13B62FFD35192962386C32A9DC90589 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FBSnapshotTestCase.framework; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A13B62FFD35192962386C32A9DC90589 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A190286C37522ABE995EDBCEC9B58420 /* Kingfisher-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-prefix.pch"; sourceTree = "<group>"; };
 		A1EC27C0E531DD5A2CB0214AB8A8AA49 /* Pods-FlaneurOpen_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FlaneurOpen_Example-dummy.m"; sourceTree = "<group>"; };
 		A229EF0D88C40568E55FCCEAD447BA37 /* IGListMoveIndexPath.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IGListMoveIndexPath.m; path = Source/Common/IGListMoveIndexPath.m; sourceTree = "<group>"; };
@@ -607,18 +614,17 @@
 		A6AA0F290001CB5A91ABAD1AC0A02D43 /* FBSnapshotTestCase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-umbrella.h"; sourceTree = "<group>"; };
 		A75DC3E8E2C0142AF246F672E6952A49 /* DSL+Wait.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DSL+Wait.swift"; path = "Sources/Nimble/DSL+Wait.swift"; sourceTree = "<group>"; };
 		A77532590BC72B0A2419A37CCC1CBC3E /* IGListCollectionContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListCollectionContext.h; path = Source/IGListCollectionContext.h; sourceTree = "<group>"; };
-		A8A5AEE9370AC6F85EF0F5DD49CF0CA4 /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
+		A8A5AEE9370AC6F85EF0F5DD49CF0CA4 /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
 		A8B4A92A8810D4267EF1797893C9E04A /* IGListSectionMap+DebugDescription.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IGListSectionMap+DebugDescription.h"; path = "Source/Internal/IGListSectionMap+DebugDescription.h"; sourceTree = "<group>"; };
 		AA4150DE674F065E9EDAF75C5A9089B0 /* ImageView+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ImageView+Kingfisher.swift"; path = "Sources/ImageView+Kingfisher.swift"; sourceTree = "<group>"; };
 		AA84E7A4C2D71B6B7C8302B2D305F97E /* Nimble.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Nimble.xcconfig; sourceTree = "<group>"; };
 		ABF1A2655866D60C2F9F59F024306450 /* CwlCatchException.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlCatchException.swift; path = Sources/Lib/CwlPreconditionTesting/CwlCatchException/CwlCatchException/CwlCatchException.swift; sourceTree = "<group>"; };
-		AC347FCAB26E50FFEFABBF359B952441 /* FlaneurFilterCollectionViewCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = FlaneurFilterCollectionViewCell.xib; path = FlaneurOpen/Assets/FlaneurFilterCollectionViewCell.xib; sourceTree = "<group>"; };
 		AC9CA415AD6EDFCC847340BE70509771 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACBD3FFEF76812C3992567483F132B0B /* QuickConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QuickConfiguration.m; path = Sources/QuickObjectiveC/Configuration/QuickConfiguration.m; sourceTree = "<group>"; };
 		ADFFE9382F99C94C8E13AFA3AB152320 /* UIImage+Compare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Compare.m"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.m"; sourceTree = "<group>"; };
 		AEF7F94FCC8E32AA33BB9B2E632420F1 /* IGListReloadIndexPath.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IGListReloadIndexPath.m; path = Source/Internal/IGListReloadIndexPath.m; sourceTree = "<group>"; };
 		AF0EAF60C65DE0C4D880DF35926F7CA0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		B01DD5EA90B953F34A81DE0C2D8D2A9A /* IGListKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IGListKit.framework; path = IGListKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B01DD5EA90B953F34A81DE0C2D8D2A9A /* IGListKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IGListKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0D307A5CAC71A97097F4792A4950FFE /* UIApplication+StrictKeyWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+StrictKeyWindow.h"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.h"; sourceTree = "<group>"; };
 		B20EF2C1CA5E02E739F3A4D20BB64091 /* Kingfisher-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Kingfisher-dummy.m"; sourceTree = "<group>"; };
 		B464856BAE2728AC68489C10E67A5284 /* FormatIndicatedCacheSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FormatIndicatedCacheSerializer.swift; path = Sources/FormatIndicatedCacheSerializer.swift; sourceTree = "<group>"; };
@@ -653,20 +659,20 @@
 		D31702D37C0C5BF45776A2AE0A0022FD /* XCTestSuite+QuickTestSuiteBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "XCTestSuite+QuickTestSuiteBuilder.m"; path = "Sources/QuickObjectiveC/XCTestSuite+QuickTestSuiteBuilder.m"; sourceTree = "<group>"; };
 		D31EFCB8E0C60F365FB8CF0DFBA02D9E /* BeAnInstanceOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeAnInstanceOf.swift; path = Sources/Nimble/Matchers/BeAnInstanceOf.swift; sourceTree = "<group>"; };
 		D340AB145EB5A2410546EB81BB7F80FC /* String+MD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+MD5.swift"; path = "Sources/String+MD5.swift"; sourceTree = "<group>"; };
-		D34D4EB1D9A5AE9F7C1C766C078CEC0C /* Pods-FlaneurOpen_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-FlaneurOpen_Tests.modulemap"; sourceTree = "<group>"; };
+		D34D4EB1D9A5AE9F7C1C766C078CEC0C /* Pods-FlaneurOpen_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-FlaneurOpen_Tests.modulemap"; sourceTree = "<group>"; };
 		D46204805A38E2A672B2225F422297A6 /* FBSnapshotTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCase.m; path = FBSnapshotTestCase/FBSnapshotTestCase.m; sourceTree = "<group>"; };
 		D60F956C4999D3AB1F810A0573291A49 /* Expression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expression.swift; path = Sources/Nimble/Expression.swift; sourceTree = "<group>"; };
 		D7CC6E2CDF4B85084BBC7C05F1F76C5C /* ImageProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageProcessor.swift; path = Sources/ImageProcessor.swift; sourceTree = "<group>"; };
-		D89BA9C777F28615B2903AE0B55B00EE /* Quick.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Quick.modulemap; sourceTree = "<group>"; };
+		D89BA9C777F28615B2903AE0B55B00EE /* Quick.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Quick.modulemap; sourceTree = "<group>"; };
 		D89FC51FB2C6AB2B33F34375726AA60D /* Pods-FlaneurOpen_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FlaneurOpen_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		D90444A35044257DCD708D927DB602C9 /* ErrorUtility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ErrorUtility.swift; path = Sources/Quick/ErrorUtility.swift; sourceTree = "<group>"; };
 		DBD7D6EBD7E9AFB5E13F6C1410E34007 /* IGListMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListMacros.h; path = Source/Common/IGListMacros.h; sourceTree = "<group>"; };
 		DC76BF1DF011B74B04D51577E93A8F77 /* QuickSpec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QuickSpec.h; path = Sources/QuickObjectiveC/QuickSpec.h; sourceTree = "<group>"; };
 		DD0EA720BC3C88F163C04C88C4CAC694 /* Filter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = Sources/Quick/Filter.swift; sourceTree = "<group>"; };
 		DEB2B55481FCDE3B115E379F2EEEA433 /* Kingfisher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Kingfisher.h; path = Sources/Kingfisher.h; sourceTree = "<group>"; };
-		E0B544AE6601B0701FE1D1DDDBBE35D3 /* Nimble-Snapshots.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Nimble-Snapshots.modulemap"; sourceTree = "<group>"; };
-		E27C474B74EE18A30BE729F051CDE53A /* FlaneurOpen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FlaneurOpen.framework; path = FlaneurOpen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E2C17C27BDA8C1D79BAC697E794AFCEC /* Pods_FlaneurOpen_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FlaneurOpen_Example.framework; path = "Pods-FlaneurOpen_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0B544AE6601B0701FE1D1DDDBBE35D3 /* Nimble-Snapshots.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Nimble-Snapshots.modulemap"; sourceTree = "<group>"; };
+		E27C474B74EE18A30BE729F051CDE53A /* FlaneurOpen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FlaneurOpen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2C17C27BDA8C1D79BAC697E794AFCEC /* Pods_FlaneurOpen_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlaneurOpen_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3256DAD01EF7AF1297606434A499B19 /* IGListBatchUpdateState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListBatchUpdateState.h; path = Source/Internal/IGListBatchUpdateState.h; sourceTree = "<group>"; };
 		E3348C1A8B2932CF65919386FBE0616F /* Stringers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stringers.swift; path = Sources/Nimble/Utils/Stringers.swift; sourceTree = "<group>"; };
 		E44F28E2634891D3AF870BF99F240899 /* NMBStringify.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NMBStringify.h; path = Sources/NimbleObjectiveC/NMBStringify.h; sourceTree = "<group>"; };
@@ -687,7 +693,7 @@
 		F094E71986CA71EA9A9DDFAB94B24E2F /* IGListBindingSectionController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListBindingSectionController.h; path = Source/IGListBindingSectionController.h; sourceTree = "<group>"; };
 		F0B5E1F0FC18A2E5ACF626F43ED1C0B0 /* XCTestObservationCenter+Register.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "XCTestObservationCenter+Register.m"; path = "Sources/NimbleObjectiveC/XCTestObservationCenter+Register.m"; sourceTree = "<group>"; };
 		F19DF7DC61BD443171FCEFC7FB893249 /* SatisfyAnyOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SatisfyAnyOf.swift; path = Sources/Nimble/Matchers/SatisfyAnyOf.swift; sourceTree = "<group>"; };
-		F2EA285FDBD7141ACFFCC2D36D724E22 /* Pods_FlaneurOpen_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FlaneurOpen_Tests.framework; path = "Pods-FlaneurOpen_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2EA285FDBD7141ACFFCC2D36D724E22 /* Pods_FlaneurOpen_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlaneurOpen_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F391F3E0DA02FB711F35B77D5BD5EE20 /* BeginWith.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeginWith.swift; path = Sources/Nimble/Matchers/BeginWith.swift; sourceTree = "<group>"; };
 		F4D5459D2C2AF280BFC8B6F4DA754392 /* BeGreaterThanOrEqualTo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeGreaterThanOrEqualTo.swift; path = Sources/Nimble/Matchers/BeGreaterThanOrEqualTo.swift; sourceTree = "<group>"; };
 		F5087C76AAEAF17CA4D59768BDAAE990 /* IGListReloadDataUpdater.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListReloadDataUpdater.h; path = Source/IGListReloadDataUpdater.h; sourceTree = "<group>"; };
@@ -709,9 +715,9 @@
 		FD668F2CBD051625C9973AB188F59A4A /* QuickConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QuickConfiguration.h; path = Sources/QuickObjectiveC/Configuration/QuickConfiguration.h; sourceTree = "<group>"; };
 		FDB5CCDCAAABE69E1797E6C10B10584B /* Pods-FlaneurOpen_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FlaneurOpen_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		FDF342F020F0B989B54558BC0B22BB58 /* CwlBadInstructionException.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlBadInstructionException.swift; path = Sources/Lib/CwlPreconditionTesting/CwlPreconditionTesting/CwlBadInstructionException.swift; sourceTree = "<group>"; };
-		FE2D8560A825589C171A533FD8B6F50A /* Pods-FlaneurOpen_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-FlaneurOpen_Example.modulemap"; sourceTree = "<group>"; };
+		FE2D8560A825589C171A533FD8B6F50A /* Pods-FlaneurOpen_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-FlaneurOpen_Example.modulemap"; sourceTree = "<group>"; };
 		FF39D71F4EB634575BB7AC8A546B8DAA /* IGListBindingSectionController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IGListBindingSectionController.m; path = Source/IGListBindingSectionController.m; sourceTree = "<group>"; };
-		FFD223F88BC6115E3695D7BE34D11927 /* Nimble_Snapshots.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Nimble_Snapshots.framework; path = "Nimble-Snapshots.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFD223F88BC6115E3695D7BE34D11927 /* Nimble_Snapshots.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nimble_Snapshots.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -809,6 +815,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00F43BAE1F6AE6F000064FD5 /* Filterable Collection View */ = {
+			isa = PBXGroup;
+			children = (
+				106F98E9269195C4ECB3F9E1E781D3AC /* FlaneurCollectionView.swift */,
+				00F43BAF1F6AE71F00064FD5 /* FlaneurCollectionItem.swift */,
+				00F43BB11F6AE80600064FD5 /* FlaneurCollectionFilter.swift */,
+				00F43BB31F6AE98C00064FD5 /* FlaneurCollectionWithBorderListAdapter.swift */,
+				00F43BB51F6AEB8A00064FD5 /* FlaneurCollectionItemSectionController.swift */,
+			);
+			name = "Filterable Collection View";
+			sourceTree = "<group>";
+		};
 		0D79A683CA7D64186BE50782ED8E8F02 /* Quick */ = {
 			isa = PBXGroup;
 			children = (
@@ -844,7 +862,6 @@
 				D31702D37C0C5BF45776A2AE0A0022FD /* XCTestSuite+QuickTestSuiteBuilder.m */,
 				D254707D415BAAFC0F4760C7145DAB64 /* Support Files */,
 			);
-			name = Quick;
 			path = Quick;
 			sourceTree = "<group>";
 		};
@@ -854,7 +871,6 @@
 				E2A2CFFD6C717C5CF5D9A252CEFB68EF /* Frameworks */,
 				C1C4F5E827364C26C3D30C6E05BF4F05 /* Resources */,
 			);
-			name = GooglePlaces;
 			path = GooglePlaces;
 			sourceTree = "<group>";
 		};
@@ -927,7 +943,6 @@
 				F0B5E1F0FC18A2E5ACF626F43ED1C0B0 /* XCTestObservationCenter+Register.m */,
 				6D7C84DFD2209DEFA8B393F32FEAA300 /* Support Files */,
 			);
-			name = Nimble;
 			path = Nimble;
 			sourceTree = "<group>";
 		};
@@ -973,14 +988,12 @@
 				6F7B82751536CC395FBAFC6FE94D0D21 /* Diffing */,
 				CC930D2B0C80260ACB5ABED19DEFF05B /* Support Files */,
 			);
-			name = IGListKit;
 			path = IGListKit;
 			sourceTree = "<group>";
 		};
 		2AB68EFE5812E1370AE5CB311101DA0E /* Custom UIView */ = {
 			isa = PBXGroup;
 			children = (
-				106F98E9269195C4ECB3F9E1E781D3AC /* FlaneurCollectionContainerView.swift */,
 				BED4E876B24C770C6B19E6303BEF9D96 /* FlaneurFilterCollectionViewCell.swift */,
 				47DD2687F4EFF2441DC6799790DBB309 /* FlaneurNavigationBar.swift */,
 			);
@@ -995,7 +1008,6 @@
 				E44E8523FF1E82F27D5C211A545558E2 /* Support Files */,
 				866F443CD3BAE42C2CB4D09B60408180 /* SwiftSupport */,
 			);
-			name = FBSnapshotTestCase;
 			path = FBSnapshotTestCase;
 			sourceTree = "<group>";
 		};
@@ -1105,7 +1117,6 @@
 		41FE37AC5E172A5E415A77F8470C796E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				AC347FCAB26E50FFEFABBF359B952441 /* FlaneurFilterCollectionViewCell.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1180,7 +1191,6 @@
 				78AB31C99D00AAC13AC9749C08C10418 /* Base */,
 				E2B4BB81FD664132A80E9CEEB076AF5A /* Maps */,
 			);
-			name = GoogleMaps;
 			path = GoogleMaps;
 			sourceTree = "<group>";
 		};
@@ -1308,7 +1318,6 @@
 				999B2567040461832F8F626F26F6AD4D /* UIButton+Kingfisher.swift */,
 				B1C819B1349A5E5A9ECB982BD937505A /* Support Files */,
 			);
-			name = Kingfisher;
 			path = Kingfisher;
 			sourceTree = "<group>";
 		};
@@ -1366,6 +1375,7 @@
 		C4AA58881611BA730C00BEEE7746C6DC /* FlaneurOpen */ = {
 			isa = PBXGroup;
 			children = (
+				00F43BAE1F6AE6F000064FD5 /* Filterable Collection View */,
 				8FEBAE0E6F08F88FDAF1687AD19AB490 /* CollectionViewUtils */,
 				2AB68EFE5812E1370AE5CB311101DA0E /* Custom UIView */,
 				D854B808E7A6137967AB5105B9307D55 /* Extensions */,
@@ -1397,7 +1407,6 @@
 				DE6E1B93E9951A460CC79F4EB7B02946 /* Frameworks */,
 				7A5BA504EB5C1C99DA533E64EFCB6EEF /* Resources */,
 			);
-			name = GooglePlacePicker;
 			path = GooglePlacePicker;
 			sourceTree = "<group>";
 		};
@@ -1492,7 +1501,6 @@
 				0FD2C621F034C8452EEE1279940254F7 /* Core */,
 				EC22BDED57A32E05FCC207E4ED4F814E /* Support Files */,
 			);
-			name = "Nimble-Snapshots";
 			path = "Nimble-Snapshots";
 			sourceTree = "<group>";
 		};
@@ -1908,7 +1916,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C6A47F8063D4B753532BF7991648526 /* FlaneurFilterCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2068,12 +2075,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A8288E59C4D158C812913CC8DE71F59 /* FlaneurCollectionContainerView.swift in Sources */,
+				4A8288E59C4D158C812913CC8DE71F59 /* FlaneurCollectionView.swift in Sources */,
 				750756EF03E19C0F66DC392447EC0576 /* FlaneurFilterCollectionViewCell.swift in Sources */,
+				00F43BB21F6AE80600064FD5 /* FlaneurCollectionFilter.swift in Sources */,
 				31F97C78CB7A39BE9AF94A9CBD799054 /* FlaneurMapViewController.swift in Sources */,
 				5745AA66F0FEA220E0D6C5FFC60F697B /* FlaneurNavigationBar.swift in Sources */,
 				150A4C1463E991057C70FFC4E892DA81 /* FlaneurOpen-dummy.m in Sources */,
 				B54CA227D01ABE5A841BA54CE2439B77 /* LoadingCollectionViewCell.swift in Sources */,
+				00F43BB41F6AE98C00064FD5 /* FlaneurCollectionWithBorderListAdapter.swift in Sources */,
+				00F43BB01F6AE71F00064FD5 /* FlaneurCollectionItem.swift in Sources */,
+				00F43BB61F6AEB8A00064FD5 /* FlaneurCollectionItemSectionController.swift in Sources */,
 				718C876FE2CC32B7CCAA1F7D9110414E /* UILabel+Flaneur.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

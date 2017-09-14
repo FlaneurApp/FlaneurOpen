@@ -9,5 +9,5 @@
 import UIKit
 
 class FlaneurFilterCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var title: UILabel!
+    // @IBOutlet weak var title: UILabel!
 }

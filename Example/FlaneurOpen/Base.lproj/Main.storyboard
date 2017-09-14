@@ -320,7 +320,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WY0-NV-rGc" customClass="FlaneurCollectionContainerView" customModule="FlaneurOpen">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WY0-NV-rGc" customClass="FlaneurCollectionView" customModule="FlaneurOpen">
                                 <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <color key="backgroundColor" red="1" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -424,7 +424,7 @@
         <scene sceneID="ohb-lq-XXH">
             <objects>
                 <navigationController id="sCv-A8-Rm8" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Chc-du-Ulb">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Chc-du-Ulb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

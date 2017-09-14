@@ -10,7 +10,7 @@ import UIKit
 import FlaneurOpen
 import IGListKit
 
-@objc class FilterableLocation: NSObject, FlaneurDiffable, ListDiffable {
+@objc class FilterableLocation: NSObject, FlaneurCollectionItem, ListDiffable {
     let id: String
     let name: String
     let categories: [String]
@@ -46,7 +46,7 @@ import IGListKit
 }
 
 class FilteredCollectionViewDemoViewController: UIViewController {
-    @IBOutlet weak var collectionViewContainer: FlaneurCollectionContainerView!
+    @IBOutlet weak var collectionViewContainer: FlaneurCollectionView!
 
     let allItems = [
         FilterableLocation(id: "1", name: "Paris", categories:        ["France",     "Europe"]),
@@ -79,12 +79,6 @@ class FilteredCollectionViewDemoViewController: UIViewController {
 
         self.navigationItem.title = "Filtered Collection Demo"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(presentActions))
-
-
-        for item in allItems {
-            debugPrint("item: ", item)
-            debugPrint("ListDiffable: ", (item as? ListDiffable ?? "false"))
-        }
 
         collectionViewContainer.configure(viewController: self, items: allItems)
         collectionViewContainer.delegate = self
@@ -127,8 +121,8 @@ class FilteredCollectionViewDemoViewController: UIViewController {
     }
 }
 
-extension FilteredCollectionViewDemoViewController: FlaneurCollectionContainerViewDelegate {
-    func collectionContainerViewDidSelectItem(_ item: Any) {
+extension FilteredCollectionViewDemoViewController: FlaneurCollectionViewDelegate {
+    func flaneurCollectionView(_ collectionView: FlaneurCollectionView, didSelectItem item: FlaneurCollectionItem) {
         debugPrint("didSelect: ", item)
     }
 }
