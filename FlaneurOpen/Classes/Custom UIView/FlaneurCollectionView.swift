@@ -31,6 +31,7 @@ final public class FlaneurCollectionView: UIView {
     public var filters: [FlaneurCollectionFilter] = [] {
         didSet {
             itemsListAdapter.performUpdates(animated: true)
+            filtersListAdapter.performUpdates(animated: true)
         }
     }
 
@@ -46,6 +47,7 @@ final public class FlaneurCollectionView: UIView {
         // IGListKit's ListCollectionViewLayout is the only 'cheap' layout option that allows
         // to use IGListKit with a multi-column layout.
         let collectionViewLayout = ListCollectionViewLayout(stickyHeaders: false,
+                                                            scrollDirection: .vertical,
                                                             topContentInset: 0.0,
                                                             stretchToEdge: false)
         let view = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
@@ -56,7 +58,26 @@ final public class FlaneurCollectionView: UIView {
         return view
     }()
 
+    // The collection view of filters (as opposed to the collection view for items).
+    let filtersCollectionView: UICollectionView = {
+        let collectionViewLayout = UICollectionViewFlowLayout()
+        collectionViewLayout.scrollDirection = .horizontal
+        let view = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
+        view.backgroundColor = .white
+        view.bounces = false
+        view.showsVerticalScrollIndicator = false
+        view.clipsToBounds = true
+
+        view.layer.borderWidth = 1.0
+        view.layer.borderColor = UIColor.red.cgColor
+
+        return view
+    }()
+
     var itemsListAdapter: FlaneurCollectionWithBorderListAdapter!
+    var filtersListAdapter: ListAdapter!
+
+    var filtersCollectionViewHeightConstraint: NSLayoutConstraint!
 
     /// Initializes and returns a newly allocated collection container object
     /// with the specified frame rectangle.
@@ -95,12 +116,53 @@ final public class FlaneurCollectionView: UIView {
                                                           borderWidth: borderWidth)
         }()
 
+        filtersListAdapter = {
+            return ListAdapter(updater: ListAdapterUpdater(),
+                               viewController: viewController,
+                               workingRangeSize: 1)
+        }()
+
         self.items = items
 
         // Setup constraint
         let padding: CGFloat = 0.0
+        self.addSubview(filtersCollectionView)
         self.addSubview(itemsCollectionView)
+        filtersCollectionView.translatesAutoresizingMaskIntoConstraints = false
         itemsCollectionView.translatesAutoresizingMaskIntoConstraints = false
+
+        // Place the filters collection view on top
+        NSLayoutConstraint(item: filtersCollectionView,
+                           attribute: .leading,
+                           relatedBy: .equal,
+                           toItem: self,
+                           attribute: .leading,
+                           multiplier: 1.0,
+                           constant: 0.0).isActive = true
+        NSLayoutConstraint(item: filtersCollectionView,
+                           attribute: .trailing,
+                           relatedBy: .equal,
+                           toItem: self,
+                           attribute: .trailing,
+                           multiplier: 1.0,
+                           constant: 0.0).isActive = true
+        NSLayoutConstraint(item: filtersCollectionView,
+                           attribute: .top,
+                           relatedBy: .equal,
+                           toItem: self,
+                           attribute: .top,
+                           multiplier: 1.0,
+                           constant: padding).isActive = true
+        filtersCollectionViewHeightConstraint = NSLayoutConstraint(item: filtersCollectionView,
+                                                                   attribute: .height,
+                                                                   relatedBy: .equal,
+                                                                   toItem: nil,
+                                                                   attribute: .notAnAttribute,
+                                                                   multiplier: 1.0,
+                                                                   constant: 0.0)
+        filtersCollectionViewHeightConstraint.isActive = true
+
+        // Place the items collection view right underneath
         NSLayoutConstraint(item: itemsCollectionView,
                            attribute: .leading,
                            relatedBy: .equal,
@@ -118,8 +180,8 @@ final public class FlaneurCollectionView: UIView {
         NSLayoutConstraint(item: itemsCollectionView,
                            attribute: .top,
                            relatedBy: .equal,
-                           toItem: self,
-                           attribute: .top,
+                           toItem: filtersCollectionView,
+                           attribute: .bottom,
                            multiplier: 1.0,
                            constant: padding).isActive = true
         NSLayoutConstraint(item: itemsCollectionView,
@@ -137,6 +199,9 @@ final public class FlaneurCollectionView: UIView {
                                                         left: borderWidth,
                                                         bottom: borderWidth / 2.0,
                                                         right: borderWidth)
+
+        filtersListAdapter.collectionView = filtersCollectionView
+        filtersListAdapter.dataSource = self
     }
 
     // MARK: - Private Code
@@ -147,8 +212,10 @@ final public class FlaneurCollectionView: UIView {
         backgroundColor = .white
     }
 
-    func didSelectFilter(named filterName: String) {
-        self.filters = filters.filter { $0.name != filterName }
+    func didSelectFilter(_ filterToRemove: FlaneurCollectionFilter) {
+        debugPrint("BEFORE Filters.Count: ", filters.count)
+        self.filters = filters.filter { $0.name != filterToRemove.name }
+        debugPrint("AFTER Filters.Count: ", filters.count)
     }
 }
 
@@ -162,6 +229,16 @@ extension FlaneurCollectionView: ListAdapterDataSource {
     /// - Parameter listAdapter: listAdapter
     /// - Returns: items
     public func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
+        if listAdapter == itemsListAdapter {
+            return itemsObjects()
+        } else if listAdapter == filtersListAdapter {
+            return filtersObjects()
+        } else {
+            fatalError("unexpected case")
+        }
+    }
+
+    func itemsObjects() -> [ListDiffable] {
         if filters.isEmpty {
             return items
         } else {
@@ -183,6 +260,20 @@ extension FlaneurCollectionView: ListAdapterDataSource {
         }
     }
 
+    func filtersObjects() -> [ListDiffable] {
+        // Adjust the height of the filtersCollectionView
+        let newHeight: CGFloat = filters.isEmpty ? 0.0 : 35.0
+        if filtersCollectionViewHeightConstraint.constant != newHeight {
+            UIView.animate(withDuration: 0.3,
+                           delay: 0.0,
+                           animations: {
+                            self.filtersCollectionViewHeightConstraint.constant = newHeight
+            })
+        }
+
+        return filters
+    }
+
     /// Cf. `IGListKit` documentation
     ///
     /// - Parameters:
@@ -190,10 +281,17 @@ extension FlaneurCollectionView: ListAdapterDataSource {
     ///   - object: object
     /// - Returns: a `FilterableSectionController` instance for the object
     public func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
-        return FilterableSectionController(object: object as! FlaneurCollectionItem,
-                                           collectionView: self)
+        if listAdapter == itemsListAdapter {
+            return FlaneurCollectionItemSectionController(object: object as! FlaneurCollectionItem,
+                                                          collectionView: self)
+        } else if listAdapter == filtersListAdapter {
+            return FlaneurCollectionFilterSectionController(object: object as! FlaneurCollectionFilter,
+                                                            collectionView: self)
+        } else {
+            fatalError("unexpected case")
+        }
     }
-
+    
     /// Cf. `IGListKit` documentation
     ///
     /// - Parameter listAdapter: listAdapter

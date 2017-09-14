@@ -6,12 +6,39 @@
 //
 //
 
-public struct FlaneurCollectionFilter {
+import IGListKit
+
+public class FlaneurCollectionFilter {
     let name: String
     let filter: ((FlaneurCollectionItem) -> Bool)
 
     public init(name: String, filter: @escaping ((FlaneurCollectionItem) -> Bool)) {
         self.name = name
         self.filter = filter
+    }
+}
+
+extension FlaneurCollectionFilter: ListDiffable {
+    public func diffIdentifier() -> NSObjectProtocol {
+        return NSString(string: name)
+    }
+
+    public func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
+        if let otherFilter = object as? FlaneurCollectionFilter {
+            return otherFilter.name == self.name
+        } else {
+            return false
+        }
+    }
+}
+
+extension FlaneurCollectionFilter: FlaneurCollectionItem {
+    public var nibName: String {
+        return "TODO"
+    }
+
+    public func configureCell(cell: UICollectionViewCell) {
+        print("TODO: configureCell for FlaneurCollectionFilter")
+        cell.backgroundColor = .blue
     }
 }

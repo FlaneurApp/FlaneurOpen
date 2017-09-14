@@ -8,7 +8,7 @@
 
 import IGListKit
 
-class FilterableSectionController: ListSectionController {
+class FlaneurCollectionItemSectionController: ListSectionController {
     let borderWidth: CGFloat
     let nbColumns: Int
     let object: FlaneurCollectionItem

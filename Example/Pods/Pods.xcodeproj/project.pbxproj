@@ -11,6 +11,7 @@
 		00F43BB21F6AE80600064FD5 /* FlaneurCollectionFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F43BB11F6AE80600064FD5 /* FlaneurCollectionFilter.swift */; };
 		00F43BB41F6AE98C00064FD5 /* FlaneurCollectionWithBorderListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F43BB31F6AE98C00064FD5 /* FlaneurCollectionWithBorderListAdapter.swift */; };
 		00F43BB61F6AEB8A00064FD5 /* FlaneurCollectionItemSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F43BB51F6AEB8A00064FD5 /* FlaneurCollectionItemSectionController.swift */; };
+		00F43BB81F6AF75100064FD5 /* FlaneurCollectionFilterSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F43BB71F6AF75100064FD5 /* FlaneurCollectionFilterSectionController.swift */; };
 		01669E26A967414EA010DD38FC1E3B49 /* IGListAdapterUpdater.m in Sources */ = {isa = PBXBuildFile; fileRef = 8699C12C8B085109CAD8BB15F13AE2BA /* IGListAdapterUpdater.m */; };
 		024C65162B861F3CC092D8E9FFEE6645 /* UIButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999B2567040461832F8F626F26F6AD4D /* UIButton+Kingfisher.swift */; };
 		02E7B5ACA0FE85E3717516DE909368C4 /* IGListSingleSectionController.h in Headers */ = {isa = PBXBuildFile; fileRef = 024316087C18F97208692F708D1B25EE /* IGListSingleSectionController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -394,6 +395,7 @@
 		00F43BB11F6AE80600064FD5 /* FlaneurCollectionFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlaneurCollectionFilter.swift; path = "FlaneurOpen/Classes/Filterable Collection View/FlaneurCollectionFilter.swift"; sourceTree = "<group>"; };
 		00F43BB31F6AE98C00064FD5 /* FlaneurCollectionWithBorderListAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlaneurCollectionWithBorderListAdapter.swift; path = "FlaneurOpen/Classes/Filterable Collection View/FlaneurCollectionWithBorderListAdapter.swift"; sourceTree = "<group>"; };
 		00F43BB51F6AEB8A00064FD5 /* FlaneurCollectionItemSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlaneurCollectionItemSectionController.swift; path = "FlaneurOpen/Classes/Filterable Collection View/FlaneurCollectionItemSectionController.swift"; sourceTree = "<group>"; };
+		00F43BB71F6AF75100064FD5 /* FlaneurCollectionFilterSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlaneurCollectionFilterSectionController.swift; path = "FlaneurOpen/Classes/Filterable Collection View/FlaneurCollectionFilterSectionController.swift"; sourceTree = "<group>"; };
 		010C81162F8F92DED56037FD9ABDB58C /* IGListDebugger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListDebugger.h; path = Source/Internal/IGListDebugger.h; sourceTree = "<group>"; };
 		01C57EC2FE6E100E2B7665C2282BF716 /* ImagePrefetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImagePrefetcher.swift; path = Sources/ImagePrefetcher.swift; sourceTree = "<group>"; };
 		024316087C18F97208692F708D1B25EE /* IGListSingleSectionController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListSingleSectionController.h; path = Source/IGListSingleSectionController.h; sourceTree = "<group>"; };
@@ -640,7 +642,7 @@
 		BCDAD700ED8775F38A5D6AF02F72B734 /* Quick-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Quick-umbrella.h"; sourceTree = "<group>"; };
 		BD695D7DD98414BD88FC4D2355547DAC /* Nimble-Snapshots-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Nimble-Snapshots-dummy.m"; sourceTree = "<group>"; };
 		BEA329B35A8989F1CC66577D3DB5C623 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BED4E876B24C770C6B19E6303BEF9D96 /* FlaneurFilterCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FlaneurFilterCollectionViewCell.swift; sourceTree = "<group>"; };
+		BED4E876B24C770C6B19E6303BEF9D96 /* FlaneurFilterCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FlaneurFilterCollectionViewCell.swift; path = "FlaneurOpen/Classes/Custom UIView/FlaneurFilterCollectionViewCell.swift"; sourceTree = "<group>"; };
 		C05770C5BCAC61D6B47C61C2157C8BDC /* IGListDiffable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListDiffable.h; path = Source/Common/IGListDiffable.h; sourceTree = "<group>"; };
 		C1722B0046D799409488983A9C043FAA /* IGListWorkingRangeDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListWorkingRangeDelegate.h; path = Source/IGListWorkingRangeDelegate.h; sourceTree = "<group>"; };
 		C1F28AF1EC4FD5E1C84423394CE95E19 /* Quick-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Quick-dummy.m"; sourceTree = "<group>"; };
@@ -823,6 +825,8 @@
 				00F43BB11F6AE80600064FD5 /* FlaneurCollectionFilter.swift */,
 				00F43BB31F6AE98C00064FD5 /* FlaneurCollectionWithBorderListAdapter.swift */,
 				00F43BB51F6AEB8A00064FD5 /* FlaneurCollectionItemSectionController.swift */,
+				00F43BB71F6AF75100064FD5 /* FlaneurCollectionFilterSectionController.swift */,
+				BED4E876B24C770C6B19E6303BEF9D96 /* FlaneurFilterCollectionViewCell.swift */,
 			);
 			name = "Filterable Collection View";
 			sourceTree = "<group>";
@@ -994,7 +998,6 @@
 		2AB68EFE5812E1370AE5CB311101DA0E /* Custom UIView */ = {
 			isa = PBXGroup;
 			children = (
-				BED4E876B24C770C6B19E6303BEF9D96 /* FlaneurFilterCollectionViewCell.swift */,
 				47DD2687F4EFF2441DC6799790DBB309 /* FlaneurNavigationBar.swift */,
 			);
 			name = "Custom UIView";
@@ -2080,6 +2083,7 @@
 				00F43BB21F6AE80600064FD5 /* FlaneurCollectionFilter.swift in Sources */,
 				31F97C78CB7A39BE9AF94A9CBD799054 /* FlaneurMapViewController.swift in Sources */,
 				5745AA66F0FEA220E0D6C5FFC60F697B /* FlaneurNavigationBar.swift in Sources */,
+				00F43BB81F6AF75100064FD5 /* FlaneurCollectionFilterSectionController.swift in Sources */,
 				150A4C1463E991057C70FFC4E892DA81 /* FlaneurOpen-dummy.m in Sources */,
 				B54CA227D01ABE5A841BA54CE2439B77 /* LoadingCollectionViewCell.swift in Sources */,
 				00F43BB41F6AE98C00064FD5 /* FlaneurCollectionWithBorderListAdapter.swift in Sources */,
