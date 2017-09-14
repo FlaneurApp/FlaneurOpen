@@ -125,8 +125,8 @@ final public class FlaneurCollectionContainerView: UIView {
         // Init the adapter
         adapter = {
             return FlaneurCollectionListAdapter(updater: ListAdapterUpdater(),
-                               viewController: viewController,
-                               workingRangeSize: 1)
+                                                viewController: viewController,
+                                                workingRangeSize: 1)
         }()
 
         self.items = items
@@ -192,14 +192,35 @@ extension FlaneurCollectionContainerView: ListAdapterDataSource {
     /// - Parameter listAdapter: listAdapter
     /// - Returns: items
     public func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
-        var filterNames: [FlaneurDiffable] = []
-        var filteredItems = items
+        if filters.isEmpty {
+            return items
+        } else {
+            var filterNames: [FlaneurDiffable] = []
+            var filteredItems = items
 
-        for filter in self.filters {
-            filterNames.append(FlaneurFilterCollectionItem(filterName: filter.name))
-            filteredItems = filteredItems.filter(filter.filter)
+            // 1st pass. Fill the filter array to retrieve the filter names.
+            for filter in self.filters {
+                filterNames.append(FlaneurFilterCollectionItem(filterName: filter.name))
+            }
+
+            // 2nd pass. Process each element to see if they're included.
+            filteredItems = items.filter({ item -> Bool in
+                guard self.filters.count > 0 else {
+                    return true
+                }
+
+                for filter in self.filters {
+                    if filter.filter(item) {
+                        // As soon as one filter includes the item, no need to apply the rest...
+                        return true
+                    }
+                }
+                // If we get here, none of the filters included the item: we can exclude it.
+                return false
+            })
+
+            return /*filterNames +*/ filteredItems
         }
-        return /*filterNames +*/ filteredItems
     }
 
     /// Cf. `IGListKit` documentation
@@ -271,7 +292,7 @@ extension FlaneurCollectionListAdapter: UICollectionViewDelegateFlowLayout {
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsetsMake(borderWidth / 2.0, 0, borderWidth / 2.0, 0)
     }
-
+    
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return borderWidth
     }

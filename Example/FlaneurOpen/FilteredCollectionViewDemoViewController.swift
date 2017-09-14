@@ -71,7 +71,7 @@ class FilteredCollectionViewDemoViewController: UIViewController {
         FilterableLocation(id: "29", name: "Rosario", categories: ["Argentine",  "Amériques"]),
         FilterableLocation(id: "30", name: "Rio de Janeiro", categories:    ["Brésil",     "Amériques"]),
         FilterableLocation(id: "31", name: "Saint-Louis", categories:       ["Sénégal",    "Afrique"]),
-    ]
+        ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,23 +98,23 @@ class FilteredCollectionViewDemoViewController: UIViewController {
         let showAllAction = UIAlertAction(title: "Show all", style: .default) { _ in
             self.collectionViewContainer.filters = []
         }
-        let filterFranceAction = UIAlertAction(title: "Show France", style: .default) { _ in
-            self.collectionViewContainer.filters = [FlaneurCollectionFilter(name: "France") { element in
+        let filterFranceAction = UIAlertAction(title: "Add France filter", style: .default) { _ in
+            self.collectionViewContainer.filters.append(FlaneurCollectionFilter(name: "France") { element in
                 if let object = element as? FilterableLocation {
                     return object.categories.contains("France")
                 } else {
                     return false
                 }
-            }]
+            })
         }
-        let filterSpainAction = UIAlertAction(title: "Show Spain", style: .default) { _ in
-            self.collectionViewContainer.filters = [FlaneurCollectionFilter(name: "Spain") { element in
+        let filterSpainAction = UIAlertAction(title: "Add Spain filter", style: .default) { _ in
+            self.collectionViewContainer.filters.append(FlaneurCollectionFilter(name: "Spain") { element in
                 if let object = element as? FilterableLocation {
                     return object.categories.contains("Spain")
                 } else {
                     return false
                 }
-                }]
+            })
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in
             self.dismiss(animated: true)
