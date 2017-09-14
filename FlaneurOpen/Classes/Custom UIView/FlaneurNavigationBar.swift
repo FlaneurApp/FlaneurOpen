@@ -42,6 +42,11 @@ public struct FlaneurNavigationBarAction {
 /// array of right buttons. You must use a flaneur navigation bar as a standalone object. It has no compatibility
 /// whatsoever with a navigation controller object.
 ///
+/// ## Behaviors
+///
+/// When a left action is configured, then the whole navigation bar actions it. It does not interfere with 
+/// the right buttons.
+///
 /// ## Using a FlaneurNavigationBar
 ///
 /// If you're using a storyboard to instanciate your views, you should try to use a height of 66 pt.
@@ -124,6 +129,11 @@ final public class FlaneurNavigationBar: UIView {
             addSubview(leftButton)
 
             leftButtonAction = leftAction.action
+
+            // If there is a left action, the whole view activates it
+            let tagGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(leftButtonPressed))
+            tagGestureRecognizer.numberOfTapsRequired = 1
+            self.addGestureRecognizer(tagGestureRecognizer)
 
             // Setting up button's constraint
             leftButton.translatesAutoresizingMaskIntoConstraints = false

@@ -86,6 +86,13 @@
     },
     {
       "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/FlaneurOpen/Classes/Custom UIView/FlaneurCollectionContainerView.swift",
+      "line": null,
+      "symbol": "FlaneurCollectionListAdapter",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/FlaneurOpen/Classes/Custom UIView/FlaneurCollectionContainerView.swift",
       "line": 50,
       "symbol": "FlaneurCollectionContainerViewDelegate",
       "symbol_kind": "source.lang.swift.decl.protocol",
@@ -121,22 +128,29 @@
     },
     {
       "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/FlaneurOpen/Classes/Custom UIView/FlaneurCollectionContainerView.swift",
-      "line": 83,
+      "line": 84,
       "symbol": "FlaneurCollectionContainerView.filters",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/FlaneurOpen/Classes/Custom UIView/FlaneurCollectionContainerView.swift",
-      "line": 260,
-      "symbol": "ListAdapter.collectionView(_:layout:insetForSectionAt:)",
+      "line": 90,
+      "symbol": "FlaneurCollectionContainerView.items",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/FlaneurOpen/Classes/Custom UIView/FlaneurCollectionContainerView.swift",
+      "line": 271,
+      "symbol": "FlaneurCollectionListAdapter.collectionView(_:layout:insetForSectionAt:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/FlaneurOpen/Classes/Custom UIView/FlaneurCollectionContainerView.swift",
-      "line": 264,
-      "symbol": "ListAdapter.collectionView(_:layout:minimumInteritemSpacingForSectionAt:)",
+      "line": 275,
+      "symbol": "FlaneurCollectionListAdapter.collectionView(_:layout:minimumInteritemSpacingForSectionAt:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
