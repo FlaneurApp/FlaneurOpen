@@ -11,6 +11,7 @@ import IGListKit
 
 fileprivate let borderWidth: CGFloat = 9.0
 fileprivate let nbColumns: CGFloat = 2.0
+fileprivate let filtersViewHeight: CGFloat = 44.0
 
 public protocol FlaneurCollectionViewDelegate {
     func flaneurCollectionView(_ collectionView: FlaneurCollectionView, didSelectItem item: FlaneurCollectionItem)
@@ -50,11 +51,18 @@ final public class FlaneurCollectionView: UIView {
                                                             scrollDirection: .vertical,
                                                             topContentInset: 0.0,
                                                             stretchToEdge: false)
+
         let view = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
         view.backgroundColor = .white
         view.bounces = false
         view.showsVerticalScrollIndicator = false
         view.clipsToBounds = true
+
+        view.contentInset = UIEdgeInsets(top: borderWidth / 2.0,
+                                         left: borderWidth,
+                                         bottom: borderWidth / 2.0,
+                                         right: borderWidth)
+
         return view
     }()
 
@@ -68,8 +76,10 @@ final public class FlaneurCollectionView: UIView {
         view.showsVerticalScrollIndicator = false
         view.clipsToBounds = true
 
-        view.layer.borderWidth = 1.0
-        view.layer.borderColor = UIColor.red.cgColor
+        view.contentInset = UIEdgeInsets(top: borderWidth,
+                                         left: borderWidth,
+                                         bottom: 0.0,
+                                         right: borderWidth)
 
         return view
     }()
@@ -77,7 +87,7 @@ final public class FlaneurCollectionView: UIView {
     var itemsListAdapter: FlaneurCollectionWithBorderListAdapter!
     var filtersListAdapter: ListAdapter!
 
-    var filtersCollectionViewHeightConstraint: NSLayoutConstraint!
+    var itemsCollectionViewTopConstraint: NSLayoutConstraint!
 
     /// Initializes and returns a newly allocated collection container object
     /// with the specified frame rectangle.
@@ -153,14 +163,13 @@ final public class FlaneurCollectionView: UIView {
                            attribute: .top,
                            multiplier: 1.0,
                            constant: padding).isActive = true
-        filtersCollectionViewHeightConstraint = NSLayoutConstraint(item: filtersCollectionView,
-                                                                   attribute: .height,
-                                                                   relatedBy: .equal,
-                                                                   toItem: nil,
-                                                                   attribute: .notAnAttribute,
-                                                                   multiplier: 1.0,
-                                                                   constant: 0.0)
-        filtersCollectionViewHeightConstraint.isActive = true
+        NSLayoutConstraint(item: filtersCollectionView,
+                           attribute: .height,
+                           relatedBy: .equal,
+                           toItem: nil,
+                           attribute: .notAnAttribute,
+                           multiplier: 1.0,
+                           constant: filtersViewHeight).isActive = true
 
         // Place the items collection view right underneath
         NSLayoutConstraint(item: itemsCollectionView,
@@ -177,13 +186,14 @@ final public class FlaneurCollectionView: UIView {
                            attribute: .trailing,
                            multiplier: 1.0,
                            constant: -padding).isActive = true
-        NSLayoutConstraint(item: itemsCollectionView,
-                           attribute: .top,
-                           relatedBy: .equal,
-                           toItem: filtersCollectionView,
-                           attribute: .bottom,
-                           multiplier: 1.0,
-                           constant: padding).isActive = true
+        itemsCollectionViewTopConstraint = NSLayoutConstraint(item: itemsCollectionView,
+                                                              attribute: .top,
+                                                              relatedBy: .equal,
+                                                              toItem: self,
+                                                              attribute: .top,
+                                                              multiplier: 1.0,
+                                                              constant: padding)
+        itemsCollectionViewTopConstraint.isActive = true
         NSLayoutConstraint(item: itemsCollectionView,
                            attribute: .bottom,
                            relatedBy: .equal,
@@ -195,10 +205,6 @@ final public class FlaneurCollectionView: UIView {
         // Finish setting up things
         itemsListAdapter.collectionView = itemsCollectionView
         itemsListAdapter.dataSource = self
-        itemsCollectionView.contentInset = UIEdgeInsets(top: borderWidth / 2.0,
-                                                        left: borderWidth,
-                                                        bottom: borderWidth / 2.0,
-                                                        right: borderWidth)
 
         filtersListAdapter.collectionView = filtersCollectionView
         filtersListAdapter.dataSource = self
@@ -213,9 +219,7 @@ final public class FlaneurCollectionView: UIView {
     }
 
     func didSelectFilter(_ filterToRemove: FlaneurCollectionFilter) {
-        debugPrint("BEFORE Filters.Count: ", filters.count)
         self.filters = filters.filter { $0.name != filterToRemove.name }
-        debugPrint("AFTER Filters.Count: ", filters.count)
     }
 }
 
@@ -262,12 +266,12 @@ extension FlaneurCollectionView: ListAdapterDataSource {
 
     func filtersObjects() -> [ListDiffable] {
         // Adjust the height of the filtersCollectionView
-        let newHeight: CGFloat = filters.isEmpty ? 0.0 : 35.0
-        if filtersCollectionViewHeightConstraint.constant != newHeight {
-            UIView.animate(withDuration: 0.3,
+        let newHeight: CGFloat = filters.isEmpty ? 0.0 : filtersViewHeight
+        if itemsCollectionViewTopConstraint.constant != newHeight {
+            UIView.animate(withDuration: 5.0,
                            delay: 0.0,
                            animations: {
-                            self.filtersCollectionViewHeightConstraint.constant = newHeight
+                            self.itemsCollectionViewTopConstraint.constant = newHeight
             })
         }
 
@@ -291,7 +295,7 @@ extension FlaneurCollectionView: ListAdapterDataSource {
             fatalError("unexpected case")
         }
     }
-    
+
     /// Cf. `IGListKit` documentation
     ///
     /// - Parameter listAdapter: listAdapter

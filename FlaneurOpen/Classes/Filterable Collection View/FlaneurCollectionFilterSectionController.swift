@@ -11,15 +11,20 @@ import IGListKit
 class FlaneurCollectionFilterSectionController: ListSectionController {
     let object: FlaneurCollectionFilter
     weak var collectionView: FlaneurCollectionView?
+    var privateCellForOffRendering: FlaneurFilterCollectionViewCell
 
     init(object: FlaneurCollectionFilter,
          collectionView: FlaneurCollectionView) {
         self.object = object
         self.collectionView = collectionView
+        self.privateCellForOffRendering = FlaneurFilterCollectionViewCell(frame: CGRect(x: 0.0, y: 0.0, width: 1000.0, height: 23.0))
     }
 
     override func sizeForItem(at index: Int) -> CGSize {
-        return CGSize(width: 240, height: 23.0)
+        object.configureCell(cell: privateCellForOffRendering)
+        let size = CGSize(width: privateCellForOffRendering.recommendedWidthForCell(), height: 23.0)
+        debugPrint("width for \(object.name):", size.width)
+        return size
     }
 
     override func cellForItem(at index: Int) -> UICollectionViewCell {

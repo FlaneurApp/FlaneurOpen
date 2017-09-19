@@ -38,7 +38,8 @@ extension FlaneurCollectionFilter: FlaneurCollectionItem {
     }
 
     public func configureCell(cell: UICollectionViewCell) {
-        print("TODO: configureCell for FlaneurCollectionFilter")
-        cell.backgroundColor = .blue
+        if let cell = cell as? FlaneurFilterCollectionViewCell {
+            cell.filterNameLabel.text = name
+        }
     }
 }
