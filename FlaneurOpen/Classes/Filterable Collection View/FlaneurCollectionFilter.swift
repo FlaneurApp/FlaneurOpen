@@ -10,10 +10,12 @@ import IGListKit
 
 public class FlaneurCollectionFilter {
     let name: String
+    let rightImage: UIImage?
     let filter: ((FlaneurCollectionItem) -> Bool)
 
-    public init(name: String, filter: @escaping ((FlaneurCollectionItem) -> Bool)) {
+    public init(name: String, rightImage: UIImage? = nil, filter: @escaping ((FlaneurCollectionItem) -> Bool)) {
         self.name = name
+        self.rightImage = rightImage
         self.filter = filter
     }
 }
@@ -40,6 +42,7 @@ extension FlaneurCollectionFilter: FlaneurCollectionItem {
     public func configureCell(cell: UICollectionViewCell) {
         if let cell = cell as? FlaneurFilterCollectionViewCell {
             cell.filterNameLabel.text = name
+            cell.rightIconImage = self.rightImage
         }
     }
 }

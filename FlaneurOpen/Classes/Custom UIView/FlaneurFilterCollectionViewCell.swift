@@ -16,7 +16,13 @@ class FlaneurFilterCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var filterNameLabel: UILabel!
     @IBOutlet weak var rightIconImageView: UIImageView!
 
-    var rightIconImage: UIImage = UIImage(named: "sample-321-like")!
+    var rightIconImage: UIImage? = nil {
+        didSet {
+            if let image = rightIconImage {
+                rightIconImageView.image = image.withRenderingMode(.alwaysTemplate)
+            }
+        }
+    }
     var nbDisplays: Int = 0
 
     override init(frame: CGRect) {
@@ -36,7 +42,9 @@ class FlaneurFilterCollectionViewCell: UICollectionViewCell {
 
         let tmpImageView = UIImageView()
         tmpImageView.contentMode = .scaleAspectFit
-        tmpImageView.image = rightIconImage.withRenderingMode(.alwaysTemplate)
+        if let image = rightIconImage {
+            tmpImageView.image = image.withRenderingMode(.alwaysTemplate)
+        }
         self.rightIconImageView = tmpImageView
         self.rightIconImageView.tintColor = .white
 

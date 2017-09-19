@@ -93,7 +93,8 @@ class FilteredCollectionViewDemoViewController: UIViewController {
             self.collectionViewContainer.filters = []
         }
         let filterFranceAction = UIAlertAction(title: "Add France filter", style: .default) { _ in
-            self.collectionViewContainer.filters.append(FlaneurCollectionFilter(name: "France") { element in
+            self.collectionViewContainer.filters.append(FlaneurCollectionFilter(name: "France",
+                                                                                rightImage: UIImage(named: "sample-821-stamp")!) { element in
                 if let object = element as? FilterableLocation {
                     return object.categories.contains("France")
                 } else {
@@ -102,7 +103,8 @@ class FilteredCollectionViewDemoViewController: UIViewController {
             })
         }
         let filterSpainAction = UIAlertAction(title: "Add Spain filter", style: .default) { _ in
-            self.collectionViewContainer.filters.append(FlaneurCollectionFilter(name: "Spain") { element in
+            self.collectionViewContainer.filters.append(FlaneurCollectionFilter(name: "Spain",
+                                                                                rightImage: UIImage(named: "sample-1082-merge")!) { element in
                 if let object = element as? FilterableLocation {
                     return object.categories.contains("Spain")
                 } else {
