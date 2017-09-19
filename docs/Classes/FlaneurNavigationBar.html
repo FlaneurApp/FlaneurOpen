@@ -14,7 +14,7 @@
     <a title="FlaneurNavigationBar Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">FlaneurOpen Docs</a> (64% documented)</p>
+        <p><a href="../index.html">FlaneurOpen Docs</a> (63% documented)</p>
         <p class="header-right"><a href="https://github.com/FlaneurApp/FlaneurOpen"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -112,12 +112,12 @@ but without the functional part requiring a <code>UINavigationController</code>.
 <h2 id='overview' class='heading'>Overview</h2>
 
 <p>A <code>FlaneurNavigationBar</code> is a bar, typically displayed at the top of the window, containing buttons that
-can be easily customized with blocks. The primary components are a left button, a title, and an optional 
+can be easily customized with blocks. The primary components are a left button, a title, and an optional
 array of right buttons. You must use a flaneur navigation bar as a standalone object. It has no compatibility
 whatsoever with a navigation controller object.</p>
 <h2 id='behaviors' class='heading'>Behaviors</h2>
 
-<p>When a left action is configured, then the whole navigation bar actions it. It does not interfere with 
+<p>When a left action is configured, then the whole navigation bar actions it. It does not interfere with
 the right buttons.</p>
 <h2 id='using-a-flaneurnavigationbar' class='heading'>Using a FlaneurNavigationBar</h2>
 
@@ -135,7 +135,7 @@ self.navigationBar.configure(title: ...,
 <h2 id='customizing-the-appearance-of-the-bar-via-code-uiappearance-code' class='heading'>Customizing the appearance of the bar via <code>UIAppearance</code></h2>
 
 <p>You can customize the appearance of a <code>FlaneurNavigationBar</code> via <code>UIAppearance</code> so that it has a consistent
-appearance in your app with unique lines of code. </p>
+appearance in your app with unique lines of code.</p>
 
 <p>For instance, the following code makes the title of the bar use the Futura font everywhere in your app:</p>
 <pre class="highlight plaintext"><code>UILabel.appearance(whenContainedInInstancesOf: [FlaneurNavigationBar.self]).font = UIFont(name: "Futura-Medium", size: 16.0)
@@ -264,7 +264,7 @@ appearance in your app with unique lines of code. </p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Configures the bar with content. </p>
+                        <p>Configures the bar with content.</p>
 
 <p>This method should only be called once per instance.</p>
 
@@ -367,6 +367,33 @@ appearance in your app with unique lines of code. </p>
                             </tr>
                           </tbody>
                         </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC11FlaneurOpen20FlaneurNavigationBar15setRightActionsFGSaVS_26FlaneurNavigationBarAction_T_"></a>
+                    <a name="//apple_ref/swift/Method/setRightActions(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC11FlaneurOpen20FlaneurNavigationBar15setRightActionsFGSaVS_26FlaneurNavigationBarAction_T_">setRightActions(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">FlaneurNavigationBar</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>

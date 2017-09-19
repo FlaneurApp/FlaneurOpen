@@ -99,6 +99,13 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/FlaneurOpen/Classes/Custom UIView/FlaneurNavigationBar.swift",
+      "line": 253,
+      "symbol": "FlaneurNavigationBar.setRightActions(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/FlaneurOpen/Classes/Filterable Collection View/FlaneurCollectionFilter.swift",
       "line": null,
       "symbol": "FlaneurCollectionFilter",

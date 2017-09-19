@@ -402,12 +402,30 @@
                                     <constraint firstAttribute="height" constant="66" id="BUJ-Ip-HDK"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Sj-Ma-8vP">
+                                <rect key="frame" x="123" y="166" width="129" height="30"/>
+                                <state key="normal" title="Clear right buttons"/>
+                                <connections>
+                                    <action selector="clearRightButtonsAction:" destination="97R-Pm-lCJ" eventType="touchUpInside" id="wdK-6k-QMO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WgY-PH-dJL">
+                                <rect key="frame" x="121" y="236" width="132" height="30"/>
+                                <state key="normal" title="Reset right buttons"/>
+                                <connections>
+                                    <action selector="restoreRightButtonsAction:" destination="97R-Pm-lCJ" eventType="touchUpInside" id="zH0-vp-lFk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Ul8-Au-ZxE" firstAttribute="top" secondItem="nzl-cE-e6v" secondAttribute="bottom" id="67B-PU-kw9"/>
+                            <constraint firstItem="WgY-PH-dJL" firstAttribute="top" secondItem="1Sj-Ma-8vP" secondAttribute="bottom" constant="40" id="7lU-Uz-CPm"/>
+                            <constraint firstItem="WgY-PH-dJL" firstAttribute="centerX" secondItem="gtm-Ya-Oiv" secondAttribute="centerX" id="ZQy-kV-PTX"/>
+                            <constraint firstItem="1Sj-Ma-8vP" firstAttribute="centerX" secondItem="gtm-Ya-Oiv" secondAttribute="centerX" id="Zok-7D-1bm"/>
                             <constraint firstAttribute="trailing" secondItem="Ul8-Au-ZxE" secondAttribute="trailing" id="bTM-3f-mUo"/>
                             <constraint firstItem="Ul8-Au-ZxE" firstAttribute="leading" secondItem="gtm-Ya-Oiv" secondAttribute="leading" id="iKX-vr-qaR"/>
+                            <constraint firstItem="1Sj-Ma-8vP" firstAttribute="top" secondItem="Ul8-Au-ZxE" secondAttribute="bottom" constant="80" id="p3t-d1-Ywe"/>
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
@@ -426,7 +444,7 @@
                 <navigationController id="sCv-A8-Rm8" sceneMemberID="viewController">
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Chc-du-Ulb">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Chc-du-Ulb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

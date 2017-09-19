@@ -9,6 +9,8 @@
 import UIKit
 import Kingfisher
 
+fileprivate let defaultTitleLabelTrailingValue: CGFloat = 16.0
+
 /// The structure describing:
 ///
 /// * how the associated control should look like
@@ -38,13 +40,13 @@ public struct FlaneurNavigationBarAction {
 /// ## Overview
 ///
 /// A `FlaneurNavigationBar` is a bar, typically displayed at the top of the window, containing buttons that
-/// can be easily customized with blocks. The primary components are a left button, a title, and an optional 
+/// can be easily customized with blocks. The primary components are a left button, a title, and an optional
 /// array of right buttons. You must use a flaneur navigation bar as a standalone object. It has no compatibility
 /// whatsoever with a navigation controller object.
 ///
 /// ## Behaviors
 ///
-/// When a left action is configured, then the whole navigation bar actions it. It does not interfere with 
+/// When a left action is configured, then the whole navigation bar actions it. It does not interfere with
 /// the right buttons.
 ///
 /// ## Using a FlaneurNavigationBar
@@ -64,7 +66,7 @@ public struct FlaneurNavigationBarAction {
 /// ## Customizing the appearance of the bar via `UIAppearance`
 ///
 /// You can customize the appearance of a `FlaneurNavigationBar` via `UIAppearance` so that it has a consistent
-/// appearance in your app with unique lines of code. 
+/// appearance in your app with unique lines of code.
 ///
 /// For instance, the following code makes the title of the bar use the Futura font everywhere in your app:
 ///
@@ -78,6 +80,8 @@ final public class FlaneurNavigationBar: UIView {
     var leftButton: UIButton!
     var rightButtons: [UIButton]!
     var bottomBorder: UIView!
+
+    var titleLabelTrailingLayoutConstraint: NSLayoutConstraint!
 
     var leftButtonAction: () -> () = { _ in
     }
@@ -102,7 +106,7 @@ final public class FlaneurNavigationBar: UIView {
 
     // MARK: - Configuring the bar
 
-    /// Configures the bar with content. 
+    /// Configures the bar with content.
     ///
     /// This method should only be called once per instance.
     ///
@@ -114,7 +118,7 @@ final public class FlaneurNavigationBar: UIView {
                           leftAction: FlaneurNavigationBarAction? = nil,
                           rightActions: [FlaneurNavigationBarAction]? = nil) {
         var titleLabelLeadingValue: CGFloat = 16.0
-        var titleLabelTrailingValue: CGFloat = 16.0
+        var titleLabelTrailingValue: CGFloat = defaultTitleLabelTrailingValue
 
         if let leftAction = leftAction {
             titleLabelLeadingValue = 42.0
@@ -155,41 +159,7 @@ final public class FlaneurNavigationBar: UIView {
         }
 
         if let rightActions = rightActions {
-            for index in 0..<rightActions.count {
-                let rightAction = rightActions[index]
-                let newRightButton = UIButton(type: .custom)
-                rightButtons.append(newRightButton)
-                rightButtonsActions.append(rightAction.action)
-
-                // Setting up button
-                newRightButton.imageView?.contentMode = .scaleAspectFit
-                newRightButton.imageView?.tintColor = .black
-                newRightButton.setImage(rightAction.image, for: .normal)
-                newRightButton.showsTouchWhenHighlighted = true
-                newRightButton.isUserInteractionEnabled = true
-                newRightButton.addTarget(self, action: #selector(rightButtonPressed), for: .touchUpInside)
-                addSubview(newRightButton)
-
-                // Setting up button's constraints
-                newRightButton.translatesAutoresizingMaskIntoConstraints = false
-                let buttonSize: CGFloat = 24.0
-
-                // Set the trailing space to 8.0 point
-                let space: CGFloat = -18.0 + CGFloat(index) * (-24.0 - 12.0)
-                titleLabelTrailingValue = -space + 24.0
-                NSLayoutConstraint(item: newRightButton,
-                                   attribute: .trailing,
-                                   relatedBy: .equal,
-                                   toItem: self,
-                                   attribute: .trailing,
-                                   multiplier: 1.0,
-                                   constant: space).isActive = true
-                // Center vertically
-                NSLayoutConstraint(item: newRightButton, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1.0, constant: 0.0).isActive = true
-                // Give a square width & height
-                NSLayoutConstraint(item: newRightButton, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: buttonSize).isActive = true
-                NSLayoutConstraint(item: newRightButton, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: buttonSize).isActive = true
-            }
+            titleLabelTrailingValue = setupRightActions(rightActions)
         }
 
         // Setting up title
@@ -207,13 +177,14 @@ final public class FlaneurNavigationBar: UIView {
                            attribute: .leading,
                            multiplier: 1.0,
                            constant: titleLabelLeadingValue).isActive = true
-        NSLayoutConstraint(item: titleLabel,
-                           attribute: .trailing,
-                           relatedBy: .equal,
-                           toItem: self,
-                           attribute: .trailing,
-                           multiplier: 1.0,
-                           constant: -titleLabelTrailingValue).isActive = true
+        titleLabelTrailingLayoutConstraint = NSLayoutConstraint(item: titleLabel,
+                                                                attribute: .trailing,
+                                                                relatedBy: .equal,
+                                                                toItem: self,
+                                                                attribute: .trailing,
+                                                                multiplier: 1.0,
+                                                                constant: -titleLabelTrailingValue)
+        titleLabelTrailingLayoutConstraint.isActive = true
         NSLayoutConstraint(item: titleLabel,
                            attribute: .centerY,
                            relatedBy: .equal,
@@ -223,11 +194,64 @@ final public class FlaneurNavigationBar: UIView {
                            constant: 0.0).isActive = true
     }
 
+    func setupRightActions(_ rightActions: [FlaneurNavigationBarAction]) -> CGFloat {
+        var newTitleLabelTrailingValue: CGFloat = defaultTitleLabelTrailingValue
+
+        // Remove old buttons
+        for oldRightButton in rightButtons {
+            oldRightButton.removeFromSuperview()
+            oldRightButton.removeTarget(self, action: #selector(rightButtonPressed), for: .touchUpInside)
+        }
+
+        // Add the new buttons
+        for index in 0..<rightActions.count {
+            let rightAction = rightActions[index]
+            let newRightButton = UIButton(type: .custom)
+            rightButtons.append(newRightButton)
+            rightButtonsActions.append(rightAction.action)
+
+            // Setting up button
+            newRightButton.imageView?.contentMode = .scaleAspectFit
+            newRightButton.imageView?.tintColor = .black
+            newRightButton.setImage(rightAction.image, for: .normal)
+            newRightButton.showsTouchWhenHighlighted = true
+            newRightButton.isUserInteractionEnabled = true
+            newRightButton.addTarget(self, action: #selector(rightButtonPressed), for: .touchUpInside)
+            addSubview(newRightButton)
+
+            // Setting up button's constraints
+            newRightButton.translatesAutoresizingMaskIntoConstraints = false
+            let buttonSize: CGFloat = 24.0
+
+            // Set the trailing space to 8.0 point
+            let space: CGFloat = -18.0 + CGFloat(index) * (-24.0 - 12.0)
+            newTitleLabelTrailingValue = -space + 24.0
+            NSLayoutConstraint(item: newRightButton,
+                               attribute: .trailing,
+                               relatedBy: .equal,
+                               toItem: self,
+                               attribute: .trailing,
+                               multiplier: 1.0,
+                               constant: space).isActive = true
+            // Center vertically
+            NSLayoutConstraint(item: newRightButton, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1.0, constant: 0.0).isActive = true
+            // Give a square width & height
+            NSLayoutConstraint(item: newRightButton, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: buttonSize).isActive = true
+            NSLayoutConstraint(item: newRightButton, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: buttonSize).isActive = true
+        }
+
+        return newTitleLabelTrailingValue
+    }
+
     /// Sets the title.
     ///
     /// - Parameter title: The string to set as the title displayed in the center of the navigation bar.
     public func setTitle(_ title: String) {
         titleLabel.flaneurText(title, letterSpacing: 2.0)
+    }
+
+    public func setRightActions(_ rightActions: [FlaneurNavigationBarAction]) {
+        titleLabelTrailingLayoutConstraint.constant = -setupRightActions(rightActions)
     }
 
     // MARK: - Actions

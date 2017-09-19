@@ -21,6 +21,13 @@ class FlaneurNavigationBarDemoViewController: UIViewController {
             self.navigationController?.popViewController(animated: true)
         }
 
+
+        self.navigationBar.configure(title: "My Super Very Long Navigation Bar Title".uppercased(),
+                                     leftAction: myLeftAction,
+                                     rightActions: rightActions())
+    }
+
+    func rightActions() -> [FlaneurNavigationBarAction] {
         let myFirstRightAction = FlaneurNavigationBarAction(image: UIImage(named: "sample-986-ghost")!) { _ in
             let alertViewController = UIAlertController(title: "My 1st Alert", message: "Cool", preferredStyle: .alert)
             let dismissAction = UIAlertAction(title: "OK", style: .cancel, handler: { _ in debugPrint("did dismiss alert") })
@@ -39,9 +46,7 @@ class FlaneurNavigationBarDemoViewController: UIViewController {
             }
         }
 
-        self.navigationBar.configure(title: "My Super Very Long Navigation Bar Title".uppercased(),
-                                     leftAction: myLeftAction,
-                                     rightActions: [myFirstRightAction, mySecondRightAction])
+        return [myFirstRightAction, mySecondRightAction]
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -50,5 +55,13 @@ class FlaneurNavigationBarDemoViewController: UIViewController {
 
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+
+    @IBAction func clearRightButtonsAction(_ sender: Any? = nil) {
+        navigationBar.setRightActions([])
+    }
+
+    @IBAction func restoreRightButtonsAction(_ sender: Any? = nil) {
+        navigationBar.setRightActions(rightActions())
     }
 }
