@@ -10,7 +10,9 @@ import UIKit
 import IGListKit
 
 fileprivate let borderWidth: CGFloat = 9.0
-fileprivate let nbColumns: CGFloat = 2.0
+fileprivate let defaultNbColumns: Int = 2
+fileprivate let defaultCellSizeRatio: CGFloat = 1.0
+
 fileprivate let filtersViewHeight: CGFloat = 44.0
 
 public protocol FlaneurCollectionViewDelegate {
@@ -19,6 +21,9 @@ public protocol FlaneurCollectionViewDelegate {
 
 /// TODO
 final public class FlaneurCollectionView: UIView {
+    public var nbColumns: Int = defaultNbColumns
+    public var cellSizeRatio: CGFloat = defaultCellSizeRatio
+
     /// The object that acts as the delegate of the collection view.
     ///
     /// The delegate must adopt the `FlaneurCollectionContainerViewDelegate` protocol.
@@ -114,7 +119,9 @@ final public class FlaneurCollectionView: UIView {
     ///   - viewController: TODO
     ///   - items: TODO
     public func configure(viewController: UIViewController,
-                          items: [FlaneurCollectionItem]) {
+                          items: [FlaneurCollectionItem],
+                          nbColumns: Int = defaultNbColumns,
+                          cellSizeRatio: CGFloat = defaultCellSizeRatio) {
         // This prevents an automatic 64pt offset for the status bar + navigation bar.
         viewController.automaticallyAdjustsScrollViewInsets = false
 
@@ -133,6 +140,9 @@ final public class FlaneurCollectionView: UIView {
         }()
 
         self.items = items
+
+        self.nbColumns = nbColumns
+        self.cellSizeRatio = cellSizeRatio
 
         // Setup constraint
         let padding: CGFloat = 0.0
@@ -287,7 +297,9 @@ extension FlaneurCollectionView: ListAdapterDataSource {
     public func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
         if listAdapter == itemsListAdapter {
             return FlaneurCollectionItemSectionController(object: object as! FlaneurCollectionItem,
-                                                          collectionView: self)
+                                                          collectionView: self,
+                                                          nbColumns: self.nbColumns,
+                                                          cellSizeRatio: self.cellSizeRatio)
         } else if listAdapter == filtersListAdapter {
             return FlaneurCollectionFilterSectionController(object: object as! FlaneurCollectionFilter,
                                                             collectionView: self)

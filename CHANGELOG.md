@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 
 * Made the right buttons of a `FlaneurNavigationBar` configurable dynamically #7
+* Make nbColumns and cellRatio customizable for FlaneurCollectionView #8
 
 ## [0.3.0] - 2017-09-19
 

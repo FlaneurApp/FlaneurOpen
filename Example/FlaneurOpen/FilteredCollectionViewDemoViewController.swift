@@ -80,7 +80,7 @@ class FilteredCollectionViewDemoViewController: UIViewController {
         self.navigationItem.title = "Filtered Collection Demo"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(presentActions))
 
-        collectionViewContainer.configure(viewController: self, items: allItems)
+        collectionViewContainer.configure(viewController: self, items: allItems, nbColumns: 2)
         collectionViewContainer.delegate = self
     }
 
@@ -116,7 +116,10 @@ class FilteredCollectionViewDemoViewController: UIViewController {
             self.dismiss(animated: true)
         }
 
-        for action in [showAllAction, filterFranceAction, filterSpainAction, cancelAction] {
+        for action in [showAllAction,
+                       filterFranceAction,
+                       filterSpainAction,
+                       cancelAction] {
             alertVC.addAction(action)
         }
         self.present(alertVC, animated: true)

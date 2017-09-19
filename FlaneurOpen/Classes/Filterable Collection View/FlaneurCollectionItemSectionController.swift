@@ -12,16 +12,19 @@ class FlaneurCollectionItemSectionController: ListSectionController {
     let borderWidth: CGFloat
     let nbColumns: Int
     let object: FlaneurCollectionItem
+    let cellSizeRatio: CGFloat
     weak var collectionView: FlaneurCollectionView?
 
     init(object: FlaneurCollectionItem,
          collectionView: FlaneurCollectionView,
          borderWidth: CGFloat = 9.0,
-         nbColumns: Int = 2) {
+         nbColumns: Int = 2,
+         cellSizeRatio: CGFloat = 1.0) {
         self.object = object
         self.collectionView = collectionView
         self.borderWidth = borderWidth
         self.nbColumns = nbColumns
+        self.cellSizeRatio = cellSizeRatio
     }
 
     override func sizeForItem(at index: Int) -> CGSize {
@@ -32,7 +35,7 @@ class FlaneurCollectionItemSectionController: ListSectionController {
         let nbColumnsAsFloat = CGFloat(nbColumns)
         let squareSize = (context.containerSize.width - (2.0 + nbColumnsAsFloat - 1.0) * borderWidth) / nbColumnsAsFloat
 
-        return CGSize(width: squareSize, height: squareSize)
+        return CGSize(width: squareSize, height: squareSize * cellSizeRatio)
     }
 
     override func cellForItem(at index: Int) -> UICollectionViewCell {

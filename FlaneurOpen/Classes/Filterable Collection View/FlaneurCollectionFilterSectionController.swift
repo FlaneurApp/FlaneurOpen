@@ -23,7 +23,6 @@ class FlaneurCollectionFilterSectionController: ListSectionController {
     override func sizeForItem(at index: Int) -> CGSize {
         object.configureCell(cell: privateCellForOffRendering)
         let size = CGSize(width: privateCellForOffRendering.recommendedWidthForCell(), height: 23.0)
-        debugPrint("width for \(object.name):", size.width)
         return size
     }
 
