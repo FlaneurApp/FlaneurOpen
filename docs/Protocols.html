@@ -13,7 +13,7 @@
     <a title="Protocols  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">FlaneurOpen Docs</a> (60% documented)</p>
+        <p><a href="index.html">FlaneurOpen Docs</a> (64% documented)</p>
         <p class="header-right"><a href="https://github.com/FlaneurApp/FlaneurOpen"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -31,7 +31,10 @@
             <a href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes/FlaneurCollectionContainerView.html">FlaneurCollectionContainerView</a>
+                <a href="Classes/FlaneurCollectionFilter.html">FlaneurCollectionFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/FlaneurCollectionView.html">FlaneurCollectionView</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/FlaneurMapAnnotation.html">FlaneurMapAnnotation</a>
@@ -59,7 +62,7 @@
             <a href="Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Extensions/FlaneurCollectionListAdapter.html">FlaneurCollectionListAdapter</a>
+                <a href="Extensions/FlaneurCollectionWithBorderListAdapter.html">FlaneurCollectionWithBorderListAdapter</a>
               </li>
               <li class="nav-group-task">
                 <a href="Extensions/UILabel.html">UILabel</a>
@@ -70,10 +73,10 @@
             <a href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Protocols/FlaneurCollectionContainerViewDelegate.html">FlaneurCollectionContainerViewDelegate</a>
+                <a href="Protocols/FlaneurCollectionItem.html">FlaneurCollectionItem</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/FlaneurDiffable.html">FlaneurDiffable</a>
+                <a href="Protocols/FlaneurCollectionViewDelegate.html">FlaneurCollectionViewDelegate</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/FlaneurMapItem.html">FlaneurMapItem</a>
@@ -86,9 +89,6 @@
           <li class="nav-group-name">
             <a href="Structs.html">Structs</a>
             <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Structs/FlaneurCollectionFilter.html">FlaneurCollectionFilter</a>
-              </li>
               <li class="nav-group-task">
                 <a href="Structs/FlaneurNavigationBarAction.html">FlaneurNavigationBarAction</a>
               </li>
@@ -109,9 +109,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:P11FlaneurOpen15FlaneurDiffable"></a>
-                    <a name="//apple_ref/swift/Protocol/FlaneurDiffable" class="dashAnchor"></a>
-                    <a class="token" href="#/s:P11FlaneurOpen15FlaneurDiffable">FlaneurDiffable</a>
+                    <a name="/s:P11FlaneurOpen21FlaneurCollectionItem"></a>
+                    <a name="//apple_ref/swift/Protocol/FlaneurCollectionItem" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P11FlaneurOpen21FlaneurCollectionItem">FlaneurCollectionItem</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -119,27 +119,31 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Convenience protocol for objects featured in a <code>IGListKit</code> collection view</p>
+                        <p>Protocol that items of a <code>FlaneurCollectionContainerView</code> must conform to.</p>
 
-                        <a href="Protocols/FlaneurDiffable.html" class="slightly-smaller">See more</a>
+                        <a href="Protocols/FlaneurCollectionItem.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">FlaneurDiffable</span><span class="p">:</span> <span class="kt">ListDiffable</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">FlaneurCollectionItem</span><span class="p">:</span> <span class="kt">ListDiffable</span></code></pre>
 
                         </div>
                       </div>
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:P11FlaneurOpen38FlaneurCollectionContainerViewDelegate"></a>
-                    <a name="//apple_ref/swift/Protocol/FlaneurCollectionContainerViewDelegate" class="dashAnchor"></a>
-                    <a class="token" href="#/s:P11FlaneurOpen38FlaneurCollectionContainerViewDelegate">FlaneurCollectionContainerViewDelegate</a>
+                    <a name="/s:P11FlaneurOpen29FlaneurCollectionViewDelegate"></a>
+                    <a name="//apple_ref/swift/Protocol/FlaneurCollectionViewDelegate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P11FlaneurOpen29FlaneurCollectionViewDelegate">FlaneurCollectionViewDelegate</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -149,7 +153,7 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
-                        <a href="Protocols/FlaneurCollectionContainerViewDelegate.html" class="slightly-smaller">See more</a>
+                        <a href="Protocols/FlaneurCollectionViewDelegate.html" class="slightly-smaller">See more</a>
                       </div>
                     </section>
                   </div>
@@ -220,7 +224,7 @@ a <code><a href="Classes/FlaneurMapViewController.html">FlaneurMapViewController
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2017 <a class="link" href="http://flaneurapp.com" target="_blank" rel="external">Flâneur</a>. All rights reserved. (Last updated: 2017-09-14)</p>
+          <p>&copy; 2017 <a class="link" href="http://flaneurapp.com" target="_blank" rel="external">Flâneur</a>. All rights reserved. (Last updated: 2017-09-19)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
