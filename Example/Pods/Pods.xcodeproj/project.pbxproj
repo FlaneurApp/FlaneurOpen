@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00EC498B1F73FD8300CC4667 /* FlaneurMapItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EC49891F73FD5200CC4667 /* FlaneurMapItem.swift */; };
+		00EC498D1F73FDB000CC4667 /* FlaneurMapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EC498C1F73FDB000CC4667 /* FlaneurMapAnnotation.swift */; };
 		047A68C646E00EB6D7D4D7343B801D09 /* AdapterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DE855E447A2DEE9F69727FE0E9CEAA /* AdapterProtocols.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		04B13FCC283CEA197DA7384DFC828A53 /* IGListDebugger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC824DE6021520008FCCF4450DC0C0E /* IGListDebugger.m */; };
 		051A816D6DD0CAE13496DDCFE0829167 /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = EE9741CA08F217E384205DE20B2DBF8D /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -74,7 +76,7 @@
 		3D58D48089E1688122FFC47FE322D725 /* UILabel+Flaneur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEDFD27F1D491CD140ECDE73676CEEB /* UILabel+Flaneur.swift */; };
 		3E4264A3C794FBDD205FA2FE91146F11 /* IGListSectionControllerInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = E54F022207276C1D76503084EC670886 /* IGListSectionControllerInternal.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		3F14F74447BEC2C98C1C8B0ED3093EE2 /* IGListBindingSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF39D71F4EB634575BB7AC8A546B8DAA /* IGListBindingSectionController.m */; };
-		3F686EEB8B3F15102AAC7BFE48C5DB26 /* FlaneurMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4B9760617691B2F9A3835FC36D181F /* FlaneurMapViewController.swift */; };
+		3F686EEB8B3F15102AAC7BFE48C5DB26 /* FlaneurMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4B9760617691B2F9A3835FC36D181F /* FlaneurMapView.swift */; };
 		409FAF576DBF8C84A9B6E18637ACE6E6 /* QuickSelectedTestSuiteBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1226A409D04FD26B4D523F68EEC949FE /* QuickSelectedTestSuiteBuilder.swift */; };
 		40DFBA37EC892AAA1E90AF4889E0049C /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54880D39CB1DA43EC68135D2D7A6016F /* Quick.framework */; };
 		421CDD701AEE0F2458A84200366CDD0F /* UIImage+Snapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = EA393F1DC3B10E2FF36BEE478E4C57A9 /* UIImage+Snapshot.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -382,6 +384,8 @@
 		0062390BA99AD68B95DE3FB21EB42878 /* IGListAdapterUpdaterInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListAdapterUpdaterInternal.h; path = Source/Internal/IGListAdapterUpdaterInternal.h; sourceTree = "<group>"; };
 		0076DD0FABBBF740E8DFCA4F3C54DFC0 /* MatchError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatchError.swift; path = Sources/Nimble/Matchers/MatchError.swift; sourceTree = "<group>"; };
 		00BE9AFE4CCE88BB4AEE0B90CBB79E1B /* IGListSectionMap.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IGListSectionMap.m; path = Source/Internal/IGListSectionMap.m; sourceTree = "<group>"; };
+		00EC49891F73FD5200CC4667 /* FlaneurMapItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlaneurMapItem.swift; sourceTree = "<group>"; };
+		00EC498C1F73FDB000CC4667 /* FlaneurMapAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlaneurMapAnnotation.swift; sourceTree = "<group>"; };
 		00EF69A9BD8C2B1E23CE557E8C95EE9B /* HaveValidSnapshot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HaveValidSnapshot.swift; sourceTree = "<group>"; };
 		010C81162F8F92DED56037FD9ABDB58C /* IGListDebugger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListDebugger.h; path = Source/Internal/IGListDebugger.h; sourceTree = "<group>"; };
 		01C57EC2FE6E100E2B7665C2282BF716 /* ImagePrefetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImagePrefetcher.swift; path = Sources/ImagePrefetcher.swift; sourceTree = "<group>"; };
@@ -439,7 +443,7 @@
 		390B55A4F9CF1DAE48BFA8BD909D4F08 /* IGListExperiments.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListExperiments.h; path = Source/Common/IGListExperiments.h; sourceTree = "<group>"; };
 		3A7B3FEB970F55F700E1D9AF5EBCD388 /* World.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = World.h; path = Sources/QuickObjectiveC/World.h; sourceTree = "<group>"; };
 		3AD48F686751525AFF5D18C5ACEB78CD /* IGListDiff.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = IGListDiff.mm; path = Source/Common/IGListDiff.mm; sourceTree = "<group>"; };
-		3B4B9760617691B2F9A3835FC36D181F /* FlaneurMapViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FlaneurMapViewController.swift; sourceTree = "<group>"; };
+		3B4B9760617691B2F9A3835FC36D181F /* FlaneurMapView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FlaneurMapView.swift; sourceTree = "<group>"; };
 		3C0DCF1E4E177D2AB6EBBF753E2F4D76 /* BeLogical.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeLogical.swift; path = Sources/Nimble/Matchers/BeLogical.swift; sourceTree = "<group>"; };
 		3C42BB8FCB5DF26171203E6F75E6DC4F /* Pods-FlaneurOpen_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FlaneurOpen_Example.release.xcconfig"; sourceTree = "<group>"; };
 		3CCC15910792FCBBD376C67E44CE917C /* Nimble-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nimble-prefix.pch"; sourceTree = "<group>"; };
@@ -1134,7 +1138,9 @@
 		6DE8563D70E57461180811A06B085233 /* MapKitUtils */ = {
 			isa = PBXGroup;
 			children = (
-				3B4B9760617691B2F9A3835FC36D181F /* FlaneurMapViewController.swift */,
+				3B4B9760617691B2F9A3835FC36D181F /* FlaneurMapView.swift */,
+				00EC49891F73FD5200CC4667 /* FlaneurMapItem.swift */,
+				00EC498C1F73FDB000CC4667 /* FlaneurMapAnnotation.swift */,
 			);
 			name = MapKitUtils;
 			path = FlaneurOpen/Classes/MapKitUtils;
@@ -1883,13 +1889,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				499D94854A920E98DF8D5A11362BFB1B /* FlaneurCollectionFilter.swift in Sources */,
+				00EC498D1F73FDB000CC4667 /* FlaneurMapAnnotation.swift in Sources */,
 				55B0B3355D9828153897EC19CC84C4DD /* FlaneurCollectionFilterSectionController.swift in Sources */,
+				00EC498B1F73FD8300CC4667 /* FlaneurMapItem.swift in Sources */,
 				68CBACA0953185A8967EF71707EE2B34 /* FlaneurCollectionItem.swift in Sources */,
 				06BA92C3190F687CD101A8A7F00D3764 /* FlaneurCollectionItemSectionController.swift in Sources */,
 				05FAD4E874C1100B0887A537AC912E93 /* FlaneurCollectionView.swift in Sources */,
 				CE688083BF82357826777AC1E8E23F14 /* FlaneurCollectionWithBorderListAdapter.swift in Sources */,
 				2D4D834D6AB86836FE263292037F848B /* FlaneurFilterCollectionViewCell.swift in Sources */,
-				3F686EEB8B3F15102AAC7BFE48C5DB26 /* FlaneurMapViewController.swift in Sources */,
+				3F686EEB8B3F15102AAC7BFE48C5DB26 /* FlaneurMapView.swift in Sources */,
 				C597C7CAEF7C0BE0CB6F63AB75475EC3 /* FlaneurNavigationBar.swift in Sources */,
 				9F202995669028127D6705473490CF3A /* FlaneurOpen-dummy.m in Sources */,
 				E35FBED4454FEF93BCBD0C475EF509B7 /* LoadingCollectionViewCell.swift in Sources */,

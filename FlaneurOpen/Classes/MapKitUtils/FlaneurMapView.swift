@@ -1,5 +1,5 @@
 //
-//  FlaneurMapViewController.swift
+//  FlaneurMapView.swift
 //  Pods
 //
 //  Created by Mickaël Floc'hlay on 04/05/2017.
@@ -9,63 +9,32 @@
 import MapKit
 import Kingfisher
 
-/// The protocol to implement for an object to be able to be displayed on 
-/// a `FlaneurMapViewController` instance.
-@objc public protocol FlaneurMapItem {
-    /// The coordinate of the item
-    var mapItemCoordinate2D: CLLocationCoordinate2D { get }
-
-    /// The title to display by the annotation for the item.
-    var mapItemTitle: String? { get }
-
-    /// The address to display by the annotation for the item.
-    var mapItemAddress: String? { get }
-
-    /// The URL of the image to display by the annotation for the item.
-    /// This property won't be used if `mapItemThumbnailImage` is set.
-    var mapItemThumbnailURL: URL? { get }
-
-    /// The image to display by the annotation for the item.
-    /// This property has priority over `mapItemThumbnailURL`.
-    var mapItemThumbnailImage: UIImage? { get }
-}
-
-/// The protocol to implement to get callbacks from a `FlaneurMapViewController` instance.
+/// The protocol to implement to get callbacks from a `FlaneurMapView` instance.
 @objc public protocol FlaneurMapViewDelegate {
     /// Tells the delegate that the specified map item's annotation callout was tapped.
     ///
     /// - Parameter mapItem: the map item for which the annotation was tapped
-    func flaneurMapViewControllerDidSelect(mapItem: FlaneurMapItem)
-}
-
-public class FlaneurMapAnnotation: MKPointAnnotation {
-    public let mapItem: FlaneurMapItem
-
-    public init(mapItem: FlaneurMapItem) {
-        self.mapItem = mapItem
-
-        super.init()
-
-        coordinate = mapItem.mapItemCoordinate2D
-        title = mapItem.mapItemTitle
-        subtitle = mapItem.mapItemAddress
-    }
+    func flaneurMapViewDidSelect(mapItem: FlaneurMapItem)
 }
 
 /// Utility class to display a map view with annotations with very little effort.
 ///
 /// ## Overview
 ///
-/// A map view controller bla bla bla
-open class FlaneurMapViewController: UIViewController {
+/// A map view controller... TODO
+open class FlaneurMapView: UIView {
     /// The map view (useful only if a Storyboard is used)
-    @IBOutlet public weak var mapView: MKMapView?
+    public var mapView: MKMapView!
 
     /// The delegate
     public var delegate: FlaneurMapViewDelegate?
 
     /// The items to display on the map
-    public var mapItems: [FlaneurMapItem] = []
+    public var mapItems: [FlaneurMapItem] = [] {
+        didSet {
+            self.reloadAnnotations()
+        }
+    }
 
     /// The image diplayed
     public var annotationImage: UIImage? = UIImage(named: "FlaneurMapViewControllerAnnotationImage")
@@ -78,41 +47,74 @@ open class FlaneurMapViewController: UIViewController {
     /// The left image to display on the annotation for each item
     public var leftCalloutPlaceholderImage: UIImage? = UIImage(named: "FlaneurMapViewControllerLeftCalloutPlaceholderImage")
 
-    // MARK: - UIViewController life cycle
+    /// Initializes and returns a newly allocated map view object
+    /// with the specified frame rectangle.
+    ///
+    /// - Parameter frame: The frame rectangle for the view, measured in points.
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        didLoad()
+    }
 
-    /// Overriden
-    override open func viewDidLoad() {
-        super.viewDidLoad()
-
-        if mapView == nil {
-            mapView = MKMapView(frame: CGRect(origin: .zero,
-                                              size: self.view.frame.size))
-            self.view.addSubview(mapView!)
-        }
-
-        if let myView = mapView {
-            // Functional config of the map view
-            myView.showsUserLocation = true
-            myView.delegate = self
-        }
+    /// Returns an object initialized from data in a given unarchiver.
+    ///
+    /// - Parameter coder: An unarchiver object.
+    public required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        didLoad()
     }
 
     /// Overriden
-    override open func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        reloadAnnotations()
+    func didLoad() {
+        mapView = MKMapView(frame: .zero)
+        mapView?.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(mapView!)
+
+        // Place the filters collection view on top
+        NSLayoutConstraint(item: mapView,
+                           attribute: .leading,
+                           relatedBy: .equal,
+                           toItem: self,
+                           attribute: .leading,
+                           multiplier: 1.0,
+                           constant: 0.0).isActive = true
+        NSLayoutConstraint(item: mapView,
+                           attribute: .trailing,
+                           relatedBy: .equal,
+                           toItem: self,
+                           attribute: .trailing,
+                           multiplier: 1.0,
+                           constant: 0.0).isActive = true
+        NSLayoutConstraint(item: mapView,
+                           attribute: .top,
+                           relatedBy: .equal,
+                           toItem: self,
+                           attribute: .top,
+                           multiplier: 1.0,
+                           constant: 0.0).isActive = true
+        NSLayoutConstraint(item: mapView,
+                           attribute: .bottom,
+                           relatedBy: .equal,
+                           toItem: self,
+                           attribute: .bottom,
+                           multiplier: 1.0,
+                           constant: 0.0).isActive = true
+
+        mapView.delegate = self
+    }
+
+    public func configure(showsUserLocation: Bool = true) {
+        mapView.showsUserLocation = showsUserLocation
     }
 
     func reloadAnnotations() {
-        if let mapView = mapView {
-            mapView.removeAnnotations(mapView.annotations)
-            let annotations = mapItems.map { FlaneurMapAnnotation(mapItem: $0) }
-            mapView.showAnnotations(annotations, animated: true)
-        }
+        mapView.removeAnnotations(mapView.annotations)
+        let annotations = mapItems.map { FlaneurMapAnnotation(mapItem: $0) }
+        mapView.showAnnotations(annotations, animated: true)
     }
 }
 
-extension FlaneurMapViewController: MKMapViewDelegate {
+extension FlaneurMapView: MKMapViewDelegate {
     /// Overriden
     public func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if annotation is MKUserLocation {
@@ -153,7 +155,7 @@ extension FlaneurMapViewController: MKMapViewDelegate {
     /// Overriden
     public func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         if let annotation = view.annotation as? FlaneurMapAnnotation {
-            delegate?.flaneurMapViewControllerDidSelect(mapItem: annotation.mapItem)
+            delegate?.flaneurMapViewDidSelect(mapItem: annotation.mapItem)
         }
     }
 }
