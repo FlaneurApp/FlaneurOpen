@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 * `FlaneurCollectionViewDelegate` now supports deselection of cells and filters #9 & #10
 * All `FlaneurCollectionViewDelegate` functions are now optional for `UIViewController` instances
   that benefit from a default implementation
+* Added `userInfo` to `FlaneurCollectionFilter` #11
 
 ### Changed
 
