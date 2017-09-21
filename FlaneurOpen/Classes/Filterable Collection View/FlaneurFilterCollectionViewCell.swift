@@ -12,7 +12,7 @@ fileprivate let padding: CGFloat = 6.0
 fileprivate let rightIconImageViewSize: CGFloat = 8.0
 fileprivate let filterNameLabelToRightIconSpace: CGFloat = 12.0
 
-class FlaneurFilterCollectionViewCell: UICollectionViewCell {
+public class FlaneurFilterCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var filterNameLabel: UILabel!
     @IBOutlet weak var rightIconImageView: UIImageView!
 
@@ -30,7 +30,7 @@ class FlaneurFilterCollectionViewCell: UICollectionViewCell {
         didLoad()
     }
 
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         didLoad()
     }

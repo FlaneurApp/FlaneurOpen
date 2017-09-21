@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 * Made the right buttons of a `FlaneurNavigationBar` configurable dynamically #7
 * Made `nbColumns` and `cellRatio` customizable for FlaneurCollectionView #8
 * Made `FlaneurCollectionView`'s collectionView public in readonly
+* `FlaneurFilterCollectionViewCell` has been made `public` to allow UIAppearance customization #12 
 
 ## [0.3.0] - 2017-09-19
 
