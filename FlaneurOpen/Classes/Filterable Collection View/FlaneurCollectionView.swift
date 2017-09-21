@@ -18,6 +18,21 @@ fileprivate let filtersViewHeight: CGFloat = 44.0
 public protocol FlaneurCollectionViewDelegate {
     func flaneurCollectionView(_ collectionView: FlaneurCollectionView, didSelectItem item: FlaneurCollectionItem)
     func flaneurCollectionView(_ collectionView: FlaneurCollectionView, didDeselectItem item: FlaneurCollectionItem)
+    func flaneurCollectionView(_ collectionView: FlaneurCollectionView, didDeselectFilter filter: FlaneurCollectionFilter)
+}
+
+public extension FlaneurCollectionViewDelegate where Self: UIViewController {
+    func flaneurCollectionView(_ collectionView: FlaneurCollectionView, didSelectItem item: FlaneurCollectionItem) {
+        debugPrint("override didSelectItem: to customize behavior")
+    }
+
+    func flaneurCollectionView(_ collectionView: FlaneurCollectionView, didDeselectItem item: FlaneurCollectionItem) {
+        debugPrint("override didDeselectItem: to customize behavior")
+    }
+
+    func flaneurCollectionView(_ collectionView: FlaneurCollectionView, didDeselectFilter filter: FlaneurCollectionFilter) {
+        debugPrint("override didDeselectFilter: to customize behavior")
+    }
 }
 
 /// TODO
@@ -231,6 +246,7 @@ final public class FlaneurCollectionView: UIView {
 
     func didSelectFilter(_ filterToRemove: FlaneurCollectionFilter) {
         self.filters = filters.filter { $0.name != filterToRemove.name }
+        delegate?.flaneurCollectionView(self, didDeselectFilter: filterToRemove)
     }
 }
 
