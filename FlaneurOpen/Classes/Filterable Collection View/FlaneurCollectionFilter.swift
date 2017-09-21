@@ -12,7 +12,7 @@ public class FlaneurCollectionFilter {
     let name: String
     let rightImage: UIImage?
     let filter: ((FlaneurCollectionItem) -> Bool)
-    let userInfo: Any?
+    public let userInfo: Any?
 
     public init(name: String, rightImage: UIImage? = nil, userInfo: Any? = nil, filter: @escaping ((FlaneurCollectionItem) -> Bool)) {
         self.name = name
