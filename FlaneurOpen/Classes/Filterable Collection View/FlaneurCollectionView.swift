@@ -17,6 +17,7 @@ fileprivate let filtersViewHeight: CGFloat = 44.0
 
 public protocol FlaneurCollectionViewDelegate {
     func flaneurCollectionView(_ collectionView: FlaneurCollectionView, didSelectItem item: FlaneurCollectionItem)
+    func flaneurCollectionView(_ collectionView: FlaneurCollectionView, didDeselectItem item: FlaneurCollectionItem)
 }
 
 /// TODO
@@ -49,7 +50,7 @@ final public class FlaneurCollectionView: UIView {
     }
 
     // The collection view of items (as opposed to the optional collection view for filters).
-    let itemsCollectionView: UICollectionView = {
+    public let itemsCollectionView: UICollectionView = {
         // IGListKit's ListCollectionViewLayout is the only 'cheap' layout option that allows
         // to use IGListKit with a multi-column layout.
         let collectionViewLayout = ListCollectionViewLayout(stickyHeaders: false,

@@ -10,17 +10,6 @@ import UIKit
 import IGListKit
 import FlaneurOpen
 
-class DemoCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var label: UILabel!
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        self.clipsToBounds = true
-        self.imageView.contentMode = .scaleAspectFill
-    }
-}
-
 class MySectionController: ListSectionController {
     var item: UnsplashItem?
 

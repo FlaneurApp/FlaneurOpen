@@ -54,4 +54,10 @@ class FlaneurCollectionItemSectionController: ListSectionController {
             collectionView.delegate?.flaneurCollectionView(collectionView, didSelectItem: object)
         }
     }
+
+    override func didDeselectItem(at index: Int) {
+        if let collectionView = collectionView {
+            collectionView.delegate?.flaneurCollectionView(collectionView, didDeselectItem: object)
+        }
+    }
 }

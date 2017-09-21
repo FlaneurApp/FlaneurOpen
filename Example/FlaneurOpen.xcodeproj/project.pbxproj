@@ -13,6 +13,7 @@
 		00A36F2A1F618F3400F05418 /* FlaneurNavigationBarDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A36F291F618F3400F05418 /* FlaneurNavigationBarDemoViewController.swift */; };
 		00D943611EBB338E00631E8E /* MapDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D943601EBB338E00631E8E /* MapDemoViewController.swift */; };
 		00DAAB7F1ECC5D9B00E40141 /* DemoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00DAAB7E1ECC5D9B00E40141 /* DemoCollectionViewCell.xib */; };
+		00EC49881F73BBD300CC4667 /* DemoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EC49871F73BBD300CC4667 /* DemoCollectionViewCell.swift */; };
 		00FCFAD41F66CE2B00E73EE8 /* FilteredCollectionViewDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FCFAD31F66CE2B00E73EE8 /* FilteredCollectionViewDemoViewController.swift */; };
 		096796B8726B0663216F1061 /* Pods_FlaneurOpen_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3541623AD9DDC3BAADDEDF9C /* Pods_FlaneurOpen_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
@@ -40,6 +41,7 @@
 		00A36F291F618F3400F05418 /* FlaneurNavigationBarDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlaneurNavigationBarDemoViewController.swift; sourceTree = "<group>"; };
 		00D943601EBB338E00631E8E /* MapDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapDemoViewController.swift; sourceTree = "<group>"; };
 		00DAAB7E1ECC5D9B00E40141 /* DemoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoCollectionViewCell.xib; sourceTree = "<group>"; };
+		00EC49871F73BBD300CC4667 /* DemoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoCollectionViewCell.swift; sourceTree = "<group>"; };
 		00FCFAD31F66CE2B00E73EE8 /* FilteredCollectionViewDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteredCollectionViewDemoViewController.swift; sourceTree = "<group>"; };
 		3541623AD9DDC3BAADDEDF9C /* Pods_FlaneurOpen_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlaneurOpen_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35B0B3EE0E9D700673CD9554 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				00A36F291F618F3400F05418 /* FlaneurNavigationBarDemoViewController.swift */,
 				00FCFAD31F66CE2B00E73EE8 /* FilteredCollectionViewDemoViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				00EC49871F73BBD300CC4667 /* DemoCollectionViewCell.swift */,
 				00DAAB7E1ECC5D9B00E40141 /* DemoCollectionViewCell.xib */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -410,6 +413,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00EC49881F73BBD300CC4667 /* DemoCollectionViewCell.swift in Sources */,
 				002E9D321ED5E13D0046326C /* GooglePlacesDemoViewController.swift in Sources */,
 				00FCFAD41F66CE2B00E73EE8 /* FilteredCollectionViewDemoViewController.swift in Sources */,
 				00D943611EBB338E00631E8E /* MapDemoViewController.swift in Sources */,

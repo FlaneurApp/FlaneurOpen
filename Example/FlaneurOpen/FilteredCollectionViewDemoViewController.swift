@@ -21,8 +21,8 @@ import IGListKit
 
     func configureCell(cell: UICollectionViewCell) {
         if let cell = cell as? DemoCollectionViewCell {
+            cell.updateBackgroundColorFromSelection()
             cell.label.text = name
-            cell.backgroundColor = .blue
         }
     }
 
@@ -129,5 +129,13 @@ class FilteredCollectionViewDemoViewController: UIViewController {
 extension FilteredCollectionViewDemoViewController: FlaneurCollectionViewDelegate {
     func flaneurCollectionView(_ collectionView: FlaneurCollectionView, didSelectItem item: FlaneurCollectionItem) {
         debugPrint("didSelect: ", item)
+        collectionView.itemsCollectionView.allowsMultipleSelection = true
+        debugPrint("selectedIndex: ", collectionView.itemsCollectionView.indexPathsForSelectedItems)
+    }
+
+    func flaneurCollectionView(_ collectionView: FlaneurCollectionView, didDeselectItem item: FlaneurCollectionItem) {
+        debugPrint("didDeselect: ", item)
+        collectionView.itemsCollectionView.allowsMultipleSelection = true
+        debugPrint("selectedIndex: ", collectionView.itemsCollectionView.indexPathsForSelectedItems)
     }
 }
