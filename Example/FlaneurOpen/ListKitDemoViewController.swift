@@ -83,12 +83,10 @@ class UnsplashItem: ListDiffable {
     }
 
     func diffIdentifier() -> NSObjectProtocol {
-        debugPrint("diffIdentifier")
         return NSNumber(integerLiteral: id)
     }
 
     func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
-        debugPrint("isEqual")
         if let object = object as? UnsplashItem {
             return self.postURL == object.postURL
         }
@@ -126,7 +124,6 @@ class ListKitDemoViewController: UIViewController, ListAdapterDataSource {
     }
 
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
-        debugPrint("listAdapter \(listAdapter)")
         return MySectionController()
     }
     

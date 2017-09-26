@@ -168,27 +168,12 @@ final public class FlaneurCollectionView: UIView {
         itemsCollectionView.translatesAutoresizingMaskIntoConstraints = false
 
         // Place the filters collection view on top
-        NSLayoutConstraint(item: filtersCollectionView,
-                           attribute: .leading,
-                           relatedBy: .equal,
-                           toItem: self,
-                           attribute: .leading,
-                           multiplier: 1.0,
-                           constant: 0.0).isActive = true
-        NSLayoutConstraint(item: filtersCollectionView,
-                           attribute: .trailing,
-                           relatedBy: .equal,
-                           toItem: self,
-                           attribute: .trailing,
-                           multiplier: 1.0,
-                           constant: 0.0).isActive = true
-        NSLayoutConstraint(item: filtersCollectionView,
-                           attribute: .top,
-                           relatedBy: .equal,
-                           toItem: self,
-                           attribute: .top,
-                           multiplier: 1.0,
-                           constant: padding).isActive = true
+        _ = LayoutBorderManager(item: filtersCollectionView,
+                                                toItem: self,
+                                                top: 0.0,
+                                                left: 0.0,
+                                                bottom: nil,
+                                                right: 0.0)
         NSLayoutConstraint(item: filtersCollectionView,
                            attribute: .height,
                            relatedBy: .equal,

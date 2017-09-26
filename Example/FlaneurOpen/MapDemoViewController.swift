@@ -93,4 +93,22 @@ class MapDemoViewController: UIViewController, FlaneurMapViewDelegate {
             self.spinner.isHidden = !self.spinner.isHidden
         }
     }
+
+    @IBAction func overlayViewAction(_ sender: Any? = nil) {
+        let overlay = UIView(frame: .zero)
+        overlay.translatesAutoresizingMaskIntoConstraints = false
+        overlay.backgroundColor = UIColor(red: 0.0,
+                                          green: 1.0,
+                                          blue: 0.0,
+                                          alpha: 0.5)
+        overlay.isOpaque = false
+        self.view.addSubview(overlay)
+
+        _ = LayoutBorderManager(item: overlay,
+                                toItem: mapView,
+                                top: 2.0,
+                                left: 4.0,
+                                bottom: 6.0,
+                                right: 8.0)
+    }
 }

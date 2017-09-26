@@ -13,8 +13,8 @@ target 'FlaneurOpen_Example' do
   target 'FlaneurOpen_Tests' do
     inherit! :search_paths
 
-    pod 'Quick', '~> 1.0.0'
-    pod 'Nimble', '~> 5.1.1'
+    pod 'Quick', '~> 1.1.0'
+    pod 'Nimble', '~> 7.0.0'
     pod 'FBSnapshotTestCase'
     pod 'Nimble-Snapshots'
   end
