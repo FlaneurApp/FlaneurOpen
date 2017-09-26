@@ -15,8 +15,8 @@ import IGListKit
     let name: String
     let categories: [String]
 
-    var nibName: String {
-        return "DemoCollectionViewCell"
+    var cellStyle: FlaneurCollectionItemCellStyle {
+        return .nibName(nibName: "DemoCollectionViewCell")
     }
 
     func configureCell(cell: UICollectionViewCell) {

@@ -37,8 +37,8 @@ extension FlaneurCollectionFilter: ListDiffable {
 }
 
 extension FlaneurCollectionFilter: FlaneurCollectionItem {
-    public var nibName: String {
-        return "TODO"
+    public var cellStyle: FlaneurCollectionItemCellStyle {
+        return .nibName(nibName: "unused")
     }
 
     public func configureCell(cell: UICollectionViewCell) {

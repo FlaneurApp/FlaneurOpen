@@ -8,10 +8,15 @@
 
 import IGListKit
 
+public enum FlaneurCollectionItemCellStyle {
+    case nibName(nibName: String)
+    case cellClass(cellClass: AnyClass)
+}
+
 /// Protocol that items of a `FlaneurCollectionContainerView` must conform to.
 public protocol FlaneurCollectionItem: ListDiffable {
-    /// The nib name to use for the cell. It will also be used as a reusable cell identifier.
-    var nibName: String { get }
+    /// The style of instanciation for the cell.
+    var cellStyle: FlaneurCollectionItemCellStyle { get }
 
     /// Configures the cell
     ///

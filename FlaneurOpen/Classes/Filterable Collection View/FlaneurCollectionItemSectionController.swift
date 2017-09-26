@@ -39,13 +39,20 @@ class FlaneurCollectionItemSectionController: ListSectionController {
     }
 
     override func cellForItem(at index: Int) -> UICollectionViewCell {
-        let cell = collectionContext!.dequeueReusableCell(withNibName: object.nibName,
-                                                          bundle: nil,
+        var cell: UICollectionViewCell!
+
+        switch object.cellStyle {
+        case .nibName(let nibName):
+            cell = collectionContext!.dequeueReusableCell(withNibName: nibName,
+                                                              bundle: nil,
+                                                              for: self,
+                                                              at: index)
+        case .cellClass(let cellClass):
+            cell = collectionContext!.dequeueReusableCell(of: cellClass,
                                                           for: self,
                                                           at: index)
-
+        }
         object.configureCell(cell: cell)
-
         return cell
     }
 
