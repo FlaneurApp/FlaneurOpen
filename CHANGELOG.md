@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 * Made `FlaneurCollectionView`'s collectionView public in readonly
 * `FlaneurFilterCollectionViewCell` has been made `public` to allow UIAppearance customization #12
 * `FlaneurMapView` replaced `FlaneurMapViewController` #13
+* Updated project and dependencies for compatibility with Xcode 9
 
 ## [0.3.0] - 2017-09-19
 
