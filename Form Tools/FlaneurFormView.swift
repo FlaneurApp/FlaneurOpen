@@ -10,6 +10,7 @@ import IGListKit
 
 public enum FlaneurFormElementType {
     case textField
+    case textArea
 }
 
 
@@ -29,7 +30,7 @@ extension FlaneurFormElement: Equatable {
     public static func == (lhs: FlaneurFormElement, rhs: FlaneurFormElement) -> Bool {
         return
             lhs.type == rhs.type
-        && lhs.label == rhs.label
+                && lhs.label == rhs.label
     }
 }
 
@@ -102,11 +103,11 @@ public final class FlaneurFormView: UIView {
         self.addSubview(collectionView)
 
         _ = LayoutBorderManager(item: collectionView,
-                            toItem: self,
-                            top: 0.0,
-                            left: 0.0,
-                            bottom: 0.0,
-                            right: 0.0)
+                                toItem: self,
+                                top: 0.0,
+                                left: 0.0,
+                                bottom: 0.0,
+                                right: 0.0)
     }
 
     public func addFormElement(_ formElement: FlaneurFormElement) {
@@ -127,7 +128,7 @@ extension FlaneurFormView: ListAdapterDataSource {
 
     public func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
         if let formElement = object as? FlaneurFormElement {
-            return FlaneurFormElementSectionController(formElement: formElement)
+            return FlaneurFormElementSectionController(formElement: formElement, cellDelegate: self)
         } else {
             fatalError("unhandled case")
         }
@@ -143,24 +144,58 @@ extension FlaneurFormView: ListAdapterDataSource {
 
 class FlaneurFormElementSectionController: ListSectionController {
     let formElement: FlaneurFormElement
+    var cellDelegate: FlaneurFormElementCollectionViewCellDelegate?
 
-    init(formElement: FlaneurFormElement) {
+    init(formElement: FlaneurFormElement, cellDelegate: FlaneurFormElementCollectionViewCellDelegate?) {
         self.formElement = formElement
+        self.cellDelegate = cellDelegate
     }
 
     override func sizeForItem(at index: Int) -> CGSize {
+        var height: CGFloat = 44.0
+
+        switch formElement.type {
+        case .textField:
+            height = 72.0
+        case .textArea:
+            height = 160.0
+        }
+
         return CGSize(width: self.collectionContext!.containerSize.width,
-                      height: 72.0)
+                      height: height)
     }
 
     override func cellForItem(at index: Int) -> UICollectionViewCell {
-        if let cell = collectionContext?.dequeueReusableCell(of: FlaneurFormTextFieldElementCollectionViewCell.self,
-                                                             for: self,
-                                                             at: index) as? FlaneurFormTextFieldElementCollectionViewCell {
-            cell.configureWith(formElement: formElement)
-            return cell
-        } else {
-            fatalError("unhandled case")
+        switch formElement.type {
+        case .textField:
+            let cell = collectionContext?.dequeueReusableCell(of: FlaneurFormTextFieldElementCollectionViewCell.self,
+                                                              for: self,
+                                                              at: index) as? FlaneurFormTextFieldElementCollectionViewCell
+            cell?.configureWith(formElement: formElement)
+            cell?.delegate = cellDelegate
+            return cell!
+        case .textArea:
+            let cell = collectionContext?.dequeueReusableCell(of: FlaneurFormTextAreaElementCollectionViewCell.self,
+                                                              for: self,
+                                                              at: index) as? FlaneurFormTextAreaElementCollectionViewCell
+            cell?.configureWith(formElement: formElement)
+            cell?.delegate = cellDelegate
+            return cell!
+        }
+    }
+}
+
+extension FlaneurFormView: FlaneurFormElementCollectionViewCellDelegate {
+    func nextElementShouldBecomeFirstResponder(cell: FlaneurFormElementCollectionViewCell) {
+        if let thisIndex = self.collectionView.indexPath(for: cell) {
+            let nextSection = (thisIndex.section + 1) % formElements.count
+            let nextIndexPath = IndexPath(row: 0, section: nextSection)
+            if let nextCell = self.collectionView.cellForItem(at: nextIndexPath) {
+                debugPrint("nextCell: ", nextCell)
+                nextCell.becomeFirstResponder()
+            } else {
+                debugPrint("no cell", self.collectionView.numberOfSections)
+            }
         }
     }
 }

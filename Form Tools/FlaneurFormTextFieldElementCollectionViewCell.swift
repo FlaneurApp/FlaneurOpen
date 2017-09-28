@@ -7,41 +7,21 @@
 
 import UIKit
 
-class FlaneurFormTextFieldElementCollectionViewCell: UICollectionViewCell {
-    var label: UILabel!
+class FlaneurFormTextFieldElementCollectionViewCell: FlaneurFormElementCollectionViewCell {
     var textField: UITextField!
 
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        didLoad()
-    }
-
-    public required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        didLoad()
-    }
-
     /// Common init code.
-    func didLoad() {
-        self.backgroundColor = .white
-
-        let label = UILabel()
-        self.label = label
-        label.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(label)
+    override func didLoad() {
+        super.didLoad()
 
         let textField = UITextField()
         self.textField = textField
         textField.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(textField)
 
+        textField.returnKeyType = .next
         textField.borderStyle = .none
-
-        _ = LayoutBorderManager(item: label,
-                                toItem: self,
-                                top: 16.0,
-                                left: 16.0,
-                                right: 16.0)
+        textField.delegate = self
 
         _ = LayoutBorderManager(item: textField,
                                 toItem: self,
@@ -55,12 +35,17 @@ class FlaneurFormTextFieldElementCollectionViewCell: UICollectionViewCell {
                            attribute: .bottom,
                            multiplier: 1.0,
                            constant: 4.0).isActive = true
-
-        createBottomBorder()
     }
 
-    func configureWith(formElement: FlaneurFormElement) {
-        label.text = formElement.label
+    override func configureWith(formElement: FlaneurFormElement) {
+        super.configureWith(formElement: formElement)
         formElement.didLoadHandler?(textField)
+    }
+}
+
+extension FlaneurFormTextFieldElementCollectionViewCell: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        delegate?.nextElementShouldBecomeFirstResponder(cell: self)
+        return true
     }
 }

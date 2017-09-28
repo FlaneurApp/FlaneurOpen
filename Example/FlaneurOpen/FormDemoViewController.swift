@@ -13,20 +13,34 @@ import FlaneurOpen
 class FormDemoViewController: UIViewController {
     @IBOutlet weak var formView: FlaneurFormView!
 
+    var firstResponderView: UIView?
+    var didAppear = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         formView.configure(viewController: self)
         let nameFormElement = FlaneurFormElement(type: .textField, label: "Name") { view in
-            view.becomeFirstResponder()
+            self.firstResponderView = view
+            if self.didAppear {
+                self.firstResponderView?.becomeFirstResponder()
+            }
         }
         formView.addFormElement(nameFormElement)
+
+        let descriptionFormElement = FlaneurFormElement(type: .textArea, label: "Description")
+        formView.addFormElement(descriptionFormElement)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        didAppear = true
+        firstResponderView?.becomeFirstResponder()
     }
     
 
