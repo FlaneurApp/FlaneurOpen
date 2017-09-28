@@ -11,6 +11,7 @@ import IGListKit
 public enum FlaneurFormElementType {
     case textField
     case textArea
+    case imagePicker
 }
 
 
@@ -52,7 +53,7 @@ public final class FlaneurFormView: UIView {
     var listAdapter: ListAdapter!
 
     // The collection view of form elements
-    let collectionView: UICollectionView = {
+    public let collectionView: UICollectionView = {
         let collectionViewLayout = UICollectionViewFlowLayout()
         collectionViewLayout.scrollDirection = .vertical
 
@@ -99,7 +100,7 @@ public final class FlaneurFormView: UIView {
         listAdapter.dataSource = self
 
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.backgroundColor = .darkGray
+        collectionView.backgroundColor = .white
         self.addSubview(collectionView)
 
         _ = LayoutBorderManager(item: collectionView,
@@ -159,6 +160,8 @@ class FlaneurFormElementSectionController: ListSectionController {
             height = 72.0
         case .textArea:
             height = 160.0
+        case .imagePicker:
+            height = 136.0
         }
 
         return CGSize(width: self.collectionContext!.containerSize.width,
@@ -181,6 +184,13 @@ class FlaneurFormElementSectionController: ListSectionController {
             cell?.configureWith(formElement: formElement)
             cell?.delegate = cellDelegate
             return cell!
+        case .imagePicker:
+            let cell = collectionContext?.dequeueReusableCell(of: FlaneurFormImagePickerElementCollectionViewCell.self,
+                                                              for: self,
+                                                              at: index) as? FlaneurFormImagePickerElementCollectionViewCell
+            cell?.configureWith(formElement: formElement)
+            cell?.delegate = cellDelegate
+            return cell!
         }
     }
 }
@@ -196,6 +206,12 @@ extension FlaneurFormView: FlaneurFormElementCollectionViewCellDelegate {
             } else {
                 debugPrint("no cell", self.collectionView.numberOfSections)
             }
+        }
+    }
+
+    func scrollToVisibleSection(cell: FlaneurFormElementCollectionViewCell) {
+        if let thisIndex = self.collectionView.indexPath(for: cell) {
+            self.collectionView.scrollToItem(at: thisIndex, at: .top, animated: true)
         }
     }
 }

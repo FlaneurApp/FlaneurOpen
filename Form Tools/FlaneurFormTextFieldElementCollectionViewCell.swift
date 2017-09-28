@@ -41,6 +41,11 @@ class FlaneurFormTextFieldElementCollectionViewCell: FlaneurFormElementCollectio
         super.configureWith(formElement: formElement)
         formElement.didLoadHandler?(textField)
     }
+
+    override func becomeFirstResponder() -> Bool {
+        delegate?.scrollToVisibleSection(cell: self)
+        return self.textField.becomeFirstResponder()
+    }
 }
 
 extension FlaneurFormTextFieldElementCollectionViewCell: UITextFieldDelegate {

@@ -9,6 +9,7 @@ import UIKit
 
 protocol FlaneurFormElementCollectionViewCellDelegate {
     func nextElementShouldBecomeFirstResponder(cell: FlaneurFormElementCollectionViewCell)
+    func scrollToVisibleSection(cell: FlaneurFormElementCollectionViewCell)
 }
 
 class FlaneurFormElementCollectionViewCell: UICollectionViewCell {

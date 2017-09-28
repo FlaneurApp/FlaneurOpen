@@ -234,44 +234,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="This is a demo of a FlaneurFormView." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xz9-jb-p1U">
-                                <rect key="frame" x="16" y="72" width="343" height="80"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="QBE-ad-SL9"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A4u-eI-kHG" customClass="FlaneurFormView" customModule="FlaneurOpen">
-                                <rect key="frame" x="0.0" y="152" width="375" height="471"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.4431372549" green="0.69019607839999997" blue="0.45882352939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WGF-g7-cC4">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="7gu-9t-KR0"/>
-                                </constraints>
-                                <items/>
-                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="A4u-eI-kHG" secondAttribute="trailing" id="2Oc-1d-TTr"/>
-                            <constraint firstItem="A4u-eI-kHG" firstAttribute="top" secondItem="Xz9-jb-p1U" secondAttribute="bottom" id="929-0c-3WF"/>
                             <constraint firstItem="A4u-eI-kHG" firstAttribute="leading" secondItem="Lpz-0F-taL" secondAttribute="leading" id="9qo-tm-hkc"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Xz9-jb-p1U" secondAttribute="trailing" id="PQj-6i-tcN"/>
-                            <constraint firstItem="WGF-g7-cC4" firstAttribute="leading" secondItem="Lpz-0F-taL" secondAttribute="leading" id="XVl-pr-KfZ"/>
-                            <constraint firstItem="Xz9-jb-p1U" firstAttribute="top" secondItem="Km5-EU-t3k" secondAttribute="bottom" constant="8" id="aIe-9Q-XYu"/>
-                            <constraint firstItem="WGF-g7-cC4" firstAttribute="top" secondItem="A4u-eI-kHG" secondAttribute="bottom" id="faA-rm-QYg"/>
-                            <constraint firstItem="ump-dg-CkE" firstAttribute="top" secondItem="WGF-g7-cC4" secondAttribute="bottom" id="i8F-7M-lja"/>
-                            <constraint firstAttribute="trailing" secondItem="WGF-g7-cC4" secondAttribute="trailing" id="oK5-CT-23U"/>
-                            <constraint firstItem="Xz9-jb-p1U" firstAttribute="leading" secondItem="Lpz-0F-taL" secondAttribute="leadingMargin" id="pRC-Hr-0T7"/>
+                            <constraint firstItem="A4u-eI-kHG" firstAttribute="top" secondItem="Km5-EU-t3k" secondAttribute="bottom" id="Pe6-Sh-CBV"/>
+                            <constraint firstItem="ump-dg-CkE" firstAttribute="top" secondItem="A4u-eI-kHG" secondAttribute="bottom" id="dYg-wQ-koi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Form Demo" id="PhJ-JT-Ks7"/>
                     <connections>
                         <outlet property="formView" destination="A4u-eI-kHG" id="KKd-Od-WNc"/>
+                        <outlet property="formViewBottomConstraint" destination="dYg-wQ-koi" id="n3u-Q2-cqU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0fF-CY-y3r" userLabel="First Responder" sceneMemberID="firstResponder"/>

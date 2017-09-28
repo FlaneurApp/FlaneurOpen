@@ -13,6 +13,7 @@
 		00E3BCE01F7D3EF800D046C5 /* UIView+Flaneur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E3BCDF1F7D3EF800D046C5 /* UIView+Flaneur.swift */; };
 		00E3BCE21F7D495700D046C5 /* FlaneurFormTextAreaElementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E3BCE11F7D495700D046C5 /* FlaneurFormTextAreaElementCollectionViewCell.swift */; };
 		00E3BCE41F7D497100D046C5 /* FlaneurFormElementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E3BCE31F7D497100D046C5 /* FlaneurFormElementCollectionViewCell.swift */; };
+		00E3BCE61F7D553B00D046C5 /* FlaneurFormImagePickerElementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E3BCE51F7D553B00D046C5 /* FlaneurFormImagePickerElementCollectionViewCell.swift */; };
 		0252FCE76AEF69749C4378921E7570B8 /* SuiteHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9544E0A4397830CC1F90A4EF389DECC9 /* SuiteHooks.swift */; };
 		028C16FD9D93949CEB5DB50FAA568D50 /* QuickSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0A2561A2ED245B40C1A7CBF4AB7064 /* QuickSpec.m */; };
 		051A816D6DD0CAE13496DDCFE0829167 /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = C408A0DDA985F26316464A174AEEEF38 /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -399,6 +400,7 @@
 		00E3BCDF1F7D3EF800D046C5 /* UIView+Flaneur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Flaneur.swift"; sourceTree = "<group>"; };
 		00E3BCE11F7D495700D046C5 /* FlaneurFormTextAreaElementCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlaneurFormTextAreaElementCollectionViewCell.swift; sourceTree = "<group>"; };
 		00E3BCE31F7D497100D046C5 /* FlaneurFormElementCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlaneurFormElementCollectionViewCell.swift; sourceTree = "<group>"; };
+		00E3BCE51F7D553B00D046C5 /* FlaneurFormImagePickerElementCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlaneurFormImagePickerElementCollectionViewCell.swift; sourceTree = "<group>"; };
 		02537B1B5510B77F43F2CCB1191A218A /* IGListBindingSectionController+DebugDescription.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IGListBindingSectionController+DebugDescription.h"; path = "Source/Internal/IGListBindingSectionController+DebugDescription.h"; sourceTree = "<group>"; };
 		0253FA0C587766670544204FC3B0C8BA /* AnimatedImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedImageView.swift; path = Sources/AnimatedImageView.swift; sourceTree = "<group>"; };
 		02900065996D450735C09A7D6A4DCFE5 /* AdapterProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AdapterProtocols.swift; path = Sources/Nimble/Adapters/AdapterProtocols.swift; sourceTree = "<group>"; };
@@ -840,6 +842,7 @@
 				00E3BCD91F7D32A500D046C5 /* FlaneurFormView.swift */,
 				00E3BCDD1F7D3A2A00D046C5 /* FlaneurFormTextFieldElementCollectionViewCell.swift */,
 				00E3BCE11F7D495700D046C5 /* FlaneurFormTextAreaElementCollectionViewCell.swift */,
+				00E3BCE51F7D553B00D046C5 /* FlaneurFormImagePickerElementCollectionViewCell.swift */,
 				00E3BCE31F7D497100D046C5 /* FlaneurFormElementCollectionViewCell.swift */,
 			);
 			path = "Form Tools";
@@ -2134,6 +2137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00E3BCDE1F7D3A2A00D046C5 /* FlaneurFormTextFieldElementCollectionViewCell.swift in Sources */,
+				00E3BCE61F7D553B00D046C5 /* FlaneurFormImagePickerElementCollectionViewCell.swift in Sources */,
 				094A6983D03B394B64F00AA7529B54BC /* FlaneurCollectionFilter.swift in Sources */,
 				C9E7CB6023D58E87DFB53EF6D7508E82 /* FlaneurCollectionFilterSectionController.swift in Sources */,
 				AE9E87EE9E4749E3B4AE030EE91899AB /* FlaneurCollectionItem.swift in Sources */,

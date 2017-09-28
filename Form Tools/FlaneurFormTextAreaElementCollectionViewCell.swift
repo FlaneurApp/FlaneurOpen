@@ -17,6 +17,10 @@ class FlaneurFormTextAreaElementCollectionViewCell: FlaneurFormElementCollection
         let textArea = UITextView()
         self.textArea = textArea
         textArea.translatesAutoresizingMaskIntoConstraints = false
+        textArea.text = ""
+        textArea.returnKeyType = .next
+        textArea.delegate = self
+
         self.addSubview(textArea)
 
         _ = LayoutBorderManager(item: textArea,
@@ -40,6 +44,14 @@ class FlaneurFormTextAreaElementCollectionViewCell: FlaneurFormElementCollection
     }
 
     override func becomeFirstResponder() -> Bool {
+        delegate?.scrollToVisibleSection(cell: self)
         return self.textArea.becomeFirstResponder()
+    }
+}
+
+extension FlaneurFormTextAreaElementCollectionViewCell: UITextViewDelegate {
+    func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
+        delegate?.nextElementShouldBecomeFirstResponder(cell: self)
+        return true
     }
 }
