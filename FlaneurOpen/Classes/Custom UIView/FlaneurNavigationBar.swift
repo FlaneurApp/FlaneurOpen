@@ -79,7 +79,6 @@ final public class FlaneurNavigationBar: UIView {
     var titleLabel: UILabel!
     var leftButton: UIButton!
     var rightButtons: [UIButton]!
-    var bottomBorder: UIView!
 
     var titleLabelTrailingLayoutConstraint: NSLayoutConstraint!
 
@@ -283,16 +282,5 @@ final public class FlaneurNavigationBar: UIView {
         rightButtons = []
         createBottomBorder()
         clipsToBounds = true
-    }
-
-    /// Create the bottom border
-    func createBottomBorder(width: CGFloat = 1.0) {
-        let bottomBorderFrame = CGRect(x: 0.0,
-                                       y: frame.height - width,
-                                       width: frame.width,
-                                       height: width)
-        bottomBorder = UIView(frame: bottomBorderFrame)
-        bottomBorder.backgroundColor = UIColor(white: 236.0 / 255.0, alpha: 1.0)
-        addSubview(bottomBorder)
     }
 }
