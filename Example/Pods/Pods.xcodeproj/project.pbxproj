@@ -845,7 +845,8 @@
 				00E3BCE51F7D553B00D046C5 /* FlaneurFormImagePickerElementCollectionViewCell.swift */,
 				00E3BCE31F7D497100D046C5 /* FlaneurFormElementCollectionViewCell.swift */,
 			);
-			path = "Form Tools";
+			name = "Form Tools";
+			path = "FlaneurOpen/Classes/Form Tools";
 			sourceTree = "<group>";
 		};
 		01A561C22F21FE545EE32C9E0A9648EF /* Custom UIView */ = {
