@@ -11,12 +11,17 @@ import Kingfisher
 
 fileprivate let defaultTitleLabelTrailingValue: CGFloat = 16.0
 
+public enum FlaneurNavigationBarActionFaceView {
+    case image(UIImage)
+    case label(String)
+}
+
 /// The structure describing:
 ///
 /// * how the associated control should look like
 /// * what the associated controld should do when tapped
 public struct FlaneurNavigationBarAction {
-    let image: UIImage
+    let faceView: FlaneurNavigationBarActionFaceView
     var action: () -> () = { _ in
         debugPrint("FlaneurNavigationBarAction pressed. Please override this attribute.")
     }
@@ -26,10 +31,10 @@ public struct FlaneurNavigationBarAction {
     /// The associated control will be a `UIButton` with an image.
     ///
     /// - Parameters:
-    ///   - image: the `UIImage` to be used on the `UIButton` associated to the action.
+    ///   - image: the *face view* to be used on the `UIButton` associated to the action.
     ///   - action: the action to perform when the `UIButton` receives a `.touchUpInside` event.
-    public init(image: UIImage, action: @escaping () -> ()) {
-        self.image = image
+    public init(faceView: FlaneurNavigationBarActionFaceView, action: @escaping () -> ()) {
+        self.faceView = faceView
         self.action = action
     }
 }
@@ -78,9 +83,10 @@ public struct FlaneurNavigationBarAction {
 final public class FlaneurNavigationBar: UIView {
     var titleLabel: UILabel!
     var leftButton: UIButton!
-    var rightButtons: [UIButton]!
+    public private(set) var rightButtons: [UIButton]!
 
     var titleLabelTrailingLayoutConstraint: NSLayoutConstraint!
+    var titleLabelTrailingLayoutConstraintToRightestButton: NSLayoutConstraint?
 
     var leftButtonAction: () -> () = { _ in
     }
@@ -117,7 +123,6 @@ final public class FlaneurNavigationBar: UIView {
                           leftAction: FlaneurNavigationBarAction? = nil,
                           rightActions: [FlaneurNavigationBarAction]? = nil) {
         var titleLabelLeadingValue: CGFloat = 16.0
-        var titleLabelTrailingValue: CGFloat = defaultTitleLabelTrailingValue
 
         if let leftAction = leftAction {
             titleLabelLeadingValue = 42.0
@@ -125,7 +130,14 @@ final public class FlaneurNavigationBar: UIView {
             // Setting up button
             leftButton.imageView?.contentMode = .scaleAspectFit
             leftButton.imageView?.tintColor = .black
-            leftButton.setImage(leftAction.image, for: .normal)
+
+            switch leftAction.faceView {
+            case .image(let image):
+                leftButton.setImage(image, for: .normal)
+            case .label(let label):
+                leftButton.setTitle(label, for: .normal)
+            }
+
             leftButton.showsTouchWhenHighlighted = true
             leftButton.isUserInteractionEnabled = true
             leftButton.addTarget(self, action: #selector(leftButtonPressed), for: .touchUpInside)
@@ -157,10 +169,6 @@ final public class FlaneurNavigationBar: UIView {
             NSLayoutConstraint(item: leftButton, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: buttonSize).isActive = true
         }
 
-        if let rightActions = rightActions {
-            titleLabelTrailingValue = setupRightActions(rightActions)
-        }
-
         // Setting up title
         self.setTitle(title)
         titleLabel.numberOfLines = 1
@@ -182,7 +190,7 @@ final public class FlaneurNavigationBar: UIView {
                                                                 toItem: self,
                                                                 attribute: .trailing,
                                                                 multiplier: 1.0,
-                                                                constant: -titleLabelTrailingValue)
+                                                                constant: -defaultTitleLabelTrailingValue)
         titleLabelTrailingLayoutConstraint.isActive = true
         NSLayoutConstraint(item: titleLabel,
                            attribute: .centerY,
@@ -191,10 +199,14 @@ final public class FlaneurNavigationBar: UIView {
                            attribute: .centerY,
                            multiplier: 1.0,
                            constant: 0.0).isActive = true
+
+        if let rightActions = rightActions {
+            setupRightActions(rightActions)
+        }
     }
 
-    func setupRightActions(_ rightActions: [FlaneurNavigationBarAction]) -> CGFloat {
-        var newTitleLabelTrailingValue: CGFloat = defaultTitleLabelTrailingValue
+    func setupRightActions(_ rightActions: [FlaneurNavigationBarAction]) {
+        var rightestView: UIView = self
 
         // Remove old buttons
         for oldRightButton in rightButtons {
@@ -202,29 +214,73 @@ final public class FlaneurNavigationBar: UIView {
             oldRightButton.removeTarget(self, action: #selector(rightButtonPressed), for: .touchUpInside)
         }
 
-        // Add the new buttons
-        for index in 0..<rightActions.count {
-            let rightAction = rightActions[index]
+        // Add the new image buttons
+        if isOnlyImageRightActions(actions: rightActions) {
+            for index in 0..<rightActions.count {
+                let rightAction = rightActions[index]
+                let newRightButton = UIButton(type: .custom)
+                rightButtons.append(newRightButton)
+                rightButtonsActions.append(rightAction.action)
+
+                // Setting up button
+                newRightButton.imageView?.contentMode = .scaleAspectFit
+                newRightButton.imageView?.tintColor = .black
+
+                switch rightAction.faceView {
+                case .image(let image):
+                    newRightButton.setImage(image, for: .normal)
+                default:
+                    fatalError("Right actions without image shouldn't be processed here")
+                }
+
+                newRightButton.showsTouchWhenHighlighted = true
+                newRightButton.isUserInteractionEnabled = true
+                newRightButton.addTarget(self, action: #selector(rightButtonPressed), for: .touchUpInside)
+                addSubview(newRightButton)
+
+                // Setting up button's constraints
+                newRightButton.translatesAutoresizingMaskIntoConstraints = false
+                let buttonSize: CGFloat = 24.0
+
+                // Set the trailing space to 8.0 point
+                let space: CGFloat = -18.0 + CGFloat(index) * (-24.0 - 12.0)
+                NSLayoutConstraint(item: newRightButton,
+                                   attribute: .trailing,
+                                   relatedBy: .equal,
+                                   toItem: self,
+                                   attribute: .trailing,
+                                   multiplier: 1.0,
+                                   constant: space).isActive = true
+                // Center vertically
+                NSLayoutConstraint(item: newRightButton, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1.0, constant: 0.0).isActive = true
+                // Give a square width & height
+                NSLayoutConstraint(item: newRightButton, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: buttonSize).isActive = true
+                NSLayoutConstraint(item: newRightButton, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: buttonSize).isActive = true
+
+                rightestView = newRightButton
+            }
+        } else if isUniqueTextAction(actions: rightActions) {
+            let rightAction = rightActions[0]
             let newRightButton = UIButton(type: .custom)
             rightButtons.append(newRightButton)
             rightButtonsActions.append(rightAction.action)
 
-            // Setting up button
-            newRightButton.imageView?.contentMode = .scaleAspectFit
-            newRightButton.imageView?.tintColor = .black
-            newRightButton.setImage(rightAction.image, for: .normal)
-            newRightButton.showsTouchWhenHighlighted = true
-            newRightButton.isUserInteractionEnabled = true
+            switch rightAction.faceView {
+            case .label(let title):
+                newRightButton.setTitle(title, for: .normal)
+                newRightButton.setTitleColor(.black, for: .normal)
+                newRightButton.setTitleColor(.gray, for: .disabled)
+            default:
+                fatalError("Right actions without text shouldn't be processed here")
+            }
+
             newRightButton.addTarget(self, action: #selector(rightButtonPressed), for: .touchUpInside)
             addSubview(newRightButton)
 
-            // Setting up button's constraints
             newRightButton.translatesAutoresizingMaskIntoConstraints = false
-            let buttonSize: CGFloat = 24.0
 
             // Set the trailing space to 8.0 point
-            let space: CGFloat = -18.0 + CGFloat(index) * (-24.0 - 12.0)
-            newTitleLabelTrailingValue = -space + 24.0
+            let space: CGFloat = -18.0
             NSLayoutConstraint(item: newRightButton,
                                attribute: .trailing,
                                relatedBy: .equal,
@@ -234,12 +290,31 @@ final public class FlaneurNavigationBar: UIView {
                                constant: space).isActive = true
             // Center vertically
             NSLayoutConstraint(item: newRightButton, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1.0, constant: 0.0).isActive = true
-            // Give a square width & height
-            NSLayoutConstraint(item: newRightButton, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: buttonSize).isActive = true
-            NSLayoutConstraint(item: newRightButton, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: buttonSize).isActive = true
+            // Set width
+            let sizeToFit = newRightButton.sizeThatFits(.zero)
+            NSLayoutConstraint(item: newRightButton, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: sizeToFit.width).isActive = true
+
+
+            rightestView = newRightButton
+        } else if rightActions.count > 0 {
+            print("ERROR! invalid right buttons, check the doc")
         }
 
-        return newTitleLabelTrailingValue
+        // Adjust constraint to rightest view
+        if rightestView == self {
+            titleLabelTrailingLayoutConstraint.isActive = true
+            titleLabelTrailingLayoutConstraintToRightestButton?.isActive = false
+        } else {
+            titleLabelTrailingLayoutConstraint.isActive = false
+            titleLabelTrailingLayoutConstraintToRightestButton = NSLayoutConstraint(item: titleLabel,
+                                                                                    attribute: .trailing,
+                                                                                    relatedBy: .equal,
+                                                                                    toItem: rightestView,
+                                                                                    attribute: .leading,
+                                                                                    multiplier: 1.0,
+                                                                                    constant: -8.0)
+            titleLabelTrailingLayoutConstraintToRightestButton?.isActive = true
+        }
     }
 
     /// Sets the title.
@@ -250,7 +325,33 @@ final public class FlaneurNavigationBar: UIView {
     }
 
     public func setRightActions(_ rightActions: [FlaneurNavigationBarAction]) {
-        titleLabelTrailingLayoutConstraint.constant = -setupRightActions(rightActions)
+        setupRightActions(rightActions)
+    }
+
+    func isOnlyImageRightActions(actions: [FlaneurNavigationBarAction]) -> Bool {
+        for action in actions {
+            switch action.faceView {
+            case .image:
+                continue
+            default:
+                return false
+            }
+        }
+
+        return actions.count > 0
+    }
+
+    func isUniqueTextAction(actions: [FlaneurNavigationBarAction]) -> Bool {
+        if actions.count == 1 {
+            switch actions[0].faceView {
+            case .label:
+                return true
+            default:
+                return false
+            }
+        } else {
+            return false
+        }
     }
 
     // MARK: - Actions

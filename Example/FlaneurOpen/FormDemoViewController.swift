@@ -14,7 +14,8 @@ class FormDemoViewController: UIViewController {
     @IBOutlet weak var formView: FlaneurFormView!
     @IBOutlet weak var formViewBottomConstraint: NSLayoutConstraint!
 
-    var firstResponderView: UIView?
+    var nameTextField: UITextField?
+    var descriptionTextArea: UITextView?
     var didAppear = false
 
     override func viewDidLoad() {
@@ -23,14 +24,16 @@ class FormDemoViewController: UIViewController {
         // Do any additional setup after loading the view.
         formView.configure(viewController: self)
         let nameFormElement = FlaneurFormElement(type: .textField, label: "Name") { view in
-            self.firstResponderView = view
+            self.nameTextField = view as? UITextField
             if self.didAppear {
-                self.firstResponderView?.becomeFirstResponder()
+                self.nameTextField?.becomeFirstResponder()
             }
         }
         formView.addFormElement(nameFormElement)
 
-        let descriptionFormElement = FlaneurFormElement(type: .textArea, label: "Description")
+        let descriptionFormElement = FlaneurFormElement(type: .textArea, label: "Description") { descriptionTextView in
+            self.descriptionTextArea = descriptionTextView as? UITextView
+        }
         formView.addFormElement(descriptionFormElement)
 
         let imagePickerFormElement = FlaneurFormElement(type: .imagePicker, label: "Cover")
@@ -62,7 +65,7 @@ class FormDemoViewController: UIViewController {
                                                object: nil)
 
         didAppear = true
-        firstResponderView?.becomeFirstResponder()
+        nameTextField?.becomeFirstResponder()
     }
 
     override func viewDidDisappear(_ animated: Bool) {
@@ -110,8 +113,7 @@ class FormDemoViewController: UIViewController {
         if keyboardShowing {
             let keyboardFrame = (keyboardInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
             let keyboardHeight = keyboardFrame?.size.height
-            debugPrint("Keyboard height: ", keyboardHeight)
-            formViewBottomConstraint.constant += keyboardHeight!
+            formViewBottomConstraint.constant = keyboardHeight!
         } else {
             formViewBottomConstraint.constant = 0
         }
@@ -124,5 +126,17 @@ class FormDemoViewController: UIViewController {
                             self.view.layoutIfNeeded()
             })
         }
+    }
+
+    @IBAction func showFormValues(_ sender: Any? = nil) {
+        let nameValue = nameTextField?.text ?? "-"
+        let descriptionValue = descriptionTextArea?.text ?? "-"
+        let message = "Name: \(nameValue)\nDescription: \(descriptionValue)"
+        let alertController = UIAlertController(title: "Form Values", message: message, preferredStyle: .alert)
+
+        let dismissAction = UIAlertAction(title: "OK", style: .cancel)
+        alertController.addAction(dismissAction)
+
+        self.present(alertController, animated: true)
     }
 }

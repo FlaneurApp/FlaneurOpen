@@ -247,7 +247,13 @@
                             <constraint firstItem="ump-dg-CkE" firstAttribute="top" secondItem="A4u-eI-kHG" secondAttribute="bottom" id="dYg-wQ-koi"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Form Demo" id="PhJ-JT-Ks7"/>
+                    <navigationItem key="navigationItem" title="Form Demo" id="PhJ-JT-Ks7">
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="done" id="wTd-Rz-XtR">
+                            <connections>
+                                <action selector="showFormValues:" destination="3pj-3X-OOl" id="NYr-QV-0Nd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="formView" destination="A4u-eI-kHG" id="KKd-Od-WNc"/>
                         <outlet property="formViewBottomConstraint" destination="dYg-wQ-koi" id="n3u-Q2-cqU"/>
@@ -454,6 +460,20 @@
                                     <action selector="restoreRightButtonsAction:" destination="97R-Pm-lCJ" eventType="touchUpInside" id="zH0-vp-lFk"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trW-WV-OHd">
+                                <rect key="frame" x="111" y="306" width="153" height="30"/>
+                                <state key="normal" title="Show text right button"/>
+                                <connections>
+                                    <action selector="showTextRightButtonAction:" destination="97R-Pm-lCJ" eventType="touchUpInside" id="q76-zt-e1P"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lxj-2q-f8F">
+                                <rect key="frame" x="133" y="376" width="108" height="30"/>
+                                <state key="normal" title="Disable buttons"/>
+                                <connections>
+                                    <action selector="disableRightButtonsActions:" destination="97R-Pm-lCJ" eventType="touchUpInside" id="w80-14-Si5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -462,8 +482,12 @@
                             <constraint firstItem="WgY-PH-dJL" firstAttribute="centerX" secondItem="gtm-Ya-Oiv" secondAttribute="centerX" id="ZQy-kV-PTX"/>
                             <constraint firstItem="1Sj-Ma-8vP" firstAttribute="centerX" secondItem="gtm-Ya-Oiv" secondAttribute="centerX" id="Zok-7D-1bm"/>
                             <constraint firstAttribute="trailing" secondItem="Ul8-Au-ZxE" secondAttribute="trailing" id="bTM-3f-mUo"/>
+                            <constraint firstItem="Lxj-2q-f8F" firstAttribute="centerX" secondItem="gtm-Ya-Oiv" secondAttribute="centerX" id="dxP-Dm-a2v"/>
+                            <constraint firstItem="Lxj-2q-f8F" firstAttribute="top" secondItem="trW-WV-OHd" secondAttribute="bottom" constant="40" id="fYj-03-W0Z"/>
+                            <constraint firstItem="trW-WV-OHd" firstAttribute="centerX" secondItem="gtm-Ya-Oiv" secondAttribute="centerX" id="g0K-ET-Jvf"/>
                             <constraint firstItem="Ul8-Au-ZxE" firstAttribute="leading" secondItem="gtm-Ya-Oiv" secondAttribute="leading" id="iKX-vr-qaR"/>
                             <constraint firstItem="1Sj-Ma-8vP" firstAttribute="top" secondItem="Ul8-Au-ZxE" secondAttribute="bottom" constant="80" id="p3t-d1-Ywe"/>
+                            <constraint firstItem="trW-WV-OHd" firstAttribute="top" secondItem="WgY-PH-dJL" secondAttribute="bottom" constant="40" id="pJW-q7-1Sj"/>
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>

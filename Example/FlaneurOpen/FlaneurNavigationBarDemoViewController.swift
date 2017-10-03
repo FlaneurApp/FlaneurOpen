@@ -17,18 +17,18 @@ class FlaneurNavigationBarDemoViewController: UIViewController {
 
         UILabel.appearance(whenContainedInInstancesOf: [FlaneurNavigationBar.self]).font = UIFont(name: "Futura-Medium", size: 16.0)
 
-        let myLeftAction = FlaneurNavigationBarAction(image: UIImage(named: "sample-844-trumpet")!) { _ in
+        let myLeftAction = FlaneurNavigationBarAction(faceView: .image(UIImage(named: "sample-844-trumpet")!)) { _ in
             self.navigationController?.popViewController(animated: true)
         }
 
 
         self.navigationBar.configure(title: "My Super Very Long Navigation Bar Title".uppercased(),
                                      leftAction: myLeftAction,
-                                     rightActions: rightActions())
+                                     rightActions: imageRightActions())
     }
 
-    func rightActions() -> [FlaneurNavigationBarAction] {
-        let myFirstRightAction = FlaneurNavigationBarAction(image: UIImage(named: "sample-986-ghost")!) { _ in
+    func imageRightActions() -> [FlaneurNavigationBarAction] {
+        let myFirstRightAction = FlaneurNavigationBarAction(faceView: .image(UIImage(named: "sample-986-ghost")!)) { _ in
             let alertViewController = UIAlertController(title: "My 1st Alert", message: "Cool", preferredStyle: .alert)
             let dismissAction = UIAlertAction(title: "OK", style: .cancel, handler: { _ in debugPrint("did dismiss alert") })
             alertViewController.addAction(dismissAction)
@@ -37,7 +37,7 @@ class FlaneurNavigationBarDemoViewController: UIViewController {
             }
         }
 
-        let mySecondRightAction = FlaneurNavigationBarAction(image: UIImage(named: "Tiny Icon")!) { _ in
+        let mySecondRightAction = FlaneurNavigationBarAction(faceView: .image(UIImage(named: "Tiny Icon")!)) { _ in
             let alertViewController = UIAlertController(title: "My 2nd Alert", message: "Cool", preferredStyle: .alert)
             let dismissAction = UIAlertAction(title: "OK", style: .cancel, handler: { _ in debugPrint("did dismiss alert") })
             alertViewController.addAction(dismissAction)
@@ -47,6 +47,19 @@ class FlaneurNavigationBarDemoViewController: UIViewController {
         }
 
         return [myFirstRightAction, mySecondRightAction]
+    }
+
+    func textRightAction() -> [FlaneurNavigationBarAction] {
+        let myTextAction = FlaneurNavigationBarAction(faceView: .label("Done")) {
+            let alertViewController = UIAlertController(title: "My text Alert", message: "Cool", preferredStyle: .alert)
+            let dismissAction = UIAlertAction(title: "OK", style: .cancel, handler: { _ in debugPrint("did dismiss alert") })
+            alertViewController.addAction(dismissAction)
+            self.present(alertViewController, animated: true) {
+                debugPrint("did present alert")
+            }
+        }
+
+        return [myTextAction]
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -62,6 +75,16 @@ class FlaneurNavigationBarDemoViewController: UIViewController {
     }
 
     @IBAction func restoreRightButtonsAction(_ sender: Any? = nil) {
-        navigationBar.setRightActions(rightActions())
+        navigationBar.setRightActions(imageRightActions())
+    }
+
+    @IBAction func showTextRightButtonAction(_ sender: Any? = nil) {
+        navigationBar.setRightActions(textRightAction())
+    }
+
+    @IBAction func disableRightButtonsActions(_ sender: Any? = nil) {
+        for button in navigationBar.rightButtons {
+            button.isEnabled = false
+        }
     }
 }
