@@ -36,7 +36,7 @@ class FormDemoViewController: UIViewController {
         }
         formView.addFormElement(descriptionFormElement)
 
-        let imagePickerFormElement = FlaneurFormElement(type: .imagePicker, label: "Cover")
+        let imagePickerFormElement = FlaneurFormElement(type: .imagePicker(buttonImage: UIImage(named: "sample-405-test-tube")!), label: "Cover")
         formView.addFormElement(imagePickerFormElement)
 
         let description1FormElement = FlaneurFormElement(type: .textArea, label: "Description 1")

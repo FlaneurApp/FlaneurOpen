@@ -19,8 +19,6 @@ class FlaneurFormImagePickerElementCollectionViewCell: FlaneurFormElementCollect
         self.launcherButton = launcherButton
         launcherButton.translatesAutoresizingMaskIntoConstraints = false
         launcherButton.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
-        launcherButton.setImage(UIImage(named: "sample-401-globe")!.withRenderingMode(.alwaysTemplate),
-                                for: .normal)
         launcherButton.tintColor = .white
         self.addSubview(launcherButton)
 
@@ -54,6 +52,12 @@ class FlaneurFormImagePickerElementCollectionViewCell: FlaneurFormElementCollect
 
     override func configureWith(formElement: FlaneurFormElement) {
         super.configureWith(formElement: formElement)
+
+        if case FlaneurFormElementType.imagePicker(let buttonImage) = formElement.type {
+            launcherButton.setImage(buttonImage.withRenderingMode(.alwaysTemplate),
+                                    for: .normal)
+        }
+
         formElement.didLoadHandler?(launcherButton)
     }
 

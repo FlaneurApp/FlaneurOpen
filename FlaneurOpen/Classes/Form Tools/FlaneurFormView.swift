@@ -11,9 +11,23 @@ import IGListKit
 public enum FlaneurFormElementType {
     case textField
     case textArea
-    case imagePicker
+    case imagePicker(buttonImage: UIImage)
 }
 
+extension FlaneurFormElementType: Equatable {
+    public static func == (lhs: FlaneurFormElementType, rhs: FlaneurFormElementType) -> Bool {
+        switch (lhs, rhs) {
+        case let (.imagePicker(l), .imagePicker(r)):
+            return l == r
+        case  (.textArea, .textArea):
+            return true
+        case  (.textField, .textField):
+            return true
+        default:
+            return false
+        }
+    }
+}
 
 public class FlaneurFormElement {
     let type: FlaneurFormElementType
