@@ -149,6 +149,7 @@ final public class FlaneurNavigationBar: UIView {
             let tagGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(leftButtonPressed))
             tagGestureRecognizer.numberOfTapsRequired = 1
             titleLabel.addGestureRecognizer(tagGestureRecognizer)
+            titleLabel.isUserInteractionEnabled = true
 
             // Setting up button's constraint
             leftButton.translatesAutoresizingMaskIntoConstraints = false
