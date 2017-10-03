@@ -145,10 +145,10 @@ final public class FlaneurNavigationBar: UIView {
 
             leftButtonAction = leftAction.action
 
-            // If there is a left action, the whole view activates it
+            // If there is a left action, the title view activates it
             let tagGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(leftButtonPressed))
             tagGestureRecognizer.numberOfTapsRequired = 1
-            self.addGestureRecognizer(tagGestureRecognizer)
+            titleLabel.addGestureRecognizer(tagGestureRecognizer)
 
             // Setting up button's constraint
             leftButton.translatesAutoresizingMaskIntoConstraints = false
