@@ -7,21 +7,22 @@
 
 import UIKit
 import IGListKit
+import FlaneurImagePicker
 
 public enum FlaneurFormElementType {
     case textField
     case textArea
-    case imagePicker(buttonImage: UIImage)
+    case imagePicker(delegate: FlaneurFormImagePickerElementCollectionViewCellDelegate)
 }
 
 extension FlaneurFormElementType: Equatable {
     public static func == (lhs: FlaneurFormElementType, rhs: FlaneurFormElementType) -> Bool {
         switch (lhs, rhs) {
-        case let (.imagePicker(l), .imagePicker(r)):
-            return l == r
-        case  (.textArea, .textArea):
+        case (.imagePicker(_), .imagePicker(_)):
             return true
-        case  (.textField, .textField):
+        case (.textArea, .textArea):
+            return true
+        case (.textField, .textField):
             return true
         default:
             return false
@@ -65,6 +66,7 @@ extension FlaneurFormElement: ListDiffable {
 
 public final class FlaneurFormView: UIView {
     var listAdapter: ListAdapter!
+    var viewController: UIViewController?
 
     // The collection view of form elements
     public let collectionView: UICollectionView = {
@@ -103,6 +105,8 @@ public final class FlaneurFormView: UIView {
     // MARK: - Public API
 
     public func configure(viewController: UIViewController) {
+        self.viewController = viewController
+
         listAdapter = {
             return ListAdapter(updater: ListAdapterUpdater(),
                                viewController: viewController,
@@ -227,5 +231,9 @@ extension FlaneurFormView: FlaneurFormElementCollectionViewCellDelegate {
         if let thisIndex = self.collectionView.indexPath(for: cell) {
             self.collectionView.scrollToItem(at: thisIndex, at: .top, animated: true)
         }
+    }
+
+    func presentViewController(viewController: UIViewController) {
+        self.viewController?.present(viewController, animated: true)
     }
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 import FlaneurOpen
-
+import FlaneurImagePicker
 
 class FormDemoViewController: UIViewController {
     @IBOutlet weak var formView: FlaneurFormView!
@@ -36,7 +36,7 @@ class FormDemoViewController: UIViewController {
         }
         formView.addFormElement(descriptionFormElement)
 
-        let imagePickerFormElement = FlaneurFormElement(type: .imagePicker(buttonImage: UIImage(named: "sample-405-test-tube")!), label: "Cover")
+        let imagePickerFormElement = FlaneurFormElement(type: .imagePicker(delegate: self), label: "Cover")
         formView.addFormElement(imagePickerFormElement)
 
         let description1FormElement = FlaneurFormElement(type: .textArea, label: "Description 1")
@@ -140,3 +140,22 @@ class FormDemoViewController: UIViewController {
         self.present(alertController, animated: true)
     }
 }
+
+extension FormDemoViewController: FlaneurFormImagePickerElementCollectionViewCellDelegate {
+    func didPickImages(images: [FlaneurImageDescription], userInfo: Any?) {
+        print("didPickImages")
+    }
+
+    func didCancelPickingImages() {
+        print("didCancel")
+    }
+
+    func buttonImage() -> UIImage {
+        return UIImage(named: "sample-405-test-tube")!
+    }
+
+    func sourceDelegates() -> [FlaneurImageSource] {
+        return [ .library, .camera ]
+    }
+}
+

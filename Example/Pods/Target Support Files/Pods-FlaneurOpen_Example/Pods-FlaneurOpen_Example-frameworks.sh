@@ -102,11 +102,15 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/ActionKit/ActionKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/FlaneurImagePicker/FlaneurImagePicker.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FlaneurOpen/FlaneurOpen.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/ActionKit/ActionKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/FlaneurImagePicker/FlaneurImagePicker.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FlaneurOpen/FlaneurOpen.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework"
