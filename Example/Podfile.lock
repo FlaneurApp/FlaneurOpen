@@ -29,7 +29,7 @@ PODS:
     - IGListKit/Diffing
   - IGListKit/Diffing (3.1.1)
   - Kingfisher (3.13.1)
-  - Nimble (7.0.1)
+  - Nimble (7.0.2)
   - Nimble-Snapshots (6.2.1):
     - Nimble-Snapshots/Core (= 6.2.1)
   - Nimble-Snapshots/Core (6.2.1):
@@ -56,20 +56,20 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   FlaneurImagePicker:
-    :commit: b5963d9f51bc9cf1e6613b0574898a0fdb3d24fe
+    :commit: 1c91c814313620df9c282a4f875bfd4d1ade413e
     :git: https://github.com/FlaneurApp/TmpFlaneurImagePicker
 
 SPEC CHECKSUMS:
   ActionKit: cc2ea5c047f6a83d03027d25dc47a443a8664906
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  FlaneurImagePicker: 0e18ccf7a0019fe86fc377472eea3f9604fd4cae
+  FlaneurImagePicker: c264c13b31fb7c943b629a40845a9454c037133c
   FlaneurOpen: 81264f8f1a413a4046df943ce44c58a973431e9a
   GoogleMaps: 8436ab5d1c25e36915b2f7416d0c8e3fa2e76c61
   GooglePlacePicker: 755f10343d71280c7b016823e73fbae9625dfa8a
   GooglePlaces: aafe5990fa7951e98e078761bbdaaf236d7e0c65
   IGListKit: cb97f405ae43e59fe1da74271e19427ec20d3c07
   Kingfisher: ed9707a409cc47fddafbcd12a43a9757e3600af5
-  Nimble: 657d000e11df8aebe27cdaf9d244de7f30ed87f7
+  Nimble: bfe1f814edabba69ff145cb1283e04ed636a67f2
   Nimble-Snapshots: 31c8ef7fcebf0e68b4dff83f6e2160813a4a116b
   Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
 

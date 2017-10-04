@@ -13,6 +13,10 @@ public protocol FlaneurFormImagePickerElementCollectionViewCellDelegate: Flaneur
     func numberOfImages() -> Int
     func initialSelection() -> [FlaneurImageDescription]
     func sourceDelegates() -> [FlaneurImageSource]
+
+    func localizedStringForTitle() -> String
+    func localizedStringForCancelAction() -> String
+    func localizedStringForDoneAction() -> String
 }
 
 public extension FlaneurFormImagePickerElementCollectionViewCellDelegate where Self: UIViewController {
@@ -26,6 +30,18 @@ public extension FlaneurFormImagePickerElementCollectionViewCellDelegate where S
 
     func sourceDelegates() -> [FlaneurImageSource] {
         return []
+    }
+
+    func localizedStringForTitle() -> String {
+        return "Pick your pictures"
+    }
+
+    func localizedStringForCancelAction() -> String {
+        return "Cancel"
+    }
+
+    func localizedStringForDoneAction() -> String {
+        return "Done"
     }
 }
 
@@ -105,29 +121,20 @@ class FlaneurFormImagePickerElementCollectionViewCell: FlaneurFormElementCollect
                                                          userInfo: nil,
                                                          sourcesDelegate: imageDelegate!.sourceDelegates(),
                                                          selectedImages: imageDelegate!.initialSelection())
-        flaneurPicker.config.cancelButtonTitle = "TODO"
-        flaneurPicker.config.doneButtonTitle = "TODO"
-        flaneurPicker.config.navBarTitle = "TODO"
+        flaneurPicker.config.cancelButtonTitle = imageDelegate!.localizedStringForCancelAction()
+        flaneurPicker.config.doneButtonTitle = imageDelegate!.localizedStringForDoneAction()
+        flaneurPicker.config.navBarTitle = imageDelegate!.localizedStringForTitle()
 
-//        // flaneurPicker.config.removeButtonColor = .red
-//
-//        flaneurPicker.config.backgroundColorForSection = [
-//            .pickerView: UIColor(red: 36/255, green: 41/255, blue: 50/255, alpha: 1),
-//            .imageSources: UIColor(red: 36/255, green: 41/255, blue: 50/255, alpha: 1),
-//            .selectedImages: UIColor(red: 36/255, green: 41/255, blue: 50/255, alpha: 1),
-//        ]
-//
-//        //        flaneurPicker.config.authorizationViewCustomClass = TestView.self
-//
-//        flaneurPicker.config.paddingForImagesPickerView = UIEdgeInsets (top: 3, left: 3, bottom: 3, right: 3)
-//        //        flaneurPicker.config.sizeForImagesPickerView = CGSize(width: 100, height: 100)
-//
-//        //        flaneurPicker.config.imageSourcesBackgroundColor = [.instagram: .brown]
-//        //        flaneurPicker.config.imageSourcesCellWidth = 200
-//
-//
-//        //        flaneurPicker.config.sectionsOrderArray = [.imageSources, .pickerView, .selectedImages]
+        flaneurPicker.config.navBarBackgroundColor = .white
+        flaneurPicker.config.navBarTitleColor = .black
 
+        flaneurPicker.config.backgroundColorForSection = [
+            .pickerView: UIColor(white: (236.0 / 255.0), alpha: 1.0),
+            .imageSources: .white,
+            .selectedImages: UIColor(white: (236.0 / 255.0), alpha: 1.0)
+        ]
+
+        // flaneurPicker.config.paddingForImagesPickerView = UIEdgeInsets (top: 3, left: 3, bottom: 3, right: 3)
         flaneurPicker.delegate = self
 
         delegate?.presentViewController(viewController: flaneurPicker)

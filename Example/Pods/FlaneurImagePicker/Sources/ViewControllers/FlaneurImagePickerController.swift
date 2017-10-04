@@ -276,7 +276,28 @@ final public class FlaneurImagePickerController: UIViewController {
     // MARK: - Layout Functions
     
     func layoutNavigationBar() {
-        navigationBar.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: 64)
+        navigationBar.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint(item: navigationBar,
+                           attribute: .leading,
+                           relatedBy: .equal,
+                           toItem: view,
+                           attribute: .leading,
+                           multiplier: 1.0,
+                           constant: 0.0).isActive = true
+        NSLayoutConstraint(item: navigationBar,
+                           attribute: .trailing,
+                           relatedBy: .equal,
+                           toItem: view,
+                           attribute: .trailing,
+                           multiplier: 1.0,
+                           constant: 0.0).isActive = true
+        NSLayoutConstraint(item: navigationBar,
+                           attribute: .top,
+                           relatedBy: .equal,
+                           toItem: topLayoutGuide,
+                           attribute: .bottom,
+                           multiplier: 1.0,
+                           constant: 0.0).isActive = true
     }
     
     func layoutCollectionViews() {
