@@ -10,7 +10,7 @@ import UIKit
 import FlaneurOpen
 import IGListKit
 
-@objc class FilterableLocation: NSObject, FlaneurCollectionItem, ListDiffable {
+class FilterableLocation: FlaneurCollectionItem, ListDiffable {
     let id: String
     let name: String
     let categories: [String]
@@ -38,17 +38,30 @@ import IGListKit
 
     public func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
         if let object = object as? FilterableLocation {
-            return self.id == object.id
+            return self == object
         } else {
             return false
         }
     }
 }
 
+extension FilterableLocation: Equatable {
+    static func == (lhs: FilterableLocation, rhs: FilterableLocation) -> Bool {
+        return lhs.id == rhs.id
+            && lhs.name == rhs.name
+    }
+}
+
+extension FilterableLocation: CustomStringConvertible {
+    var description: String {
+        return "(\(id); \(name))"
+    }
+}
+
 class FilteredCollectionViewDemoViewController: UIViewController {
     @IBOutlet weak var collectionViewContainer: FlaneurCollectionView!
 
-    let allItems = [
+    var allItems = [
         FilterableLocation(id: "1", name: "Paris", categories:        ["France",     "Europe"]),
         FilterableLocation(id: "2", name: "Bordeaux", categories:     ["France",     "Europe"]),
         FilterableLocation(id: "3", name: "Madrid", categories:       ["Spain",    "Europe"]),
@@ -81,6 +94,7 @@ class FilteredCollectionViewDemoViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(presentActions))
 
         collectionViewContainer.configure(viewController: self, items: allItems, nbColumns: 2)
+        collectionViewContainer.itemsCollectionView.allowsMultipleSelection = true
         collectionViewContainer.delegate = self
     }
 
@@ -95,47 +109,44 @@ class FilteredCollectionViewDemoViewController: UIViewController {
         let filterFranceAction = UIAlertAction(title: "Add France filter", style: .default) { _ in
             self.collectionViewContainer.filters.append(FlaneurCollectionFilter(name: "France",
                                                                                 rightImage: UIImage(named: "sample-821-stamp")!) { element in
-                if let object = element as? FilterableLocation {
-                    return object.categories.contains("France")
-                } else {
-                    return false
-                }
+                                                                                    if let object = element as? FilterableLocation {
+                                                                                        return object.categories.contains("France")
+                                                                                    } else {
+                                                                                        return false
+                                                                                    }
             })
         }
         let filterSpainAction = UIAlertAction(title: "Add Spain filter", style: .default) { _ in
             self.collectionViewContainer.filters.append(FlaneurCollectionFilter(name: "Spain",
                                                                                 rightImage: UIImage(named: "sample-1082-merge")!) { element in
-                if let object = element as? FilterableLocation {
-                    return object.categories.contains("Spain")
-                } else {
-                    return false
-                }
+                                                                                    if let object = element as? FilterableLocation {
+                                                                                        return object.categories.contains("Spain")
+                                                                                    } else {
+                                                                                        return false
+                                                                                    }
             })
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in
             self.dismiss(animated: true)
         }
 
+        let changeItemAction = UIAlertAction(title: "Change item", style: .default) { _ in
+            self.allItems.remove(at: 0)
+            self.allItems.insert(FilterableLocation(id: "1", name: "Brest", categories:        ["France",     "Europe"]), at: 0)
+            self.collectionViewContainer.items = self.allItems
+        }
+
         for action in [showAllAction,
                        filterFranceAction,
                        filterSpainAction,
+                       changeItemAction,
                        cancelAction] {
-            alertVC.addAction(action)
+                        alertVC.addAction(action)
         }
         self.present(alertVC, animated: true)
     }
 }
 
 extension FilteredCollectionViewDemoViewController: FlaneurCollectionViewDelegate {
-    func flaneurCollectionView(_ collectionView: FlaneurCollectionView, didSelectItem item: FlaneurCollectionItem) {
-        debugPrint("didSelect: ", item)
-        collectionView.itemsCollectionView.allowsMultipleSelection = true
-        debugPrint("selectedIndex: ", collectionView.itemsCollectionView.indexPathsForSelectedItems)
-    }
-
-    func flaneurCollectionView(_ collectionView: FlaneurCollectionView, didDeselectItem item: FlaneurCollectionItem) {
-        debugPrint("didDeselect: ", item)
-        collectionView.itemsCollectionView.allowsMultipleSelection = true
-        debugPrint("selectedIndex: ", collectionView.itemsCollectionView.indexPathsForSelectedItems)
-    }
+    // Override stuff here if necessary
 }

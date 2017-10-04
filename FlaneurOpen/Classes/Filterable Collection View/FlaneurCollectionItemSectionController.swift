@@ -11,7 +11,7 @@ import IGListKit
 class FlaneurCollectionItemSectionController: ListSectionController {
     let borderWidth: CGFloat
     let nbColumns: Int
-    let object: FlaneurCollectionItem
+    var object: FlaneurCollectionItem
     let cellSizeRatio: CGFloat
     weak var collectionView: FlaneurCollectionView?
 
@@ -66,5 +66,10 @@ class FlaneurCollectionItemSectionController: ListSectionController {
         if let collectionView = collectionView {
             collectionView.delegate?.flaneurCollectionView(collectionView, didDeselectItem: object)
         }
+    }
+
+    override func didUpdate(to object: Any) {
+        guard let newItem = object as? FlaneurCollectionItem else { fatalError("Wrong type in FlaneurCollectionItemSectionController") }
+        self.object = newItem
     }
 }

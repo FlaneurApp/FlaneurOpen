@@ -26,6 +26,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 * Right actions in a `FlaneurNavigationBar` can either be a collection if images or a single text #16
 * Right actions in a `FlaneurNavigationBar` are now have public getters for their `UIButton` #16
 * Limit the navigation bar left action surface to its title #21
+* Fixed bug where `FlaneurCollectionView` was not updating items #22
 
 ## [0.3.0] - 2017-09-19
 
