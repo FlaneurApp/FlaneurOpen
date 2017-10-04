@@ -3,7 +3,7 @@
 //  FlaneurImagePickerController
 //
 //  Created by Frenchapp on 13/07/2017.
-//  Copyright © 2017 Frenchapp. All rights reserved.
+//  
 //
 
 import UIKit
@@ -85,10 +85,6 @@ public struct FlaneurImagePickerConfig {
     
     // MARK: - Content Size and shape
     
-    /// Height for each section, if nothing is specified, calculateSectionsHeight() function will fill
-    /// this with default values at init()
-    public var heightForSection = [FlaneurImagePickerSection: Int]()
-    
     /// Size of each thumbnail image shown in the .pickerView section, defaults to 1:4 of the screen's width
     public var sizeForImagesPickerView: CGSize = CGSize(width: UIScreen.main.bounds.width / 4, height: UIScreen.main.bounds.width / 4)
     
@@ -142,39 +138,9 @@ public struct FlaneurImagePickerConfig {
             message: NSLocalizedString("Maximum number of pictures reached", comment: ""),
             preferredStyle: .alert)
         alert.addAction(UIAlertAction(
-                            title: NSLocalizedString("OK", comment: ""),
-                            style: .cancel,
-                            handler: nil))
+            title: NSLocalizedString("OK", comment: ""),
+            style: .cancel,
+            handler: nil))
         vc.present(alert, animated: true, completion: nil)
     }
-    
-    // MARK: - Initializers
-    
-    
-    /**
-     Init - Automatically calculates the height of each section so it fits the screen's height
-     
-     - returns: A new FlaneurImagePickerConfig
-     */
-    public init() {
-        calculateSectionsHeight()
-    }
-    
-    
-    // MARK: - Functions
-    
-    mutating func calculateSectionsHeight() {
-        let screenHeight = UIScreen.main.bounds.height - 64
-        
-        heightForSection[.selectedImages] = Int(floor(screenHeight * (2 / 5)))
-        heightForSection[.imageSources] = 50
-        heightForSection[.pickerView] = Int(floor(screenHeight * (3 / 5) - 50))
-        
-        // Correct space error from floor function by adding it to the last section
-        let emptySpace = heightForSection.reduce(Int(screenHeight)) { (currentDiff, elem) -> Int in
-            return currentDiff - elem.value
-        }
-        heightForSection[.pickerView] = heightForSection[.pickerView]! + emptySpace
-    }
-
 }

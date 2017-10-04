@@ -304,23 +304,41 @@ final public class FlaneurImagePickerController: UIViewController {
         for i in 0..<collectionViews.count {
             let collectionView = collectionViews[i]
             let currentSection = config.sectionsOrderArray[i]
-            
             collectionView.translatesAutoresizingMaskIntoConstraints = false
-            
-            collectionView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-            collectionView.heightAnchor.constraint(equalToConstant: CGFloat(config.heightForSection[currentSection]!)).isActive = true
-            
+
+            // Use all horizontal space
+            collectionView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
             collectionView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+
+            // Bind the previous view
             if i == 0 {
                 collectionView.topAnchor.constraint(equalTo: navigationBar.bottomAnchor).isActive = true
             } else {
                 collectionView.topAnchor.constraint(equalTo: collectionViews[i - 1].bottomAnchor).isActive = true
             }
-            if currentSection == .selectedImages {
+
+            // Bind last cell to the bottom
+            if i == (collectionViews.count - 1) {
+                NSLayoutConstraint(item: collectionView,
+                                   attribute: .bottom,
+                                   relatedBy: .equal,
+                                   toItem: bottomLayoutGuide,
+                                   attribute: .top,
+                                   multiplier: 1.0,
+                                   constant: 0.0).isActive = true
+            }
+
+            switch currentSection {
+            case .selectedImages:
+                collectionView.heightAnchor.constraint(equalToConstant: 245.0).isActive = true
+
                 pageControl.translatesAutoresizingMaskIntoConstraints = false
                 pageControl.widthAnchor.constraint(equalTo: collectionView.widthAnchor).isActive = true
                 pageControl.bottomAnchor.constraint(equalTo: collectionView.bottomAnchor).isActive = true
                 pageControl.leftAnchor.constraint(equalTo: collectionView.leftAnchor).isActive = true
+            case .imageSources:
+                collectionView.heightAnchor.constraint(equalToConstant: 65.0).isActive = true
+            case .pickerView: break // Do nothing, it will adjust to whatever the other are :)
             }
         }
     }

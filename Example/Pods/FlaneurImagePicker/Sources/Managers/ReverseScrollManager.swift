@@ -4,7 +4,7 @@
 //  FlaneurImagePickerController
 //
 //  Created by Frenchapp on 31/07/2017.
-//  Copyright © 2017 Frenchapp. All rights reserved.
+//  
 //
 
 
