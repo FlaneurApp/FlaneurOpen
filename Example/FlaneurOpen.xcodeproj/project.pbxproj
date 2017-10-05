@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		002E9D321ED5E13D0046326C /* GooglePlacesDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002E9D311ED5E13D0046326C /* GooglePlacesDemoViewController.swift */; };
 		00880B9B1EC3502A00AD5B64 /* ListKitDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00880B9A1EC3502A00AD5B64 /* ListKitDemoViewController.swift */; };
+		0092AB631F867D6D0030E1D7 /* FlaneurModalProgressDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092AB621F867D6D0030E1D7 /* FlaneurModalProgressDemoViewController.swift */; };
 		009DAAEB1F3B795F0051E258 /* FlaneurOpenSecretInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 009DAAEA1F3B795F0051E258 /* FlaneurOpenSecretInfo.plist */; };
 		00A36F2A1F618F3400F05418 /* FlaneurNavigationBarDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A36F291F618F3400F05418 /* FlaneurNavigationBarDemoViewController.swift */; };
 		00D943611EBB338E00631E8E /* MapDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D943601EBB338E00631E8E /* MapDemoViewController.swift */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		002E9D311ED5E13D0046326C /* GooglePlacesDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlacesDemoViewController.swift; sourceTree = "<group>"; };
 		00880B9A1EC3502A00AD5B64 /* ListKitDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListKitDemoViewController.swift; sourceTree = "<group>"; };
+		0092AB621F867D6D0030E1D7 /* FlaneurModalProgressDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlaneurModalProgressDemoViewController.swift; sourceTree = "<group>"; };
 		009DAAEA1F3B795F0051E258 /* FlaneurOpenSecretInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FlaneurOpenSecretInfo.plist; sourceTree = SOURCE_ROOT; };
 		00A36F291F618F3400F05418 /* FlaneurNavigationBarDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlaneurNavigationBarDemoViewController.swift; sourceTree = "<group>"; };
 		00D943601EBB338E00631E8E /* MapDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapDemoViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				00A36F291F618F3400F05418 /* FlaneurNavigationBarDemoViewController.swift */,
 				00FCFAD31F66CE2B00E73EE8 /* FilteredCollectionViewDemoViewController.swift */,
 				00E3BCDB1F7D32C200D046C5 /* FormDemoViewController.swift */,
+				0092AB621F867D6D0030E1D7 /* FlaneurModalProgressDemoViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				00EC49871F73BBD300CC4667 /* DemoCollectionViewCell.swift */,
 				00DAAB7E1ECC5D9B00E40141 /* DemoCollectionViewCell.xib */,
@@ -437,6 +440,7 @@
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				00A36F2A1F618F3400F05418 /* FlaneurNavigationBarDemoViewController.swift in Sources */,
 				00E3BCDC1F7D32C200D046C5 /* FormDemoViewController.swift in Sources */,
+				0092AB631F867D6D0030E1D7 /* FlaneurModalProgressDemoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

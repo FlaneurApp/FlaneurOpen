@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   that benefit from a default implementation
 * Added `userInfo` to `FlaneurCollectionFilter` #11
 * Added `LayoutBorderManager`: a `NSLayoutConstraint` helper #14
+* Added `FlaneurModalProgressViewController` #TODO
 
 ### Changed
 
