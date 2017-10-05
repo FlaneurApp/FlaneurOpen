@@ -26,7 +26,13 @@ class FlaneurModalProgressDemoViewController: UIViewController {
                            animations: {
                             self.backgroundImageView.alpha = 1.0
             }, completion: { finished in
-                modalProgressViewController.okButton.isEnabled = true
+                modalProgressViewController.bodyLabel.text = "Demo completed."
+                UIView.animate(withDuration: 0.5,
+                               animations: {
+                                modalProgressViewController.progressBar.isHidden = true
+                                modalProgressViewController.bodyLabel.isHidden = false
+                                modalProgressViewController.okButton.isEnabled = true
+                })
             })
         }
     }

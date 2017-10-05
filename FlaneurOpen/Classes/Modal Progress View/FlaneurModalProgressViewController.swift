@@ -45,6 +45,24 @@ final public class FlaneurModalProgressViewController: UIViewController {
                            multiplier: 1.0,
                            constant: 0.0).isActive = true
 
+        bodyLabel = UILabel(frame: .zero)
+        bodyLabel.numberOfLines = 2
+        bodyLabel.translatesAutoresizingMaskIntoConstraints = false
+        bodyLabel.textAlignment = .center
+        bodyLabel.isHidden = true
+        popup.addSubview(bodyLabel)
+        _ = LayoutBorderManager(item: bodyLabel,
+                               toItem: popup,
+                               left: 15.0,
+                               right: 15.0)
+        NSLayoutConstraint(item: bodyLabel,
+                           attribute: .centerY,
+                           relatedBy: .equal,
+                           toItem: popup,
+                           attribute: .centerY,
+                           multiplier: 1.0,
+                           constant: 0.0).isActive = true
+
         titleLabel = UILabel(frame: .zero)
         titleLabel.numberOfLines = 1
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
