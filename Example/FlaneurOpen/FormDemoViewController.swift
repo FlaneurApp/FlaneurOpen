@@ -17,6 +17,7 @@ class FormDemoViewController: UIViewController {
     var nameTextField: UITextField?
     var descriptionTextArea: UITextView?
     var didAppear = false
+    var currentPictureSelection: [FlaneurImageDescription] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +46,9 @@ class FormDemoViewController: UIViewController {
         formView.addFormElement(description2FormElement)
         let description3FormElement = FlaneurFormElement(type: .textArea, label: "Description 3")
         formView.addFormElement(description3FormElement)
+
+        let selectElement = FlaneurFormElement(type: .select(delegate: self), label: "My Great Select")
+        formView.addFormElement(selectElement)
     }
 
     override func didReceiveMemoryWarning() {
@@ -143,7 +147,8 @@ class FormDemoViewController: UIViewController {
 
 extension FormDemoViewController: FlaneurFormImagePickerElementCollectionViewCellDelegate {
     func didPickImages(images: [FlaneurImageDescription], userInfo: Any?) {
-        print("didPickImages")
+        print("didPickImages: \(images.count)")
+        self.currentPictureSelection = images
     }
 
     func didCancelPickingImages() {
@@ -157,5 +162,16 @@ extension FormDemoViewController: FlaneurFormImagePickerElementCollectionViewCel
     func sourceDelegates() -> [FlaneurImageSource] {
         return [ .library, .camera ]
     }
+
+    func numberOfImages() -> Int {
+        return 2
+    }
+
+    func initialSelection() -> [FlaneurImageDescription] {
+        return currentPictureSelection
+    }
 }
 
+extension FormDemoViewController: FlaneurFormSelectElementCollectionViewCellDelegate {
+
+}

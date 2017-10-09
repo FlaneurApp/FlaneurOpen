@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0092AB611F867BEF0030E1D7 /* FlaneurModalProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092AB601F867BEF0030E1D7 /* FlaneurModalProgressViewController.swift */; };
+		00ADAA791F8BDEF6004A6D20 /* FlaneurFormSelectElementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ADAA781F8BDEF6004A6D20 /* FlaneurFormSelectElementCollectionViewCell.swift */; };
 		024D971D6D0A23F6FA8E942F381B9AF4 /* FlaneurNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04562BCA5314A18A8C8B767C015373E4 /* FlaneurNavigationBar.swift */; };
 		0252FCE76AEF69749C4378921E7570B8 /* SuiteHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B102F2A8E2CA86F9CB02E1E1C26379C8 /* SuiteHooks.swift */; };
 		028C16FD9D93949CEB5DB50FAA568D50 /* QuickSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = DB03CC19922778904424F89982F8FD9A /* QuickSpec.m */; };
@@ -493,6 +494,7 @@
 		0046FDE3AD8DF694FA649082908A1AD0 /* Pods-FlaneurOpen_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FlaneurOpen_Example-umbrella.h"; sourceTree = "<group>"; };
 		004B4220F810840C26CBCADCE164D8E4 /* ErrorUtility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ErrorUtility.swift; path = Sources/Quick/ErrorUtility.swift; sourceTree = "<group>"; };
 		0092AB601F867BEF0030E1D7 /* FlaneurModalProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FlaneurModalProgressViewController.swift; path = "../FlaneurOpen/Classes/Modal Progress View/FlaneurModalProgressViewController.swift"; sourceTree = "<group>"; };
+		00ADAA781F8BDEF6004A6D20 /* FlaneurFormSelectElementCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlaneurFormSelectElementCollectionViewCell.swift; sourceTree = "<group>"; };
 		00EB3E78518C3F6EBAD589AC2AA90894 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0111CE34A56B64CE0110F98639879F3D /* QuickConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QuickConfiguration.h; path = Sources/QuickObjectiveC/Configuration/QuickConfiguration.h; sourceTree = "<group>"; };
 		01BECD5B71B63C57BF9CF570E9163BB5 /* FlaneurImageDescription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FlaneurImageDescription.swift; path = Sources/Models/FlaneurImageDescription.swift; sourceTree = "<group>"; };
@@ -1227,6 +1229,7 @@
 				D2EF7BFF83DD0458E67141A9B8735F36 /* FlaneurFormImagePickerElementCollectionViewCell.swift */,
 				2862B00CF8C467280147651EAE7E5241 /* FlaneurFormTextAreaElementCollectionViewCell.swift */,
 				8884D9257507759DEA6FF40545376B68 /* FlaneurFormTextFieldElementCollectionViewCell.swift */,
+				00ADAA781F8BDEF6004A6D20 /* FlaneurFormSelectElementCollectionViewCell.swift */,
 				BC4D5C6B559C636AF8AD1E28CA3F9172 /* FlaneurFormView.swift */,
 			);
 			name = "Form Tools";
@@ -2536,6 +2539,7 @@
 				BE9ACD9AA2BE7B3DAE04EB6EB95C13EC /* FlaneurCollectionView.swift in Sources */,
 				BC3F7EF81764DCE60232123E9619CF71 /* FlaneurCollectionWithBorderListAdapter.swift in Sources */,
 				0C5E496EBBAA3B02A30695E70F35A705 /* FlaneurFilterCollectionViewCell.swift in Sources */,
+				00ADAA791F8BDEF6004A6D20 /* FlaneurFormSelectElementCollectionViewCell.swift in Sources */,
 				23962C51F665A1199A2B0E752AA1DFDB /* FlaneurFormElementCollectionViewCell.swift in Sources */,
 				ED26763B9EA02433E234CF7EF6B9FFA2 /* FlaneurFormImagePickerElementCollectionViewCell.swift in Sources */,
 				403867C2B8F1DF54B2DBC3742735A45D /* FlaneurFormTextAreaElementCollectionViewCell.swift in Sources */,

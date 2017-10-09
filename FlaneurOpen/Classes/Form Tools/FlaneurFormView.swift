@@ -13,6 +13,7 @@ public enum FlaneurFormElementType {
     case textField
     case textArea
     case imagePicker(delegate: FlaneurFormImagePickerElementCollectionViewCellDelegate)
+    case select(delegate: FlaneurFormSelectElementCollectionViewCellDelegate)
 }
 
 extension FlaneurFormElementType: Equatable {
@@ -180,6 +181,8 @@ class FlaneurFormElementSectionController: ListSectionController {
             height = 160.0
         case .imagePicker:
             height = 136.0
+        case .select(let delegate):
+            height = delegate.selectCollectionViewHeight()
         }
 
         return CGSize(width: self.collectionContext!.containerSize.width,
@@ -206,6 +209,13 @@ class FlaneurFormElementSectionController: ListSectionController {
             let cell = collectionContext?.dequeueReusableCell(of: FlaneurFormImagePickerElementCollectionViewCell.self,
                                                               for: self,
                                                               at: index) as? FlaneurFormImagePickerElementCollectionViewCell
+            cell?.configureWith(formElement: formElement)
+            cell?.delegate = cellDelegate
+            return cell!
+        case .select(let _):
+            let cell = collectionContext?.dequeueReusableCell(of: FlaneurFormSelectElementCollectionViewCell.self,
+                                                              for: self,
+                                                              at: index) as? FlaneurFormSelectElementCollectionViewCell
             cell?.configureWith(formElement: formElement)
             cell?.delegate = cellDelegate
             return cell!
