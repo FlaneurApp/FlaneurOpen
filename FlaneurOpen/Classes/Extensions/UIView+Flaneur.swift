@@ -25,5 +25,19 @@ public extension UIView {
                            multiplier: 1.0,
                            constant: width).isActive = true
     }
+
+    func removeAllSubviews() {
+        for view in self.subviews {
+            view.removeFromSuperview()
+        }
+    }
+
+    func removeAllGestureRecognizers() {
+        if let gestureRecognizers = self.gestureRecognizers {
+            for gestureRecognizer in gestureRecognizers {
+                self.removeGestureRecognizer(gestureRecognizer)
+            }
+        }
+    }
 }
 

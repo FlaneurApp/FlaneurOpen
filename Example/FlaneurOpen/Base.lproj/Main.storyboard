@@ -512,47 +512,56 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Sj-Ma-8vP">
-                                <rect key="frame" x="123" y="166" width="129" height="30"/>
+                                <rect key="frame" x="123" y="126" width="129" height="30"/>
                                 <state key="normal" title="Clear right buttons"/>
                                 <connections>
                                     <action selector="clearRightButtonsAction:" destination="97R-Pm-lCJ" eventType="touchUpInside" id="wdK-6k-QMO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WgY-PH-dJL">
-                                <rect key="frame" x="121" y="236" width="132" height="30"/>
+                                <rect key="frame" x="121" y="176" width="132" height="30"/>
                                 <state key="normal" title="Reset right buttons"/>
                                 <connections>
                                     <action selector="restoreRightButtonsAction:" destination="97R-Pm-lCJ" eventType="touchUpInside" id="zH0-vp-lFk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trW-WV-OHd">
-                                <rect key="frame" x="111" y="306" width="153" height="30"/>
+                                <rect key="frame" x="111" y="226" width="153" height="30"/>
                                 <state key="normal" title="Show text right button"/>
                                 <connections>
                                     <action selector="showTextRightButtonAction:" destination="97R-Pm-lCJ" eventType="touchUpInside" id="q76-zt-e1P"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lxj-2q-f8F">
-                                <rect key="frame" x="133" y="376" width="108" height="30"/>
-                                <state key="normal" title="Disable buttons"/>
+                                <rect key="frame" x="116" y="276" width="143" height="30"/>
+                                <state key="normal" title="Disable right buttons"/>
                                 <connections>
                                     <action selector="disableRightButtonsActions:" destination="97R-Pm-lCJ" eventType="touchUpInside" id="w80-14-Si5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgN-pE-y3p">
+                                <rect key="frame" x="107.5" y="326" width="160" height="30"/>
+                                <state key="normal" title="Toggle large left button"/>
+                                <connections>
+                                    <action selector="toggleLeftButtonAction:" destination="97R-Pm-lCJ" eventType="touchUpInside" id="UuT-fy-FyX"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Ul8-Au-ZxE" firstAttribute="top" secondItem="nzl-cE-e6v" secondAttribute="bottom" id="67B-PU-kw9"/>
-                            <constraint firstItem="WgY-PH-dJL" firstAttribute="top" secondItem="1Sj-Ma-8vP" secondAttribute="bottom" constant="40" id="7lU-Uz-CPm"/>
+                            <constraint firstItem="pgN-pE-y3p" firstAttribute="top" secondItem="Lxj-2q-f8F" secondAttribute="bottom" constant="20" id="6Qm-4Q-Qgd"/>
+                            <constraint firstItem="WgY-PH-dJL" firstAttribute="top" secondItem="1Sj-Ma-8vP" secondAttribute="bottom" constant="20" id="7lU-Uz-CPm"/>
+                            <constraint firstItem="pgN-pE-y3p" firstAttribute="centerX" secondItem="gtm-Ya-Oiv" secondAttribute="centerX" id="7p9-k2-deN"/>
                             <constraint firstItem="WgY-PH-dJL" firstAttribute="centerX" secondItem="gtm-Ya-Oiv" secondAttribute="centerX" id="ZQy-kV-PTX"/>
                             <constraint firstItem="1Sj-Ma-8vP" firstAttribute="centerX" secondItem="gtm-Ya-Oiv" secondAttribute="centerX" id="Zok-7D-1bm"/>
                             <constraint firstAttribute="trailing" secondItem="Ul8-Au-ZxE" secondAttribute="trailing" id="bTM-3f-mUo"/>
                             <constraint firstItem="Lxj-2q-f8F" firstAttribute="centerX" secondItem="gtm-Ya-Oiv" secondAttribute="centerX" id="dxP-Dm-a2v"/>
-                            <constraint firstItem="Lxj-2q-f8F" firstAttribute="top" secondItem="trW-WV-OHd" secondAttribute="bottom" constant="40" id="fYj-03-W0Z"/>
+                            <constraint firstItem="Lxj-2q-f8F" firstAttribute="top" secondItem="trW-WV-OHd" secondAttribute="bottom" constant="20" id="fYj-03-W0Z"/>
                             <constraint firstItem="trW-WV-OHd" firstAttribute="centerX" secondItem="gtm-Ya-Oiv" secondAttribute="centerX" id="g0K-ET-Jvf"/>
                             <constraint firstItem="Ul8-Au-ZxE" firstAttribute="leading" secondItem="gtm-Ya-Oiv" secondAttribute="leading" id="iKX-vr-qaR"/>
-                            <constraint firstItem="1Sj-Ma-8vP" firstAttribute="top" secondItem="Ul8-Au-ZxE" secondAttribute="bottom" constant="80" id="p3t-d1-Ywe"/>
-                            <constraint firstItem="trW-WV-OHd" firstAttribute="top" secondItem="WgY-PH-dJL" secondAttribute="bottom" constant="40" id="pJW-q7-1Sj"/>
+                            <constraint firstItem="1Sj-Ma-8vP" firstAttribute="top" secondItem="Ul8-Au-ZxE" secondAttribute="bottom" constant="40" id="p3t-d1-Ywe"/>
+                            <constraint firstItem="trW-WV-OHd" firstAttribute="top" secondItem="WgY-PH-dJL" secondAttribute="bottom" constant="20" id="pJW-q7-1Sj"/>
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>

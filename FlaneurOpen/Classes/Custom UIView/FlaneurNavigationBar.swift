@@ -9,11 +9,13 @@
 import UIKit
 import Kingfisher
 
-fileprivate let defaultTitleLabelTrailingValue: CGFloat = 16.0
+fileprivate let defaultContainerWidth: CGFloat = 16.0
 
 public enum FlaneurNavigationBarActionFaceView {
     case image(UIImage)
+    case imageToggle(UIImage, UIImage)
     case label(String)
+    case customView(UIView)
 }
 
 /// The structure describing:
@@ -23,7 +25,7 @@ public enum FlaneurNavigationBarActionFaceView {
 public struct FlaneurNavigationBarAction {
     let faceView: FlaneurNavigationBarActionFaceView
     var action: () -> () = { _ in
-        debugPrint("FlaneurNavigationBarAction pressed. Please override this attribute.")
+        print("INFO: FlaneurNavigationBarAction pressed. Please override this attribute.")
     }
 
     /// Returns an action.
@@ -82,15 +84,15 @@ public struct FlaneurNavigationBarAction {
 /// The FlaneurOpen demo app includes a demo for `FlaneurNavigationBar`. Cf. `FlaneurNavigationBarDemoViewController`.
 final public class FlaneurNavigationBar: UIView {
     var titleLabel: UILabel!
-    var leftButton: UIButton!
-    public private(set) var rightButtons: [UIButton]!
+    var leftContainer: UIView!
+    var rightContainer: UIView!
 
-    var titleLabelTrailingLayoutConstraint: NSLayoutConstraint!
-    var titleLabelTrailingLayoutConstraintToRightestButton: NSLayoutConstraint?
+    var leftContainerWidthConstraint: NSLayoutConstraint!
+    var rightContainerWidthConstraint: NSLayoutConstraint!
 
-    var leftButtonAction: () -> () = { _ in
-    }
+    public private(set) var rightButtons: [UIButton] = []
 
+    var leftButtonAction: () -> () = { _ in }
     var rightButtonsActions: [() -> ()] = []
 
     /// Initializes and returns a newly allocated navigation bar object with the specified frame rectangle.
@@ -109,6 +111,53 @@ final public class FlaneurNavigationBar: UIView {
         didLoad()
     }
 
+    /// Common init code.
+    func didLoad() {
+        translatesAutoresizingMaskIntoConstraints = false
+        backgroundColor = .white
+
+        // Init the left container
+        leftContainer = UIView(frame: .zero)
+        leftContainer.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(leftContainer)
+        _ = LayoutBorderManager.init(item: leftContainer,
+                                     toItem: self,
+                                     top: 0,
+                                     left: 0,
+                                     bottom: 0)
+        leftContainerWidthConstraint = NSLayoutConstraint(item: leftContainer, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: defaultContainerWidth)
+        leftContainerWidthConstraint.isActive = true
+
+        // Init the right container
+        rightContainer = UIView(frame: .zero)
+        rightContainer.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(rightContainer)
+        _ = LayoutBorderManager.init(item: rightContainer,
+                                     toItem: self,
+                                     top: 0,
+                                     bottom: 0,
+                                     right: 0)
+        rightContainerWidthConstraint = NSLayoutConstraint(item: rightContainer, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: defaultContainerWidth)
+        rightContainerWidthConstraint.isActive = true
+
+        titleLabel = UILabel(frame: .zero)
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.numberOfLines = 1
+        self.addSubview(titleLabel)
+
+        let views: [String: Any] = [
+        "lView": leftContainer,
+        "rView": rightContainer,
+        "tLabel": titleLabel
+        ]
+        let formatString = "[lView]-16-[tLabel]-16-[rView]"
+        let constraints = NSLayoutConstraint.constraints(withVisualFormat: formatString, options: .alignAllCenterY, metrics: nil, views: views)
+        NSLayoutConstraint.activate(constraints)
+
+        createBottomBorder()
+        clipsToBounds = true
+    }
+
     // MARK: - Configuring the bar
 
     /// Configures the bar with content.
@@ -122,200 +171,9 @@ final public class FlaneurNavigationBar: UIView {
     public func configure(title: String,
                           leftAction: FlaneurNavigationBarAction? = nil,
                           rightActions: [FlaneurNavigationBarAction]? = nil) {
-        var titleLabelLeadingValue: CGFloat = 16.0
-
-        if let leftAction = leftAction {
-            titleLabelLeadingValue = 42.0
-
-            // Setting up button
-            leftButton.imageView?.contentMode = .scaleAspectFit
-            leftButton.imageView?.tintColor = .black
-
-            switch leftAction.faceView {
-            case .image(let image):
-                leftButton.setImage(image, for: .normal)
-            case .label(let label):
-                leftButton.setTitle(label, for: .normal)
-            }
-
-            leftButton.showsTouchWhenHighlighted = true
-            leftButton.isUserInteractionEnabled = true
-            leftButton.addTarget(self, action: #selector(leftButtonPressed), for: .touchUpInside)
-            addSubview(leftButton)
-
-            leftButtonAction = leftAction.action
-
-            // If there is a left action, the title view activates it
-            let tagGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(leftButtonPressed))
-            tagGestureRecognizer.numberOfTapsRequired = 1
-            titleLabel.addGestureRecognizer(tagGestureRecognizer)
-            titleLabel.isUserInteractionEnabled = true
-
-            // Setting up button's constraint
-            leftButton.translatesAutoresizingMaskIntoConstraints = false
-            let buttonSize: CGFloat = 24.0
-
-            // Set the leading space to 8.0 point
-            NSLayoutConstraint(item: leftButton,
-                               attribute: .leading,
-                               relatedBy: .equal,
-                               toItem: self,
-                               attribute: .leading,
-                               multiplier: 1.0,
-                               constant: 8.0).isActive = true
-            // Center vertically
-            NSLayoutConstraint(item: leftButton, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1.0, constant: 0.0).isActive = true
-            // Give a square width & height
-            NSLayoutConstraint(item: leftButton, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: buttonSize).isActive = true
-            NSLayoutConstraint(item: leftButton, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: buttonSize).isActive = true
-        }
-
-        // Setting up title
         self.setTitle(title)
-        titleLabel.numberOfLines = 1
-        titleLabel.sizeToFit()
-        addSubview(titleLabel)
-
-        // Setting up title's constraints
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint(item: titleLabel,
-                           attribute: .leading,
-                           relatedBy: .equal,
-                           toItem: self,
-                           attribute: .leading,
-                           multiplier: 1.0,
-                           constant: titleLabelLeadingValue).isActive = true
-        titleLabelTrailingLayoutConstraint = NSLayoutConstraint(item: titleLabel,
-                                                                attribute: .trailing,
-                                                                relatedBy: .equal,
-                                                                toItem: self,
-                                                                attribute: .trailing,
-                                                                multiplier: 1.0,
-                                                                constant: -defaultTitleLabelTrailingValue)
-        titleLabelTrailingLayoutConstraint.isActive = true
-        NSLayoutConstraint(item: titleLabel,
-                           attribute: .centerY,
-                           relatedBy: .equal,
-                           toItem: self,
-                           attribute: .centerY,
-                           multiplier: 1.0,
-                           constant: 0.0).isActive = true
-
-        if let rightActions = rightActions {
-            setupRightActions(rightActions)
-        }
-    }
-
-    func setupRightActions(_ rightActions: [FlaneurNavigationBarAction]) {
-        var rightestView: UIView = self
-
-        // Remove old buttons
-        for oldRightButton in rightButtons {
-            oldRightButton.removeFromSuperview()
-            oldRightButton.removeTarget(self, action: #selector(rightButtonPressed), for: .touchUpInside)
-        }
-
-        // Add the new image buttons
-        if isOnlyImageRightActions(actions: rightActions) {
-            for index in 0..<rightActions.count {
-                let rightAction = rightActions[index]
-                let newRightButton = UIButton(type: .custom)
-                rightButtons.append(newRightButton)
-                rightButtonsActions.append(rightAction.action)
-
-                // Setting up button
-                newRightButton.imageView?.contentMode = .scaleAspectFit
-                newRightButton.imageView?.tintColor = .black
-
-                switch rightAction.faceView {
-                case .image(let image):
-                    newRightButton.setImage(image, for: .normal)
-                default:
-                    fatalError("Right actions without image shouldn't be processed here")
-                }
-
-                newRightButton.showsTouchWhenHighlighted = true
-                newRightButton.isUserInteractionEnabled = true
-                newRightButton.addTarget(self, action: #selector(rightButtonPressed), for: .touchUpInside)
-                addSubview(newRightButton)
-
-                // Setting up button's constraints
-                newRightButton.translatesAutoresizingMaskIntoConstraints = false
-                let buttonSize: CGFloat = 24.0
-
-                // Set the trailing space to 8.0 point
-                let space: CGFloat = -18.0 + CGFloat(index) * (-24.0 - 12.0)
-                NSLayoutConstraint(item: newRightButton,
-                                   attribute: .trailing,
-                                   relatedBy: .equal,
-                                   toItem: self,
-                                   attribute: .trailing,
-                                   multiplier: 1.0,
-                                   constant: space).isActive = true
-                // Center vertically
-                NSLayoutConstraint(item: newRightButton, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1.0, constant: 0.0).isActive = true
-                // Give a square width & height
-                NSLayoutConstraint(item: newRightButton, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: buttonSize).isActive = true
-                NSLayoutConstraint(item: newRightButton, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: buttonSize).isActive = true
-
-                rightestView = newRightButton
-            }
-        } else if isUniqueTextAction(actions: rightActions) {
-            let rightAction = rightActions[0]
-            let newRightButton = UIButton(type: .custom)
-            rightButtons.append(newRightButton)
-            rightButtonsActions.append(rightAction.action)
-
-            switch rightAction.faceView {
-            case .label(let title):
-                newRightButton.setTitle(title, for: .normal)
-                newRightButton.setTitleColor(.black, for: .normal)
-                newRightButton.setTitleColor(.gray, for: .disabled)
-            default:
-                fatalError("Right actions without text shouldn't be processed here")
-            }
-
-            newRightButton.addTarget(self, action: #selector(rightButtonPressed), for: .touchUpInside)
-            addSubview(newRightButton)
-
-            newRightButton.translatesAutoresizingMaskIntoConstraints = false
-
-            // Set the trailing space to 8.0 point
-            let space: CGFloat = -18.0
-            NSLayoutConstraint(item: newRightButton,
-                               attribute: .trailing,
-                               relatedBy: .equal,
-                               toItem: self,
-                               attribute: .trailing,
-                               multiplier: 1.0,
-                               constant: space).isActive = true
-            // Center vertically
-            NSLayoutConstraint(item: newRightButton, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1.0, constant: 0.0).isActive = true
-            // Set width
-            let sizeToFit = newRightButton.sizeThatFits(.zero)
-            NSLayoutConstraint(item: newRightButton, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: sizeToFit.width).isActive = true
-
-
-            rightestView = newRightButton
-        } else if rightActions.count > 0 {
-            print("ERROR! invalid right buttons, check the doc")
-        }
-
-        // Adjust constraint to rightest view
-        if rightestView == self {
-            titleLabelTrailingLayoutConstraint.isActive = true
-            titleLabelTrailingLayoutConstraintToRightestButton?.isActive = false
-        } else {
-            titleLabelTrailingLayoutConstraint.isActive = false
-            titleLabelTrailingLayoutConstraintToRightestButton = NSLayoutConstraint(item: titleLabel,
-                                                                                    attribute: .trailing,
-                                                                                    relatedBy: .equal,
-                                                                                    toItem: rightestView,
-                                                                                    attribute: .leading,
-                                                                                    multiplier: 1.0,
-                                                                                    constant: -8.0)
-            titleLabelTrailingLayoutConstraintToRightestButton?.isActive = true
-        }
+        setLeftAction(leftAction)
+        setRightActions(rightActions)
     }
 
     /// Sets the title.
@@ -325,14 +183,107 @@ final public class FlaneurNavigationBar: UIView {
         titleLabel.flaneurText(title, letterSpacing: 2.0)
     }
 
-    public func setRightActions(_ rightActions: [FlaneurNavigationBarAction]) {
-        setupRightActions(rightActions)
+    public func setLeftAction(_ leftAction: FlaneurNavigationBarAction?) {
+        // Reset state
+        leftContainer.removeAllSubviews()
+        leftButtonAction = { _ in }
+
+        if let leftAction = leftAction {
+            leftButtonAction = leftAction.action
+
+            let view = leftAction.view
+            leftContainer.addSubview(view)
+
+            // If there is a left action, the title view activates it
+            for activatingView in [leftContainer, titleLabel] {
+                let tagGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(leftButtonPressed))
+                tagGestureRecognizer.numberOfTapsRequired = 1
+                activatingView?.addGestureRecognizer(tagGestureRecognizer)
+                activatingView?.isUserInteractionEnabled = true
+            }
+
+            // Setting up button's constraint
+            view.translatesAutoresizingMaskIntoConstraints = false
+
+            NSLayoutConstraint(item: view,
+                               attribute: .leading,
+                               relatedBy: .equal,
+                               toItem: leftContainer,
+                               attribute: .leading,
+                               multiplier: 1.0,
+                               constant: 8.0).isActive = true
+            // Center vertically
+            NSLayoutConstraint(item: view, attribute: .centerY, relatedBy: .equal, toItem: leftContainer, attribute: .centerY, multiplier: 1.0, constant: 0.0).isActive = true
+            // Give a square width & height
+            NSLayoutConstraint(item: view, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: view.frame.width).isActive = true
+            NSLayoutConstraint(item: view, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: view.frame.height).isActive = true
+
+            leftContainerWidthConstraint.constant = 18.0 + view.frame.width
+        } else {
+            titleLabel.removeAllGestureRecognizers()
+            leftContainerWidthConstraint.constant = 16.0
+        }
+    }
+
+    public func setRightActions(_ rightActions: [FlaneurNavigationBarAction]?) {
+        rightContainer.removeAllSubviews()
+        rightButtons = []
+        rightButtonsActions = []
+
+        if let rightActions = rightActions {
+            guard self.isOnlyImageRightActions(actions: rightActions) || self.isUniqueTextAction(actions: rightActions) || rightActions.count == 0 else {
+                print("ERROR: Invalid right button configuration for FlaneurNavigationBar")
+                return
+            }
+
+            // Add the new image buttons
+            var latestRightWidth: CGFloat = 0.0
+            for index in 0..<rightActions.count {
+
+                let rightAction = rightActions[index]
+
+                let newRightButton = rightAction.view as! UIButton
+                rightButtons.append(newRightButton)
+                rightButtonsActions.append(rightAction.action)
+                newRightButton.addTarget(self, action: #selector(rightButtonPressed), for: .touchUpInside)
+                rightContainer.addSubview(newRightButton)
+
+                // Set the trailing space to 8.0 point
+                newRightButton.translatesAutoresizingMaskIntoConstraints = false
+
+                let space = rightSpaceForIndex(index: index)
+                NSLayoutConstraint(item: newRightButton,
+                                   attribute: .trailing,
+                                   relatedBy: .equal,
+                                   toItem: rightContainer,
+                                   attribute: .trailing,
+                                   multiplier: 1.0,
+                                   constant: -space).isActive = true
+                // Center vertically
+                NSLayoutConstraint(item: newRightButton, attribute: .centerY, relatedBy: .equal, toItem: rightContainer, attribute: .centerY, multiplier: 1.0, constant: 0.0).isActive = true
+                // Give a square width & height
+                NSLayoutConstraint(item: newRightButton, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: newRightButton.frame.width).isActive = true
+                NSLayoutConstraint(item: newRightButton, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: newRightButton.frame.height).isActive = true
+
+                latestRightWidth = space + newRightButton.frame.width
+            }
+
+            rightContainerWidthConstraint.constant = latestRightWidth
+        } else {
+            rightContainerWidthConstraint.constant = 0.0
+        }
+    }
+
+    func rightSpaceForIndex(index: Int) -> CGFloat {
+        // Default trailing space is 18.0
+        // The we have a 24.0 button and a 12.0 space
+        return 18.0 + CGFloat(index) * (24.0 + 12.0)
     }
 
     func isOnlyImageRightActions(actions: [FlaneurNavigationBarAction]) -> Bool {
         for action in actions {
             switch action.faceView {
-            case .image:
+            case .image, .imageToggle:
                 continue
             default:
                 return false
@@ -363,26 +314,56 @@ final public class FlaneurNavigationBar: UIView {
 
     @IBAction func rightButtonPressed(_ sender: Any) {
         if let senderButton = sender as? UIButton {
+            senderButton.isSelected = !senderButton.isSelected
             if let buttonIndex = rightButtons.index(where: { $0 == senderButton }) {
                 rightButtonsActions[buttonIndex]()
             } else {
-                debugPrint("Sender not found in rightButtons", sender)
+                print("ERROR: Sender not found in rightButtons", sender)
             }
         } else {
-            debugPrint("Sender is not a UIButton: ", sender)
+            print("ERROR: Sender is not a UIButton: ", sender)
+        }
+    }
+}
+
+extension FlaneurNavigationBarAction {
+    var view: UIView {
+        switch self.faceView {
+        case .image(let image):
+            return viewForImageFaceView(defaultStateImage: image)
+        case .imageToggle(let image1, let image2):
+            return viewForImageFaceView(defaultStateImage: image1, optionalImage: image2)
+        case .label(let labelTitle):
+            return viewForLabelFaceView(title: labelTitle)
+        case .customView(let view):
+            return view
         }
     }
 
-    // MARK: - Private Code
+    func viewForImageFaceView(defaultStateImage: UIImage, optionalImage: UIImage? = nil) -> UIButton {
+        let resultButton = UIButton(frame: CGRect(x: 0.0,
+                                                  y: 0.0,
+                                                  width: 24.0,
+                                                  height: 24.0))
 
-    /// Common init code.
-    func didLoad() {
-        translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = .white
-        titleLabel = UILabel(frame: .zero)
-        leftButton = UIButton(frame: .zero)
-        rightButtons = []
-        createBottomBorder()
-        clipsToBounds = true
+        // Setting up button
+        resultButton.imageView?.contentMode = .scaleAspectFit
+        resultButton.imageView?.tintColor = .black
+        resultButton.setImage(defaultStateImage, for: .normal)
+
+        if let optionalImage = optionalImage {
+            resultButton.setImage(optionalImage, for: .selected)
+        }
+
+        return resultButton
+    }
+
+    func viewForLabelFaceView(title: String) -> UIButton {
+        let resultButton = UIButton(frame: .zero)
+        resultButton.setTitle(title, for: .normal)
+        resultButton.setTitleColor(.black, for: .normal)
+        resultButton.setTitleColor(.gray, for: .disabled)
+        resultButton.sizeToFit()
+        return resultButton
     }
 }

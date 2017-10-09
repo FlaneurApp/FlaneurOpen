@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/FlaneurOpen/Classes/CollectionViewUtils/FlaneurNavigationBar.xib">
+   </FileRef>
+   <FileRef
       location = "group:FlaneurOpen.xcodeproj">
    </FileRef>
    <FileRef

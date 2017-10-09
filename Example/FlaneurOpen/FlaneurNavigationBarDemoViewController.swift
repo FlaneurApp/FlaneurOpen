@@ -12,19 +12,31 @@ import FlaneurOpen
 class FlaneurNavigationBarDemoViewController: UIViewController {
     @IBOutlet weak var navigationBar: FlaneurNavigationBar!
 
+    var isDefaultLeftAction: Bool = false
+    var myDefaultLeftAction: FlaneurNavigationBarAction!
+    var myLongerLeftAction: FlaneurNavigationBarAction!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         UILabel.appearance(whenContainedInInstancesOf: [FlaneurNavigationBar.self]).font = UIFont(name: "Futura-Medium", size: 16.0)
 
-        let myLeftAction = FlaneurNavigationBarAction(faceView: .image(UIImage(named: "sample-844-trumpet")!)) { _ in
+        myDefaultLeftAction = FlaneurNavigationBarAction(faceView: .image(UIImage(named: "sample-844-trumpet")!)) {
             self.navigationController?.popViewController(animated: true)
         }
 
+        let myLongView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 100.0, height: 10.0))
+        myLongView.translatesAutoresizingMaskIntoConstraints = false
+        myLongView.backgroundColor = .orange
+
+        myLongerLeftAction = FlaneurNavigationBarAction(faceView: .customView(myLongView)) { _ in
+            self.navigationController?.popViewController(animated: true)
+        }
 
         self.navigationBar.configure(title: "My Super Very Long Navigation Bar Title".uppercased(),
-                                     leftAction: myLeftAction,
+                                     leftAction: myDefaultLeftAction,
                                      rightActions: imageRightActions())
+        isDefaultLeftAction = true
     }
 
     func imageRightActions() -> [FlaneurNavigationBarAction] {
@@ -37,7 +49,7 @@ class FlaneurNavigationBarDemoViewController: UIViewController {
             }
         }
 
-        let mySecondRightAction = FlaneurNavigationBarAction(faceView: .image(UIImage(named: "Tiny Icon")!)) { _ in
+        let mySecondRightAction = FlaneurNavigationBarAction(faceView: .imageToggle(UIImage(named: "Tiny Icon")!, UIImage(named: "sample-321-like")!)) { _ in
             let alertViewController = UIAlertController(title: "My 2nd Alert", message: "Cool", preferredStyle: .alert)
             let dismissAction = UIAlertAction(title: "OK", style: .cancel, handler: { _ in debugPrint("did dismiss alert") })
             alertViewController.addAction(dismissAction)
@@ -86,5 +98,15 @@ class FlaneurNavigationBarDemoViewController: UIViewController {
         for button in navigationBar.rightButtons {
             button.isEnabled = false
         }
+    }
+
+    @IBAction func toggleLeftButtonAction(_ sender: Any? = nil) {
+        if isDefaultLeftAction {
+            navigationBar.setLeftAction(myLongerLeftAction)
+        } else {
+            navigationBar.setLeftAction(myDefaultLeftAction)
+        }
+
+        isDefaultLeftAction = !isDefaultLeftAction
     }
 }
