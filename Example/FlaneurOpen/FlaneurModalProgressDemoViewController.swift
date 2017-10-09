@@ -11,29 +11,51 @@ import FlaneurOpen
 
 class FlaneurModalProgressDemoViewController: UIViewController {
     @IBOutlet weak var backgroundImageView: UIImageView!
+    var progress: Progress!
+    var startDate: CFTimeInterval? = nil
+    var animationDuration: Int64 = 3
+    var modalProgressViewController: FlaneurModalProgressViewController? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.backgroundImageView.alpha = 0.0
+        self.progress = Progress(totalUnitCount: animationDuration * 1000)
+    }
+
+    func createDisplayLink() {
+        let displayLink =  CADisplayLink(target: self, selector: #selector(step(displaylink:)))
+        displayLink.add(to: .current, forMode: .defaultRunLoopMode)
+    }
+
+    func step(displaylink: CADisplayLink) {
+        if startDate == nil {
+            startDate = displaylink.timestamp
+        }
+
+        let elapsed: CFTimeInterval = displaylink.timestamp - startDate!
+        self.progress.completedUnitCount = Int64(elapsed * 1000)
+
+        self.backgroundImageView.alpha = CGFloat(self.progress.fractionCompleted)
+
+        if elapsed >= CFTimeInterval(animationDuration) {
+            displaylink.invalidate()
+
+            self.modalProgressViewController?.bodyLabel.text = "Demo completed."
+            UIView.animate(withDuration: 0.5,
+                           animations: {
+                            self.modalProgressViewController?.progressBar.isHidden = true
+                            self.modalProgressViewController?.bodyLabel.isHidden = false
+                            self.modalProgressViewController?.okButton.isEnabled = true
+            })
+        }
     }
 
     @IBAction func launchModalAction(_ sender: Any? = nil) {
-        let modalProgressViewController = FlaneurModalProgressViewController(nibName: nil, bundle: nil)
-        modalProgressViewController.modalPresentationStyle = .overCurrentContext
-        self.present(modalProgressViewController, animated: true) {
-            modalProgressViewController.titleLabel.text = "My Demo Modal"
-            UIView.animate(withDuration: 3.0,
-                           animations: {
-                            self.backgroundImageView.alpha = 1.0
-            }, completion: { finished in
-                modalProgressViewController.bodyLabel.text = "Demo completed."
-                UIView.animate(withDuration: 0.5,
-                               animations: {
-                                modalProgressViewController.progressBar.isHidden = true
-                                modalProgressViewController.bodyLabel.isHidden = false
-                                modalProgressViewController.okButton.isEnabled = true
-                })
-            })
+        self.createDisplayLink()
+        modalProgressViewController = FlaneurModalProgressViewController(nibName: nil, bundle: nil)
+        modalProgressViewController!.modalPresentationStyle = .overCurrentContext
+        self.present(modalProgressViewController!, animated: true) {
+            self.modalProgressViewController?.progressBar.observedProgress = self.progress
         }
     }
 }
