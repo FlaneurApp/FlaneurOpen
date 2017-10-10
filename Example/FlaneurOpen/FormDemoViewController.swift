@@ -173,5 +173,39 @@ extension FormDemoViewController: FlaneurFormImagePickerElementCollectionViewCel
 }
 
 extension FormDemoViewController: FlaneurFormSelectElementCollectionViewCellDelegate {
+    func nbOfItems() -> Int {
+        return 10
+    }
 
+    func selectCollectionViewHeight() -> CGFloat {
+        return 54.0
+    }
+
+    func cellClass() -> AnyClass? {
+        return DemoCollectionViewCell.self
+    }
+
+    func cellReuseIdentifier() -> String {
+        return "formElementCell"
+    }
+
+    func configure(cell: UICollectionViewCell, forIndex: Int) {
+        guard let demoCell = cell as? DemoCollectionViewCell else {
+            fatalError("configuration error")
+        }
+
+        demoCell.label.text = "\(forIndex)"
+    }
+
+    func allowMultipleSelection() -> Bool {
+        return true
+    }
+
+    func didSelectItem(index: Int, cell: UICollectionViewCell) {
+        //
+    }
+
+    func didDeselectItem(index: Int, cell: UICollectionViewCell) {
+        // ...
+    }
 }

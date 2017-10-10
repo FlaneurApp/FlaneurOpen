@@ -25,6 +25,8 @@ extension FlaneurFormElementType: Equatable {
             return true
         case (.textField, .textField):
             return true
+        case (.select, .select):
+            return true
         default:
             return false
         }
@@ -182,8 +184,10 @@ class FlaneurFormElementSectionController: ListSectionController {
         case .imagePicker:
             height = 136.0
         case .select(let delegate):
-            height = delegate.selectCollectionViewHeight()
+            height = delegate.selectCollectionViewSize().height + 44.0 + 16.0
         }
+
+        debugPrint("FormElement height: \(height)")
 
         return CGSize(width: self.collectionContext!.containerSize.width,
                       height: height)
@@ -212,12 +216,13 @@ class FlaneurFormElementSectionController: ListSectionController {
             cell?.configureWith(formElement: formElement)
             cell?.delegate = cellDelegate
             return cell!
-        case .select(let _):
+        case .select(let selectDelegate):
             let cell = collectionContext?.dequeueReusableCell(of: FlaneurFormSelectElementCollectionViewCell.self,
                                                               for: self,
                                                               at: index) as? FlaneurFormSelectElementCollectionViewCell
-            cell?.configureWith(formElement: formElement)
             cell?.delegate = cellDelegate
+            cell?.selectDelegate = selectDelegate
+            cell?.configureWith(formElement: formElement)
             return cell!
         }
     }
