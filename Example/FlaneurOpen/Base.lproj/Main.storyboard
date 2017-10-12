@@ -162,6 +162,26 @@
                                             <segue destination="JhK-JZ-xIG" kind="show" id="kKy-9V-a7v"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="yoc-fY-AUo" style="IBUITableViewCellStyleDefault" id="qYs-cX-X3S">
+                                        <rect key="frame" x="0.0" y="308" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qYs-cX-X3S" id="WjT-iB-hEC">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="SegmentedCollectionView Demo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yoc-fY-AUo">
+                                                    <rect key="frame" x="16" y="0.0" width="344" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="LSU-Np-bcq" kind="show" id="2KR-yS-G83"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -241,6 +261,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gaC-ld-nho" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="465" y="-348"/>
+        </scene>
+        <!--SegmentedCollectionView Demo-->
+        <scene sceneID="DLl-TK-TKN">
+            <objects>
+                <viewController id="LSU-Np-bcq" customClass="SegmentedCollectionViewController" customModule="FlaneurOpen_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qGQ-N8-Ae8"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ewh-C2-VYB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Vc-up-cex">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3RG-jR-7Ve" customClass="SegmentedCollectionView" customModule="FlaneurOpen">
+                                <rect key="frame" x="8" y="72" width="359" height="587"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ewh-C2-VYB" firstAttribute="top" secondItem="3RG-jR-7Ve" secondAttribute="bottom" constant="8" id="IKo-nC-Tdd"/>
+                            <constraint firstAttribute="trailing" secondItem="3RG-jR-7Ve" secondAttribute="trailing" constant="8" id="JKX-Ll-9NY"/>
+                            <constraint firstItem="3RG-jR-7Ve" firstAttribute="leading" secondItem="6Vc-up-cex" secondAttribute="leading" constant="8" id="POn-wC-wIc"/>
+                            <constraint firstItem="3RG-jR-7Ve" firstAttribute="top" secondItem="qGQ-N8-Ae8" secondAttribute="bottom" constant="8" id="vVe-0s-LKH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="SegmentedCollectionView Demo" id="64V-fl-grX"/>
+                    <connections>
+                        <outlet property="collectionView" destination="3RG-jR-7Ve" id="wi8-Gq-J2z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kmp-72-IvE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1290" y="-349"/>
         </scene>
         <!--Form Demo-->
         <scene sceneID="rOx-5k-txv">

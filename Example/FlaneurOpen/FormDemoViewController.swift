@@ -49,6 +49,9 @@ class FormDemoViewController: UIViewController {
 
         let selectElement = FlaneurFormElement(type: .select(delegate: self), label: "My Great Select")
         formView.addFormElement(selectElement)
+
+        let deleteElement = FlaneurFormElement(type: .delete(delegate: self), label: "Delete")
+        formView.addFormElement(deleteElement)
     }
 
     override func didReceiveMemoryWarning() {
@@ -207,5 +210,11 @@ extension FormDemoViewController: FlaneurFormSelectElementCollectionViewCellDele
 
     func didDeselectItem(index: Int, cell: UICollectionViewCell) {
         // ...
+    }
+}
+
+extension FormDemoViewController: FlaneurFormDeleteElementCollectionViewCellDelegate {
+    func flaneurFormCellDidRequestDeletion() {
+        print("didRequestDeletion")
     }
 }

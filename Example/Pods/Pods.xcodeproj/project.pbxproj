@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0004A7BF1F8D249400827A44 /* FlaneurFormDeleteElementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0004A7BE1F8D249400827A44 /* FlaneurFormDeleteElementCollectionViewCell.swift */; };
+		000D5B961F8E4BEA008BFED7 /* SegmentedCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000D5B951F8E4BEA008BFED7 /* SegmentedCollectionView.swift */; };
+		005C13F61F8FEAEB0053B74B /* ContainerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005C13F51F8FEAEB0053B74B /* ContainerCollectionViewCell.swift */; };
+		005C13FA1F8FF14A0053B74B /* FlaneurOpenTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005C13F91F8FF1490053B74B /* FlaneurOpenTheme.swift */; };
 		0092AB611F867BEF0030E1D7 /* FlaneurModalProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092AB601F867BEF0030E1D7 /* FlaneurModalProgressViewController.swift */; };
+		00A544E51F8FB4CD00BCC33E /* SegmentedControlHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A544E41F8FB4CD00BCC33E /* SegmentedControlHeaderCollectionReusableView.swift */; };
 		00ADAA791F8BDEF6004A6D20 /* FlaneurFormSelectElementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ADAA781F8BDEF6004A6D20 /* FlaneurFormSelectElementCollectionViewCell.swift */; };
 		024D971D6D0A23F6FA8E942F381B9AF4 /* FlaneurNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04562BCA5314A18A8C8B767C015373E4 /* FlaneurNavigationBar.swift */; };
 		0252FCE76AEF69749C4378921E7570B8 /* SuiteHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B102F2A8E2CA86F9CB02E1E1C26379C8 /* SuiteHooks.swift */; };
@@ -491,9 +496,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0004A7BE1F8D249400827A44 /* FlaneurFormDeleteElementCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlaneurFormDeleteElementCollectionViewCell.swift; sourceTree = "<group>"; };
+		000D5B951F8E4BEA008BFED7 /* SegmentedCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedCollectionView.swift; sourceTree = "<group>"; };
 		0046FDE3AD8DF694FA649082908A1AD0 /* Pods-FlaneurOpen_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FlaneurOpen_Example-umbrella.h"; sourceTree = "<group>"; };
 		004B4220F810840C26CBCADCE164D8E4 /* ErrorUtility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ErrorUtility.swift; path = Sources/Quick/ErrorUtility.swift; sourceTree = "<group>"; };
+		005C13F51F8FEAEB0053B74B /* ContainerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerCollectionViewCell.swift; sourceTree = "<group>"; };
+		005C13F91F8FF1490053B74B /* FlaneurOpenTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlaneurOpenTheme.swift; path = FlaneurOpen/Classes/FlaneurOpenTheme.swift; sourceTree = "<group>"; };
 		0092AB601F867BEF0030E1D7 /* FlaneurModalProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FlaneurModalProgressViewController.swift; path = "../FlaneurOpen/Classes/Modal Progress View/FlaneurModalProgressViewController.swift"; sourceTree = "<group>"; };
+		00A544E41F8FB4CD00BCC33E /* SegmentedControlHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		00ADAA781F8BDEF6004A6D20 /* FlaneurFormSelectElementCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlaneurFormSelectElementCollectionViewCell.swift; sourceTree = "<group>"; };
 		00EB3E78518C3F6EBAD589AC2AA90894 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0111CE34A56B64CE0110F98639879F3D /* QuickConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QuickConfiguration.h; path = Sources/QuickObjectiveC/Configuration/QuickConfiguration.h; sourceTree = "<group>"; };
@@ -1011,6 +1021,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		000D5B941F8E48F6008BFED7 /* Fancy Segmented Collection View */ = {
+			isa = PBXGroup;
+			children = (
+				000D5B951F8E4BEA008BFED7 /* SegmentedCollectionView.swift */,
+				00A544E41F8FB4CD00BCC33E /* SegmentedControlHeaderCollectionReusableView.swift */,
+				005C13F51F8FEAEB0053B74B /* ContainerCollectionViewCell.swift */,
+			);
+			name = "Fancy Segmented Collection View";
+			path = "FlaneurOpen/Classes/Fancy Segmented Collection View";
+			sourceTree = "<group>";
+		};
 		0092AB5F1F867BB20030E1D7 /* Modal Progress View */ = {
 			isa = PBXGroup;
 			children = (
@@ -1230,6 +1251,7 @@
 				2862B00CF8C467280147651EAE7E5241 /* FlaneurFormTextAreaElementCollectionViewCell.swift */,
 				8884D9257507759DEA6FF40545376B68 /* FlaneurFormTextFieldElementCollectionViewCell.swift */,
 				00ADAA781F8BDEF6004A6D20 /* FlaneurFormSelectElementCollectionViewCell.swift */,
+				0004A7BE1F8D249400827A44 /* FlaneurFormDeleteElementCollectionViewCell.swift */,
 				BC4D5C6B559C636AF8AD1E28CA3F9172 /* FlaneurFormView.swift */,
 			);
 			name = "Form Tools";
@@ -1663,6 +1685,8 @@
 		DFE7B0BB3EA72B71E879B4E231390A21 /* FlaneurOpen */ = {
 			isa = PBXGroup;
 			children = (
+				005C13F91F8FF1490053B74B /* FlaneurOpenTheme.swift */,
+				000D5B941F8E48F6008BFED7 /* Fancy Segmented Collection View */,
 				0092AB5F1F867BB20030E1D7 /* Modal Progress View */,
 				D970CFA1DF5FE13FA1EDA82850AC1B6D /* CollectionViewUtils */,
 				95900DD5D4778242638D6BD9D4A79DD2 /* Custom UIView */,
@@ -2539,6 +2563,7 @@
 				BE9ACD9AA2BE7B3DAE04EB6EB95C13EC /* FlaneurCollectionView.swift in Sources */,
 				BC3F7EF81764DCE60232123E9619CF71 /* FlaneurCollectionWithBorderListAdapter.swift in Sources */,
 				0C5E496EBBAA3B02A30695E70F35A705 /* FlaneurFilterCollectionViewCell.swift in Sources */,
+				0004A7BF1F8D249400827A44 /* FlaneurFormDeleteElementCollectionViewCell.swift in Sources */,
 				00ADAA791F8BDEF6004A6D20 /* FlaneurFormSelectElementCollectionViewCell.swift in Sources */,
 				23962C51F665A1199A2B0E752AA1DFDB /* FlaneurFormElementCollectionViewCell.swift in Sources */,
 				ED26763B9EA02433E234CF7EF6B9FFA2 /* FlaneurFormImagePickerElementCollectionViewCell.swift in Sources */,
@@ -2549,7 +2574,11 @@
 				CC2B49070C254D334540ED401992E9E8 /* FlaneurMapItem.swift in Sources */,
 				B44592A39DB60723205273262B5FFFD9 /* FlaneurMapView.swift in Sources */,
 				024D971D6D0A23F6FA8E942F381B9AF4 /* FlaneurNavigationBar.swift in Sources */,
+				005C13FA1F8FF14A0053B74B /* FlaneurOpenTheme.swift in Sources */,
+				005C13F61F8FEAEB0053B74B /* ContainerCollectionViewCell.swift in Sources */,
 				27DD2B477DEF39F8946AFB523DF0A4BC /* FlaneurOpen-dummy.m in Sources */,
+				000D5B961F8E4BEA008BFED7 /* SegmentedCollectionView.swift in Sources */,
+				00A544E51F8FB4CD00BCC33E /* SegmentedControlHeaderCollectionReusableView.swift in Sources */,
 				AB6440A6AD7932A391E850617EA129F6 /* LayoutBorderManager.swift in Sources */,
 				7F4431FA9C7B0453E40410A813232B31 /* LoadingCollectionViewCell.swift in Sources */,
 				8DAEF65A3716D35FA612E84E3AEDA929 /* UILabel+Flaneur.swift in Sources */,

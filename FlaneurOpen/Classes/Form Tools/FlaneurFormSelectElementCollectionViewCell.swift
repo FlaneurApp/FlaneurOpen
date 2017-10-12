@@ -41,6 +41,7 @@ class FlaneurFormSelectElementCollectionViewCell: FlaneurFormElementCollectionVi
         selectCollectionView.translatesAutoresizingMaskIntoConstraints = false
         selectCollectionView.dataSource = self
         selectCollectionView.delegate = self
+        selectCollectionView.backgroundColor = .white
 
         selectCollectionView.contentInset = UIEdgeInsets(top: 0.0, left: 15.0, bottom: 0.0, right: 15.0)
         layout.minimumLineSpacing = 9.0 // Spacing between items

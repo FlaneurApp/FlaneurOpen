@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FlaneurOpen
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let theme = FlaneurOpenTheme(
+            segmentedControlFont: UIFont(name: "AmericanTypewriter", size: 12.0)!
+        )
+        FlaneurOpenThemeManager.shared.theme = theme
+
         return true
     }
 

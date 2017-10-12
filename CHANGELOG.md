@@ -17,6 +17,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 * Added `FlaneurModalProgressViewController` #23
 * Added the option to toggle or deselect right buttons in `FlaneurNavigationBar` #18
 * Added the option to use a custom view for the left part of the navigation bar. #17
+* Added `SegmentedCollectionView` #23
+* Added `FlaneurOpenThemeManager` to change fonts easily without exposing everything
 
 ### Changed
 

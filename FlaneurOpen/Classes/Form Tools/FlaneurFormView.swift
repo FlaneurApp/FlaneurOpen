@@ -14,6 +14,7 @@ public enum FlaneurFormElementType {
     case textArea
     case imagePicker(delegate: FlaneurFormImagePickerElementCollectionViewCellDelegate)
     case select(delegate: FlaneurFormSelectElementCollectionViewCellDelegate)
+    case delete(delegate: FlaneurFormDeleteElementCollectionViewCellDelegate)
 }
 
 extension FlaneurFormElementType: Equatable {
@@ -26,6 +27,8 @@ extension FlaneurFormElementType: Equatable {
         case (.textField, .textField):
             return true
         case (.select, .select):
+            return true
+        case (.delete, .delete):
             return true
         default:
             return false
@@ -185,6 +188,8 @@ class FlaneurFormElementSectionController: ListSectionController {
             height = 136.0
         case .select(let delegate):
             height = delegate.selectCollectionViewSize().height + 44.0 + 16.0
+        case .delete:
+            height = 56.0
         }
 
         debugPrint("FormElement height: \(height)")
@@ -222,6 +227,14 @@ class FlaneurFormElementSectionController: ListSectionController {
                                                               at: index) as? FlaneurFormSelectElementCollectionViewCell
             cell?.delegate = cellDelegate
             cell?.selectDelegate = selectDelegate
+            cell?.configureWith(formElement: formElement)
+            return cell!
+        case .delete(let tapDelegate):
+            let cell = collectionContext?.dequeueReusableCell(of: FlaneurFormDeleteElementCollectionViewCell.self,
+                                                              for: self,
+                                                              at: index) as? FlaneurFormDeleteElementCollectionViewCell
+            cell?.delegate = cellDelegate
+            cell?.tapDelegate = tapDelegate
             cell?.configureWith(formElement: formElement)
             return cell!
         }

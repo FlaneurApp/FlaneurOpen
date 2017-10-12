@@ -9,9 +9,9 @@ import UIKit
 
 public extension UIView {
     /// Create the bottom border
-    func createBottomBorder(width: CGFloat = 1.0) {
+    func createBottomBorder(width: CGFloat = 1.0, color: UIColor = UIColor(white: 236.0 / 255.0, alpha: 1.0)) -> UIView {
         let bottomBorder = UIView(frame: .zero)
-        bottomBorder.backgroundColor = UIColor(white: 236.0 / 255.0, alpha: 1.0)
+        bottomBorder.backgroundColor = color
         bottomBorder.translatesAutoresizingMaskIntoConstraints = false
         addSubview(bottomBorder)
         _ = LayoutBorderManager(item: bottomBorder, toItem: self,
@@ -24,6 +24,8 @@ public extension UIView {
                            attribute: .notAnAttribute,
                            multiplier: 1.0,
                            constant: width).isActive = true
+
+        return bottomBorder
     }
 
     func removeAllSubviews() {
@@ -38,6 +40,13 @@ public extension UIView {
                 self.removeGestureRecognizer(gestureRecognizer)
             }
         }
+    }
+
+    func respondsToTap(target: Any?, action: Selector?, numberOfTaps: Int = 1) {
+        let tagGestureRecognizer = UITapGestureRecognizer(target: target, action: action)
+        tagGestureRecognizer.numberOfTapsRequired = numberOfTaps
+        self.addGestureRecognizer(tagGestureRecognizer)
+        self.isUserInteractionEnabled = true
     }
 }
 
