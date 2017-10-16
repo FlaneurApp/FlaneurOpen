@@ -29,13 +29,23 @@ public protocol SegmentedCollectionViewDelegate {
 }
 
 final public class SegmentedCollectionView: UIView {
+    public var headerView: UIView = UIView(frame: .zero) {
+        didSet {
+            self.collectionView.reloadData()
+        }
+    }
+
+    public var itemsSections: [SegmentedCollectionSection] = [] {
+        didSet {
+            self.collectionView.reloadData()
+        }
+    }
+
     fileprivate var registeredClassesNames: [String] = []
     fileprivate var registeredNibNames: [String] = []
     private(set) var collectionView: UICollectionView!
-    public var itemsSections: [SegmentedCollectionSection] = []
-    public var headerView: UIView = UIView(frame: .zero)
-    var selectedItemsSectionIndex: Int = 0
 
+    var selectedItemsSectionIndex: Int = 0
     var selectedItems: [FlaneurCollectionItem] {
         return itemsSections[selectedItemsSectionIndex].items
     }
