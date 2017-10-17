@@ -8,10 +8,13 @@
 import Foundation
 
 public struct FlaneurOpenTheme {
-    let segmentedControlFont: UIFont
+    let segmentedSelectedControlFont: UIFont
+    let segmentedDeselectedControlFont: UIFont
 
-    public init(segmentedControlFont: UIFont = UIFont.preferredFont(forTextStyle: .headline)) {
-        self.segmentedControlFont = segmentedControlFont
+    public init(segmentedSelectedControlFont: UIFont = UIFont.preferredFont(forTextStyle: .headline),
+                segmentedDeselectedControlFont: UIFont = UIFont.preferredFont(forTextStyle: .headline)) {
+        self.segmentedSelectedControlFont = segmentedSelectedControlFont
+        self.segmentedDeselectedControlFont = segmentedDeselectedControlFont
     }
 }
 

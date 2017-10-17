@@ -150,11 +150,14 @@ final public class FlaneurNavigationBar: UIView {
         "rView": rightContainer,
         "tLabel": titleLabel
         ]
-        let formatString = "[lView]-16-[tLabel]-16-[rView]"
+        let formatString = "[lView]-0-[tLabel]-16-[rView]"
         let constraints = NSLayoutConstraint.constraints(withVisualFormat: formatString, options: .alignAllCenterY, metrics: nil, views: views)
         NSLayoutConstraint.activate(constraints)
-
-        createBottomBorder()
+        _ = LayoutBorderManager.init(item: titleLabel,
+                                     toItem: self,
+                                     top: 0,
+                                     bottom: 0)
+        _ = createBottomBorder()
         clipsToBounds = true
     }
 
@@ -188,15 +191,23 @@ final public class FlaneurNavigationBar: UIView {
         leftContainer.removeAllSubviews()
         leftButtonAction = { _ in }
 
+        let horizontalPaddingForButton: CGFloat = 8.0
+
+        // We want the leftContainer and the titleLabel to touch each other
+        // otherwise, there might be a gap between them where touch does not trigger the action
+        let activatingViews = [ leftContainer, titleLabel ]
+        let paddingToLabelForContinuousTouchZone: CGFloat = 16.0
+
         if let leftAction = leftAction {
             leftButtonAction = leftAction.action
 
             let view = leftAction.view
+            view.isUserInteractionEnabled = false // Forward to the left container
             leftContainer.addSubview(view)
 
             // If there is a left action, the title view activates it
-            for activatingView in [leftContainer, titleLabel] {
-                activatingView!.respondsToTap(target: self, action: #selector(leftButtonPressed))
+            for activatingView in activatingViews {
+                activatingView?.respondsToTap(target: self, action: #selector(leftButtonPressed))
             }
 
             // Setting up button's constraint
@@ -208,17 +219,20 @@ final public class FlaneurNavigationBar: UIView {
                                toItem: leftContainer,
                                attribute: .leading,
                                multiplier: 1.0,
-                               constant: 8.0).isActive = true
+                               constant: horizontalPaddingForButton).isActive = true
             // Center vertically
             NSLayoutConstraint(item: view, attribute: .centerY, relatedBy: .equal, toItem: leftContainer, attribute: .centerY, multiplier: 1.0, constant: 0.0).isActive = true
             // Give a square width & height
             NSLayoutConstraint(item: view, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: view.frame.width).isActive = true
             NSLayoutConstraint(item: view, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: view.frame.height).isActive = true
 
-            leftContainerWidthConstraint.constant = 18.0 + view.frame.width
+            leftContainerWidthConstraint.constant = 2.0 * horizontalPaddingForButton + view.frame.width + paddingToLabelForContinuousTouchZone
         } else {
-            titleLabel.removeAllGestureRecognizers()
-            leftContainerWidthConstraint.constant = 16.0
+            for activatingView in activatingViews {
+                activatingView?.removeAllGestureRecognizers()
+            }
+
+            leftContainerWidthConstraint.constant = 2.0 * horizontalPaddingForButton + paddingToLabelForContinuousTouchZone
         }
     }
 

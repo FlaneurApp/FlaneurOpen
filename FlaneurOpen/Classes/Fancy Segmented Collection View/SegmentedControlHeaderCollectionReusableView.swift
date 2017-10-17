@@ -79,7 +79,7 @@ class SegmentedControlHeaderCollectionReusableView: UICollectionReusableView {
 
         newButton.titleLabel?.numberOfLines = 2
         newButton.titleLabel?.textAlignment = .center
-        newButton.titleLabel?.font = FlaneurOpenThemeManager.shared.theme.segmentedControlFont
+        newButton.titleLabel?.font = FlaneurOpenThemeManager.shared.theme.segmentedSelectedControlFont
 
         newButton.addTarget(self, action: #selector(itemControlPressed), for: .touchUpInside)
 
@@ -90,6 +90,7 @@ class SegmentedControlHeaderCollectionReusableView: UICollectionReusableView {
         guard let borderedButton = sender as? BorderedButton else { return }
 
         borderedButton.isSelected = true
+
         buttonsStackView.arrangedSubviews
             .filter { $0 != sender }
             .forEach { view in
@@ -128,6 +129,7 @@ class BorderedButton: UIButton {
         set(newValue) {
             super.isSelected = newValue
             bottomBorderView?.backgroundColor = newValue ? .black : .white
+            self.titleLabel?.font = newValue ? FlaneurOpenThemeManager.shared.theme.segmentedSelectedControlFont : FlaneurOpenThemeManager.shared.theme.segmentedDeselectedControlFont
         }
     }
 }
