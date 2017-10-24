@@ -1,6 +1,6 @@
 # FlaneurImagePicker
 
-[![CI Status](http://img.shields.io/travis/Matthieu Luci/FlaneurImagePicker.svg?style=flat)](https://travis-ci.org/Matthieu Luci/FlaneurImagePicker)
+[![CI Status](http://img.shields.io/travis/FlaneurApp/FlaneurImagePicker.svg?style=flat)](https://travis-ci.org/FlaneurApp/FlaneurImagePicker)
 [![Version](https://img.shields.io/cocoapods/v/FlaneurImagePicker.svg?style=flat)](http://cocoapods.org/pods/FlaneurImagePicker)
 [![License](https://img.shields.io/cocoapods/l/FlaneurImagePicker.svg?style=flat)](http://cocoapods.org/pods/FlaneurImagePicker)
 [![Platform](https://img.shields.io/cocoapods/p/FlaneurImagePicker.svg?style=flat)](http://cocoapods.org/pods/FlaneurImagePicker)
@@ -137,7 +137,7 @@ Open the index.html to view the documentation.
 
 ## Author
 
-Matthieu Luci, matthieu.luci@gmail.com
+FlaneurApp, flaneurdev@bootstragram.com
 
 ## License
 
