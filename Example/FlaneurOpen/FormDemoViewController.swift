@@ -19,6 +19,8 @@ class FormDemoViewController: UIViewController {
     var didAppear = false
     var currentPictureSelection: [FlaneurImageDescription] = []
 
+    let categoriesDelegate = CategoriesSelectDelegate()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -47,10 +49,15 @@ class FormDemoViewController: UIViewController {
         let description3FormElement = FlaneurFormElement(type: .textArea, label: "Description 3")
         formView.addFormElement(description3FormElement)
 
-        let selectElement = FlaneurFormElement(type: .select(delegate: self), label: "My Great Select") { view in
+        let selectElement = FlaneurFormElement(type: .select(delegate: categoriesDelegate), label: "My Great Select") { view in
             view.backgroundColor = .orange
         }
         formView.addFormElement(selectElement)
+
+        let selectElement2 = FlaneurFormElement(type: .select(delegate: self), label: "My 2nd Great Select") { view in
+            view.backgroundColor = .purple
+        }
+        formView.addFormElement(selectElement2)
 
         let deleteElement = FlaneurFormElement(type: .delete(delegate: self), label: "Delete")
         formView.addFormElement(deleteElement)
@@ -218,5 +225,43 @@ extension FormDemoViewController: FlaneurFormSelectElementCollectionViewCellDele
 extension FormDemoViewController: FlaneurFormDeleteElementCollectionViewCellDelegate {
     func flaneurFormCellDidRequestDeletion() {
         print("didRequestDeletion")
+    }
+}
+
+class CategoriesSelectDelegate: FlaneurFormSelectElementCollectionViewCellDelegate {
+    func selectCollectionViewSize() -> CGSize {
+        return CGSize(width: 54.0, height: 54.0)
+    }
+
+    func nbOfItems() -> Int {
+        return 9
+    }
+
+    func cellClass() -> AnyClass? {
+        return DemoCollectionViewCell.self
+    }
+
+    func cellReuseIdentifier() -> String {
+        return "formElementCell"
+    }
+
+    func configure(cell: UICollectionViewCell, forIndex: Int) {
+        guard let demoCell = cell as? DemoCollectionViewCell else {
+            fatalError("configuration error")
+        }
+
+        demoCell.label.text = "\(forIndex)"
+    }
+
+    func allowMultipleSelection() -> Bool {
+        return true
+    }
+
+    func didSelectItem(index: Int, cell: UICollectionViewCell) {
+        debugPrint("didSelect \(index)")
+    }
+
+    func didDeselectItem(index: Int, cell: UICollectionViewCell) {
+        debugPrint("didDeselect \(index)")
     }
 }
