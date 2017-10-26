@@ -7,11 +7,17 @@
 
 import UIKit
 
+public protocol FlaneurModalProgressViewControllerDelegate {
+    func modalProgressControllerDidDismiss()
+}
+
 final public class FlaneurModalProgressViewController: UIViewController {
     public private(set) var titleLabel: UILabel!
     public private(set) var bodyLabel: UILabel!
     public private(set) var okButton: UIButton!
     public private(set) var progressBar: UIProgressView!
+
+    public var delegate: FlaneurModalProgressViewControllerDelegate? = nil
 
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -99,5 +105,6 @@ final public class FlaneurModalProgressViewController: UIViewController {
     
     @IBAction func dismiss(_ sender: Any? = nil) {
         self.dismiss(animated: true)
+        delegate?.modalProgressControllerDidDismiss()
     }
 }

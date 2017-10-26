@@ -54,8 +54,15 @@ class FlaneurModalProgressDemoViewController: UIViewController {
         self.createDisplayLink()
         modalProgressViewController = FlaneurModalProgressViewController(nibName: nil, bundle: nil)
         modalProgressViewController!.modalPresentationStyle = .overCurrentContext
+        modalProgressViewController!.delegate = self
         self.present(modalProgressViewController!, animated: true) {
             self.modalProgressViewController?.progressBar.observedProgress = self.progress
         }
+    }
+}
+
+extension FlaneurModalProgressDemoViewController: FlaneurModalProgressViewControllerDelegate {
+    func modalProgressControllerDidDismiss() {
+        debugPrint("didDismiss")
     }
 }
