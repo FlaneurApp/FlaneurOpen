@@ -47,7 +47,9 @@ class FormDemoViewController: UIViewController {
         let description3FormElement = FlaneurFormElement(type: .textArea, label: "Description 3")
         formView.addFormElement(description3FormElement)
 
-        let selectElement = FlaneurFormElement(type: .select(delegate: self), label: "My Great Select")
+        let selectElement = FlaneurFormElement(type: .select(delegate: self), label: "My Great Select") { view in
+            view.backgroundColor = .orange
+        }
         formView.addFormElement(selectElement)
 
         let deleteElement = FlaneurFormElement(type: .delete(delegate: self), label: "Delete")
@@ -205,11 +207,11 @@ extension FormDemoViewController: FlaneurFormSelectElementCollectionViewCellDele
     }
 
     func didSelectItem(index: Int, cell: UICollectionViewCell) {
-        //
+        debugPrint("didSelect \(index)")
     }
 
     func didDeselectItem(index: Int, cell: UICollectionViewCell) {
-        // ...
+        debugPrint("didDeselectItem \(index)")
     }
 }
 

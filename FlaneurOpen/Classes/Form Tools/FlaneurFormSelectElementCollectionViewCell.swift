@@ -84,6 +84,8 @@ class FlaneurFormSelectElementCollectionViewCell: FlaneurFormElementCollectionVi
 
         // Allow multiple selection
         selectCollectionView.allowsMultipleSelection = selectDelegate.allowMultipleSelection()
+
+        formElement.didLoadHandler?(selectCollectionView)
     }
 }
 

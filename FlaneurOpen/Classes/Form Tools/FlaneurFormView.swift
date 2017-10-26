@@ -192,8 +192,6 @@ class FlaneurFormElementSectionController: ListSectionController {
             height = 56.0
         }
 
-        debugPrint("FormElement height: \(height)")
-
         return CGSize(width: self.collectionContext!.containerSize.width,
                       height: height)
     }
@@ -247,7 +245,6 @@ extension FlaneurFormView: FlaneurFormElementCollectionViewCellDelegate {
             let nextSection = (thisIndex.section + 1) % formElements.count
             let nextIndexPath = IndexPath(row: 0, section: nextSection)
             if let nextCell = self.collectionView.cellForItem(at: nextIndexPath) {
-                debugPrint("nextCell: ", nextCell)
                 nextCell.becomeFirstResponder()
             } else {
                 debugPrint("no cell", self.collectionView.numberOfSections)
