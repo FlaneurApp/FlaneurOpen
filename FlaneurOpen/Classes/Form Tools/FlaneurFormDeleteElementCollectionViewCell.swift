@@ -21,6 +21,7 @@ class FlaneurFormDeleteElementCollectionViewCell: FlaneurFormElementCollectionVi
                                 toItem: self,
                                 bottom: 16.0)
         label.textAlignment = .center
+        label.font = FlaneurOpenThemeManager.shared.theme.formDeleteFont
         label.textColor = UIColor(red: (226.0 / 255.0), green: (0.0 / 255.0), blue: (26.0 / 255.0), alpha: 1.0)
 
         label.respondsToTap(target: self, action: #selector(labelTapped))

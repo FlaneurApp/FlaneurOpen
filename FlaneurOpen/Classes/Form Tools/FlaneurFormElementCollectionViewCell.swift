@@ -39,10 +39,11 @@ class FlaneurFormElementCollectionViewCell: UICollectionViewCell {
                                 left: 16.0,
                                 right: 16.0)
 
-        createBottomBorder()
+        _ = createBottomBorder()
     }
 
     func configureWith(formElement: FlaneurFormElement) {
+        label.font = FlaneurOpenThemeManager.shared.theme.formLabelsFont
         label.text = formElement.label
     }
 }

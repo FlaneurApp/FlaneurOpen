@@ -19,6 +19,7 @@ class FlaneurFormTextFieldElementCollectionViewCell: FlaneurFormElementCollectio
         textField.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(textField)
 
+        textField.font = FlaneurOpenThemeManager.shared.theme.formTextFieldFont
         textField.returnKeyType = .next
         textField.borderStyle = .none
         textField.delegate = self

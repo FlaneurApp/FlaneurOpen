@@ -18,7 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         let theme = FlaneurOpenTheme(
             segmentedSelectedControlFont: UIFont(name: "AmericanTypewriter", size: 12.0)!,
-            segmentedDeselectedControlFont: UIFont(name: "Chalkduster", size: 12.0)!
+            segmentedDeselectedControlFont: UIFont(name: "Chalkduster", size: 12.0)!,
+            formLabelsFont: UIFont(name: "AvenirNextCondensed-Bold", size: 12.0)!,
+            formTextFieldFont: UIFont(name: "Didot-Italic", size: 12.0)!,
+            formTextAreaFont: UIFont(name: "Noteworthy-Light", size: 16.0)!,
+            formDeleteFont: UIFont(name: "SavoyeLetPlain", size: 14.0)!
         )
         FlaneurOpenThemeManager.shared.theme = theme
 

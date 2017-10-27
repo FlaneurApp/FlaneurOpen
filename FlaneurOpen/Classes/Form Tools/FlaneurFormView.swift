@@ -116,7 +116,7 @@ public final class FlaneurFormView: UIView {
         listAdapter = {
             return ListAdapter(updater: ListAdapterUpdater(),
                                viewController: viewController,
-                               workingRangeSize: 1)
+                               workingRangeSize: 10) // This is a trick to try to fix architectural bug: this shouldn't be a collection view because the collection view cell reusability is an overkill for collection view management
         }()
 
         // Finish setting up things

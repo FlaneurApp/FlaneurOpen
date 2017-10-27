@@ -16,6 +16,7 @@ class FlaneurFormTextAreaElementCollectionViewCell: FlaneurFormElementCollection
 
         let textArea = UITextView()
         self.textArea = textArea
+        textArea.font = FlaneurOpenThemeManager.shared.theme.formTextAreaFont
         textArea.translatesAutoresizingMaskIntoConstraints = false
         textArea.text = ""
         textArea.returnKeyType = .next
