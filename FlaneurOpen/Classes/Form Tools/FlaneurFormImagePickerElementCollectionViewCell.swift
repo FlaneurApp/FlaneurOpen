@@ -48,6 +48,13 @@ public extension FlaneurFormImagePickerElementCollectionViewCellDelegate where S
 class FlaneurFormImagePickerElementCollectionViewCell: FlaneurFormElementCollectionViewCell {
     var imageDelegate: FlaneurFormImagePickerElementCollectionViewCellDelegate?
     var launcherButton: UIButton!
+    var photosCollectionView: UICollectionView!
+
+    var currentSelection: [FlaneurImageDescription] = [] {
+        didSet {
+            photosCollectionView.reloadData()
+        }
+    }
 
     /// Common init code.
     override func didLoad() {
@@ -61,7 +68,22 @@ class FlaneurFormImagePickerElementCollectionViewCell: FlaneurFormElementCollect
         launcherButton.tintColor = .white
         launcherButton.contentMode = .scaleAspectFill
 
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+
+        self.photosCollectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        photosCollectionView.translatesAutoresizingMaskIntoConstraints = false
+        photosCollectionView.dataSource = self
+        photosCollectionView.delegate = self
+        photosCollectionView.backgroundColor = .white
+        photosCollectionView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 15.0)
+        layout.minimumLineSpacing = 9.0 // Spacing between items
+
+        photosCollectionView.register(PhotoCollectionViewCell.self,
+                                      forCellWithReuseIdentifier: "PhotoCollectionViewCell")
+
         self.addSubview(launcherButton)
+        self.addSubview(photosCollectionView)
 
         _ = LayoutBorderManager(item: launcherButton,
                                 toItem: self,
@@ -89,6 +111,26 @@ class FlaneurFormImagePickerElementCollectionViewCell: FlaneurFormElementCollect
                            attribute: .notAnAttribute,
                            multiplier: 1.0,
                            constant: 80.0).isActive = true
+
+        _ = LayoutBorderManager(item: photosCollectionView,
+                                toItem: self,
+                                bottom: 16.0,
+                                right: 0.0)
+        NSLayoutConstraint(item: photosCollectionView,
+                           attribute: .height,
+                           relatedBy: .equal,
+                           toItem: nil,
+                           attribute: .notAnAttribute,
+                           multiplier: 1.0,
+                           constant: 80.0).isActive = true
+
+        NSLayoutConstraint(item: photosCollectionView,
+                           attribute: .leading,
+                           relatedBy: .equal,
+                           toItem: launcherButton,
+                           attribute: .trailing,
+                           multiplier: 1.0,
+                           constant: 8.0).isActive = true
     }
 
     override func configureWith(formElement: FlaneurFormElement) {
@@ -96,13 +138,10 @@ class FlaneurFormImagePickerElementCollectionViewCell: FlaneurFormElementCollect
 
         if case FlaneurFormElementType.imagePicker(let cellDelegate) = formElement.type {
             self.imageDelegate = cellDelegate
+            self.currentSelection = imageDelegate!.initialSelection()
 
             launcherButton.setImage(imageDelegate!.buttonImage().withRenderingMode(.alwaysTemplate),
                                     for: .normal)
-
-            if let firstImage = imageDelegate?.initialSelection().first {
-                launcherButton.setBackgroundImage(firstImage.image, for: .normal)
-            }
         }
 
         formElement.didLoadHandler?(launcherButton)
@@ -120,7 +159,7 @@ class FlaneurFormImagePickerElementCollectionViewCell: FlaneurFormElementCollect
         let flaneurPicker = FlaneurImagePickerController(maxNumberOfSelectedImages: imageDelegate!.numberOfImages(),
                                                          userInfo: nil,
                                                          sourcesDelegate: imageDelegate!.sourceDelegates(),
-                                                         selectedImages: imageDelegate!.initialSelection())
+                                                         selectedImages: currentSelection)
         flaneurPicker.config.cancelButtonTitle = imageDelegate!.localizedStringForCancelAction()
         flaneurPicker.config.doneButtonTitle = imageDelegate!.localizedStringForDoneAction()
         flaneurPicker.config.navBarTitle = imageDelegate!.localizedStringForTitle()
@@ -134,7 +173,6 @@ class FlaneurFormImagePickerElementCollectionViewCell: FlaneurFormElementCollect
             .selectedImages: UIColor(white: (236.0 / 255.0), alpha: 1.0)
         ]
 
-        // flaneurPicker.config.paddingForImagesPickerView = UIEdgeInsets (top: 3, left: 3, bottom: 3, right: 3)
         flaneurPicker.delegate = self
 
         delegate?.presentViewController(viewController: flaneurPicker)
@@ -143,21 +181,33 @@ class FlaneurFormImagePickerElementCollectionViewCell: FlaneurFormElementCollect
 
 extension FlaneurFormImagePickerElementCollectionViewCell: FlaneurImagePickerControllerDelegate {
     func didPickImages(images: [FlaneurImageDescription], userInfo: Any?) {
-        if let firstImage = images.first {
-            switch firstImage.imageSource {
-            case .urlBased:
-                debugPrint("Load image")
-            case .imageBased, .phassetBased:
-                launcherButton.setBackgroundImage(firstImage.image, for: .normal)
-            default:
-                debugPrint("...")
-            }
-        }
-
+        self.currentSelection = images
         imageDelegate?.didPickImages(images: images, userInfo: userInfo)
     }
 
     func didCancelPickingImages() {
         imageDelegate?.didCancelPickingImages()
+    }
+}
+
+extension FlaneurFormImagePickerElementCollectionViewCell: UICollectionViewDelegate {
+
+}
+
+extension FlaneurFormImagePickerElementCollectionViewCell: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return currentSelection.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCollectionViewCell", for: indexPath) as! PhotoCollectionViewCell
+        cell.configureWith(imageDescription: currentSelection[indexPath.row])
+        return cell
+    }
+}
+
+extension FlaneurFormImagePickerElementCollectionViewCell: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 80.0, height: 80.0)
     }
 }

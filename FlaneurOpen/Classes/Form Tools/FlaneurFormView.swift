@@ -14,6 +14,7 @@ public enum FlaneurFormElementType {
     case textArea
     case imagePicker(delegate: FlaneurFormImagePickerElementCollectionViewCellDelegate)
     case select(delegate: FlaneurFormSelectElementCollectionViewCellDelegate)
+    case selectBis(delegate: FlaneurFormSelectElementCollectionViewCellDelegate)
     case delete(delegate: FlaneurFormDeleteElementCollectionViewCellDelegate)
 }
 
@@ -27,6 +28,8 @@ extension FlaneurFormElementType: Equatable {
         case (.textField, .textField):
             return true
         case (.select, .select):
+            return true
+        case (.selectBis, .selectBis):
             return true
         case (.delete, .delete):
             return true
@@ -116,7 +119,7 @@ public final class FlaneurFormView: UIView {
         listAdapter = {
             return ListAdapter(updater: ListAdapterUpdater(),
                                viewController: viewController,
-                               workingRangeSize: 10) // This is a trick to try to fix architectural bug: this shouldn't be a collection view because the collection view cell reusability is an overkill for collection view management
+                               workingRangeSize: 1)
         }()
 
         // Finish setting up things
@@ -188,6 +191,8 @@ class FlaneurFormElementSectionController: ListSectionController {
             height = 136.0
         case .select(let delegate):
             height = delegate.selectCollectionViewSize().height + 44.0 + 16.0
+        case .selectBis(let delegate):
+            height = delegate.selectCollectionViewSize().height + 44.0 + 16.0
         case .delete:
             height = 56.0
         }
@@ -223,6 +228,14 @@ class FlaneurFormElementSectionController: ListSectionController {
             let cell = collectionContext?.dequeueReusableCell(of: FlaneurFormSelectElementCollectionViewCell.self,
                                                               for: self,
                                                               at: index) as? FlaneurFormSelectElementCollectionViewCell
+            cell?.delegate = cellDelegate
+            cell?.selectDelegate = selectDelegate
+            cell?.configureWith(formElement: formElement)
+            return cell!
+        case .selectBis(let selectDelegate):
+            let cell = collectionContext?.dequeueReusableCell(of: FlaneurFormSelectBisElementCollectionViewCell.self,
+                                                              for: self,
+                                                              at: index) as? FlaneurFormSelectBisElementCollectionViewCell
             cell?.delegate = cellDelegate
             cell?.selectDelegate = selectDelegate
             cell?.configureWith(formElement: formElement)

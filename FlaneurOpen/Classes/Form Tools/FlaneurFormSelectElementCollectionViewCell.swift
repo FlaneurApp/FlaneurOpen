@@ -116,3 +116,7 @@ extension FlaneurFormSelectElementCollectionViewCell: UICollectionViewDelegateFl
         return selectDelegate.selectCollectionViewSize()
     }
 }
+
+class FlaneurFormSelectBisElementCollectionViewCell: FlaneurFormSelectElementCollectionViewCell {
+
+}

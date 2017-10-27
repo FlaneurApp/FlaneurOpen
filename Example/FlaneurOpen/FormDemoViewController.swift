@@ -34,6 +34,11 @@ class FormDemoViewController: UIViewController {
         }
         formView.addFormElement(nameFormElement)
 
+        let selectElement = FlaneurFormElement(type: .selectBis(delegate: categoriesDelegate), label: "My Great Select") { view in
+            view.backgroundColor = .orange
+        }
+        formView.addFormElement(selectElement)
+
         let descriptionFormElement = FlaneurFormElement(type: .textArea, label: "Description") { descriptionTextView in
             self.descriptionTextArea = descriptionTextView as? UITextView
         }
@@ -48,11 +53,6 @@ class FormDemoViewController: UIViewController {
         formView.addFormElement(description2FormElement)
         let description3FormElement = FlaneurFormElement(type: .textArea, label: "Description 3")
         formView.addFormElement(description3FormElement)
-
-        let selectElement = FlaneurFormElement(type: .select(delegate: categoriesDelegate), label: "My Great Select") { view in
-            view.backgroundColor = .orange
-        }
-        formView.addFormElement(selectElement)
 
         let selectElement2 = FlaneurFormElement(type: .select(delegate: self), label: "My 2nd Great Select") { view in
             view.backgroundColor = .purple

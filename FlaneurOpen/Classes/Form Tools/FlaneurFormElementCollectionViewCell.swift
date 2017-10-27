@@ -30,6 +30,7 @@ class FlaneurFormElementCollectionViewCell: UICollectionViewCell {
     func didLoad() {
         let label = UILabel()
         self.label = label
+        label.font = FlaneurOpenThemeManager.shared.theme.formLabelsFont
         label.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(label)
 
@@ -43,7 +44,6 @@ class FlaneurFormElementCollectionViewCell: UICollectionViewCell {
     }
 
     func configureWith(formElement: FlaneurFormElement) {
-        label.font = FlaneurOpenThemeManager.shared.theme.formLabelsFont
         label.text = formElement.label
     }
 }

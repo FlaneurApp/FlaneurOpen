@@ -10,7 +10,7 @@ target 'FlaneurOpen_Example' do
   pod 'GooglePlacePicker'
   pod 'GoogleMaps'
 
-  pod 'FlaneurImagePicker'
+  pod 'FlaneurImagePicker', :git => "https://github.com/FlaneurApp/FlaneurImagePicker"
 
   target 'FlaneurOpen_Tests' do
     inherit! :search_paths
