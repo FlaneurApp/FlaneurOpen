@@ -13,13 +13,13 @@ class FlaneurModalProgressDemoViewController: UIViewController {
     @IBOutlet weak var backgroundImageView: UIImageView!
     var progress: Progress!
     var startDate: CFTimeInterval? = nil
-    var animationDuration: Int64 = 3
+    var animationDuration: CFTimeInterval = 0.400
     var modalProgressViewController: FlaneurModalProgressViewController? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.backgroundImageView.alpha = 0.0
-        self.progress = Progress(totalUnitCount: animationDuration * 1000)
+        self.progress = Progress(totalUnitCount: Int64(animationDuration * 1000))
     }
 
     func createDisplayLink() {
@@ -35,12 +35,13 @@ class FlaneurModalProgressDemoViewController: UIViewController {
         let elapsed: CFTimeInterval = displaylink.timestamp - startDate!
         self.progress.completedUnitCount = Int64(elapsed * 1000)
 
+        debugPrint("Progress: \(self.progress.fractionCompleted), elapsed: \(elapsed)")
         self.backgroundImageView.alpha = CGFloat(self.progress.fractionCompleted)
 
-        if elapsed >= CFTimeInterval(animationDuration) {
+        if elapsed >= animationDuration {
             displaylink.invalidate()
 
-            self.modalProgressViewController?.bodyLabel.text = "Demo completed."
+            self.modalProgressViewController?.configureWithFinalState(body: "Demo completed.")
             UIView.animate(withDuration: 0.5,
                            animations: {
                             self.modalProgressViewController?.progressBar.isHidden = true
@@ -56,8 +57,12 @@ class FlaneurModalProgressDemoViewController: UIViewController {
         modalProgressViewController!.modalPresentationStyle = .overCurrentContext
         modalProgressViewController!.delegate = self
         self.present(modalProgressViewController!, animated: true) {
-            self.modalProgressViewController?.progressBar.observedProgress = self.progress
+            self.modalProgressViewController!.configureWithInProgressState(body: "In progress", progress: self.progress)
         }
+    }
+
+    deinit {
+        debugPrint("deinit")
     }
 }
 

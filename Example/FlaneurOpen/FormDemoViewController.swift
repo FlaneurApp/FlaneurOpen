@@ -21,31 +21,39 @@ class FormDemoViewController: UIViewController {
 
     let categoriesDelegate = CategoriesSelectDelegate()
 
+    deinit {
+        print("deinit FormDemoViewController")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         formView.configure(viewController: self)
-        let nameFormElement = FlaneurFormElement(type: .textField, label: "Name") { view in
-            self.nameTextField = view as? UITextField
-            if self.didAppear {
-                self.nameTextField?.becomeFirstResponder()
+
+        // Add form elements
+        let nameFormElement = FlaneurFormElement(type: .textField, label: "Name") { [weak self] view in
+            self?.nameTextField = view as? UITextField
+            if self?.didAppear ?? false {
+                self?.nameTextField?.becomeFirstResponder()
             }
         }
         formView.addFormElement(nameFormElement)
+
+        let name2FormElement = FlaneurFormElement(type: .textField, label: "Name 2")
+        formView.addFormElement(name2FormElement)
 
         let selectElement = FlaneurFormElement(type: .selectBis(delegate: categoriesDelegate), label: "My Great Select") { view in
             view.backgroundColor = .orange
         }
         formView.addFormElement(selectElement)
 
-        let descriptionFormElement = FlaneurFormElement(type: .textArea, label: "Description") { descriptionTextView in
-            self.descriptionTextArea = descriptionTextView as? UITextView
+        let descriptionFormElement = FlaneurFormElement(type: .textArea, label: "Description") { [weak self] descriptionTextView in
+            self?.descriptionTextArea = descriptionTextView as? UITextView
         }
         formView.addFormElement(descriptionFormElement)
 
-        let imagePickerFormElement = FlaneurFormElement(type: .imagePicker(delegate: self), label: "Cover")
-        formView.addFormElement(imagePickerFormElement)
+//        let imagePickerFormElement = FlaneurFormElement(type: .imagePicker(delegate: self), label: "Cover")
+//        formView.addFormElement(imagePickerFormElement)
 
         let description1FormElement = FlaneurFormElement(type: .textArea, label: "Description 1")
         formView.addFormElement(description1FormElement)

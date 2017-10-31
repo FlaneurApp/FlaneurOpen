@@ -7,10 +7,11 @@
 
 import UIKit
 
-protocol FlaneurFormElementCollectionViewCellDelegate {
+protocol FlaneurFormElementCollectionViewCellDelegate: AnyObject {
     func nextElementShouldBecomeFirstResponder(cell: FlaneurFormElementCollectionViewCell)
     func scrollToVisibleSection(cell: FlaneurFormElementCollectionViewCell)
     func presentViewController(viewController: UIViewController)
+    func cacheValue(forLabel: String) -> String?
 }
 
 class FlaneurFormElementCollectionViewCell: UICollectionViewCell {

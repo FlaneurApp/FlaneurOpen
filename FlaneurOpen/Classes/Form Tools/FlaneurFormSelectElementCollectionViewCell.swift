@@ -7,7 +7,7 @@
 
 import UIKit
 
-public protocol FlaneurFormSelectElementCollectionViewCellDelegate {
+public protocol FlaneurFormSelectElementCollectionViewCellDelegate: AnyObject {
     func selectCollectionViewSize() -> CGSize
     func nbOfItems() -> Int
     func cellClass() -> AnyClass?
@@ -26,7 +26,7 @@ public extension FlaneurFormSelectElementCollectionViewCellDelegate where Self: 
 }
 
 class FlaneurFormSelectElementCollectionViewCell: FlaneurFormElementCollectionViewCell {
-    var selectDelegate: FlaneurFormSelectElementCollectionViewCellDelegate!
+    weak var selectDelegate: FlaneurFormSelectElementCollectionViewCellDelegate!
     var selectCollectionView: UICollectionView!
     var collectionViewHeightConstraint: NSLayoutConstraint!
 

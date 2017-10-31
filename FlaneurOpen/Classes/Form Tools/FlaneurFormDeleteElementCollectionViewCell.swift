@@ -7,12 +7,12 @@
 
 import UIKit
 
-public protocol FlaneurFormDeleteElementCollectionViewCellDelegate {
+public protocol FlaneurFormDeleteElementCollectionViewCellDelegate: AnyObject {
     func flaneurFormCellDidRequestDeletion()
 }
 
 class FlaneurFormDeleteElementCollectionViewCell: FlaneurFormElementCollectionViewCell {
-    var tapDelegate: FlaneurFormDeleteElementCollectionViewCellDelegate?
+    weak var tapDelegate: FlaneurFormDeleteElementCollectionViewCellDelegate?
 
     override func didLoad() {
         super.didLoad()

@@ -7,7 +7,7 @@
 
 import UIKit
 
-public protocol FlaneurModalProgressViewControllerDelegate {
+public protocol FlaneurModalProgressViewControllerDelegate: AnyObject {
     func modalProgressControllerDidDismiss()
 }
 
@@ -16,8 +16,9 @@ final public class FlaneurModalProgressViewController: UIViewController {
     public private(set) var bodyLabel: UILabel!
     public private(set) var okButton: UIButton!
     public private(set) var progressBar: UIProgressView!
+    private var finalStateReached: Bool = false
 
-    public var delegate: FlaneurModalProgressViewControllerDelegate? = nil
+    public weak var delegate: FlaneurModalProgressViewControllerDelegate? = nil
 
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -58,9 +59,9 @@ final public class FlaneurModalProgressViewController: UIViewController {
         bodyLabel.isHidden = true
         popup.addSubview(bodyLabel)
         _ = LayoutBorderManager(item: bodyLabel,
-                               toItem: popup,
-                               left: 15.0,
-                               right: 15.0)
+                                toItem: popup,
+                                left: 15.0,
+                                right: 15.0)
         NSLayoutConstraint(item: bodyLabel,
                            attribute: .centerY,
                            relatedBy: .equal,
@@ -106,5 +107,29 @@ final public class FlaneurModalProgressViewController: UIViewController {
     @IBAction func dismiss(_ sender: Any? = nil) {
         self.dismiss(animated: true)
         delegate?.modalProgressControllerDidDismiss()
+    }
+
+    public func configureWithInProgressState(title: String? = nil,
+                                             body: String? = nil,
+                                             button: String = "OK",
+                                             progress: Progress? = nil) {
+        if !finalStateReached {
+            titleLabel.text = title
+            bodyLabel.text = body
+            okButton.setTitle(button, for: .normal)
+            progressBar.observedProgress = progress
+        }
+    }
+
+    public func configureWithFinalState(title: String? = nil,
+                                        body: String? = nil,
+                                        button: String = "OK",
+                                        hideProgress: Bool = false) {
+        finalStateReached = true
+        titleLabel.text = title
+        bodyLabel.text = body
+        okButton.isEnabled = true
+        okButton.setTitle(button, for: .normal)
+        progressBar.isHidden = hideProgress
     }
 }

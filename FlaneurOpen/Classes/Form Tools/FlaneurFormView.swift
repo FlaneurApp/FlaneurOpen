@@ -75,7 +75,8 @@ extension FlaneurFormElement: ListDiffable {
 
 public final class FlaneurFormView: UIView {
     var listAdapter: ListAdapter!
-    var viewController: UIViewController?
+    weak var viewController: UIViewController?
+    fileprivate var textCache: [String: String?] = [:]
 
     // The collection view of form elements
     public let collectionView: UICollectionView = {
@@ -156,7 +157,9 @@ extension FlaneurFormView: ListAdapterDataSource {
 
     public func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
         if let formElement = object as? FlaneurFormElement {
-            return FlaneurFormElementSectionController(formElement: formElement, cellDelegate: self)
+            return FlaneurFormElementSectionController(formElement: formElement,
+                                                       cellDelegate: self,
+                                                       displayDelegate: self)
         } else {
             fatalError("unhandled case")
         }
@@ -172,11 +175,15 @@ extension FlaneurFormView: ListAdapterDataSource {
 
 class FlaneurFormElementSectionController: ListSectionController {
     let formElement: FlaneurFormElement
-    var cellDelegate: FlaneurFormElementCollectionViewCellDelegate?
+    weak var cellDelegate: FlaneurFormElementCollectionViewCellDelegate?
 
-    init(formElement: FlaneurFormElement, cellDelegate: FlaneurFormElementCollectionViewCellDelegate?) {
+    init(formElement: FlaneurFormElement,
+         cellDelegate: FlaneurFormElementCollectionViewCellDelegate?,
+         displayDelegate: ListDisplayDelegate) {
         self.formElement = formElement
         self.cellDelegate = cellDelegate
+        super.init()
+        self.displayDelegate = displayDelegate
     }
 
     override func sizeForItem(at index: Int) -> CGSize {
@@ -208,6 +215,7 @@ class FlaneurFormElementSectionController: ListSectionController {
                                                               for: self,
                                                               at: index) as? FlaneurFormTextFieldElementCollectionViewCell
             cell?.configureWith(formElement: formElement)
+            cell?.textField.text = cellDelegate?.cacheValue(forLabel: formElement.label)
             cell?.delegate = cellDelegate
             return cell!
         case .textArea:
@@ -215,6 +223,7 @@ class FlaneurFormElementSectionController: ListSectionController {
                                                               for: self,
                                                               at: index) as? FlaneurFormTextAreaElementCollectionViewCell
             cell?.configureWith(formElement: formElement)
+            cell?.textArea.text = cellDelegate?.cacheValue(forLabel: formElement.label) ?? ""
             cell?.delegate = cellDelegate
             return cell!
         case .imagePicker:
@@ -252,6 +261,42 @@ class FlaneurFormElementSectionController: ListSectionController {
     }
 }
 
+extension FlaneurFormView: ListDisplayDelegate {
+    public func listAdapter(_ listAdapter: ListAdapter, willDisplay sectionController: ListSectionController) {
+    }
+
+    public func listAdapter(_ listAdapter: ListAdapter, didEndDisplaying sectionController: ListSectionController) {
+    }
+
+    public func listAdapter(_ listAdapter: ListAdapter, willDisplay sectionController: ListSectionController, cell: UICollectionViewCell, at index: Int) {
+    }
+
+    public func listAdapter(_ listAdapter: ListAdapter, didEndDisplaying sectionController: ListSectionController, cell: UICollectionViewCell, at index: Int) {
+        if let mySectionController = sectionController as? FlaneurFormElementSectionController {
+            switch mySectionController.formElement.type {
+            case .textField:
+                if let myCell = cell as? FlaneurFormTextFieldElementCollectionViewCell {
+                    let label = mySectionController.formElement.label
+                    let value = myCell.textField.text
+                    self.textCache[label] = value
+                    debugPrint("Caching for \(label): \(String(describing: value))")
+                }
+
+            case .textArea:
+                if let myCell = cell as? FlaneurFormTextAreaElementCollectionViewCell {
+                    let label = mySectionController.formElement.label
+                    let value = myCell.textArea.text
+                    self.textCache[label] = value
+                    debugPrint("Caching for \(label): \(String(describing: value))")
+                }
+
+            default:
+                debugPrint("No cache management for type \(mySectionController.formElement.type)")
+            }
+        }
+    }
+}
+
 extension FlaneurFormView: FlaneurFormElementCollectionViewCellDelegate {
     func nextElementShouldBecomeFirstResponder(cell: FlaneurFormElementCollectionViewCell) {
         if let thisIndex = self.collectionView.indexPath(for: cell) {
@@ -273,5 +318,13 @@ extension FlaneurFormView: FlaneurFormElementCollectionViewCellDelegate {
 
     func presentViewController(viewController: UIViewController) {
         self.viewController?.present(viewController, animated: true)
+    }
+
+    func cacheValue(forLabel label: String) -> String? {
+        if let cacheValue = self.textCache[label] {
+            return cacheValue
+        } else {
+            return nil
+        }
     }
 }
