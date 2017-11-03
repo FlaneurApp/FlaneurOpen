@@ -169,12 +169,10 @@ extension FormDemoViewController: FlaneurFormImagePickerElementCollectionViewCel
     func flaneurImagePickerController(_ picker: FlaneurImagePickerController, didFinishPickingImages images: [FlaneurImageDescription], userInfo: Any?) {
         print("didPickImages: \(images.count)")
         self.currentPictureSelection = images
-        picker.dismiss(animated: true)
     }
 
     func flaneurImagePickerControllerDidCancel(_ picker: FlaneurImagePickerController) {
         print("didCancel")
-        picker.dismiss(animated: true)
     }
 
     func buttonImage() -> UIImage {

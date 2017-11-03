@@ -231,6 +231,7 @@ extension FlaneurFormImagePickerElementCollectionViewCell: FlaneurImagePickerCon
                                                        didFinishPickingImages: images,
                                                        userInfo: userInfo)
         }
+        picker.dismiss(animated: true)
     }
 
     func flaneurImagePickerControllerDidCancel(_ picker: FlaneurImagePickerController) {
