@@ -14,7 +14,7 @@ public protocol FlaneurFormImagePickerElementCollectionViewCellDelegate: Flaneur
     func initialSelection() -> [FlaneurImageDescription]
     func sourceDelegates() -> [FlaneurImageSource]
 
-    func localizedStringForTitle() -> String
+    func localizedAttributedStringForTitle() -> NSAttributedString
     func localizedStringForCancelAction() -> String
     func localizedStringForDoneAction() -> String
 }
@@ -32,8 +32,8 @@ public extension FlaneurFormImagePickerElementCollectionViewCellDelegate where S
         return []
     }
 
-    func localizedStringForTitle() -> String {
-        return "Pick your pictures"
+    func localizedAttributedStringForTitle() -> NSAttributedString {
+        return NSAttributedString(string: "Pick your pictures")
     }
 
     func localizedStringForCancelAction() -> String {
@@ -163,18 +163,17 @@ class FlaneurFormImagePickerElementCollectionViewCell: FlaneurFormElementCollect
 
         // Picker Configuration
         flaneurPicker.view.backgroundColor = .white
+        flaneurPicker.navigationBar.tintColor = .black
         flaneurPicker.navigationBar.barTintColor = .white
         flaneurPicker.navigationBar.isTranslucent = false
         flaneurPicker.navigationBar.topItem?.backBarButtonItem?.title = imageDelegate!.localizedStringForCancelAction()
-        flaneurPicker.navigationBar.topItem?.backBarButtonItem?.tintColor = .black
         flaneurPicker.navigationBar.topItem?.rightBarButtonItem?.title = imageDelegate!.localizedStringForDoneAction()
-        flaneurPicker.navigationBar.topItem?.rightBarButtonItem?.tintColor = .black
 
         let myTitleViewContainer = FullWidthNavigationItemTitle(frame: CGRect(x: 0.0, y: 0.0, width: 1000.0, height: 0.0))
         myTitleViewContainer.containingView = flaneurPicker.navigationBar
         let myTitleText = UILabel(frame: .zero)
         myTitleText.numberOfLines = 1
-        myTitleText.text = imageDelegate!.localizedStringForTitle()
+        myTitleText.attributedText = imageDelegate!.localizedAttributedStringForTitle()
         myTitleText.font = FlaneurOpenThemeManager.shared.theme.navigationBarTitleFont
         myTitleViewContainer.titleLabel = myTitleText
         flaneurPicker.navigationBar.topItem?.titleView = myTitleViewContainer
