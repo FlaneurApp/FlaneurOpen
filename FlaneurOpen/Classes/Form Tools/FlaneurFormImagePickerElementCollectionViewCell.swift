@@ -198,15 +198,23 @@ class FlaneurFormImagePickerElementCollectionViewCell: FlaneurFormElementCollect
                                                                        right: 2.0)
 
         let selfBundle = Bundle(for: FlaneurFormView.self)
-        flaneurPicker.config.imageForImageSource = { imageSource in
-            switch imageSource {
-            case .library:
-                return UIImage(named: "libraryImageSource", in: selfBundle, compatibleWith: nil)
-            case .camera:
-                return UIImage(named: "cameraImageSource", in: selfBundle, compatibleWith: nil)
-            case .instagram:
-                return UIImage(named: "instagramImageSource", in: selfBundle, compatibleWith: nil)
+        if let imageBundleURL = selfBundle.url(forResource: "FlaneurOpen", withExtension: "bundle") {
+            if let imageBundle = Bundle(url: imageBundleURL) {
+                flaneurPicker.config.imageForImageSource = { imageSource in
+                    switch imageSource {
+                    case .library:
+                        return UIImage(named: "libraryImageSource", in: imageBundle, compatibleWith: nil)
+                    case .camera:
+                        return UIImage(named: "cameraImageSource", in: imageBundle, compatibleWith: nil)
+                    case .instagram:
+                        return UIImage(named: "instagramImageSource", in: imageBundle, compatibleWith: nil)
+                    }
+                }
+            } else {
+                print("Bundle for FlaneurOpen images not found.")
             }
+        } else {
+            print("URL for FlaneurOpen images bundle not found.")
         }
 
         flaneurPicker.delegate = self
