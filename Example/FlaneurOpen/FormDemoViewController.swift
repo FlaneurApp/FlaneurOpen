@@ -52,8 +52,8 @@ class FormDemoViewController: UIViewController {
         }
         formView.addFormElement(descriptionFormElement)
 
-//        let imagePickerFormElement = FlaneurFormElement(type: .imagePicker(delegate: self), label: "Cover")
-//        formView.addFormElement(imagePickerFormElement)
+        let imagePickerFormElement = FlaneurFormElement(type: .imagePicker(delegate: self), label: "Cover")
+        formView.addFormElement(imagePickerFormElement)
 
         let description1FormElement = FlaneurFormElement(type: .textArea, label: "Description 1")
         formView.addFormElement(description1FormElement)
@@ -166,13 +166,15 @@ class FormDemoViewController: UIViewController {
 }
 
 extension FormDemoViewController: FlaneurFormImagePickerElementCollectionViewCellDelegate {
-    func didPickImages(images: [FlaneurImageDescription], userInfo: Any?) {
+    func flaneurImagePickerController(_ picker: FlaneurImagePickerController, didFinishPickingImages images: [FlaneurImageDescription], userInfo: Any?) {
         print("didPickImages: \(images.count)")
         self.currentPictureSelection = images
+        picker.dismiss(animated: true)
     }
 
-    func didCancelPickingImages() {
+    func flaneurImagePickerControllerDidCancel(_ picker: FlaneurImagePickerController) {
         print("didCancel")
+        picker.dismiss(animated: true)
     }
 
     func buttonImage() -> UIImage {

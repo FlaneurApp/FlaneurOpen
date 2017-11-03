@@ -2,7 +2,7 @@
 //  FlaneurImageInstagramProvider.swift
 //  FlaneurImagePickerController
 //
-//  Created by Frenchapp on 24/07/2017.
+//  Created by Flâneur on 24/07/2017.
 //  
 //
 
@@ -21,8 +21,7 @@ struct InstagramAuthInfo {
 }
 
 final class FlaneurImageInstagramProvider: NSObject, FlaneurImageProvider {
-    
-    var delegate: FlaneurImageProviderDelegate?
+    weak var delegate: FlaneurImageProviderDelegate?
     weak var parentVC: UIViewController?
 
     var instagramAuthInfo: InstagramAuthInfo!

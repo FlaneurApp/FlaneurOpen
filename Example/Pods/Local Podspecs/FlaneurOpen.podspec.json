@@ -19,6 +19,9 @@
     "ios": "9.0"
   },
   "source_files": "FlaneurOpen/Classes/**/*",
+  "resource_bundles": {
+    "FlaneurOpen": "FlaneurOpen/Assets/*"
+  },
   "dependencies": {
     "Kingfisher": [
       "~> 3.0"

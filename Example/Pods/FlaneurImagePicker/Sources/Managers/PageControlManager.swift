@@ -3,7 +3,7 @@
 //  PageControlManager.swift
 //  FlaneurImagePickerController
 //
-//  Created by Frenchapp on 24/07/2017.
+//  Created by Flâneur on 24/07/2017.
 //  
 //
 
@@ -12,9 +12,9 @@ import IGListKit
 
 /*
  **  This class is used to move the page control as the pages change
-*/
+ */
 
-final class PageControlManager: NSObject {
+final internal class PageControlManager: NSObject {
 
     weak var pageControl: UIPageControl?
     weak var collectionView: UICollectionView?
@@ -60,21 +60,26 @@ final class PageControlManager: NSObject {
 
 }
 
-extension PageControlManager: UICollectionViewDelegate {
-    func endScrolling(_ scrollView: UIScrollView) {
-        let width = scrollView.bounds.width
-        let page = (scrollView.contentOffset.x + (0.5 * width)) / width
-        currentIndex = Int(page)
+extension PageControlManager: ListScrollDelegate {
+    func listAdapter(_ listAdapter: ListAdapter, didScroll sectionController: ListSectionController) {
+        if let scrollView = listAdapter.collectionView {
+            let width = scrollView.bounds.width
+            let page = (scrollView.contentOffset.x + (0.5 * width)) / width
+            currentIndex = Int(page)
+        }
     }
-    
-    
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        endScrolling(scrollView)
+
+    func listAdapter(_ listAdapter: ListAdapter, willBeginDragging sectionController: ListSectionController) {
+        ()
     }
-    
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+
+    func listAdapter(_ listAdapter: ListAdapter, didEndDeceleratingSectionController sectionController: ListSectionController) {
+        self.listAdapter(listAdapter, didScroll: sectionController)
+    }
+
+    func listAdapter(_ listAdapter: ListAdapter, didEndDragging sectionController: ListSectionController, willDecelerate decelerate: Bool) {
         if decelerate {
-            endScrolling(scrollView)
+            self.listAdapter(listAdapter, didScroll: sectionController)
         }
     }
 }

@@ -2,7 +2,7 @@
 //  FlaneurImagePickerConfig.swift
 //  FlaneurImagePickerController
 //
-//  Created by Frenchapp on 13/07/2017.
+//  Created by Flâneur on 13/07/2017.
 //  
 //
 
@@ -29,59 +29,62 @@ public enum FlaneurImagePickerSection {
 }
 
 /// An object used to set all the configurations relative to the FlaneurImagePicker
-public struct FlaneurImagePickerConfig {
-    
+public class FlaneurImagePickerConfig {
+    // MARK: - Source Selection
+
+    /// Changes the order of the imageSources shown in the .imageSources section
+    public var imageSourcesArray: [FlaneurImageSource] = [
+        .library,
+        .camera,
+        .instagram
+    ]
+
+    /// Title displayed for the image source selection button.
+    ///
+    /// If `nil` and `imageForImageSource` is also `nil`, it defaults to `FlaneurImageSource.rawValue`.
+    public var titleForImageSource: ((FlaneurImageSource) -> (String?)) = { imageSource in
+        return nil
+    }
+
+    /// Image displayed for the image source selection button.
+    public var imageForImageSource: ((FlaneurImageSource) -> (UIImage?)) = { _ in
+        return nil
+    }
+
+    /// Title color for the image source selection buttons.
+    ///
+    /// Defaults to `.blue`.
+    public var imageSourcesTitleColor: UIColor = .blue
+
+    /// Background color for the image source selection buttons.
+    ///
+    /// Defaults to `.white`.
+    public var imageSourcesBackgroundColor: UIColor = .white
+
     // MARK: - Titles
-    
-    /// The title of the navigation bar
-    public var navBarTitle: String = "My Image Picker"
-    
-    /// The title of the cancel button at the top left of the picker
-    public var cancelButtonTitle: String = "Cancel"
-    
-    /// The title of the done button at the top right of the picker
-    public var doneButtonTitle: String = "Done"
     
     /// The title of the remove button at the top right of the images picked
     public var removeButtonTitle: String = "Remove"
     
-    /// Title shown for a specific image source, defaults to enum FlaneurImageSource.rawValue
-    public var titleForImageSource: [FlaneurImageSource: String]?
-    
-    
-    
+
     // MARK: - Colors
     
-    /// The background color of the navigation bar
-    public var navBarBackgroundColor: UIColor?
-    /// The color of the navigation bar's title
-    public var navBarTitleColor: UIColor?
+    /// Background color for a specific collectionView in a section.
+    ///
+    /// Defaults to `.gray`.
+    public var backgroundColorForSection: ((FlaneurImagePickerSection) -> (UIColor)) = { _ in
+        return .gray
+    }
 
-    /// The color of the cancel button
-    public var cancelButtonColor: UIColor?
-    /// The color of the done button
-    public var doneButtonColor: UIColor?
-    
     /// The color of the remove button
     public var removeButtonColor: UIColor?
-    
-    /// Title color for a specific image source, defaults to .blue
-    public var imageSourcesTitleColors: [FlaneurImageSource: UIColor]?
-    
-    /// BackgroundColor for a specific image source, defaults to .white
-    public var imageSourcesBackgroundColor: [FlaneurImageSource: UIColor]?
 
-
-    /// BackgroundColor for a specific collectionView in a section, defaults to .black
-    public var backgroundColorForSection: [FlaneurImagePickerSection: UIColor]?
-    
     /// Color of the not selected dots of the pageControl
     public var pageControlTintColor: UIColor = .black
     
     /// Color of the currently selected dot of the pageControl
     public var pageControlCurrentIndexColor: UIColor = .white
-    
-    
+
     
     // MARK: - Content Size and shape
     
@@ -109,15 +112,7 @@ public struct FlaneurImagePickerConfig {
         .imageSources,
         .pickerView
     ]
-    
-    /// Changes the order of the imageSources shown in the .imageSources section
-    public var imageSourcesArray: [FlaneurImageSource] = [
-        .library,
-        .camera,
-        .instagram
-    ]
-    
-    
+
     // MARK: - Views
     
     /// Class of the custom view to use for authorization view.

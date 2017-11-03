@@ -46,8 +46,7 @@ public extension FlaneurFormImagePickerElementCollectionViewCellDelegate where S
 }
 
 class FlaneurFormImagePickerElementCollectionViewCell: FlaneurFormElementCollectionViewCell {
-    // FIXME: the image delegate should be weak
-    var imageDelegate: FlaneurFormImagePickerElementCollectionViewCellDelegate?
+    weak var imageDelegate: FlaneurFormImagePickerElementCollectionViewCellDelegate?
     var launcherButton: UIButton!
     var photosCollectionView: UICollectionView!
 
@@ -161,18 +160,54 @@ class FlaneurFormImagePickerElementCollectionViewCell: FlaneurFormElementCollect
                                                          userInfo: nil,
                                                          sourcesDelegate: imageDelegate!.sourceDelegates(),
                                                          selectedImages: currentSelection)
-        flaneurPicker.config.cancelButtonTitle = imageDelegate!.localizedStringForCancelAction()
-        flaneurPicker.config.doneButtonTitle = imageDelegate!.localizedStringForDoneAction()
-        flaneurPicker.config.navBarTitle = imageDelegate!.localizedStringForTitle()
 
-        flaneurPicker.config.navBarBackgroundColor = .white
-        flaneurPicker.config.navBarTitleColor = .black
+        // Picker Configuration
+        flaneurPicker.view.backgroundColor = .white
+        flaneurPicker.navigationBar.barTintColor = .white
+        flaneurPicker.navigationBar.isTranslucent = false
+        flaneurPicker.navigationBar.topItem?.backBarButtonItem?.title = imageDelegate!.localizedStringForCancelAction()
+        flaneurPicker.navigationBar.topItem?.backBarButtonItem?.tintColor = .black
+        flaneurPicker.navigationBar.topItem?.rightBarButtonItem?.title = imageDelegate!.localizedStringForDoneAction()
+        flaneurPicker.navigationBar.topItem?.rightBarButtonItem?.tintColor = .black
 
-        flaneurPicker.config.backgroundColorForSection = [
-            .pickerView: UIColor(white: (236.0 / 255.0), alpha: 1.0),
-            .imageSources: .white,
-            .selectedImages: UIColor(white: (236.0 / 255.0), alpha: 1.0)
-        ]
+        let myTitleViewContainer = FullWidthNavigationItemTitle(frame: CGRect(x: 0.0, y: 0.0, width: 1000.0, height: 0.0))
+        myTitleViewContainer.containingView = flaneurPicker.navigationBar
+        let myTitleText = UILabel(frame: .zero)
+        myTitleText.numberOfLines = 1
+        myTitleText.text = imageDelegate!.localizedStringForTitle()
+        myTitleText.font = FlaneurOpenThemeManager.shared.theme.navigationBarTitleFont
+        myTitleViewContainer.titleLabel = myTitleText
+        flaneurPicker.navigationBar.topItem?.titleView = myTitleViewContainer
+
+        flaneurPicker.config.backgroundColorForSection = { section in
+            switch section {
+            case .selectedImages:
+                return UIColor(white: (236.0 / 255.0), alpha: 1.0)
+            case .imageSources:
+                return .white
+            case .pickerView:
+                return UIColor(white: (236.0 / 255.0), alpha: 1.0)
+            }
+        }
+
+        flaneurPicker.config.sizeForImagesPickerView = CGSize(width: self.frame.width / 3.0,
+                                                              height: self.frame.width / 3.0)
+        flaneurPicker.config.paddingForImagesPickerView = UIEdgeInsets(top: 2.0,
+                                                                       left: 2.0,
+                                                                       bottom: 2.0,
+                                                                       right: 2.0)
+
+        let selfBundle = Bundle(for: FlaneurFormView.self)
+        flaneurPicker.config.imageForImageSource = { imageSource in
+            switch imageSource {
+            case .library:
+                return UIImage(named: "libraryImageSource", in: selfBundle, compatibleWith: nil)
+            case .camera:
+                return UIImage(named: "cameraImageSource", in: selfBundle, compatibleWith: nil)
+            case .instagram:
+                return UIImage(named: "instagramImageSource", in: selfBundle, compatibleWith: nil)
+            }
+        }
 
         flaneurPicker.delegate = self
 
@@ -181,13 +216,21 @@ class FlaneurFormImagePickerElementCollectionViewCell: FlaneurFormElementCollect
 }
 
 extension FlaneurFormImagePickerElementCollectionViewCell: FlaneurImagePickerControllerDelegate {
-    func didPickImages(images: [FlaneurImageDescription], userInfo: Any?) {
+    func flaneurImagePickerController(_ picker: FlaneurImagePickerController, didFinishPickingImages images: [FlaneurImageDescription], userInfo: Any?) {
         self.currentSelection = images
-        imageDelegate?.didPickImages(images: images, userInfo: userInfo)
+
+        if let imageDelegate = imageDelegate {
+            imageDelegate.flaneurImagePickerController(picker,
+                                                       didFinishPickingImages: images,
+                                                       userInfo: userInfo)
+        }
     }
 
-    func didCancelPickingImages() {
-        imageDelegate?.didCancelPickingImages()
+    func flaneurImagePickerControllerDidCancel(_ picker: FlaneurImagePickerController) {
+        if let imageDelegate = imageDelegate {
+            imageDelegate.flaneurImagePickerControllerDidCancel(picker)
+        }
+        picker.dismiss(animated: true)
     }
 }
 

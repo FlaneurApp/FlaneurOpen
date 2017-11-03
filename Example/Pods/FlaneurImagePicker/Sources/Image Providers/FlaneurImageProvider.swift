@@ -3,21 +3,20 @@
 //  FlaneurImageProvider.swift
 //  FlaneurImagePickerController
 //
-//  Created by Frenchapp on 24/07/2017.
+//  Created by Flâneur on 24/07/2017.
 //  
 //
 
 import UIKit
 
-protocol FlaneurImageProviderDelegate: class {    
+protocol FlaneurImageProviderDelegate: AnyObject {
     func didLoadImages(images: [FlaneurImageDescription])
     
     func didFailLoadingImages(with unauthorizedSourcePermission: FlaneurImageSource)
 }
 
 protocol FlaneurImageProvider {
-    
-    var delegate: FlaneurImageProviderDelegate? {get set}
+    weak var delegate: FlaneurImageProviderDelegate? {get set}
     weak var parentVC: UIViewController? {get set}    
     
     init(delegate: FlaneurImageProviderDelegate, andParentVC parentVC: UIViewController)
@@ -29,5 +28,4 @@ protocol FlaneurImageProvider {
     func fetchImagesFromSource()
     
     func fetchNextPage()
-
 }

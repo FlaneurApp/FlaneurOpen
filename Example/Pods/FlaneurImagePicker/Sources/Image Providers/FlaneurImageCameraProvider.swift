@@ -2,7 +2,7 @@
 //  FlaneurImageCameraProvider.swift
 //  FlaneurImagePickerController
 //
-//  Created by Frenchapp on 24/07/2017.
+//  Created by Flâneur on 24/07/2017.
 //  
 //
 
@@ -10,13 +10,11 @@ import UIKit
 import AVFoundation
 
 final class FlaneurImageCameraProvider: NSObject, FlaneurImageProvider {
-    
-    var delegate: FlaneurImageProviderDelegate?
+    weak var delegate: FlaneurImageProviderDelegate?
     weak var parentVC: UIViewController?
     
     var picker = UIImagePickerController()
 
-    
     init(delegate: FlaneurImageProviderDelegate, andParentVC parentVC: UIViewController) {
         self.delegate = delegate
         self.parentVC = parentVC

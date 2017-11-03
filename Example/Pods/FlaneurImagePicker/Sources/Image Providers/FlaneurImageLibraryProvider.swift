@@ -2,7 +2,7 @@
 //  FlaneurImageLibraryProvider.swift
 //  FlaneurImagePickerController
 //
-//  Created by Frenchapp on 24/07/2017.
+//  Created by Flâneur on 24/07/2017.
 //  
 //
 
@@ -10,8 +10,7 @@ import UIKit
 import Photos
 
 final class FlaneurImageLibraryProvider: NSObject, FlaneurImageProvider {
-
-    var delegate: FlaneurImageProviderDelegate?
+    weak var delegate: FlaneurImageProviderDelegate?
     weak var parentVC: UIViewController?
     
     private let config: FlaneurImagePickerConfig
