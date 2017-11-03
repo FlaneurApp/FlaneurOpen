@@ -13,7 +13,7 @@ class FlaneurModalProgressDemoViewController: UIViewController {
     @IBOutlet weak var backgroundImageView: UIImageView!
     var progress: Progress!
     var startDate: CFTimeInterval? = nil
-    var animationDuration: CFTimeInterval = 0.400
+    var animationDuration: CFTimeInterval = 3.0
     var modalProgressViewController: FlaneurModalProgressViewController? = nil
 
     override func viewDidLoad() {
