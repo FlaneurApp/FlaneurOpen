@@ -139,8 +139,10 @@ public final class FlaneurFormView: UIView {
                                 right: 0.0)
     }
 
-    public func addFormElement(_ formElement: FlaneurFormElement) {
+    public func addFormElement(_ formElement: FlaneurFormElement,
+                               cacheValue: String? = nil) {
         formElements.append(formElement)
+        textCache[formElement.label] = cacheValue
     }
 
     // MARK: - Private stuff
@@ -279,7 +281,6 @@ extension FlaneurFormView: ListDisplayDelegate {
                     let label = mySectionController.formElement.label
                     let value = myCell.textField.text
                     self.textCache[label] = value
-                    debugPrint("Caching for \(label): \(String(describing: value))")
                 }
 
             case .textArea:
@@ -287,7 +288,6 @@ extension FlaneurFormView: ListDisplayDelegate {
                     let label = mySectionController.formElement.label
                     let value = myCell.textArea.text
                     self.textCache[label] = value
-                    debugPrint("Caching for \(label): \(String(describing: value))")
                 }
 
             default:

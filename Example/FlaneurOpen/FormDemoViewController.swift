@@ -17,7 +17,9 @@ class FormDemoViewController: UIViewController {
     var nameTextField: UITextField?
     var descriptionTextArea: UITextView?
     var didAppear = false
-    var currentPictureSelection: [FlaneurImageDescription] = []
+    var currentPictureSelection: [FlaneurImageDescription] = [
+        FlaneurImageDescription(imageURLString: "https://images.unsplash.com/photo-1427434991195-f42379e2139d")!
+    ]
 
     let categoriesDelegate = CategoriesSelectDelegate()
 
@@ -56,7 +58,7 @@ class FormDemoViewController: UIViewController {
         formView.addFormElement(imagePickerFormElement)
 
         let description1FormElement = FlaneurFormElement(type: .textArea, label: "Description 1")
-        formView.addFormElement(description1FormElement)
+        formView.addFormElement(description1FormElement, cacheValue: "TEST CACHE")
         let description2FormElement = FlaneurFormElement(type: .textArea, label: "Description 2")
         formView.addFormElement(description2FormElement)
         let description3FormElement = FlaneurFormElement(type: .textArea, label: "Description 3")
