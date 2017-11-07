@@ -56,7 +56,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   FlaneurImagePicker:
-    :commit: e0af8c931bd92d9dc67ab9a56ef1ddb6002935c2
+    :commit: cccd223f78f4c9c667c8a378a45dc59ff54cf239
     :git: https://github.com/FlaneurApp/FlaneurImagePicker
 
 SPEC CHECKSUMS:

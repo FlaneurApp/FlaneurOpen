@@ -189,12 +189,17 @@ class FlaneurFormImagePickerElementCollectionViewCell: FlaneurFormElementCollect
             }
         }
 
-        flaneurPicker.config.sizeForImagesPickerView = CGSize(width: self.frame.width / 3.0,
-                                                              height: self.frame.width / 3.0)
-        flaneurPicker.config.paddingForImagesPickerView = UIEdgeInsets(top: 2.0,
-                                                                       left: 2.0,
-                                                                       bottom: 2.0,
-                                                                       right: 2.0)
+        flaneurPicker.config.sizeForImagesPickerView = { collectionSize in
+            let nbOfColumns: CGFloat = 3.0
+            let squareDimension: CGFloat = (collectionSize.width / nbOfColumns)
+            return CGSize(width: squareDimension, height: squareDimension)
+        }
+
+        let paddingOfImages: CGFloat = 2.0
+        flaneurPicker.config.paddingForImagesPickerView = UIEdgeInsets(top: paddingOfImages,
+                                                                       left: paddingOfImages,
+                                                                       bottom: paddingOfImages,
+                                                                       right: paddingOfImages)
 
         let selfBundle = Bundle(for: FlaneurFormView.self)
         if let imageBundleURL = selfBundle.url(forResource: "FlaneurOpen", withExtension: "bundle") {

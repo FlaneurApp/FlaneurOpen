@@ -29,12 +29,14 @@ final class PickerSectionController: ListSectionController {
     func sizeWithPadding(width: CGFloat, height: CGFloat, padding: UIEdgeInsets) -> CGSize {
         let finalWidth = width - padding.left - padding.right
         let finalHeight = height - padding.top - padding.bottom
+        debugPrint("width: \(width), finalWidth: \(finalWidth), padding: \(padding)")
         return CGSize(width: finalWidth, height: finalHeight)
     }
     
     override func sizeForItem(at index: Int) -> CGSize {
-        return sizeWithPadding(width: config.sizeForImagesPickerView.width,
-                               height: config.sizeForImagesPickerView.height,
+        let customSize = config.sizeForImagesPickerView(collectionContext!.containerSize)
+        return sizeWithPadding(width: customSize.width,
+                               height: customSize.height,
                                padding: self.inset)
     }
     

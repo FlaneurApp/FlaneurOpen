@@ -119,14 +119,7 @@ final public class FlaneurImagePickerController: UIViewController {
     /// We need to retrieve the adapter to refresh the UI
     var pickerViewImages: [FlaneurImageDescription] = [FlaneurImageDescription]() {
         didSet {
-            let adapter = adapterForSection(section: .pickerView)
-            if pickerViewImages.count == 0 {
-                adapter.reloadData(completion: self.selectDefaultImageSource)
-            } else {
-                // For performance issues, we don't want to activate IGListKit's diffing
-                // feature here (ie no `adapter.performUpdates(animated: true, completion: nil)`)
-                adapter.reloadData(completion: self.selectDefaultImageSource)
-            }
+            self.refreshGalleryIfVisible()
         }
     }
 
@@ -204,7 +197,7 @@ final public class FlaneurImagePickerController: UIViewController {
     }
 
     deinit {
-        print("deinit")
+        ()
     }
 
     // MARK: - Lifecyle callbacks
@@ -234,6 +227,13 @@ final public class FlaneurImagePickerController: UIViewController {
         selectedImagesCollectionView?.backgroundColor = config.backgroundColorForSection(.selectedImages)
         imageSourceSelectionCollectionView?.backgroundColor = config.backgroundColorForSection(.imageSources)
         galleryCollectionView?.backgroundColor = config.backgroundColorForSection(.pickerView)
+    }
+
+    override public func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        // Dirty hack
+        refreshGalleryIfVisible()
     }
 
     /// viewDidLayoutSubviews Lifecyle callback
@@ -390,8 +390,21 @@ final public class FlaneurImagePickerController: UIViewController {
 
                 }
             }
+        }
+    }
+
+    func refreshGalleryIfVisible() {
+        if let galleryCollectionView = galleryCollectionView {
+            if galleryCollectionView.frame.width > 0 {
+                let adapter = adapterForSection(section: .pickerView)
+                // For performance issues, we don't want to activate IGListKit's diffing
+                // feature here (ie no `adapter.performUpdates(animated: true, completion: nil)`)
+                adapter.reloadData(completion: self.selectDefaultImageSource)
+            } else {
+                debugPrint("Skipping reload as the galleryCollectionView seems to not be displayed right now (frame: \(galleryCollectionView.frame))")
+            }
         } else {
-            debugPrint("Done")
+            debugPrint("Skipping reload as the galleryCollectionView is nil right now.")
         }
     }
 }
