@@ -9,7 +9,23 @@
 import UIKit
 import Kingfisher
 
+fileprivate extension CGFloat {
+    static var random: CGFloat {
+        return CGFloat(arc4random()) / CGFloat(UInt32.max)
+    }
+}
+
+fileprivate extension UIColor {
+    static var random: UIColor {
+        return UIColor(red: .random, green: .random, blue: .random, alpha: 1.0)
+    }
+}
+
 fileprivate let defaultContainerWidth: CGFloat = 16.0
+
+fileprivate let leftButtonSize: CGFloat = 24.0
+fileprivate let rightButtonSize: CGFloat = 36.0
+fileprivate let rightInBetweenButtonSpace: CGFloat = 4.0
 
 public enum FlaneurNavigationBarActionFaceView {
     case image(UIImage)
@@ -95,6 +111,8 @@ final public class FlaneurNavigationBar: UIView {
     var leftButtonAction: () -> () = { _ in }
     var rightButtonsActions: [() -> ()] = []
 
+    public var debug: Bool = false
+
     /// Initializes and returns a newly allocated navigation bar object with the specified frame rectangle.
     ///
     /// - Parameter frame: The frame rectangle for the view, measured in points.
@@ -146,9 +164,9 @@ final public class FlaneurNavigationBar: UIView {
         self.addSubview(titleLabel)
 
         let views: [String: Any] = [
-        "lView": leftContainer,
-        "rView": rightContainer,
-        "tLabel": titleLabel
+            "lView": leftContainer,
+            "rView": rightContainer,
+            "tLabel": titleLabel
         ]
         let formatString = "[lView]-0-[tLabel]-16-[rView]"
         let constraints = NSLayoutConstraint.constraints(withVisualFormat: formatString, options: .alignAllCenterY, metrics: nil, views: views)
@@ -177,6 +195,16 @@ final public class FlaneurNavigationBar: UIView {
         self.setTitle(title)
         setLeftAction(leftAction)
         setRightActions(rightActions)
+
+        if debug {
+            leftContainer.backgroundColor = UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 0.1)
+            titleLabel.backgroundColor = UIColor(red: 0.0, green: 1.0, blue: 0.0, alpha: 0.1)
+            rightContainer.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 1.0, alpha: 0.1)
+
+            rightContainer.subviews.forEach { subview in
+                subview.backgroundColor = .random
+            }
+        }
     }
 
     /// Sets the title.
@@ -196,12 +224,12 @@ final public class FlaneurNavigationBar: UIView {
         // We want the leftContainer and the titleLabel to touch each other
         // otherwise, there might be a gap between them where touch does not trigger the action
         let activatingViews = [ leftContainer, titleLabel ]
-        let paddingToLabelForContinuousTouchZone: CGFloat = 16.0
+        let paddingToLabelForContinuousTouchZone: CGFloat = 2.0
 
         if let leftAction = leftAction {
             leftButtonAction = leftAction.action
 
-            let view = leftAction.view
+            let view = leftAction.view(size: leftButtonSize)
             view.isUserInteractionEnabled = false // Forward to the left container
             leftContainer.addSubview(view)
 
@@ -253,7 +281,7 @@ final public class FlaneurNavigationBar: UIView {
 
                 let rightAction = rightActions[index]
 
-                let newRightButton = rightAction.view as! UIButton
+                let newRightButton = rightAction.view(size: rightButtonSize) as! UIButton
                 rightButtons.append(newRightButton)
                 rightButtonsActions.append(rightAction.action)
                 newRightButton.addTarget(self, action: #selector(rightButtonPressed), for: .touchUpInside)
@@ -288,7 +316,7 @@ final public class FlaneurNavigationBar: UIView {
     func rightSpaceForIndex(index: Int) -> CGFloat {
         // Default trailing space is 18.0
         // The we have a 24.0 button and a 12.0 space
-        return 18.0 + CGFloat(index) * (24.0 + 12.0)
+        return 10.0 + CGFloat(index) * (rightButtonSize + rightInBetweenButtonSpace)
     }
 
     func isOnlyImageRightActions(actions: [FlaneurNavigationBarAction]) -> Bool {
@@ -338,12 +366,12 @@ final public class FlaneurNavigationBar: UIView {
 }
 
 extension FlaneurNavigationBarAction {
-    var view: UIView {
+    func view(size: CGFloat) -> UIView {
         switch self.faceView {
         case .image(let image):
-            return viewForImageFaceView(defaultStateImage: image)
+            return viewForImageFaceView(defaultStateImage: image, size: size)
         case .imageToggle(let image1, let image2):
-            return viewForImageFaceView(defaultStateImage: image1, optionalImage: image2)
+            return viewForImageFaceView(defaultStateImage: image1, optionalImage: image2, size: size)
         case .label(let labelTitle):
             return viewForLabelFaceView(title: labelTitle)
         case .customView(let view):
@@ -351,16 +379,25 @@ extension FlaneurNavigationBarAction {
         }
     }
 
-    func viewForImageFaceView(defaultStateImage: UIImage, optionalImage: UIImage? = nil) -> UIButton {
+    func viewForImageFaceView(defaultStateImage: UIImage,
+                              optionalImage: UIImage? = nil,
+                              size: CGFloat = leftButtonSize) -> UIButton {
         let resultButton = UIButton(frame: CGRect(x: 0.0,
                                                   y: 0.0,
-                                                  width: 24.0,
-                                                  height: 24.0))
+                                                  width: size,
+                                                  height: size))
 
         // Setting up button
         resultButton.imageView?.contentMode = .scaleAspectFit
         resultButton.imageView?.tintColor = .black
         resultButton.setImage(defaultStateImage, for: .normal)
+
+        // After a size of 24.0, we add some insets to keep the image being shown
+        // at a 24 x 24 size (the insets space will still be tappable).
+        if size > 24.0 {
+            let edge: CGFloat = (size - 24.0) / 2.0
+            resultButton.contentEdgeInsets = UIEdgeInsetsMake(edge, edge, edge, edge)
+        }
 
         if let optionalImage = optionalImage {
             resultButton.setImage(optionalImage, for: .selected)
