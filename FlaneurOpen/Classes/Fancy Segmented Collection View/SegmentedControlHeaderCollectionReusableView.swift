@@ -95,7 +95,6 @@ class SegmentedControlHeaderCollectionReusableView: UICollectionReusableView {
             .filter { $0 != sender }
             .forEach { view in
                 guard let myButton = view as? BorderedButton else { return }
-                debugPrint("Deselecting: ", myButton.item)
                 myButton.isSelected = false
         }
 

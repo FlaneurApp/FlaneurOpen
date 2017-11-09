@@ -8,17 +8,22 @@
 import UIKit
 
 public protocol FlaneurModalProgressViewControllerDelegate: AnyObject {
-    func modalProgressControllerDidDismiss()
+    func modalProgressControllerDidComplete(_ viewController: FlaneurModalProgressViewController)
 }
 
 final public class FlaneurModalProgressViewController: UIViewController {
-    public private(set) var titleLabel: UILabel!
-    public private(set) var bodyLabel: UILabel!
-    public private(set) var okButton: UIButton!
-    public private(set) var progressBar: UIProgressView!
+    public var topPadding: CGFloat = 0.0
+
+    public private(set) var titleLabel: UILabel = UILabel(frame: .zero)
+    public private(set) var bodyLabel: UILabel = UILabel(frame: .zero)
+    public private(set) var progressBar: UIProgressView = UIProgressView(progressViewStyle: .default)
     private var finalStateReached: Bool = false
 
     public weak var delegate: FlaneurModalProgressViewControllerDelegate? = nil
+
+    deinit {
+        ()
+    }
 
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -26,37 +31,29 @@ final public class FlaneurModalProgressViewController: UIViewController {
         view.isOpaque = false
 
         let popup = UIView(frame: .zero)
-        popup.backgroundColor = .white
+        popup.backgroundColor = UIColor(white: 0.0, alpha: 0.8)
         popup.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(popup)
         _ = LayoutBorderManager(item: popup,
                                 toItem: view,
-                                top: 180.0,
-                                left: 15.0,
-                                bottom: 180.0,
-                                right: 15.0)
+                                top: topPadding,
+                                left: 0.0,
+                                bottom: 0.0,
+                                right: 0.0)
 
         // Setup the progress bar
-        progressBar = UIProgressView(progressViewStyle: .default)
         progressBar.translatesAutoresizingMaskIntoConstraints = false
         popup.addSubview(progressBar)
         _ = LayoutBorderManager(item: progressBar,
                                 toItem: popup,
-                                left: 15.0,
-                                right: 15.0)
-        NSLayoutConstraint(item: progressBar,
-                           attribute: .centerY,
-                           relatedBy: .equal,
-                           toItem: popup,
-                           attribute: .centerY,
-                           multiplier: 1.0,
-                           constant: 0.0).isActive = true
+                                top: 0.0,
+                                left: 0.0,
+                                right: 0.0)
 
-        bodyLabel = UILabel(frame: .zero)
+        bodyLabel.textColor = .white
         bodyLabel.numberOfLines = 2
         bodyLabel.translatesAutoresizingMaskIntoConstraints = false
         bodyLabel.textAlignment = .center
-        bodyLabel.isHidden = true
         popup.addSubview(bodyLabel)
         _ = LayoutBorderManager(item: bodyLabel,
                                 toItem: popup,
@@ -70,7 +67,7 @@ final public class FlaneurModalProgressViewController: UIViewController {
                            multiplier: 1.0,
                            constant: 0.0).isActive = true
 
-        titleLabel = UILabel(frame: .zero)
+        titleLabel.textColor = .white
         titleLabel.numberOfLines = 1
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.textAlignment = .center
@@ -80,56 +77,26 @@ final public class FlaneurModalProgressViewController: UIViewController {
                                 top: 90.0,
                                 left: 45.0,
                                 right: 45.0)
-
-        okButton = UIButton(type: .custom)
-        okButton.translatesAutoresizingMaskIntoConstraints = false
-        okButton.backgroundColor = .black
-        okButton.setTitleColor(.white, for: .normal)
-        okButton.setTitleColor(.gray, for: .disabled)
-        okButton.isEnabled = false
-        okButton.contentEdgeInsets = UIEdgeInsetsMake(14.0, 60.0, 14.0, 60.0)
-        okButton.setTitle("OK", for: .normal)
-        okButton.addTarget(self, action: #selector(dismiss), for: .touchUpInside)
-        popup.addSubview(okButton)
-        _ = LayoutBorderManager(item: okButton,
-                                toItem: popup,
-                                bottom: 50.0)
-        NSLayoutConstraint(item: okButton,
-                           attribute: .centerX,
-                           relatedBy: .equal,
-                           toItem: popup,
-                           attribute: .centerX,
-                           multiplier: 1.0,
-                           constant: 0.0).isActive = true
-
     }
     
-    @IBAction func dismiss(_ sender: Any? = nil) {
-        self.dismiss(animated: true)
-        delegate?.modalProgressControllerDidDismiss()
-    }
-
     public func configureWithInProgressState(title: String? = nil,
                                              body: String? = nil,
-                                             button: String = "OK",
                                              progress: Progress? = nil) {
         if !finalStateReached {
             titleLabel.text = title
             bodyLabel.text = body
-            okButton.setTitle(button, for: .normal)
             progressBar.observedProgress = progress
         }
     }
 
     public func configureWithFinalState(title: String? = nil,
                                         body: String? = nil,
-                                        button: String = "OK",
                                         hideProgress: Bool = false) {
         finalStateReached = true
         titleLabel.text = title
         bodyLabel.text = body
-        okButton.isEnabled = true
-        okButton.setTitle(button, for: .normal)
         progressBar.isHidden = hideProgress
+
+        delegate?.modalProgressControllerDidComplete(self)
     }
 }

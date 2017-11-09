@@ -19,10 +19,12 @@ class FlaneurModalProgressDemoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.backgroundImageView.alpha = 0.0
-        self.progress = Progress(totalUnitCount: Int64(animationDuration * 1000))
     }
 
     func createDisplayLink() {
+        progress = Progress(totalUnitCount: Int64(animationDuration * 1000))
+        startDate = nil
+
         let displayLink =  CADisplayLink(target: self, selector: #selector(step(displaylink:)))
         displayLink.add(to: .current, forMode: .defaultRunLoopMode)
     }
@@ -46,19 +48,22 @@ class FlaneurModalProgressDemoViewController: UIViewController {
                            animations: {
                             self.modalProgressViewController?.progressBar.isHidden = true
                             self.modalProgressViewController?.bodyLabel.isHidden = false
-                            self.modalProgressViewController?.okButton.isEnabled = true
             })
         }
     }
 
     @IBAction func launchModalAction(_ sender: Any? = nil) {
         self.createDisplayLink()
-        modalProgressViewController = FlaneurModalProgressViewController(nibName: nil, bundle: nil)
-        modalProgressViewController!.modalPresentationStyle = .overCurrentContext
-        modalProgressViewController!.delegate = self
-        self.present(modalProgressViewController!, animated: true) {
-            self.modalProgressViewController!.configureWithInProgressState(body: "In progress", progress: self.progress)
-        }
+
+        let modalProgressViewController = FlaneurModalProgressViewController()
+        self.modalProgressViewController = modalProgressViewController
+        modalProgressViewController.topPadding = self.topLayoutGuide.length
+        modalProgressViewController.modalPresentationStyle = .overCurrentContext
+        modalProgressViewController.delegate = self
+        modalProgressViewController.configureWithInProgressState(title: "In progress",
+                                                                 body: "Please wait",
+                                                                 progress: self.progress)
+        self.present(modalProgressViewController, animated: true)
     }
 
     deinit {
@@ -67,7 +72,8 @@ class FlaneurModalProgressDemoViewController: UIViewController {
 }
 
 extension FlaneurModalProgressDemoViewController: FlaneurModalProgressViewControllerDelegate {
-    func modalProgressControllerDidDismiss() {
-        debugPrint("didDismiss")
+    func modalProgressControllerDidComplete(_ viewController: FlaneurModalProgressViewController) {
+        self.modalProgressViewController = nil
+        viewController.dismiss(animated: true)
     }
 }
