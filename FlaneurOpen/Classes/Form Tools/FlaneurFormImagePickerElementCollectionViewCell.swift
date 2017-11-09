@@ -201,6 +201,10 @@ class FlaneurFormImagePickerElementCollectionViewCell: FlaneurFormElementCollect
                                                                        bottom: paddingOfImages,
                                                                        right: paddingOfImages)
 
+        if imageDelegate?.numberOfImages() == 1 {
+            flaneurPicker.config.maxNumberOfSelectedImagesReachedClosure = { _ in }
+        }
+
         let selfBundle = Bundle(for: FlaneurFormView.self)
         if let imageBundleURL = selfBundle.url(forResource: "FlaneurOpen", withExtension: "bundle") {
             if let imageBundle = Bundle(url: imageBundleURL) {
