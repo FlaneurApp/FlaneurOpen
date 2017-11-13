@@ -30,6 +30,8 @@ class FormDemoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.automaticallyAdjustsScrollViewInsets = false
+
         formView.configure(viewController: self)
 
         // Add form elements
