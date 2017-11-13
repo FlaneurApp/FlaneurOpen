@@ -592,7 +592,7 @@
 			baseConfigurationReference = 7AFD04225B7E7BE454A20D6B /* Pods-FlaneurOpen_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Dévelopeur Flaneur (B73RS296PR)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = BLSC88J9HQ;
@@ -614,7 +614,7 @@
 			baseConfigurationReference = A853C1FC5DB1F804DDD45A54 /* Pods-FlaneurOpen_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = BLSC88J9HQ;
@@ -624,8 +624,8 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.flaneurapp.open;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "61e71c74-e949-48b3-9eb8-074410da5235";
-				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc com.flaneurapp.open";
+				PROVISIONING_PROFILE = "d2d17eae-1966-4ea6-aa03-a2f08960a4bc";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.flaneurapp.open";
 				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

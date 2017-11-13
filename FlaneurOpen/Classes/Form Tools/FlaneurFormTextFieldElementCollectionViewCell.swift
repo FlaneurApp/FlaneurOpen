@@ -35,7 +35,7 @@ class FlaneurFormTextFieldElementCollectionViewCell: FlaneurFormElementCollectio
                            toItem: label,
                            attribute: .bottom,
                            multiplier: 1.0,
-                           constant: 4.0).isActive = true
+                           constant: 8.0).isActive = true
     }
 
     override func configureWith(formElement: FlaneurFormElement) {
@@ -50,6 +50,11 @@ class FlaneurFormTextFieldElementCollectionViewCell: FlaneurFormElementCollectio
 }
 
 extension FlaneurFormTextFieldElementCollectionViewCell: UITextFieldDelegate {
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        delegate?.scrollToVisibleSection(cell: self)
+        return true
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         delegate?.nextElementShouldBecomeFirstResponder(cell: self)
         return true

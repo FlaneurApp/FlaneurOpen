@@ -152,6 +152,9 @@ class FormDemoViewController: UIViewController {
                            options: animationOptions,
                            animations: {
                             self.view.layoutIfNeeded()
+            },
+                           completion: { succes in
+                            self.formView.scrollCurrentFieldToVisible()
             })
         }
     }

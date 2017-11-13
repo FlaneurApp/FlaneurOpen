@@ -51,8 +51,8 @@ class FlaneurFormTextAreaElementCollectionViewCell: FlaneurFormElementCollection
 }
 
 extension FlaneurFormTextAreaElementCollectionViewCell: UITextViewDelegate {
-    func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
-        delegate?.nextElementShouldBecomeFirstResponder(cell: self)
+    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
+        delegate?.scrollToVisibleSection(cell: self)
         return true
     }
 }

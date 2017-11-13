@@ -60,7 +60,7 @@ class FlaneurFormSelectElementCollectionViewCell: FlaneurFormElementCollectionVi
                            toItem: label,
                            attribute: .bottom,
                            multiplier: 1.0,
-                           constant: 4.0).isActive = true
+                           constant: 12.0).isActive = true
         collectionViewHeightConstraint = NSLayoutConstraint(item: selectCollectionView,
                                                             attribute: .height,
                                                             relatedBy: .equal,
@@ -87,6 +87,12 @@ class FlaneurFormSelectElementCollectionViewCell: FlaneurFormElementCollectionVi
         selectCollectionView.allowsMultipleSelection = selectDelegate.allowMultipleSelection()
 
         formElement.didLoadHandler?(selectCollectionView)
+    }
+
+    override func becomeFirstResponder() -> Bool {
+        delegate?.scrollToVisibleSection(cell: self)
+        self.selectCollectionView.becomeFirstResponder()
+        return true
     }
 }
 

@@ -77,6 +77,7 @@ public final class FlaneurFormView: UIView {
     var listAdapter: ListAdapter!
     weak var viewController: UIViewController?
     fileprivate var textCache: [String: String?] = [:]
+    var respondingCell: UICollectionViewCell? = nil
 
     // The collection view of form elements
     public let collectionView: UICollectionView = {
@@ -295,6 +296,11 @@ extension FlaneurFormView: ListDisplayDelegate {
             }
         }
     }
+
+    public func scrollCurrentFieldToVisible() {
+        guard let currentCell = self.respondingCell as? FlaneurFormElementCollectionViewCell else { return }
+        scrollToVisibleSection(cell: currentCell)
+    }
 }
 
 extension FlaneurFormView: FlaneurFormElementCollectionViewCellDelegate {
@@ -305,15 +311,17 @@ extension FlaneurFormView: FlaneurFormElementCollectionViewCellDelegate {
             if let nextCell = self.collectionView.cellForItem(at: nextIndexPath) {
                 nextCell.becomeFirstResponder()
             } else {
-                debugPrint("no cell", self.collectionView.numberOfSections)
+                debugPrint("DEBUG: couldn't find cell at \(nextIndexPath)")
             }
         }
     }
 
     func scrollToVisibleSection(cell: FlaneurFormElementCollectionViewCell) {
-        if let thisIndex = self.collectionView.indexPath(for: cell) {
-            self.collectionView.scrollToItem(at: thisIndex, at: .top, animated: true)
-        }
+        respondingCell = cell
+
+        guard let indexPath = self.collectionView.indexPath(for: cell) else { return }
+        guard let layoutAttributes = self.collectionView.layoutAttributesForItem(at: indexPath) else { return }
+        collectionView.scrollRectToVisible(layoutAttributes.frame, animated: true)
     }
 
     func presentViewController(viewController: UIViewController) {
