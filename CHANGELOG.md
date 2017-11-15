@@ -33,6 +33,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 * Limit the navigation bar left action surface to its title #21
 * Fixed bug where `FlaneurCollectionView` was not updating items #22
 * Extend size of right actions buttons and bring title closer to left container
+* Add sender to FlaneurNavigationBar actions
 
 ## [0.3.0] - 2017-09-19
 
