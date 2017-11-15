@@ -40,7 +40,7 @@ public enum FlaneurNavigationBarActionFaceView {
 /// * what the associated controld should do when tapped
 public struct FlaneurNavigationBarAction {
     let faceView: FlaneurNavigationBarActionFaceView
-    var action: () -> () = { _ in
+    var action: (Any) -> () = { _ in
         print("INFO: FlaneurNavigationBarAction pressed. Please override this attribute.")
     }
 
@@ -51,7 +51,7 @@ public struct FlaneurNavigationBarAction {
     /// - Parameters:
     ///   - image: the *face view* to be used on the `UIButton` associated to the action.
     ///   - action: the action to perform when the `UIButton` receives a `.touchUpInside` event.
-    public init(faceView: FlaneurNavigationBarActionFaceView, action: @escaping () -> ()) {
+    public init(faceView: FlaneurNavigationBarActionFaceView, action: @escaping (Any) -> ()) {
         self.faceView = faceView
         self.action = action
     }
@@ -108,8 +108,8 @@ final public class FlaneurNavigationBar: UIView {
 
     public private(set) var rightButtons: [UIButton] = []
 
-    var leftButtonAction: () -> () = { _ in }
-    var rightButtonsActions: [() -> ()] = []
+    var leftButtonAction: (Any) -> () = { _ in }
+    var rightButtonsActions: [(Any) -> ()] = []
 
     public var debug: Bool = false
 
@@ -348,14 +348,14 @@ final public class FlaneurNavigationBar: UIView {
     // MARK: - Actions
 
     @IBAction func leftButtonPressed(_ sender: Any) {
-        leftButtonAction()
+        leftButtonAction(sender)
     }
 
     @IBAction func rightButtonPressed(_ sender: Any) {
         if let senderButton = sender as? UIButton {
             senderButton.isSelected = !senderButton.isSelected
             if let buttonIndex = rightButtons.index(where: { $0 == senderButton }) {
-                rightButtonsActions[buttonIndex]()
+                rightButtonsActions[buttonIndex](sender)
             } else {
                 print("ERROR: Sender not found in rightButtons", sender)
             }

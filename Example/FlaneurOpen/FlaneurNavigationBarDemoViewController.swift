@@ -22,7 +22,7 @@ class FlaneurNavigationBarDemoViewController: UIViewController {
 
         UILabel.appearance(whenContainedInInstancesOf: [FlaneurNavigationBar.self]).font = UIFont(name: "Futura-Medium", size: 16.0)
 
-        myDefaultLeftAction = FlaneurNavigationBarAction(faceView: .image(UIImage(named: "sample-844-trumpet")!)) {
+        myDefaultLeftAction = FlaneurNavigationBarAction(faceView: .image(UIImage(named: "sample-844-trumpet")!)) { sender in
             self.navigationController?.popViewController(animated: true)
         }
 
@@ -63,7 +63,7 @@ class FlaneurNavigationBarDemoViewController: UIViewController {
     }
 
     func textRightAction() -> [FlaneurNavigationBarAction] {
-        let myTextAction = FlaneurNavigationBarAction(faceView: .label("Done")) {
+        let myTextAction = FlaneurNavigationBarAction(faceView: .label("Done")) { sender in
             let alertViewController = UIAlertController(title: "My text Alert", message: "Cool", preferredStyle: .alert)
             let dismissAction = UIAlertAction(title: "OK", style: .cancel, handler: { _ in debugPrint("did dismiss alert") })
             alertViewController.addAction(dismissAction)
