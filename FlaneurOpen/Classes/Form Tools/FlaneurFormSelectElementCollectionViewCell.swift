@@ -98,11 +98,21 @@ class FlaneurFormSelectElementCollectionViewCell: FlaneurFormElementCollectionVi
 
 extension FlaneurFormSelectElementCollectionViewCell: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectDelegate.didSelectItem(index: indexPath.row, cell: collectionView.cellForItem(at: indexPath)!)
+        guard let cell = collectionView.cellForItem(at: indexPath) else {
+            print("ERROR: no cell found at \(indexPath)")
+            return
+        }
+
+        selectDelegate.didSelectItem(index: indexPath.row, cell: cell)
     }
 
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        selectDelegate.didDeselectItem(index: indexPath.row, cell: collectionView.cellForItem(at: indexPath)!)
+        guard let cell = collectionView.cellForItem(at: indexPath) else {
+            print("ERROR: no cell found at \(indexPath)")
+            return
+        }
+
+        selectDelegate.didDeselectItem(index: indexPath.row, cell: cell)
     }
 }
 

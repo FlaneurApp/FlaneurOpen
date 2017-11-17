@@ -245,7 +245,7 @@ extension FormDemoViewController: FlaneurFormDeleteElementCollectionViewCellDele
 
 class CategoriesSelectDelegate: FlaneurFormSelectElementCollectionViewCellDelegate {
     func selectCollectionViewSize() -> CGSize {
-        return CGSize(width: 54.0, height: 54.0)
+        return CGSize(width: 140.0, height: 140.0)
     }
 
     func nbOfItems() -> Int {
