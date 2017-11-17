@@ -15,8 +15,8 @@ public protocol FlaneurFormSelectElementCollectionViewCellDelegate: AnyObject {
     func configure(cell: UICollectionViewCell, forIndex: Int)
     func allowMultipleSelection() -> Bool
 
-    func didSelectItem(index: Int, cell: UICollectionViewCell)
-    func didDeselectItem(index: Int, cell: UICollectionViewCell)
+    func selectElementDidSelectItemAt(index: Int)
+    func selectElementDidDeselectItemAt(index: Int)
 }
 
 public extension FlaneurFormSelectElementCollectionViewCellDelegate where Self: UIViewController {
@@ -98,21 +98,11 @@ class FlaneurFormSelectElementCollectionViewCell: FlaneurFormElementCollectionVi
 
 extension FlaneurFormSelectElementCollectionViewCell: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let cell = collectionView.cellForItem(at: indexPath) else {
-            print("ERROR: no cell found at \(indexPath)")
-            return
-        }
-
-        selectDelegate.didSelectItem(index: indexPath.row, cell: cell)
+        selectDelegate.selectElementDidSelectItemAt(index: indexPath.row)
     }
 
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        guard let cell = collectionView.cellForItem(at: indexPath) else {
-            print("ERROR: no cell found at \(indexPath)")
-            return
-        }
-
-        selectDelegate.didDeselectItem(index: indexPath.row, cell: cell)
+        selectDelegate.selectElementDidDeselectItemAt(index: indexPath.row)
     }
 }
 

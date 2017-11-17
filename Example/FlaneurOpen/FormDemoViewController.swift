@@ -228,11 +228,11 @@ extension FormDemoViewController: FlaneurFormSelectElementCollectionViewCellDele
         return true
     }
 
-    func didSelectItem(index: Int, cell: UICollectionViewCell) {
+    func selectElementDidSelectItemAt(index: Int) {
         debugPrint("didSelect \(index)")
     }
 
-    func didDeselectItem(index: Int, cell: UICollectionViewCell) {
+    func selectElementDidDeselectItemAt(index: Int) {
         debugPrint("didDeselectItem \(index)")
     }
 }
@@ -272,11 +272,11 @@ class CategoriesSelectDelegate: FlaneurFormSelectElementCollectionViewCellDelega
         return true
     }
 
-    func didSelectItem(index: Int, cell: UICollectionViewCell) {
+    func selectElementDidSelectItemAt(index: Int) {
         debugPrint("didSelect \(index)")
     }
 
-    func didDeselectItem(index: Int, cell: UICollectionViewCell) {
+    func selectElementDidDeselectItemAt(index: Int) {
         debugPrint("didDeselect \(index)")
     }
 }
