@@ -182,6 +182,10 @@ extension FormDemoViewController: FlaneurFormImagePickerElementCollectionViewCel
         print("didCancel")
     }
 
+    func flaneurImagePickerControllerDidFail(_ error: FlaneurImagePickerError) {
+        print("ERROR: \(error)")
+    }
+
     func buttonImage() -> UIImage {
         return UIImage(named: "sample-405-test-tube")!
     }

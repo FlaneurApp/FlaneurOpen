@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Unreleased
 
+* Updated `FlaneurImagePicker` to 0.3.0 version.
+
+## [0.4.0] - 2017-11-20
+
 ### Added
 
 * `FlaneurCollectionViewDelegate` now supports deselection of cells and filters #9 & #10
@@ -77,6 +81,7 @@ Older versions of this package were evolving at a really high pace.
 The package was not stable enough and maintaining a Changelog would have a real
 pain in the b***.
 
+[0.4.0]: https://github.com/FlaneurApp/FlaneurOpen/compare/0.3.0...0.4.0
 [0.3.0]: https://github.com/FlaneurApp/FlaneurOpen/compare/0.2.1...0.3.0
 [0.2.1]: https://github.com/FlaneurApp/FlaneurOpen/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/FlaneurApp/FlaneurOpen/compare/v0.1.1...v0.2.0

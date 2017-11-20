@@ -249,6 +249,10 @@ extension FlaneurFormImagePickerElementCollectionViewCell: FlaneurImagePickerCon
         }
         picker.dismiss(animated: true)
     }
+
+    func flaneurImagePickerControllerDidFail(_ error: FlaneurImagePickerError) {
+        debugPrint("ERROR: \(error)")
+    }
 }
 
 extension FlaneurFormImagePickerElementCollectionViewCell: UICollectionViewDelegate {
