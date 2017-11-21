@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## Unreleased
 
 * Updated `FlaneurImagePicker` to 0.3.0 version.
+* Added functions to `SegmentedCollectionViewDelegate` for more customization of the view appearance, including default implementations for `NSObject` implementations:
+    - the number of columns
+    - the height of the header view
+    - the vertical padding for items
+    - the height for items
 
 ## [0.4.0] - 2017-11-20
 

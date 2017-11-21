@@ -9,10 +9,11 @@ import UIKit
 import IGListKit
 
 fileprivate let gutterWidth: CGFloat = 9.0
-fileprivate let nbColumns: Int = 2
-fileprivate let collapsedHeaderViewHeight: CGFloat = 26.0
-fileprivate let expendedHeaderViewHeight: CGFloat = 306.0
 fileprivate let segmentControlHeight: CGFloat = 65.0
+
+fileprivate let defaultVerticalPaddingForItems: CGFloat = 9.0
+fileprivate let defaultNumberOfColumns: Int = 2
+fileprivate let defaultHeaderViewHeight: CGFloat = 306.0
 
 public struct SegmentedCollectionSection {
     let title: String
@@ -24,8 +25,43 @@ public struct SegmentedCollectionSection {
     }
 }
 
-public protocol SegmentedCollectionViewDelegate {
-    func segmentedCollectionView(_ collectionView: SegmentedCollectionView, didSelectItem item: FlaneurCollectionItem)
+/// A set of methods that your delegate object must implement to interact with
+/// the segmented collection view.
+public protocol SegmentedCollectionViewDelegate: AnyObject {
+    // MARK: - Managing Selections
+
+    func segmentedCollectionView(_ collectionView: SegmentedCollectionView,
+                                 didSelectItem item: FlaneurCollectionItem)
+
+    // MARK: - Configuring the UI Style
+
+    func numberOfColumns(in collectionView: SegmentedCollectionView) -> Int
+
+    func heightOfHeaderView(in collectionView: SegmentedCollectionView) -> CGFloat
+
+    func verticalPaddingForItems(in collectionView: SegmentedCollectionView) -> CGFloat
+
+    func segmentedCollectionView(_ collectionView: SegmentedCollectionView,
+                                 heightForItemWithWidth width: CGFloat) -> CGFloat
+}
+
+public extension SegmentedCollectionViewDelegate where Self: NSObject {
+    func heightOfHeaderView(in collectionView: SegmentedCollectionView) -> CGFloat {
+        return defaultHeaderViewHeight
+    }
+
+    func numberOfColumns(in collectionView: SegmentedCollectionView) -> Int {
+        return defaultNumberOfColumns
+    }
+
+    func segmentedCollectionView(_ collectionView: SegmentedCollectionView,
+                                 heightForItemWithWidth width: CGFloat) -> CGFloat {
+        return width
+    }
+
+    func verticalPaddingForItems(in collectionView: SegmentedCollectionView) -> CGFloat {
+        return defaultVerticalPaddingForItems
+    }
 }
 
 final public class SegmentedCollectionView: UIView {
@@ -44,14 +80,20 @@ final public class SegmentedCollectionView: UIView {
     fileprivate var registeredClassesNames: [String] = []
     fileprivate var registeredNibNames: [String] = []
     private(set) var collectionView: UICollectionView!
+    private var collectionViewLayout: UICollectionViewFlowLayout!
 
     var selectedItemsSectionIndex: Int = 0
     var selectedItems: [FlaneurCollectionItem] {
         return itemsSections[selectedItemsSectionIndex].items
     }
 
-    public var delegate: SegmentedCollectionViewDelegate? = nil
-
+    public weak var delegate: SegmentedCollectionViewDelegate? = nil {
+        didSet {
+            // Update delegate dependent configuration of the view layout
+            collectionViewLayout.minimumLineSpacing = gutterHeight
+        }
+    }
+    
     public override init(frame: CGRect) {
         super.init(frame: frame)
         didLoad()
@@ -62,15 +104,19 @@ final public class SegmentedCollectionView: UIView {
         didLoad()
     }
 
+    var gutterHeight: CGFloat {
+        return delegate?.verticalPaddingForItems(in: self) ?? defaultVerticalPaddingForItems
+    }
+
     func didLoad() {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
-        layout.sectionHeadersPinToVisibleBounds = true // We want the segment control to always be visible
-        layout.minimumLineSpacing = gutterWidth
-        layout.minimumInteritemSpacing = gutterWidth
+        collectionViewLayout = UICollectionViewFlowLayout()
+        collectionViewLayout.scrollDirection = .vertical
+        collectionViewLayout.sectionHeadersPinToVisibleBounds = true // We want the segment control to always be visible
+        collectionViewLayout.minimumLineSpacing = gutterHeight
+        collectionViewLayout.minimumInteritemSpacing = gutterWidth
 
         collectionView = UICollectionView(frame: .zero,
-                                          collectionViewLayout: layout)
+                                          collectionViewLayout: collectionViewLayout)
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.contentInset = UIEdgeInsetsMake(0.0, gutterWidth, 0.0, gutterWidth)
@@ -195,12 +241,15 @@ extension SegmentedCollectionView: UICollectionViewDelegateFlowLayout {
         case 0:
             //the item width must be less than the width of the UICollectionView minus the section insets left and right values, minus the content insets left and right values.
             let width = self.frame.width - 2 * gutterWidth
-            return CGSize(width: width,
-                          height: expendedHeaderViewHeight)
+            let height = self.delegate?.heightOfHeaderView(in: self) ?? defaultHeaderViewHeight
+            return CGSize(width: width, height: height)
         case 1:
-            let squareSize: CGFloat = floor((self.frame.width - CGFloat(nbColumns + 1) * gutterWidth) / CGFloat(nbColumns))
-            return CGSize(width: squareSize,
-                          height: squareSize)
+            let nbColumns = self.delegate?.numberOfColumns(in: self) ?? defaultNumberOfColumns
+            let width: CGFloat = floor((self.frame.width - CGFloat(nbColumns + 1) * gutterWidth) / CGFloat(nbColumns))
+            let height = self.delegate?.segmentedCollectionView(self,
+                                                                heightForItemWithWidth: width) ?? width
+            return CGSize(width: width,
+                          height: height)
         default:
             fatalError("unexpected section \(indexPath.section)")
         }
@@ -217,9 +266,9 @@ extension SegmentedCollectionView: UICollectionViewDelegateFlowLayout {
 
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         if section == 1 {
-            return UIEdgeInsets(top: gutterWidth,
+            return UIEdgeInsets(top: gutterHeight,
                                 left: 0.0,
-                                bottom: gutterWidth,
+                                bottom: gutterHeight,
                                 right: 0.0)
         } else {
             return .zero

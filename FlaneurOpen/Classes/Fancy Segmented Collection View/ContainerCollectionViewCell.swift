@@ -27,6 +27,7 @@ class ContainerCollectionViewCell: UICollectionViewCell {
     func configureWithView(containedView: UIView) {
         self.containedView?.removeFromSuperview()
         self.containedView = containedView
+        self.clipsToBounds = true
         self.addSubview(self.containedView!)
         self.containedView!.translatesAutoresizingMaskIntoConstraints = false
         _ = LayoutBorderManager(item: self.containedView!,
