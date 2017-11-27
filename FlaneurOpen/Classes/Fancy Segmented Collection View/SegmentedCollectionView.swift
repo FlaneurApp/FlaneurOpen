@@ -35,14 +35,16 @@ public protocol SegmentedCollectionViewDelegate: AnyObject {
 
     // MARK: - Configuring the UI Style
 
-    func numberOfColumns(in collectionView: SegmentedCollectionView) -> Int
-
     func heightOfHeaderView(in collectionView: SegmentedCollectionView) -> CGFloat
 
     func verticalPaddingForItems(in collectionView: SegmentedCollectionView) -> CGFloat
 
     func segmentedCollectionView(_ collectionView: SegmentedCollectionView,
-                                 heightForItemWithWidth width: CGFloat) -> CGFloat
+                                 numberOfColumnsForSection section: Int) -> Int
+
+    func segmentedCollectionView(_ collectionView: SegmentedCollectionView,
+                                 heightForItemWithWidth width: CGFloat,
+                                 forSection section: Int) -> CGFloat
 }
 
 public extension SegmentedCollectionViewDelegate where Self: NSObject {
@@ -50,12 +52,14 @@ public extension SegmentedCollectionViewDelegate where Self: NSObject {
         return defaultHeaderViewHeight
     }
 
-    func numberOfColumns(in collectionView: SegmentedCollectionView) -> Int {
+    func segmentedCollectionView(_ collectionView: SegmentedCollectionView,
+                                 numberOfColumnsForSection section: Int) -> Int {
         return defaultNumberOfColumns
     }
 
     func segmentedCollectionView(_ collectionView: SegmentedCollectionView,
-                                 heightForItemWithWidth width: CGFloat) -> CGFloat {
+                                 heightForItemWithWidth width: CGFloat,
+                                 forSection section: Int) -> CGFloat {
         return width
     }
 
@@ -244,10 +248,15 @@ extension SegmentedCollectionView: UICollectionViewDelegateFlowLayout {
             let height = self.delegate?.heightOfHeaderView(in: self) ?? defaultHeaderViewHeight
             return CGSize(width: width, height: height)
         case 1:
-            let nbColumns = self.delegate?.numberOfColumns(in: self) ?? defaultNumberOfColumns
+
+            let nbColumns = self.delegate?.segmentedCollectionView(self, numberOfColumnsForSection: selectedItemsSectionIndex) ?? defaultNumberOfColumns
+
+            guard nbColumns > 0 else {
+                fatalError("SegmentedCollectionView does not support 0 column.")
+            }
+
             let width: CGFloat = floor((self.frame.width - CGFloat(nbColumns + 1) * gutterWidth) / CGFloat(nbColumns))
-            let height = self.delegate?.segmentedCollectionView(self,
-                                                                heightForItemWithWidth: width) ?? width
+            let height = self.delegate?.segmentedCollectionView(self, heightForItemWithWidth: width, forSection: selectedItemsSectionIndex) ?? width
             return CGSize(width: width,
                           height: height)
         default:

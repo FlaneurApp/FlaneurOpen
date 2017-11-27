@@ -60,16 +60,16 @@ class SegmentedCollectionViewController: UIViewController {
 }
 
 extension SegmentedCollectionViewController: SegmentedCollectionViewDelegate {
-    func segmentedCollectionView(_ collectionView: SegmentedCollectionView, didSelectItem item: FlaneurCollectionItem) {
-        print("select: \(item)")
+    func segmentedCollectionView(_ collectionView: SegmentedCollectionView, numberOfColumnsForSection section: Int) -> Int {
+        return section + 1
     }
 
-    func heightOfHeaderView(in collectionView: SegmentedCollectionView) -> CGFloat {
+    func segmentedCollectionView(_ collectionView: SegmentedCollectionView, heightForItemWithWidth width: CGFloat, forSection: Int) -> CGFloat {
         return 100.0
     }
 
-    func numberOfColumns(in collectionView: SegmentedCollectionView) -> Int {
-        return 1
+    func segmentedCollectionView(_ collectionView: SegmentedCollectionView, didSelectItem item: FlaneurCollectionItem) {
+        print("select: \(item)")
     }
 
     func segmentedCollectionView(_ collectionView: SegmentedCollectionView,
