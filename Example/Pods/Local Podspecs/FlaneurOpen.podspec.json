@@ -1,6 +1,6 @@
 {
   "name": "FlaneurOpen",
-  "version": "0.5.1-alpha",
+  "version": "0.6.0",
   "summary": "A collection of convenient classes for Swift iOS development.",
   "description": "A collection of convenient classes for Swift iOS development, including\nMapKit extension, etc.",
   "homepage": "https://github.com/FlaneurApp/FlaneurOpen",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/FlaneurApp/FlaneurOpen.git",
-    "tag": "0.5.1-alpha"
+    "tag": "0.6.0"
   },
   "platforms": {
     "ios": "9.0"
@@ -34,7 +34,7 @@
       "~> 3.0"
     ],
     "FlaneurImagePicker": [
-      "~> 0.1"
+      "~> 0.4"
     ]
   }
 }
