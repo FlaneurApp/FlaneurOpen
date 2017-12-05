@@ -18,9 +18,9 @@
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "FlaneurOpen/Classes/**/*",
+  "source_files": "Sources/Classes/**/*",
   "resource_bundles": {
-    "FlaneurOpen": "FlaneurOpen/Assets/*"
+    "FlaneurOpen": "Sources/Assets/*"
   },
   "pod_target_xcconfig": {
     "SWIFT_SWIFT3_OBJC_INFERENCE": "Default",
@@ -34,7 +34,7 @@
       "~> 3.0"
     ],
     "FlaneurImagePicker": [
-
+      "~> 0.1"
     ]
   }
 }

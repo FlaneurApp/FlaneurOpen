@@ -48,5 +48,5 @@ MapKit extension, etc.
   # Dependencies
   s.dependency 'Kingfisher', '~> 4.0' # Asynchronous image downloads
   s.dependency 'IGListKit', '~> 3.0' #IGListKit for managing collection views
-  s.dependency 'FlaneurImagePicker'
+  s.dependency 'FlaneurImagePicker', '~> 0.1'
 end

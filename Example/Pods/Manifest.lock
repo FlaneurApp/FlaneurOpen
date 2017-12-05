@@ -10,7 +10,7 @@ PODS:
     - IGListKit (~> 3.0)
     - Kingfisher (~> 4.0)
   - FlaneurOpen (0.5.1-alpha):
-    - FlaneurImagePicker
+    - FlaneurImagePicker (~> 0.1)
     - IGListKit (~> 3.0)
     - Kingfisher (~> 4.0)
   - GoogleMaps (2.5.0):
@@ -64,7 +64,7 @@ SPEC CHECKSUMS:
   ActionKit: cf7ca5781f4a43342384d872105fadd58985f416
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   FlaneurImagePicker: 60633731a1cc643d2e71b9a984d19f554f8968df
-  FlaneurOpen: 535a43f32343cb28f099e47651f7794a1870dcf8
+  FlaneurOpen: 503a504bafed74dced0a306481e626377e95e30b
   GoogleMaps: c087b8e5dfe87ca6ebf59adb9b4894a4146bec4f
   GooglePlacePicker: 1573e644ab54564d95c2643edc0f29091609e966
   GooglePlaces: dd70d9d71ea1c7944846afe67de3712c99b30a77
