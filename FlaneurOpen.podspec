@@ -31,17 +31,17 @@ MapKit extension, etc.
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'FlaneurOpen/Classes/**/*'
+  s.source_files = 'Sources/Classes/**/*'
 
   s.resource_bundles = {
-    'FlaneurOpen' => "FlaneurOpen/Assets/*"
+    'FlaneurOpen' => "Sources/Assets/*"
   }
 
   s.pod_target_xcconfig = {
     'SWIFT_SWIFT3_OBJC_INFERENCE' => 'Default',
     'SWIFT_VERSION' => '4.0'
   }
-  
+
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
 
