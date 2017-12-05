@@ -1,4 +1,4 @@
-![FlaneurOpen logo](Image.png)
+![FlaneurOpen logo](https://raw.githubusercontent.com/FlaneurApp/FlaneurOpen/master/Image.png)
 
 # FlaneurOpen
 
