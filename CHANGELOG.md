@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## Unreleased
+## [0.5.0] - 2017-12-05
 
 * Updated `FlaneurImagePicker` to 0.3.0 version.
 * Added functions to `SegmentedCollectionViewDelegate` for more customization of the view appearance, including default implementations for `NSObject` implementations:
@@ -86,6 +86,7 @@ Older versions of this package were evolving at a really high pace.
 The package was not stable enough and maintaining a Changelog would have a real
 pain in the b***.
 
+[0.5.0]: https://github.com/FlaneurApp/FlaneurOpen/compare/0.4.0...0.5.0
 [0.4.0]: https://github.com/FlaneurApp/FlaneurOpen/compare/0.3.0...0.4.0
 [0.3.0]: https://github.com/FlaneurApp/FlaneurOpen/compare/0.2.1...0.3.0
 [0.2.1]: https://github.com/FlaneurApp/FlaneurOpen/compare/v0.2.0...v0.2.1
