@@ -153,7 +153,7 @@ class FlaneurFormImagePickerElementCollectionViewCell: FlaneurFormElementCollect
         return true
     }
 
-    func buttonPressed(_ sender: Any? = nil) {
+    @objc func buttonPressed(_ sender: Any? = nil) {
         _ = self.becomeFirstResponder()
 
         let flaneurPicker = FlaneurImagePickerController(maxNumberOfSelectedImages: imageDelegate!.numberOfImages(),

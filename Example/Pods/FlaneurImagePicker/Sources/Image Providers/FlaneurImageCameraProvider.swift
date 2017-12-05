@@ -24,14 +24,14 @@ final class FlaneurImageCameraProvider: NSObject, FlaneurImageProvider {
     }
 
     func isAuthorized() -> Bool {
-        if AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo) == AVAuthorizationStatus.authorized {
+        if AVCaptureDevice.authorizationStatus(for: AVMediaType.video) == AVAuthorizationStatus.authorized {
             return true
         }
         return false
     }
 
     func askForPermission(isPermissionGiven: @escaping (Bool) -> Void) {
-        AVCaptureDevice.requestAccess(forMediaType: AVMediaTypeVideo) { response in
+        AVCaptureDevice.requestAccess(for: AVMediaType.video) { response in
             if response {
                 return isPermissionGiven(true)
             } else {
@@ -48,10 +48,7 @@ final class FlaneurImageCameraProvider: NSObject, FlaneurImageProvider {
 
         picker.allowsEditing = false
         picker.sourceType = .camera
-        debugPrint("Presenting...", Thread.current.isMainThread)
-        parentVC?.present(picker, animated: true, completion: {
-            debugPrint("did present")
-        })
+        parentVC?.present(picker, animated: true)
     }
     
     func fetchNextPage() {

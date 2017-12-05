@@ -86,7 +86,7 @@ class SegmentedControlHeaderCollectionReusableView: UICollectionReusableView {
         return newButton
     }
 
-    func itemControlPressed(sender: UIButton) {
+    @objc func itemControlPressed(sender: UIButton) {
         guard let borderedButton = sender as? BorderedButton else { return }
 
         borderedButton.isSelected = true

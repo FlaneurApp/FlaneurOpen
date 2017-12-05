@@ -10,8 +10,8 @@ import UIKit
 import IGListKit
 
 fileprivate let borderWidth: CGFloat = 9.0
-fileprivate let defaultNbColumns: Int = 2
-fileprivate let defaultCellSizeRatio: CGFloat = 1.0
+public let defaultNbColumns: Int = 2
+public let defaultCellSizeRatio: CGFloat = 1.0
 
 fileprivate let filtersViewHeight: CGFloat = 44.0
 

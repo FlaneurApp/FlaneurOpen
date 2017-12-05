@@ -22,9 +22,13 @@
   "resource_bundles": {
     "FlaneurOpen": "FlaneurOpen/Assets/*"
   },
+  "pod_target_xcconfig": {
+    "SWIFT_SWIFT3_OBJC_INFERENCE": "Default",
+    "SWIFT_VERSION": "4.0"
+  },
   "dependencies": {
     "Kingfisher": [
-      "~> 3.0"
+      "~> 4.0"
     ],
     "IGListKit": [
       "~> 3.0"

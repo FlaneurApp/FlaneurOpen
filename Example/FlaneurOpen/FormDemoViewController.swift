@@ -103,7 +103,7 @@ class FormDemoViewController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
     }
 
-    func keyboardWillShow(notification: Notification) {
+    @objc func keyboardWillShow(notification: Notification) {
         guard let keyboardInfo = notification.userInfo else {
             print("WARN! No keyboard info")
             return
@@ -111,7 +111,7 @@ class FormDemoViewController: UIViewController {
         adjustFormView(keyboardShowing: true, keyboardInfo: keyboardInfo)
     }
 
-    func keyboardWillHide(notification: Notification) {
+    @objc func keyboardWillHide(notification: Notification) {
         guard let keyboardInfo = notification.userInfo else {
             print("WARN! No keyboard info")
             return

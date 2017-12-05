@@ -10,12 +10,12 @@ target 'FlaneurOpen_Example' do
   pod 'GooglePlacePicker'
   pod 'GoogleMaps'
 
-  pod 'FlaneurImagePicker', :git => "https://github.com/FlaneurApp/FlaneurImagePicker.git"
+  pod 'FlaneurImagePicker', :git => "https://github.com/FlaneurApp/FlaneurImagePicker.git", :branch => "swift4-support"
 
   target 'FlaneurOpen_Tests' do
     inherit! :search_paths
 
-    pod 'Quick', '~> 1.1.0'
+    pod 'Quick', '~> 1.2.0'
     pod 'Nimble', '~> 7.0.0'
     pod 'FBSnapshotTestCase'
     pod 'Nimble-Snapshots'

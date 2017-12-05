@@ -29,7 +29,7 @@ class FlaneurModalProgressDemoViewController: UIViewController {
         displayLink.add(to: .current, forMode: .defaultRunLoopMode)
     }
 
-    func step(displaylink: CADisplayLink) {
+    @objc func step(displaylink: CADisplayLink) {
         if startDate == nil {
             startDate = displaylink.timestamp
         }

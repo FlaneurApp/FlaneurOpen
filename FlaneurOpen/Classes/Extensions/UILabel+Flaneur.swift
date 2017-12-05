@@ -16,7 +16,7 @@ public extension UILabel {
     ///   - letterSpacing: the letter spacing to use. `0.0` is the default. Positive values will expand the text. Negative values will condense the text.
     public func flaneurText(_ text: String, letterSpacing: CGFloat = 0.0) {
         let attributedString = NSMutableAttributedString(string: text)
-        attributedString.addAttribute(NSKernAttributeName,
+        attributedString.addAttribute(NSAttributedStringKey.kern,
                                       value: letterSpacing,
                                       range: NSMakeRange(0, text.characters.count))
         self.attributedText = attributedString
