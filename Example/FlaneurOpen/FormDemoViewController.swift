@@ -186,6 +186,10 @@ extension FormDemoViewController: FlaneurFormImagePickerElementCollectionViewCel
         print("ERROR: \(error)")
     }
 
+    func flaneurImagePickerController(_ picker: FlaneurImagePickerController, withCurrentSelectionOfSize count: Int, actionForNewImageSelection newImage: FlaneurImageDescription) -> FlaneurImagePickerControllerAction {
+        fatalError("We shouldn't reach this")
+    }
+
     func buttonImage() -> UIImage {
         return UIImage(named: "sample-405-test-tube")!
     }

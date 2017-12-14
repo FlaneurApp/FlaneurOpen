@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FlaneurOpen'
-  s.version          = '0.6.0'
+  s.version          = '0.7.0-beta'
   s.summary          = 'A collection of convenient classes for Swift iOS development.'
 
 # This description is used to generate tags and improve search results.

@@ -156,8 +156,7 @@ class FlaneurFormImagePickerElementCollectionViewCell: FlaneurFormElementCollect
     @objc func buttonPressed(_ sender: Any? = nil) {
         _ = self.becomeFirstResponder()
 
-        let flaneurPicker = FlaneurImagePickerController(maxNumberOfSelectedImages: imageDelegate!.numberOfImages(),
-                                                         userInfo: nil,
+        let flaneurPicker = FlaneurImagePickerController(userInfo: nil,
                                                          sourcesDelegate: imageDelegate!.sourceDelegates(),
                                                          selectedImages: currentSelection)
 
@@ -201,10 +200,6 @@ class FlaneurFormImagePickerElementCollectionViewCell: FlaneurFormElementCollect
                                                                        bottom: paddingOfImages,
                                                                        right: paddingOfImages)
 
-        if imageDelegate?.numberOfImages() == 1 {
-            flaneurPicker.config.maxNumberOfSelectedImagesReachedClosure = { _ in }
-        }
-
         let selfBundle = Bundle(for: FlaneurFormView.self)
         if let imageBundleURL = selfBundle.url(forResource: "FlaneurOpen", withExtension: "bundle") {
             if let imageBundle = Bundle(url: imageBundleURL) {
@@ -240,6 +235,7 @@ extension FlaneurFormImagePickerElementCollectionViewCell: FlaneurImagePickerCon
                                                        didFinishPickingImages: images,
                                                        userInfo: userInfo)
         }
+
         picker.dismiss(animated: true)
     }
 
@@ -252,6 +248,22 @@ extension FlaneurFormImagePickerElementCollectionViewCell: FlaneurImagePickerCon
 
     func flaneurImagePickerControllerDidFail(_ error: FlaneurImagePickerError) {
         debugPrint("ERROR: \(error)")
+    }
+
+    func flaneurImagePickerController(_ picker: FlaneurImagePickerController, withCurrentSelectionOfSize count: Int, actionForNewImageSelection newImage: FlaneurImageDescription) -> FlaneurImagePickerControllerAction {
+        guard let imageDelegate = imageDelegate else {
+            return .add
+        }
+
+        if imageDelegate.numberOfImages() == 1 {
+            return count < 1 ? .add : .replaceLast
+        } else {
+            if count < imageDelegate.numberOfImages() {
+                return .add
+            } else {
+                return .doNothing
+            }
+        }
     }
 }
 

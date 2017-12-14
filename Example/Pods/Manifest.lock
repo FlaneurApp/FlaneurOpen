@@ -5,11 +5,11 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - FlaneurImagePicker (0.4.0):
+  - FlaneurImagePicker (0.5.0-beta):
     - ActionKit (~> 2.1)
     - IGListKit (~> 3.0)
     - Kingfisher (~> 4.0)
-  - FlaneurOpen (0.6.0):
+  - FlaneurOpen (0.7.0-beta):
     - FlaneurImagePicker (~> 0.4)
     - IGListKit (~> 3.0)
     - Kingfisher (~> 4.0)
@@ -39,7 +39,7 @@ PODS:
 
 DEPENDENCIES:
   - FBSnapshotTestCase
-  - FlaneurImagePicker
+  - FlaneurImagePicker (from `https://github.com/FlaneurApp/FlaneurImagePicker`)
   - FlaneurOpen (from `../`)
   - GoogleMaps
   - GooglePlacePicker
@@ -49,14 +49,21 @@ DEPENDENCIES:
   - Quick (~> 1.2.0)
 
 EXTERNAL SOURCES:
+  FlaneurImagePicker:
+    :git: https://github.com/FlaneurApp/FlaneurImagePicker
   FlaneurOpen:
     :path: ../
+
+CHECKOUT OPTIONS:
+  FlaneurImagePicker:
+    :commit: 346084d63e031ae3cbd50a1d584816a7b29f71f6
+    :git: https://github.com/FlaneurApp/FlaneurImagePicker
 
 SPEC CHECKSUMS:
   ActionKit: cf7ca5781f4a43342384d872105fadd58985f416
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  FlaneurImagePicker: 45fd1face7277abd384aadb09aaedc57a37903a1
-  FlaneurOpen: e861ecdb936cb1ab82a483e5525ca28509c975f3
+  FlaneurImagePicker: dddac286fd0c3010a04fea2010b9c81317eefbfb
+  FlaneurOpen: 9e655b948f92c44d909290f83d66127b3bea1224
   GoogleMaps: c087b8e5dfe87ca6ebf59adb9b4894a4146bec4f
   GooglePlacePicker: 1573e644ab54564d95c2643edc0f29091609e966
   GooglePlaces: dd70d9d71ea1c7944846afe67de3712c99b30a77
@@ -66,6 +73,6 @@ SPEC CHECKSUMS:
   Nimble-Snapshots: f5459b5b091678dc942d03ec4741cacb58ba4a52
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
 
-PODFILE CHECKSUM: 71d6505840dee844f11bbeaf466b474cde9f75b3
+PODFILE CHECKSUM: 1dd0fd775ec6d60b38ea0a5a5e3c1f9cc79c950a
 
 COCOAPODS: 1.3.1
