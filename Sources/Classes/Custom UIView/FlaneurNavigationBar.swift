@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Kingfisher
 
 fileprivate extension CGFloat {
     static var random: CGFloat {
