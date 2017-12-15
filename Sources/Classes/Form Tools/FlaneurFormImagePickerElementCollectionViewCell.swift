@@ -45,7 +45,7 @@ public extension FlaneurFormImagePickerElementCollectionViewCellDelegate where S
     }
 }
 
-class FlaneurFormImagePickerElementCollectionViewCell: FlaneurFormElementCollectionViewCell {
+final class FlaneurFormImagePickerElementCollectionViewCell: FlaneurFormElementCollectionViewCell {
     weak var imageDelegate: FlaneurFormImagePickerElementCollectionViewCellDelegate?
     var launcherButton: UIButton!
     var photosCollectionView: UICollectionView!

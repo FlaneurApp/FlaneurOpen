@@ -35,6 +35,16 @@ class FormDemoViewController: UIViewController {
         formView.configure(viewController: self)
 
         // Add form elements
+        let buttonFormElement = FlaneurFormElement(type: .button, label: "button") { [weak self] view in
+            guard let label1 = view.subviews.filter({ $0.tag == 1 }).first else { return }
+            guard let textField1 = view.subviews.filter({ $0.tag == 2 }).first else { return }
+            guard let label2 = view.subviews.filter({ $0.tag == 3 }).first else { return }
+            guard let textField2 = view.subviews.filter({ $0.tag == 4 }).first else { return }
+            guard let button = view.subviews.filter({ $0.tag == 5 }).first else { return }
+            debugPrint("Yipee")
+        }
+        formView.addFormElement(buttonFormElement)
+
         let nameFormElement = FlaneurFormElement(type: .textField, label: "Name") { [weak self] view in
             self?.nameTextField = view as? UITextField
             if self?.didAppear ?? false {

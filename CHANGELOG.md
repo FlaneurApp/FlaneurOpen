@@ -7,7 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [0.7.0] - ...
 
-* Upgraded `FlaneurImagePicker` to version 0.5.0 
+* Upgraded `FlaneurImagePicker` to version 0.5.0
+* Gross implementation of a new form element type (`button`) which proves that the
+  form tools should be moved and redesigned to a dedicated pod
 
 ## [0.6.0] - 2017-12-05
 

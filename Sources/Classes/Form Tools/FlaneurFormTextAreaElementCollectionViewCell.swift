@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FlaneurFormTextAreaElementCollectionViewCell: FlaneurFormElementCollectionViewCell {
+final class FlaneurFormTextAreaElementCollectionViewCell: FlaneurFormElementCollectionViewCell {
     var textArea: UITextView!
 
     /// Common init code.

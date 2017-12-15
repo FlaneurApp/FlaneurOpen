@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FlaneurFormTextFieldElementCollectionViewCell: FlaneurFormElementCollectionViewCell {
+final class FlaneurFormTextFieldElementCollectionViewCell: FlaneurFormElementCollectionViewCell {
     var textField: UITextField!
 
     /// Common init code.
@@ -19,9 +19,8 @@ class FlaneurFormTextFieldElementCollectionViewCell: FlaneurFormElementCollectio
         textField.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(textField)
 
-        textField.font = FlaneurOpenThemeManager.shared.theme.formTextFieldFont
+        textField.flaneurFormStyle()
         textField.returnKeyType = .next
-        textField.borderStyle = .none
         textField.delegate = self
 
         _ = LayoutBorderManager(item: textField,

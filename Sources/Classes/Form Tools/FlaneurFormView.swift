@@ -16,6 +16,7 @@ public enum FlaneurFormElementType {
     case select(delegate: FlaneurFormSelectElementCollectionViewCellDelegate)
     case selectBis(delegate: FlaneurFormSelectElementCollectionViewCellDelegate)
     case delete(delegate: FlaneurFormDeleteElementCollectionViewCellDelegate)
+    case button
 }
 
 extension FlaneurFormElementType: Equatable {
@@ -32,6 +33,8 @@ extension FlaneurFormElementType: Equatable {
         case (.selectBis, .selectBis):
             return true
         case (.delete, .delete):
+            return true
+        case (.button, .button):
             return true
         default:
             return false
@@ -205,6 +208,8 @@ class FlaneurFormElementSectionController: ListSectionController {
             height = delegate.selectCollectionViewSize().height + 44.0 + 16.0
         case .delete:
             height = 56.0
+        case .button:
+            height = 194.0
         }
 
         return CGSize(width: self.collectionContext!.containerSize.width,
@@ -258,6 +263,14 @@ class FlaneurFormElementSectionController: ListSectionController {
                                                               at: index) as? FlaneurFormDeleteElementCollectionViewCell
             cell?.delegate = cellDelegate
             cell?.tapDelegate = tapDelegate
+            cell?.configureWith(formElement: formElement)
+            return cell!
+        case .button:
+            let cell = collectionContext?.dequeueReusableCell(of: FlaneurFormButtonCollectionViewCell.self,
+                                                              for: self,
+                                                              at: index) as? FlaneurFormButtonCollectionViewCell
+            cell?.delegate = cellDelegate
+            // cell?.tapDelegate = tapDelegate
             cell?.configureWith(formElement: formElement)
             return cell!
         }

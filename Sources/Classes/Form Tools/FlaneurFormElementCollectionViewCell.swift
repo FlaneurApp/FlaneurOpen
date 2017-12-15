@@ -48,3 +48,10 @@ class FlaneurFormElementCollectionViewCell: UICollectionViewCell {
         label.text = formElement.label
     }
 }
+
+extension UITextField {
+    func flaneurFormStyle() {
+        self.font = FlaneurOpenThemeManager.shared.theme.formTextFieldFont
+        self.borderStyle = .none
+    }
+}
