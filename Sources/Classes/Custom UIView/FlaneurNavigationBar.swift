@@ -23,7 +23,7 @@ fileprivate extension UIColor {
 fileprivate let defaultContainerWidth: CGFloat = 16.0
 
 fileprivate let leftButtonSize: CGFloat = 24.0
-fileprivate let rightButtonSize: CGFloat = 6.0
+fileprivate let rightButtonSize: CGFloat = 36.0
 fileprivate let rightInBetweenButtonSpace: CGFloat = 4.0
 
 public enum FlaneurNavigationBarActionFaceView {
@@ -92,7 +92,7 @@ public struct FlaneurNavigationBarAction {
 ///
 /// For instance, the following code makes the title of the bar use the Futura font everywhere in your app:
 ///
-///     UILabel.appearance(whenContainedInInstancesOf: [FlaneurNavigationBar.self]).font = UIFont(name: "Futura-Me , size: 16.0)
+///     UILabel.appearance(whenContainedInInstancesOf: [FlaneurNavigationBar.self]).font = UIFont(name: "Futura-Medium", size: 16.0)
 ///
 /// ## Demo
 ///
