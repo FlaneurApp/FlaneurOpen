@@ -36,7 +36,7 @@ final class FlaneurFormButtonCollectionViewCell: FlaneurFormElementCollectionVie
                            toItem: label,
                            attribute: .bottom,
                            multiplier: 1.0,
-                           constant: 8.0).isActive = true
+                           constant: 6.0).isActive = true
 
         let otherLabel = UILabel()
         self.otherLabel = otherLabel
@@ -44,7 +44,7 @@ final class FlaneurFormButtonCollectionViewCell: FlaneurFormElementCollectionVie
         otherLabel.translatesAutoresizingMaskIntoConstraints = false
         otherLabel.font = FlaneurOpenThemeManager.shared.theme.formLabelsFont
         otherLabel.topAnchor.constraint(equalTo: textField.bottomAnchor,
-                                        constant: 8.0).isActive = true
+                                        constant: 30.0).isActive = true
         otherLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16.0).isActive = true
         otherLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 16.0).isActive = true
 
@@ -55,7 +55,7 @@ final class FlaneurFormButtonCollectionViewCell: FlaneurFormElementCollectionVie
         otherTextField.flaneurFormStyle()
         otherTextField.isUserInteractionEnabled = false
         otherTextField.topAnchor.constraint(equalTo: otherLabel.bottomAnchor,
-                                            constant: 8.0).isActive = true
+                                            constant: 6.0).isActive = true
         otherTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16.0).isActive = true
         otherTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 16.0).isActive = true
 
