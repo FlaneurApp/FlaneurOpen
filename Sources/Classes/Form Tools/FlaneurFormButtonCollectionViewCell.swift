@@ -63,9 +63,9 @@ final class FlaneurFormButtonCollectionViewCell: FlaneurFormElementCollectionVie
         self.actionButton = actionButton
         self.addSubview(actionButton)
         actionButton.translatesAutoresizingMaskIntoConstraints = false
-        actionButton.setTitle("TODO", for: .normal)
+        actionButton.setTitle("-", for: .normal)
         actionButton.topAnchor.constraint(equalTo: otherTextField.bottomAnchor,
-                                            constant: 8.0).isActive = true
+                                            constant: 21.0).isActive = true
         actionButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16.0).isActive = true
     }
 
