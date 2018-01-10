@@ -105,12 +105,16 @@ final public class FlaneurNavigationBar: UIView {
     var leftContainerWidthConstraint: NSLayoutConstraint!
     var rightContainerWidthConstraint: NSLayoutConstraint!
 
+    /// Read-only getter for `UIButton` instances of the right part of the bar.
     public private(set) var rightButtons: [UIButton] = []
 
     var leftButtonAction: (Any) -> () = { _ in }
     var rightButtonsActions: [(Any) -> ()] = []
 
-    public var debug: Bool = false
+    private var debug: Bool = false
+
+    /// Decides if a bottom border should be drawn or not (`true` by default).
+    public var hasBottomBorder: Bool = true
 
     /// Initializes and returns a newly allocated navigation bar object with the specified frame rectangle.
     ///
@@ -174,7 +178,11 @@ final public class FlaneurNavigationBar: UIView {
                                      toItem: self,
                                      top: 0,
                                      bottom: 0)
-        _ = createBottomBorder()
+
+        if hasBottomBorder {
+            _ = createBottomBorder()
+        }
+
         clipsToBounds = true
     }
 
@@ -213,6 +221,9 @@ final public class FlaneurNavigationBar: UIView {
         titleLabel.flaneurText(title, letterSpacing: 2.0)
     }
 
+    /// Sets the optional left action for the bar.
+    ///
+    /// - Parameter leftAction: the action.
     public func setLeftAction(_ leftAction: FlaneurNavigationBarAction?) {
         // Reset state
         leftContainer.removeAllSubviews()
@@ -263,6 +274,9 @@ final public class FlaneurNavigationBar: UIView {
         }
     }
 
+    /// Sets the optional right actions for the bar.
+    ///
+    /// - Parameter rightActions: the actions.
     public func setRightActions(_ rightActions: [FlaneurNavigationBarAction]?) {
         rightContainer.removeAllSubviews()
         rightButtons = []
