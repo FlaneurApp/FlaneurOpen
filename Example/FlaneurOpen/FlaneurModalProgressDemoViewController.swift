@@ -57,7 +57,7 @@ class FlaneurModalProgressDemoViewController: UIViewController {
 
         let modalProgressViewController = FlaneurModalProgressViewController()
         self.modalProgressViewController = modalProgressViewController
-        modalProgressViewController.topPadding = self.topLayoutGuide.length
+        modalProgressViewController.topPadding = 0.0 // <- below status bar
         modalProgressViewController.modalPresentationStyle = .overCurrentContext
         modalProgressViewController.delegate = self
         modalProgressViewController.configureWithInProgressState(title: "In progress",

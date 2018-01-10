@@ -11,15 +11,25 @@ public protocol FlaneurModalProgressViewControllerDelegate: AnyObject {
     func modalProgressControllerDidComplete(_ viewController: FlaneurModalProgressViewController)
 }
 
+/// A progress view controller that is intended to be presented modally over an existing
+/// view controller
 final public class FlaneurModalProgressViewController: UIViewController {
+    /// The top padding of the popup.
     public var topPadding: CGFloat = 0.0
 
-    public private(set) var titleLabel: UILabel = UILabel(frame: .zero)
-    public private(set) var bodyLabel: UILabel = UILabel(frame: .zero)
+    /// The title of the modal view.
+    public private(set) var titleLabel: UILabel = UILabel()
+
+    /// The body of the modal view.
+    public private(set) var bodyLabel: UILabel = UILabel()
+
+    /// The progress indicator view of the modal view.
     public private(set) var progressBar: UIProgressView = UIProgressView(progressViewStyle: .default)
+
     private var finalStateReached: Bool = false
 
-    public weak var delegate: FlaneurModalProgressViewControllerDelegate? = nil
+    /// The delegate of the modal view controller.
+    public weak var delegate: FlaneurModalProgressViewControllerDelegate?
 
     deinit {
         ()
@@ -27,19 +37,18 @@ final public class FlaneurModalProgressViewController: UIViewController {
 
     override public func viewDidLoad() {
         super.viewDidLoad()
+
         view.backgroundColor = .clear
         view.isOpaque = false
 
-        let popup = UIView(frame: .zero)
+        let popup = UIView()
         popup.backgroundColor = UIColor(white: 0.0, alpha: 0.8)
         popup.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(popup)
-        _ = LayoutBorderManager(item: popup,
-                                toItem: view,
-                                top: topPadding,
-                                left: 0.0,
-                                bottom: 0.0,
-                                right: 0.0)
+        popup.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: topPadding).isActive = true
+        popup.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0.0).isActive = true
+        popup.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0.0).isActive = true
+        popup.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor, constant: 0.0).isActive = true
 
         // Setup the progress bar
         progressBar.translatesAutoresizingMaskIntoConstraints = false
