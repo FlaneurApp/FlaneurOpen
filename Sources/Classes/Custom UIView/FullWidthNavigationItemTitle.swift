@@ -8,8 +8,8 @@
 import UIKit
 
 class FullWidthNavigationItemTitle: UIView {
-    let leftMargin: CGFloat = 12.0
-    let bottomMargin: CGFloat = 4.0 // Required for FlaneurApp :( - let's make it an attribute one day
+    let leftMargin: CGFloat = 0.0
+    let topMargin: CGFloat = 3.0 // Required for FlaneurApp :( - let's make it an attribute one day
 
     weak var containingView: UIView?
 
@@ -31,8 +31,8 @@ class FullWidthNavigationItemTitle: UIView {
         }
 
         self.titleLabel?.frame = CGRect(x: leftMargin,
-                                        y: 0.0,
+                                        y: topMargin,
                                         width: self.frame.width - leftMargin,
-                                        height: referenceHeight - bottomMargin)
+                                        height: referenceHeight - topMargin)
     }
 }
