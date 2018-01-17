@@ -102,6 +102,8 @@ final public class FlaneurNavigationBar: UIView {
     var leftContainer: UIView!
     var rightContainer: UIView!
 
+    public let bottomBorder = UIView()
+
     var leftContainerWidthConstraint: NSLayoutConstraint!
     var rightContainerWidthConstraint: NSLayoutConstraint!
 
@@ -112,9 +114,6 @@ final public class FlaneurNavigationBar: UIView {
     var rightButtonsActions: [(Any) -> ()] = []
 
     private var debug: Bool = false
-
-    /// Decides if a bottom border should be drawn or not (`true` by default).
-    public var hasBottomBorder: Bool = true
 
     /// Initializes and returns a newly allocated navigation bar object with the specified frame rectangle.
     ///
@@ -179,9 +178,7 @@ final public class FlaneurNavigationBar: UIView {
                                      top: 0,
                                      bottom: 0)
 
-        if hasBottomBorder {
-            _ = createBottomBorder()
-        }
+        bottomBorder.transformIntoBottomBorder(parent: self)
 
         clipsToBounds = true
     }

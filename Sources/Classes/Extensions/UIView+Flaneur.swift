@@ -10,22 +10,26 @@ import UIKit
 public extension UIView {
     /// Create the bottom border
     func createBottomBorder(width: CGFloat = 1.0, color: UIColor = UIColor(white: 236.0 / 255.0, alpha: 1.0)) -> UIView {
-        let bottomBorder = UIView(frame: .zero)
-        bottomBorder.backgroundColor = color
-        bottomBorder.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(bottomBorder)
-        _ = LayoutBorderManager(item: bottomBorder, toItem: self,
-                                left: 0.0, bottom: 0.0, right: 0.0)
+        let bottomBorder = UIView()
+        bottomBorder.transformIntoBottomBorder(parent: self,
+                                               width: width,
+                                               color: color)
+        return bottomBorder
+    }
 
-        NSLayoutConstraint(item: bottomBorder,
+    func transformIntoBottomBorder(parent: UIView, width: CGFloat = 1.0, color: UIColor = UIColor(white: 236.0 / 255.0, alpha: 1.0)) {
+        backgroundColor = color
+        translatesAutoresizingMaskIntoConstraints = false
+        parent.addSubview(self)
+        _ = LayoutBorderManager(item: self, toItem: parent,
+                                left: 0.0, bottom: 0.0, right: 0.0)
+        NSLayoutConstraint(item: self,
                            attribute: .height,
                            relatedBy: .equal,
                            toItem: nil,
                            attribute: .notAnAttribute,
                            multiplier: 1.0,
                            constant: width).isActive = true
-
-        return bottomBorder
     }
 
     func removeAllSubviews() {

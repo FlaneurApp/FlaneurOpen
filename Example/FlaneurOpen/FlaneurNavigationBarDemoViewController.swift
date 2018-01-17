@@ -18,7 +18,6 @@ class FlaneurNavigationBarDemoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationBar.debug = true
 
         UILabel.appearance(whenContainedInInstancesOf: [FlaneurNavigationBar.self]).font = UIFont(name: "Futura-Medium", size: 16.0)
 
@@ -37,6 +36,7 @@ class FlaneurNavigationBarDemoViewController: UIViewController {
         self.navigationBar.configure(title: "My Super Very Long Navigation Bar Title".uppercased(),
                                      leftAction: myDefaultLeftAction,
                                      rightActions: imageRightActions())
+        navigationBar.bottomBorder.isHidden = true
         isDefaultLeftAction = true
     }
 

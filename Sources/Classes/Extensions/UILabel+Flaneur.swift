@@ -18,7 +18,7 @@ public extension UILabel {
         let attributedString = NSMutableAttributedString(string: text)
         attributedString.addAttribute(NSAttributedStringKey.kern,
                                       value: letterSpacing,
-                                      range: NSMakeRange(0, text.characters.count))
+                                      range: NSMakeRange(0, text.count))
         self.attributedText = attributedString
     }
 }

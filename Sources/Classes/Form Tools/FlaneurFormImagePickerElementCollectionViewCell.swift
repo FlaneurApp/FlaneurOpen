@@ -165,7 +165,7 @@ final class FlaneurFormImagePickerElementCollectionViewCell: FlaneurFormElementC
         flaneurPicker.navigationBar.tintColor = .black
         flaneurPicker.navigationBar.barTintColor = .white
         flaneurPicker.navigationBar.isTranslucent = false
-        flaneurPicker.navigationBar.topItem?.backBarButtonItem?.title = imageDelegate!.localizedStringForCancelAction()
+        flaneurPicker.navigationBar.topItem?.leftBarButtonItem?.title = imageDelegate!.localizedStringForCancelAction()
         flaneurPicker.navigationBar.topItem?.rightBarButtonItem?.title = imageDelegate!.localizedStringForDoneAction()
 
         let myTitleViewContainer = FullWidthNavigationItemTitle(frame: CGRect(x: 0.0, y: 0.0, width: 1000.0, height: 0.0))
