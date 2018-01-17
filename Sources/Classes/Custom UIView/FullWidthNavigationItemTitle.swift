@@ -8,6 +8,9 @@
 import UIKit
 
 class FullWidthNavigationItemTitle: UIView {
+    let leftMargin: CGFloat = 12.0
+    let bottomMargin: CGFloat = 4.0 // Required for FlaneurApp :( - let's make it an attribute one day
+
     weak var containingView: UIView?
 
     var titleLabel: UILabel? {
@@ -27,9 +30,9 @@ class FullWidthNavigationItemTitle: UIView {
                                 height: referenceHeight)
         }
 
-        self.titleLabel?.frame = CGRect(x: 16.0,
+        self.titleLabel?.frame = CGRect(x: leftMargin,
                                         y: 0.0,
-                                        width: self.frame.width - 16.0,
-                                        height: referenceHeight)
+                                        width: self.frame.width - leftMargin,
+                                        height: referenceHeight - bottomMargin)
     }
 }

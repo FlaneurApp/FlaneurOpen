@@ -12,6 +12,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   form tools should be moved and redesigned to a dedicated pod
 * Fixed size of navigation bar button
 * Added logo for iPhone app
+* Added the option to hide the navigation bar bottom border
+* Fixed bug of the image picker left button so that `localizedStringForCancelAction` is used
+* Added some code specific for FlaneurApp... not ideal but we'll fix it later... I hope...
 
 ## [0.6.0] - 2017-12-05
 
