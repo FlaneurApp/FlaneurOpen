@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [0.7.0] - ...
+## [0.7.0] - 2018-01-18
 
 * Upgraded `FlaneurImagePicker` to version 0.5.0
 * Gross implementation of a new form element type (`button`) which proves that the
@@ -101,6 +101,7 @@ Older versions of this package were evolving at a really high pace.
 The package was not stable enough and maintaining a Changelog would have a real
 pain in the b***.
 
+[0.7.0]: https://github.com/FlaneurApp/FlaneurOpen/compare/0.6.0...0.7.0
 [0.6.0]: https://github.com/FlaneurApp/FlaneurOpen/compare/0.5.0...0.6.0
 [0.5.0]: https://github.com/FlaneurApp/FlaneurOpen/compare/0.4.0...0.5.0
 [0.4.0]: https://github.com/FlaneurApp/FlaneurOpen/compare/0.3.0...0.4.0
