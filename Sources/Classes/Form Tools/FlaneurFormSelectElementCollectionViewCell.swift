@@ -108,6 +108,10 @@ extension FlaneurFormSelectElementCollectionViewCell: UICollectionViewDelegate {
 
 extension FlaneurFormSelectElementCollectionViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        guard selectDelegate != nil else {
+            print("ERROR: selectDelegate is nil");
+            return 0
+        }
         return selectDelegate.nbOfItems()
     }
 
