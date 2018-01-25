@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		00C07DD72018F3A10043427D /* FlaneurFormElementSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C07DD62018F3A10043427D /* FlaneurFormElementSectionController.swift */; };
 		00C07DD82018F3A70043427D /* FlaneurFormElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C07DD42018F3760043427D /* FlaneurFormElement.swift */; };
+		00C07DDA2019E1FC0043427D /* MultiSelectCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C07DD92019E1FC0043427D /* MultiSelectCollectionViewController.swift */; };
 		00F28DBCBFD3A8E0C1A6F810AD639E8B /* IGListAdapterDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = D2BD051AB4AD5DD1FE74E23DC951EE4B /* IGListAdapterDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		017FA43A9979E6A57002489BDF5682C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 700A0564C9781AF6F8FF03059449FC2B /* Foundation.framework */; };
 		03B9C8A65C1EBEC3B9534B7F6453B0EE /* FlaneurCollectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1D25DAA3E344688648D8AFAB28D3BD /* FlaneurCollectionItem.swift */; };
@@ -519,6 +520,7 @@
 		0046FDE3AD8DF694FA649082908A1AD0 /* Pods-FlaneurOpen_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FlaneurOpen_Example-umbrella.h"; sourceTree = "<group>"; };
 		00C07DD42018F3760043427D /* FlaneurFormElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlaneurFormElement.swift; sourceTree = "<group>"; };
 		00C07DD62018F3A10043427D /* FlaneurFormElementSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlaneurFormElementSectionController.swift; sourceTree = "<group>"; };
+		00C07DD92019E1FC0043427D /* MultiSelectCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiSelectCollectionViewController.swift; sourceTree = "<group>"; };
 		01A182FF3F1FAFF72320D1F9CBA0B947 /* IGListAdapter+DebugDescription.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IGListAdapter+DebugDescription.h"; path = "Source/Internal/IGListAdapter+DebugDescription.h"; sourceTree = "<group>"; };
 		01C0367C8DE04870B298E406FC93850D /* FlaneurCollectionItemSectionController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FlaneurCollectionItemSectionController.swift; sourceTree = "<group>"; };
 		020730589103C708A8F762DB27678442 /* IGListAdapter+DebugDescription.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IGListAdapter+DebugDescription.m"; path = "Source/Internal/IGListAdapter+DebugDescription.m"; sourceTree = "<group>"; };
@@ -1516,6 +1518,7 @@
 		96F479EAC7878EAD43566CA746F54349 /* Form Tools */ = {
 			isa = PBXGroup;
 			children = (
+				00C07DD92019E1FC0043427D /* MultiSelectCollectionViewController.swift */,
 				00C07DD42018F3760043427D /* FlaneurFormElement.swift */,
 				E5355DA2BFF5A0DDD22312633C6E3A92 /* FlaneurFormView.swift */,
 				00C07DD62018F3A10043427D /* FlaneurFormElementSectionController.swift */,
@@ -2662,6 +2665,7 @@
 				44695A1817FB3B8B93F820D4FCEF9563 /* FlaneurFormElementCollectionViewCell.swift in Sources */,
 				256C680212C0B8E63B6A033C0BADE0D4 /* FlaneurFormImagePickerElementCollectionViewCell.swift in Sources */,
 				EF1C886D82E48EE97D9CDEBCB89816FE /* FlaneurFormSelectElementCollectionViewCell.swift in Sources */,
+				00C07DDA2019E1FC0043427D /* MultiSelectCollectionViewController.swift in Sources */,
 				69E4EFCA965073365630CA5A7F295D4D /* FlaneurFormTextAreaElementCollectionViewCell.swift in Sources */,
 				F0D1965C2AAC589B67FBCC040C4F1BE1 /* FlaneurFormTextFieldElementCollectionViewCell.swift in Sources */,
 				F258C6D81D18FBE101F22AC893E7F9CC /* FlaneurFormView.swift in Sources */,

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		000D5B9A1F8E55B4008BFED7 /* SegmentedCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000D5B991F8E55B4008BFED7 /* SegmentedCollectionViewController.swift */; };
+		00135CD7201A299200002BF7 /* PortraitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00135CD6201A299200002BF7 /* PortraitCollectionViewCell.swift */; };
 		002E9D321ED5E13D0046326C /* GooglePlacesDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002E9D311ED5E13D0046326C /* GooglePlacesDemoViewController.swift */; };
 		00880B9B1EC3502A00AD5B64 /* ListKitDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00880B9A1EC3502A00AD5B64 /* ListKitDemoViewController.swift */; };
 		0092AB631F867D6D0030E1D7 /* FlaneurModalProgressDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092AB621F867D6D0030E1D7 /* FlaneurModalProgressDemoViewController.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		000D5B991F8E55B4008BFED7 /* SegmentedCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedCollectionViewController.swift; sourceTree = "<group>"; };
+		00135CD6201A299200002BF7 /* PortraitCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortraitCollectionViewCell.swift; sourceTree = "<group>"; };
 		002E9D311ED5E13D0046326C /* GooglePlacesDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlacesDemoViewController.swift; sourceTree = "<group>"; };
 		00880B9A1EC3502A00AD5B64 /* ListKitDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListKitDemoViewController.swift; sourceTree = "<group>"; };
 		0092AB621F867D6D0030E1D7 /* FlaneurModalProgressDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlaneurModalProgressDemoViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				00FCFAD31F66CE2B00E73EE8 /* FilteredCollectionViewDemoViewController.swift */,
 				00E3BCDB1F7D32C200D046C5 /* FormDemoViewController.swift */,
 				0092AB621F867D6D0030E1D7 /* FlaneurModalProgressDemoViewController.swift */,
+				00135CD6201A299200002BF7 /* PortraitCollectionViewCell.swift */,
 				000D5B991F8E55B4008BFED7 /* SegmentedCollectionViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				00EC49871F73BBD300CC4667 /* DemoCollectionViewCell.swift */,
@@ -245,9 +248,9 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = BLSC88J9HQ;
+						DevelopmentTeam = P76F9A8U26;
 						LastSwiftMigration = 0910;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
 								enabled = 0;
@@ -444,6 +447,7 @@
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				00A36F2A1F618F3400F05418 /* FlaneurNavigationBarDemoViewController.swift in Sources */,
 				00E3BCDC1F7D32C200D046C5 /* FormDemoViewController.swift in Sources */,
+				00135CD7201A299200002BF7 /* PortraitCollectionViewCell.swift in Sources */,
 				0092AB631F867D6D0030E1D7 /* FlaneurModalProgressDemoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -593,17 +597,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = BLSC88J9HQ;
+				DEVELOPMENT_TEAM = P76F9A8U26;
 				INFOPLIST_FILE = FlaneurOpen/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.flaneurapp.open;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d2d17eae-1966-4ea6-aa03-a2f08960a4bc";
-				PROVISIONING_PROFILE_SPECIFIER = "match Development com.flaneurapp.open";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -616,17 +621,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = BLSC88J9HQ;
+				DEVELOPMENT_TEAM = P76F9A8U26;
 				INFOPLIST_FILE = FlaneurOpen/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.flaneurapp.open;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d2d17eae-1966-4ea6-aa03-a2f08960a4bc";
-				PROVISIONING_PROFILE_SPECIFIER = "match Development com.flaneurapp.open";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";

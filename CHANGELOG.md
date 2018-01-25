@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [0.8.0] -
+
+* Created `MultiSelectCollectionViewController` based on [objc.io's Generic Table View Controllers](https://talk.objc.io/episodes/S01E26-generic-table-view-controllers-part-2)
+* Made selectDelegate an optional in `FlaneurFormSelectElementCollectionViewCell`
+
 ## [0.7.0] - 2018-01-18
 
 * Upgraded `FlaneurImagePicker` to version 0.5.0

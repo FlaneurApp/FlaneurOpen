@@ -57,7 +57,7 @@ open class LoadingCollectionViewCell: UICollectionViewCell {
     }
 
     public func configure<A>(load: (@escaping (Result<A>) -> ()) -> (),
-                          build: @escaping (Result<A>) -> UICollectionViewCell) {
+                             build: @escaping (Result<A>) -> UICollectionViewCell) {
         // TODO: this call might not be necessary since the prepareForReuse func
         // was overriden.
         configureToInitialLoadingState()

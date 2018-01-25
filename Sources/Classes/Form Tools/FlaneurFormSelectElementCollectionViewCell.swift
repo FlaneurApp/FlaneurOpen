@@ -26,7 +26,7 @@ public extension FlaneurFormSelectElementCollectionViewCellDelegate where Self: 
 }
 
 class FlaneurFormSelectElementCollectionViewCell: FlaneurFormElementCollectionViewCell {
-    weak var selectDelegate: FlaneurFormSelectElementCollectionViewCellDelegate!
+    weak var selectDelegate: FlaneurFormSelectElementCollectionViewCellDelegate?
     var selectCollectionView: UICollectionView!
     var collectionViewHeightConstraint: NSLayoutConstraint!
 
@@ -77,14 +77,14 @@ class FlaneurFormSelectElementCollectionViewCell: FlaneurFormElementCollectionVi
         super.configureWith(formElement: formElement)
 
         // Update the height of the collection view
-        collectionViewHeightConstraint.constant = selectDelegate.selectCollectionViewSize().height
+        collectionViewHeightConstraint.constant = selectDelegate!.selectCollectionViewSize().height
 
         // Register the cell type
-        selectCollectionView.register(selectDelegate.cellClass(),
-                                      forCellWithReuseIdentifier: selectDelegate.cellReuseIdentifier())
+        selectCollectionView.register(selectDelegate!.cellClass(),
+                                      forCellWithReuseIdentifier: selectDelegate!.cellReuseIdentifier())
 
         // Allow multiple selection
-        selectCollectionView.allowsMultipleSelection = selectDelegate.allowMultipleSelection()
+        selectCollectionView.allowsMultipleSelection = selectDelegate!.allowMultipleSelection()
 
         formElement.didLoadHandler?(selectCollectionView)
     }
@@ -98,11 +98,11 @@ class FlaneurFormSelectElementCollectionViewCell: FlaneurFormElementCollectionVi
 
 extension FlaneurFormSelectElementCollectionViewCell: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectDelegate.selectElementDidSelectItemAt(index: indexPath.row)
+        selectDelegate?.selectElementDidSelectItemAt(index: indexPath.row)
     }
 
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        selectDelegate.selectElementDidDeselectItemAt(index: indexPath.row)
+        selectDelegate?.selectElementDidDeselectItemAt(index: indexPath.row)
     }
 }
 
@@ -112,19 +112,28 @@ extension FlaneurFormSelectElementCollectionViewCell: UICollectionViewDataSource
             print("ERROR: selectDelegate is nil");
             return 0
         }
-        return selectDelegate.nbOfItems()
+        return selectDelegate!.nbOfItems()
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: selectDelegate.cellReuseIdentifier(), for: indexPath)
-        selectDelegate.configure(cell: cell, forIndex: indexPath.row)
+        guard selectDelegate != nil else {
+            fatalError("ERROR: selectDelegate is nil");
+        }
+
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: selectDelegate!.cellReuseIdentifier(), for: indexPath)
+        selectDelegate!.configure(cell: cell, forIndex: indexPath.row)
         return cell
     }
 }
 
 extension FlaneurFormSelectElementCollectionViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return selectDelegate.selectCollectionViewSize()
+        guard selectDelegate != nil else {
+            print("ERROR: selectDelegate is nil");
+            return .zero
+        }
+
+        return selectDelegate!.selectCollectionViewSize()
     }
 }
 
