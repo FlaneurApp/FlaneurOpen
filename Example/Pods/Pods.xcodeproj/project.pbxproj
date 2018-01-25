@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00135CDB201A3D2100002BF7 /* MultiSelectDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00135CDA201A3D2100002BF7 /* MultiSelectDelegate.swift */; };
 		00C07DD72018F3A10043427D /* FlaneurFormElementSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C07DD62018F3A10043427D /* FlaneurFormElementSectionController.swift */; };
 		00C07DD82018F3A70043427D /* FlaneurFormElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C07DD42018F3760043427D /* FlaneurFormElement.swift */; };
 		00C07DDA2019E1FC0043427D /* MultiSelectCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C07DD92019E1FC0043427D /* MultiSelectCollectionViewController.swift */; };
@@ -515,6 +516,7 @@
 
 /* Begin PBXFileReference section */
 		0005FAEFADE1E71C061459F524DCD020 /* UIImage+Compare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Compare.m"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.m"; sourceTree = "<group>"; };
+		00135CDA201A3D2100002BF7 /* MultiSelectDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiSelectDelegate.swift; sourceTree = "<group>"; };
 		001FC892AA2F34D2DD77BD5C6EB862B1 /* FlaneurOpen.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FlaneurOpen.xcconfig; sourceTree = "<group>"; };
 		003F4E8DCF3E0F9F5733A85818BB7CB4 /* IGListBatchContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListBatchContext.h; path = Source/IGListBatchContext.h; sourceTree = "<group>"; };
 		0046FDE3AD8DF694FA649082908A1AD0 /* Pods-FlaneurOpen_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FlaneurOpen_Example-umbrella.h"; sourceTree = "<group>"; };
@@ -1228,6 +1230,8 @@
 			isa = PBXGroup;
 			children = (
 				F8C844327EB5E45068D24C1F6F96BDB6 /* LoadingCollectionViewCell.swift */,
+				00C07DD92019E1FC0043427D /* MultiSelectCollectionViewController.swift */,
+				00135CDA201A3D2100002BF7 /* MultiSelectDelegate.swift */,
 			);
 			name = CollectionViewUtils;
 			path = Sources/Classes/CollectionViewUtils;
@@ -1518,7 +1522,6 @@
 		96F479EAC7878EAD43566CA746F54349 /* Form Tools */ = {
 			isa = PBXGroup;
 			children = (
-				00C07DD92019E1FC0043427D /* MultiSelectCollectionViewController.swift */,
 				00C07DD42018F3760043427D /* FlaneurFormElement.swift */,
 				E5355DA2BFF5A0DDD22312633C6E3A92 /* FlaneurFormView.swift */,
 				00C07DD62018F3A10043427D /* FlaneurFormElementSectionController.swift */,
@@ -2676,6 +2679,7 @@
 				54E8601A011F910A3BFD04296B9D2FD2 /* FlaneurNavigationBar.swift in Sources */,
 				6EB8269A200B10D86275C58CB4D610A8 /* FlaneurOpen-dummy.m in Sources */,
 				D9F1CFEB801A7A576AAF93C4262C8679 /* FlaneurOpenTheme.swift in Sources */,
+				00135CDB201A3D2100002BF7 /* MultiSelectDelegate.swift in Sources */,
 				B5DE1A203F4F8B6363CCF0C71BF85283 /* FullWidthNavigationItemTitle.swift in Sources */,
 				7C9158C165811B4740903445B06AEEA3 /* LayoutBorderManager.swift in Sources */,
 				7FA600842740F3851B89B1886F858A67 /* LoadingCollectionViewCell.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  PreSelectCollectionViewController.swift
+//  MultiSelectCollectionViewController.swift
 //  FlaneurOpen
 //
 //  Created by Mickaël Floc'hlay on 25/01/2018.
@@ -81,7 +81,7 @@ final public class MultiSelectCollectionViewController<Item: MultiSelectable>: U
 
         return cell
     }
-    
+
     override public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         items[indexPath.row].isSelected = true
     }
