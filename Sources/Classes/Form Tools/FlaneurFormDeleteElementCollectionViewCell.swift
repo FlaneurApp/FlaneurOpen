@@ -14,8 +14,8 @@ public protocol FlaneurFormDeleteElementCollectionViewCellDelegate: AnyObject {
 class FlaneurFormDeleteElementCollectionViewCell: FlaneurFormElementCollectionViewCell {
     weak var tapDelegate: FlaneurFormDeleteElementCollectionViewCellDelegate?
 
-    override func didLoad() {
-        super.didLoad()
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
 
         _ = LayoutBorderManager(item: label,
                                 toItem: self,
@@ -25,6 +25,10 @@ class FlaneurFormDeleteElementCollectionViewCell: FlaneurFormElementCollectionVi
         label.textColor = UIColor(red: (226.0 / 255.0), green: (0.0 / 255.0), blue: (26.0 / 255.0), alpha: 1.0)
 
         label.respondsToTap(target: self, action: #selector(labelTapped))
+    }
+
+    public required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     @IBAction func labelTapped(_ sender: Any? = nil) {

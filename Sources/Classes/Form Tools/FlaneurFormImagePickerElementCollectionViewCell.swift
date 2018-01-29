@@ -47,8 +47,18 @@ public extension FlaneurFormImagePickerElementCollectionViewCellDelegate where S
 
 final class FlaneurFormImagePickerElementCollectionViewCell: FlaneurFormElementCollectionViewCell {
     weak var imageDelegate: FlaneurFormImagePickerElementCollectionViewCellDelegate?
-    var launcherButton: UIButton!
-    var photosCollectionView: UICollectionView!
+    let launcherButton: UIButton = UIButton()
+    let photosCollectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.minimumLineSpacing = 9.0 // Spacing between items
+
+        let result = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        result.translatesAutoresizingMaskIntoConstraints = false
+        result.backgroundColor = .white
+        result.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 15.0)
+        return result
+    }()
 
     var currentSelection: [FlaneurImageDescription] = [] {
         didSet {
@@ -56,28 +66,17 @@ final class FlaneurFormImagePickerElementCollectionViewCell: FlaneurFormElementC
         }
     }
 
-    /// Common init code.
-    override func didLoad() {
-        super.didLoad()
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
 
-        let launcherButton = UIButton()
+        photosCollectionView.dataSource = self
+        photosCollectionView.delegate = self
+
         launcherButton.backgroundColor = UIColor(white: (39.0 / 255.0), alpha: 1.0)
-        self.launcherButton = launcherButton
         launcherButton.translatesAutoresizingMaskIntoConstraints = false
         launcherButton.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
         launcherButton.tintColor = .white
         launcherButton.contentMode = .scaleAspectFill
-
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-
-        self.photosCollectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        photosCollectionView.translatesAutoresizingMaskIntoConstraints = false
-        photosCollectionView.dataSource = self
-        photosCollectionView.delegate = self
-        photosCollectionView.backgroundColor = .white
-        photosCollectionView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 15.0)
-        layout.minimumLineSpacing = 9.0 // Spacing between items
 
         photosCollectionView.register(PhotoCollectionViewCell.self,
                                       forCellWithReuseIdentifier: "PhotoCollectionViewCell")
@@ -131,6 +130,10 @@ final class FlaneurFormImagePickerElementCollectionViewCell: FlaneurFormElementC
                            attribute: .trailing,
                            multiplier: 1.0,
                            constant: 8.0).isActive = true
+    }
+
+    public required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     override func configureWith(formElement: FlaneurFormElement) {

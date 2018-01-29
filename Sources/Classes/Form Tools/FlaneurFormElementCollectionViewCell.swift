@@ -15,22 +15,12 @@ protocol FlaneurFormElementCollectionViewCellDelegate: AnyObject {
 }
 
 class FlaneurFormElementCollectionViewCell: UICollectionViewCell {
-    var label: UILabel!
+    let label = UILabel()
     var delegate: FlaneurFormElementCollectionViewCellDelegate? = nil
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        didLoad()
-    }
 
-    public required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        didLoad()
-    }
-
-    func didLoad() {
-        let label = UILabel()
-        self.label = label
         label.font = FlaneurOpenThemeManager.shared.theme.formLabelsFont
         label.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(label)
@@ -42,6 +32,10 @@ class FlaneurFormElementCollectionViewCell: UICollectionViewCell {
                                 right: 16.0)
 
         _ = createBottomBorder()
+    }
+
+    public required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     func configureWith(formElement: FlaneurFormElement) {

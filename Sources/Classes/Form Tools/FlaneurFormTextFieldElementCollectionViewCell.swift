@@ -8,14 +8,11 @@
 import UIKit
 
 final class FlaneurFormTextFieldElementCollectionViewCell: FlaneurFormElementCollectionViewCell {
-    var textField: UITextField!
+    let textField: UITextField = UITextField()
 
-    /// Common init code.
-    override func didLoad() {
-        super.didLoad()
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
 
-        let textField = UITextField()
-        self.textField = textField
         textField.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(textField)
 
@@ -35,6 +32,10 @@ final class FlaneurFormTextFieldElementCollectionViewCell: FlaneurFormElementCol
                            attribute: .bottom,
                            multiplier: 1.0,
                            constant: 8.0).isActive = true
+    }
+
+    public required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     override func configureWith(formElement: FlaneurFormElement) {

@@ -27,26 +27,28 @@ public extension FlaneurFormSelectElementCollectionViewCellDelegate where Self: 
 
 class FlaneurFormSelectElementCollectionViewCell: FlaneurFormElementCollectionViewCell {
     weak var selectDelegate: FlaneurFormSelectElementCollectionViewCellDelegate?
-    var selectCollectionView: UICollectionView!
-    var collectionViewHeightConstraint: NSLayoutConstraint!
 
-    /// Common init code.
-    override func didLoad() {
-        super.didLoad()
-
+    let selectCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-
-        self.selectCollectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        selectCollectionView.translatesAutoresizingMaskIntoConstraints = false
-        selectCollectionView.dataSource = self
-        selectCollectionView.delegate = self
-        selectCollectionView.backgroundColor = .white
-        selectCollectionView.showsHorizontalScrollIndicator = false
-
-        selectCollectionView.contentInset = UIEdgeInsets(top: 0.0, left: 15.0, bottom: 0.0, right: 15.0)
         layout.minimumLineSpacing = 9.0 // Spacing between items
         // layout.minimumInteritemSpacing = 40.0 // Useless here. Because I have only 1 section?
+
+        let result = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        result.translatesAutoresizingMaskIntoConstraints = false
+        result.backgroundColor = .white
+        result.showsHorizontalScrollIndicator = false
+        result.contentInset = UIEdgeInsets(top: 0.0, left: 15.0, bottom: 0.0, right: 15.0)
+        return result
+    }()
+
+    var collectionViewHeightConstraint: NSLayoutConstraint?
+
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+
+        selectCollectionView.dataSource = self
+        selectCollectionView.delegate = self
 
         self.addSubview(selectCollectionView)
 
@@ -68,23 +70,32 @@ class FlaneurFormSelectElementCollectionViewCell: FlaneurFormElementCollectionVi
                                                             attribute: .notAnAttribute,
                                                             multiplier: 1.0,
                                                             constant: 44.0)
-        collectionViewHeightConstraint.isActive = true
+        collectionViewHeightConstraint?.isActive = true
+    }
+
+    public required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     override func configureWith(formElement: FlaneurFormElement) {
-        guard selectDelegate != nil else { fatalError("Setting selectDelegate is required")}
+        guard let selectDelegate = selectDelegate else {
+            fatalError("Having set `selectDelegate` is required at configuration time.")
+        }
+        guard let heightConstraint = collectionViewHeightConstraint else {
+            fatalError("The height constraint should be set at init time.")
+        }
 
         super.configureWith(formElement: formElement)
 
         // Update the height of the collection view
-        collectionViewHeightConstraint.constant = selectDelegate!.selectCollectionViewSize().height
+        heightConstraint.constant = selectDelegate.selectCollectionViewSize().height
 
         // Register the cell type
-        selectCollectionView.register(selectDelegate!.cellClass(),
-                                      forCellWithReuseIdentifier: selectDelegate!.cellReuseIdentifier())
+        selectCollectionView.register(selectDelegate.cellClass(),
+                                      forCellWithReuseIdentifier: selectDelegate.cellReuseIdentifier())
 
         // Allow multiple selection
-        selectCollectionView.allowsMultipleSelection = selectDelegate!.allowMultipleSelection()
+        selectCollectionView.allowsMultipleSelection = selectDelegate.allowMultipleSelection()
 
         formElement.didLoadHandler?(selectCollectionView)
     }
@@ -108,11 +119,11 @@ extension FlaneurFormSelectElementCollectionViewCell: UICollectionViewDelegate {
 
 extension FlaneurFormSelectElementCollectionViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        guard selectDelegate != nil else {
+        guard let selectDelegate = selectDelegate else {
             print("ERROR: selectDelegate is nil");
             return 0
         }
-        return selectDelegate!.nbOfItems()
+        return selectDelegate.nbOfItems()
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -139,12 +150,12 @@ extension FlaneurFormSelectElementCollectionViewCell: UICollectionViewDataSource
 
 extension FlaneurFormSelectElementCollectionViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        guard selectDelegate != nil else {
+        guard let selectDelegate = selectDelegate else {
             print("ERROR: selectDelegate is nil");
             return .zero
         }
 
-        return selectDelegate!.selectCollectionViewSize()
+        return selectDelegate.selectCollectionViewSize()
     }
 }
 

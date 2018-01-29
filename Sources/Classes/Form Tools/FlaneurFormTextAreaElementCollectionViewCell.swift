@@ -8,14 +8,11 @@
 import UIKit
 
 final class FlaneurFormTextAreaElementCollectionViewCell: FlaneurFormElementCollectionViewCell {
-    var textArea: UITextView!
+    let textArea = UITextView()
 
-    /// Common init code.
-    override func didLoad() {
-        super.didLoad()
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
 
-        let textArea = UITextView()
-        self.textArea = textArea
         textArea.font = FlaneurOpenThemeManager.shared.theme.formTextAreaFont
         textArea.translatesAutoresizingMaskIntoConstraints = false
         textArea.text = ""
@@ -37,6 +34,10 @@ final class FlaneurFormTextAreaElementCollectionViewCell: FlaneurFormElementColl
                            attribute: .bottom,
                            multiplier: 1.0,
                            constant: 4.0).isActive = true
+    }
+    
+    public required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     override func configureWith(formElement: FlaneurFormElement) {

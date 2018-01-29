@@ -8,17 +8,14 @@
 import Foundation
 
 final class FlaneurFormButtonCollectionViewCell: FlaneurFormElementCollectionViewCell {
-    public var textField: UITextField!
-    public var otherLabel: UILabel!
-    var otherTextField: UITextField!
-    var actionButton: UIButton!
+    public let textField = UITextField()
+    public let otherLabel = UILabel()
+    let otherTextField = UITextField()
+    let actionButton = UIButton()
 
-    /// Common init code.
-    override func didLoad() {
-        super.didLoad()
+    public override init(frame: CGRect) {
+         super.init(frame: frame)
 
-        let textField = UITextField()
-        self.textField = textField
         self.addSubview(textField)
         textField.translatesAutoresizingMaskIntoConstraints = false
 
@@ -38,8 +35,6 @@ final class FlaneurFormButtonCollectionViewCell: FlaneurFormElementCollectionVie
                            multiplier: 1.0,
                            constant: 6.0).isActive = true
 
-        let otherLabel = UILabel()
-        self.otherLabel = otherLabel
         self.addSubview(otherLabel)
         otherLabel.translatesAutoresizingMaskIntoConstraints = false
         otherLabel.font = FlaneurOpenThemeManager.shared.theme.formLabelsFont
@@ -48,8 +43,6 @@ final class FlaneurFormButtonCollectionViewCell: FlaneurFormElementCollectionVie
         otherLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16.0).isActive = true
         otherLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 16.0).isActive = true
 
-        let otherTextField = UITextField()
-        self.otherTextField = otherTextField
         self.addSubview(otherTextField)
         otherTextField.translatesAutoresizingMaskIntoConstraints = false
         otherTextField.flaneurFormStyle()
@@ -59,14 +52,16 @@ final class FlaneurFormButtonCollectionViewCell: FlaneurFormElementCollectionVie
         otherTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16.0).isActive = true
         otherTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 16.0).isActive = true
 
-        let actionButton = UIButton()
-        self.actionButton = actionButton
         self.addSubview(actionButton)
         actionButton.translatesAutoresizingMaskIntoConstraints = false
         actionButton.setTitle("-", for: .normal)
         actionButton.topAnchor.constraint(equalTo: otherTextField.bottomAnchor,
                                             constant: 21.0).isActive = true
         actionButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16.0).isActive = true
+    }
+
+    public required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     override func configureWith(formElement: FlaneurFormElement) {

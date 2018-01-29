@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 * Created `MultiSelectDelegate` and `MultiSelectCollectionViewController` based on [objc.io's Generic Table View Controllers](https://talk.objc.io/episodes/S01E26-generic-table-view-controllers-part-2)
 * Made selectDelegate an optional in `FlaneurFormSelectElementCollectionViewCell`
 * Fixed cell selection management in FlaneurFormSelectElementCollectionViewCell #24
+* Changed design of form cells so that they don't use conditional/forced casts so much
 
 ## [0.7.0] - 2018-01-18
 
