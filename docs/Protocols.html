@@ -13,7 +13,7 @@
     <a title="Protocols  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">FlaneurOpen Docs</a> (28% documented)</p>
+        <p><a href="index.html">FlaneurOpen Docs</a> (26% documented)</p>
         <p class="header-right"><a href="https://github.com/FlaneurApp/FlaneurOpen"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -65,6 +65,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/LoadingCollectionViewCell.html">LoadingCollectionViewCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/MultiSelectCollectionViewController.html">MultiSelectCollectionViewController</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/SegmentedCollectionView.html">SegmentedCollectionView</a>
@@ -141,6 +144,9 @@
                 <a href="Protocols/FlaneurModalProgressViewControllerDelegate.html">FlaneurModalProgressViewControllerDelegate</a>
               </li>
               <li class="nav-group-task">
+                <a href="Protocols/MultiSelectable.html">MultiSelectable</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Protocols/SegmentedCollectionViewDelegate.html">SegmentedCollectionViewDelegate</a>
               </li>
             </ul>
@@ -148,6 +154,9 @@
           <li class="nav-group-name">
             <a href="Structs.html">Structures</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/CollectionViewCellDescriptor.html">CollectionViewCellDescriptor</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Structs/FlaneurNavigationBarAction.html">FlaneurNavigationBarAction</a>
               </li>
@@ -192,7 +201,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">FlaneurCollectionItem</span><span class="p">:</span> <span class="kt">ListDiffable</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">FlaneurCollectionItem</span><span class="p">:</span> <span class="kt">ListDiffable</span></code></pre>
 
                         </div>
                       </div>
@@ -224,7 +233,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">FlaneurCollectionViewDelegate</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">FlaneurCollectionViewDelegate</span></code></pre>
 
                         </div>
                       </div>
@@ -256,7 +265,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">FlaneurFormDeleteElementCollectionViewCellDelegate</span><span class="p">:</span> <span class="kt">AnyObject</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">FlaneurFormDeleteElementCollectionViewCellDelegate</span><span class="p">:</span> <span class="kt">AnyObject</span></code></pre>
 
                         </div>
                       </div>
@@ -288,7 +297,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">FlaneurFormImagePickerElementCollectionViewCellDelegate</span><span class="p">:</span> <span class="kt">FlaneurImagePickerControllerDelegate</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">FlaneurFormImagePickerElementCollectionViewCellDelegate</span><span class="p">:</span> <span class="kt">FlaneurImagePickerControllerDelegate</span></code></pre>
 
                         </div>
                       </div>
@@ -320,7 +329,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">FlaneurFormSelectElementCollectionViewCellDelegate</span><span class="p">:</span> <span class="kt">AnyObject</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">FlaneurFormSelectElementCollectionViewCellDelegate</span><span class="p">:</span> <span class="kt">AnyObject</span></code></pre>
 
                         </div>
                       </div>
@@ -353,7 +362,7 @@ a <code>FlaneurMapViewController</code> instance.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">FlaneurMapItem</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">FlaneurMapItem</span></code></pre>
 
                         </div>
                       </div>
@@ -385,7 +394,7 @@ a <code>FlaneurMapViewController</code> instance.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">FlaneurMapViewDelegate</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">FlaneurMapViewDelegate</span></code></pre>
 
                         </div>
                       </div>
@@ -417,7 +426,39 @@ a <code>FlaneurMapViewController</code> instance.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">FlaneurModalProgressViewControllerDelegate</span><span class="p">:</span> <span class="kt">AnyObject</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">FlaneurModalProgressViewControllerDelegate</span><span class="p">:</span> <span class="kt">AnyObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11FlaneurOpen15MultiSelectableP"></a>
+                    <a name="//apple_ref/swift/Protocol/MultiSelectable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11FlaneurOpen15MultiSelectableP">MultiSelectable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Protocols/MultiSelectable.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">MultiSelectable</span><span class="p">:</span> <span class="kt">AnyObject</span></code></pre>
 
                         </div>
                       </div>
@@ -450,7 +491,7 @@ the segmented collection view.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">SegmentedCollectionViewDelegate</span><span class="p">:</span> <span class="kt">AnyObject</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">SegmentedCollectionViewDelegate</span><span class="p">:</span> <span class="kt">AnyObject</span></code></pre>
 
                         </div>
                       </div>
@@ -462,8 +503,8 @@ the segmented collection view.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="http://flaneurapp.com" target="_blank" rel="external">Flâneur</a>. All rights reserved. (Last updated: 2018-01-18)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2018 <a class="link" href="http://flaneurapp.com" target="_blank" rel="external">Flâneur</a>. All rights reserved. (Last updated: 2018-01-29)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

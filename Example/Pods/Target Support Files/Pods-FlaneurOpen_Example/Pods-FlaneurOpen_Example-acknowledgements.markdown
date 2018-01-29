@@ -27,7 +27,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 
 ## FlaneurImagePicker
 
-Copyright (c) 2017 Flâneur <flaneurdev@bootstragram.com>
+Copyright (c) 2017-2018 Flâneur <dev@flaneurapp.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -50,7 +50,7 @@ THE SOFTWARE.
 
 ## FlaneurOpen
 
-Copyright (c) 2017 Flâneur <flaneurdev@bootstragram.com>
+Copyright (c) 2017-2018 Flâneur <dev@flaneurapp.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

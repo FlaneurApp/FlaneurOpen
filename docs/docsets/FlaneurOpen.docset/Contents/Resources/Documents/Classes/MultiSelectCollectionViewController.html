@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>FlaneurNavigationBarActionFaceView Enumeration Reference</title>
+    <title>MultiSelectCollectionViewController Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Enum/FlaneurNavigationBarActionFaceView" class="dashAnchor"></a>
-    <a title="FlaneurNavigationBarActionFaceView Enumeration Reference"></a>
+    <a name="//apple_ref/swift/Class/MultiSelectCollectionViewController" class="dashAnchor"></a>
+    <a title="MultiSelectCollectionViewController Class Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">FlaneurOpen Docs</a> (26% documented)</p>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">FlaneurOpen Reference</a>
         <img id="carat" src="../img/carat.png" />
-        FlaneurNavigationBarActionFaceView Enumeration Reference
+        MultiSelectCollectionViewController Class Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -174,10 +174,10 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>FlaneurNavigationBarActionFaceView</h1>
+            <h1>MultiSelectCollectionViewController</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">FlaneurNavigationBarActionFaceView</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">MultiSelectCollectionViewController</span><span class="o">&lt;</span><span class="kt">Item</span><span class="p">:</span> <span class="kt"><a href="../Protocols/MultiSelectable.html">MultiSelectable</a></span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">UICollectionViewController</span></code></pre>
 
                 </div>
               </div>
@@ -190,9 +190,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11FlaneurOpen0A27NavigationBarActionFaceViewO5imageACSo7UIImageCcACmF"></a>
-                    <a name="//apple_ref/swift/Element/image" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11FlaneurOpen0A27NavigationBarActionFaceViewO5imageACSo7UIImageCcACmF">image</a>
+                    <a name="/s:11FlaneurOpen35MultiSelectCollectionViewControllerC5itemsSayxGv"></a>
+                    <a name="//apple_ref/swift/Property/items" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11FlaneurOpen35MultiSelectCollectionViewControllerC5itemsSayxGv">items</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -207,7 +207,61 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">image</span><span class="p">(</span><span class="kt">UIImage</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">items</span><span class="p">:</span> <span class="p">[</span><span class="kt">Item</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11FlaneurOpen35MultiSelectCollectionViewControllerCACyxGSo012UICollectionF6LayoutC010collectionfI0_SayxG5itemsAA0eF14CellDescriptorVxc04cellM0tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(collectionViewLayout:items:cellDescriptor:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11FlaneurOpen35MultiSelectCollectionViewControllerCACyxGSo012UICollectionF6LayoutC010collectionfI0_SayxG5itemsAA0eF14CellDescriptorVxc04cellM0tcfc">init(collectionViewLayout:items:cellDescriptor:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">collectionViewLayout</span><span class="p">:</span> <span class="kt">UICollectionViewLayout</span><span class="p">,</span> <span class="nv">items</span><span class="p">:</span> <span class="p">[</span><span class="kt">Item</span><span class="p">],</span> <span class="nv">cellDescriptor</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Item</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/CollectionViewCellDescriptor.html">CollectionViewCellDescriptor</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11FlaneurOpen35MultiSelectCollectionViewControllerCACyxGSgSo7NSCoderC5coder_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(coder:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11FlaneurOpen35MultiSelectCollectionViewControllerCACyxGSgSo7NSCoderC5coder_tcfc">init(coder:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">required</span> <span class="kd">public</span> <span class="nf">init</span><span class="p">?(</span><span class="n">coder</span> <span class="nv">aDecoder</span><span class="p">:</span> <span class="kt">NSCoder</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -217,13 +271,20 @@
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/UICollectionViewDataSource"></a>
+                <a name="//apple_ref/swift/Section/UICollectionViewDataSource" class="dashAnchor"></a>
+                <a href="#/UICollectionViewDataSource">
+                  <h3 class="section-name">UICollectionViewDataSource</h3>
+                </a>
+              </div>
               <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11FlaneurOpen0A27NavigationBarActionFaceViewO11imageToggleACSo7UIImageC_AFtcACmF"></a>
-                    <a name="//apple_ref/swift/Element/imageToggle" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11FlaneurOpen0A27NavigationBarActionFaceViewO11imageToggleACSo7UIImageC_AFtcACmF">imageToggle</a>
+                    <a name="/s:11FlaneurOpen35MultiSelectCollectionViewControllerC16numberOfSectionsSiSo012UICollectionF0C2in_tF"></a>
+                    <a name="//apple_ref/swift/Method/numberOfSections(in:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11FlaneurOpen35MultiSelectCollectionViewControllerC16numberOfSectionsSiSo012UICollectionF0C2in_tF">numberOfSections(in:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -238,23 +299,19 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">imageToggle</span><span class="p">(</span><span class="kt">UIImage</span><span class="p">,</span> <span class="kt">UIImage</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">numberOfSections</span><span class="p">(</span><span class="k">in</span> <span class="nv">collectionView</span><span class="p">:</span> <span class="kt">UICollectionView</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
 
                         </div>
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11FlaneurOpen0A27NavigationBarActionFaceViewO5labelACSScACmF"></a>
-                    <a name="//apple_ref/swift/Element/label" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11FlaneurOpen0A27NavigationBarActionFaceViewO5labelACSScACmF">label</a>
+                    <a name="/s:11FlaneurOpen35MultiSelectCollectionViewControllerC010collectionF0SiSo012UICollectionF0C_Si22numberOfItemsInSectiontF"></a>
+                    <a name="//apple_ref/swift/Method/collectionView(_:numberOfItemsInSection:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11FlaneurOpen35MultiSelectCollectionViewControllerC010collectionF0SiSo012UICollectionF0C_Si22numberOfItemsInSectiontF">collectionView(_:numberOfItemsInSection:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -269,23 +326,19 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">label</span><span class="p">(</span><span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">collectionView</span><span class="p">(</span><span class="n">_</span> <span class="nv">collectionView</span><span class="p">:</span> <span class="kt">UICollectionView</span><span class="p">,</span> <span class="n">numberOfItemsInSection</span> <span class="nv">section</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
 
                         </div>
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11FlaneurOpen0A27NavigationBarActionFaceViewO06customG0ACSo6UIViewCcACmF"></a>
-                    <a name="//apple_ref/swift/Element/customView" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11FlaneurOpen0A27NavigationBarActionFaceViewO06customG0ACSo6UIViewCcACmF">customView</a>
+                    <a name="/s:11FlaneurOpen35MultiSelectCollectionViewControllerC010collectionF0So012UICollectionF4CellCSo0iF0C_10Foundation9IndexPathV13cellForItemAttF"></a>
+                    <a name="//apple_ref/swift/Method/collectionView(_:cellForItemAt:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11FlaneurOpen35MultiSelectCollectionViewControllerC010collectionF0So012UICollectionF4CellCSo0iF0C_10Foundation9IndexPathV13cellForItemAttF">collectionView(_:cellForItemAt:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -300,7 +353,61 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">customView</span><span class="p">(</span><span class="kt">UIView</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">collectionView</span><span class="p">(</span><span class="n">_</span> <span class="nv">collectionView</span><span class="p">:</span> <span class="kt">UICollectionView</span><span class="p">,</span> <span class="n">cellForItemAt</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UICollectionViewCell</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11FlaneurOpen35MultiSelectCollectionViewControllerC010collectionF0ySo012UICollectionF0C_10Foundation9IndexPathV03didD6ItemAttF"></a>
+                    <a name="//apple_ref/swift/Method/collectionView(_:didSelectItemAt:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11FlaneurOpen35MultiSelectCollectionViewControllerC010collectionF0ySo012UICollectionF0C_10Foundation9IndexPathV03didD6ItemAttF">collectionView(_:didSelectItemAt:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">collectionView</span><span class="p">(</span><span class="n">_</span> <span class="nv">collectionView</span><span class="p">:</span> <span class="kt">UICollectionView</span><span class="p">,</span> <span class="n">didSelectItemAt</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11FlaneurOpen35MultiSelectCollectionViewControllerC010collectionF0ySo012UICollectionF0C_10Foundation9IndexPathV17didDeselectItemAttF"></a>
+                    <a name="//apple_ref/swift/Method/collectionView(_:didDeselectItemAt:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11FlaneurOpen35MultiSelectCollectionViewControllerC010collectionF0ySo012UICollectionF0C_10Foundation9IndexPathV17didDeselectItemAttF">collectionView(_:didDeselectItemAt:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">collectionView</span><span class="p">(</span><span class="n">_</span> <span class="nv">collectionView</span><span class="p">:</span> <span class="kt">UICollectionView</span><span class="p">,</span> <span class="n">didDeselectItemAt</span> <span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>

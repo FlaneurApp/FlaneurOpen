@@ -13,7 +13,7 @@
     <a title="Classes  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">FlaneurOpen Docs</a> (28% documented)</p>
+        <p><a href="index.html">FlaneurOpen Docs</a> (26% documented)</p>
         <p class="header-right"><a href="https://github.com/FlaneurApp/FlaneurOpen"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -65,6 +65,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/LoadingCollectionViewCell.html">LoadingCollectionViewCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/MultiSelectCollectionViewController.html">MultiSelectCollectionViewController</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/SegmentedCollectionView.html">SegmentedCollectionView</a>
@@ -141,6 +144,9 @@
                 <a href="Protocols/FlaneurModalProgressViewControllerDelegate.html">FlaneurModalProgressViewControllerDelegate</a>
               </li>
               <li class="nav-group-task">
+                <a href="Protocols/MultiSelectable.html">MultiSelectable</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Protocols/SegmentedCollectionViewDelegate.html">SegmentedCollectionViewDelegate</a>
               </li>
             </ul>
@@ -148,6 +154,9 @@
           <li class="nav-group-name">
             <a href="Structs.html">Structures</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/CollectionViewCellDescriptor.html">CollectionViewCellDescriptor</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Structs/FlaneurNavigationBarAction.html">FlaneurNavigationBarAction</a>
               </li>
@@ -192,7 +201,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">FlaneurCollectionFilter</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">FlaneurCollectionFilter</span></code></pre>
 
                         </div>
                       </div>
@@ -224,7 +233,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">FlaneurCollectionView</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">FlaneurCollectionView</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
 
                         </div>
                       </div>
@@ -256,7 +265,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">FlaneurFilterCollectionViewCell</span><span class="p">:</span> <span class="kt">UICollectionViewCell</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">FlaneurFilterCollectionViewCell</span><span class="p">:</span> <span class="kt">UICollectionViewCell</span></code></pre>
 
                         </div>
                       </div>
@@ -288,13 +297,17 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">FlaneurFormElement</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">FlaneurFormElement</span></code></pre>
 
                         </div>
                       </div>
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
                 <li class="item">
                   <div>
                     <code>
@@ -316,7 +329,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">FlaneurFormView</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">FlaneurFormView</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
 
                         </div>
                       </div>
@@ -348,7 +361,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">FlaneurMapAnnotation</span><span class="p">:</span> <span class="kt">MKPointAnnotation</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">FlaneurMapAnnotation</span><span class="p">:</span> <span class="kt">MKPointAnnotation</span></code></pre>
 
                         </div>
                       </div>
@@ -383,7 +396,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">FlaneurMapView</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">FlaneurMapView</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
 
                         </div>
                       </div>
@@ -416,7 +429,7 @@ view controller</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">FlaneurModalProgressViewController</span><span class="p">:</span> <span class="kt">UIViewController</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">FlaneurModalProgressViewController</span><span class="p">:</span> <span class="kt">UIViewController</span></code></pre>
 
                         </div>
                       </div>
@@ -456,14 +469,14 @@ the right buttons.</p>
 
 <p>If you&rsquo;re using a storyboard to instanciate your views, you should try to use a height of 66 pt.
 After placing the view, you can configure its content programmatically:</p>
-<pre class="highlight plaintext"><code>@IBOutlet weak var navigationBar: FlaneurNavigationBar!
+<pre class="highlight swift"><code><span class="kd">@IBOutlet</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">navigationBar</span><span class="p">:</span> <span class="kt">FlaneurNavigationBar</span><span class="o">!</span>
 
-let leftAction = FlaneurNavigationBarAction(image: ...) { _ in
-    ...
-}
+<span class="k">let</span> <span class="nv">leftAction</span> <span class="o">=</span> <span class="kt">FlaneurNavigationBarAction</span><span class="p">(</span><span class="nv">image</span><span class="p">:</span> <span class="o">...</span><span class="p">)</span> <span class="p">{</span> <span class="n">_</span> <span class="k">in</span>
+    <span class="o">...</span>
+<span class="p">}</span>
 
-self.navigationBar.configure(title: ...,
-                             leftAction: myLeftAction)
+<span class="k">self</span><span class="o">.</span><span class="n">navigationBar</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="o">...</span><span class="p">,</span>
+                             <span class="nv">leftAction</span><span class="p">:</span> <span class="n">myLeftAction</span><span class="p">)</span>
 </code></pre>
 <h2 id='customizing-the-appearance-of-the-bar-via-code-uiappearance-code' class='heading'>Customizing the appearance of the bar via <code>UIAppearance</code></h2>
 
@@ -471,7 +484,7 @@ self.navigationBar.configure(title: ...,
 appearance in your app with unique lines of code.</p>
 
 <p>For instance, the following code makes the title of the bar use the Futura font everywhere in your app:</p>
-<pre class="highlight plaintext"><code>UILabel.appearance(whenContainedInInstancesOf: [FlaneurNavigationBar.self]).font = UIFont(name: "Futura-Medium", size: 16.0)
+<pre class="highlight swift"><code><span class="kt">UILabel</span><span class="o">.</span><span class="nf">appearance</span><span class="p">(</span><span class="nv">whenContainedInInstancesOf</span><span class="p">:</span> <span class="p">[</span><span class="kt">FlaneurNavigationBar</span><span class="o">.</span><span class="k">self</span><span class="p">])</span><span class="o">.</span><span class="n">font</span> <span class="o">=</span> <span class="kt">UIFont</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Futura-Medium"</span><span class="p">,</span> <span class="nv">size</span><span class="p">:</span> <span class="mf">16.0</span><span class="p">)</span>
 </code></pre>
 <h2 id='demo' class='heading'>Demo</h2>
 
@@ -483,7 +496,7 @@ appearance in your app with unique lines of code.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">FlaneurNavigationBar</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">FlaneurNavigationBar</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
 
                         </div>
                       </div>
@@ -515,7 +528,7 @@ appearance in your app with unique lines of code.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">FlaneurOpenThemeManager</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">FlaneurOpenThemeManager</span></code></pre>
 
                         </div>
                       </div>
@@ -547,7 +560,7 @@ appearance in your app with unique lines of code.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">LayoutBorderManager</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">LayoutBorderManager</span></code></pre>
 
                         </div>
                       </div>
@@ -579,7 +592,39 @@ appearance in your app with unique lines of code.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">LoadingCollectionViewCell</span><span class="p">:</span> <span class="kt">UICollectionViewCell</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">LoadingCollectionViewCell</span><span class="p">:</span> <span class="kt">UICollectionViewCell</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11FlaneurOpen35MultiSelectCollectionViewControllerC"></a>
+                    <a name="//apple_ref/swift/Class/MultiSelectCollectionViewController" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11FlaneurOpen35MultiSelectCollectionViewControllerC">MultiSelectCollectionViewController</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Classes/MultiSelectCollectionViewController.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">MultiSelectCollectionViewController</span><span class="o">&lt;</span><span class="kt">Item</span><span class="p">:</span> <span class="kt"><a href="Protocols/MultiSelectable.html">MultiSelectable</a></span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">UICollectionViewController</span></code></pre>
 
                         </div>
                       </div>
@@ -611,7 +656,7 @@ appearance in your app with unique lines of code.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">SegmentedCollectionView</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">SegmentedCollectionView</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
 
                         </div>
                       </div>
@@ -623,8 +668,8 @@ appearance in your app with unique lines of code.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="http://flaneurapp.com" target="_blank" rel="external">Flâneur</a>. All rights reserved. (Last updated: 2018-01-18)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2018 <a class="link" href="http://flaneurapp.com" target="_blank" rel="external">Flâneur</a>. All rights reserved. (Last updated: 2018-01-29)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
