@@ -116,12 +116,23 @@ extension FlaneurFormSelectElementCollectionViewCell: UICollectionViewDataSource
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard selectDelegate != nil else {
+        guard let selectDelegate = selectDelegate else {
             fatalError("ERROR: selectDelegate is nil");
         }
 
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: selectDelegate!.cellReuseIdentifier(), for: indexPath)
-        selectDelegate!.configure(cell: cell, forIndex: indexPath.row)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: selectDelegate.cellReuseIdentifier(), for: indexPath)
+        selectDelegate.configure(cell: cell, forIndex: indexPath.row)
+
+        let isCollectionViewSelected = (collectionView.indexPathsForSelectedItems ?? []).contains(indexPath)
+        if cell.isSelected && !isCollectionViewSelected {
+            debugPrint("DEBUG: selecting indexPath for pre-selected item.")
+            collectionView.selectItem(at: indexPath, animated: false, scrollPosition: .top)
+        }
+        if !cell.isSelected && isCollectionViewSelected {
+            debugPrint("WARN: deselecting indexPath for pre-selected item. This should never happen.")
+            collectionView.deselectItem(at: indexPath, animated: false)
+        }
+
         return cell
     }
 }

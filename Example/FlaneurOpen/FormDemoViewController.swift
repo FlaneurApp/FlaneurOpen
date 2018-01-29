@@ -35,12 +35,7 @@ class FormDemoViewController: UIViewController {
         formView.configure(viewController: self)
 
         // Add form elements
-        let buttonFormElement = FlaneurFormElement(type: .button, label: "button") { [weak self] view in
-            guard let label1 = view.subviews.filter({ $0.tag == 1 }).first else { return }
-            guard let textField1 = view.subviews.filter({ $0.tag == 2 }).first else { return }
-            guard let label2 = view.subviews.filter({ $0.tag == 3 }).first else { return }
-            guard let textField2 = view.subviews.filter({ $0.tag == 4 }).first else { return }
-            guard let button = view.subviews.filter({ $0.tag == 5 }).first else { return }
+        let buttonFormElement = FlaneurFormElement(type: .button, label: "button") { view in
             debugPrint("Yipee")
         }
         formView.addFormElement(buttonFormElement)
@@ -262,6 +257,9 @@ extension FormDemoViewController: FlaneurFormDeleteElementCollectionViewCellDele
 }
 
 class CategoriesSelectDelegate: FlaneurFormSelectElementCollectionViewCellDelegate {
+    // Let's say the first and last item are selected by default
+    var currentSelection = [0, 8]
+
     func selectCollectionViewSize() -> CGSize {
         return CGSize(width: 140.0, height: 140.0)
     }
@@ -278,12 +276,13 @@ class CategoriesSelectDelegate: FlaneurFormSelectElementCollectionViewCellDelega
         return "formElementCell"
     }
 
-    func configure(cell: UICollectionViewCell, forIndex: Int) {
+    func configure(cell: UICollectionViewCell, forIndex index: Int) {
         guard let demoCell = cell as? DemoCollectionViewCell else {
             fatalError("configuration error")
         }
 
-        demoCell.label.text = "\(forIndex)"
+        cell.isSelected = currentSelection.contains(index)
+        demoCell.label.text = "\(index)"
     }
 
     func allowMultipleSelection() -> Bool {
@@ -291,10 +290,14 @@ class CategoriesSelectDelegate: FlaneurFormSelectElementCollectionViewCellDelega
     }
 
     func selectElementDidSelectItemAt(index: Int) {
-        debugPrint("didSelect \(index)")
+        currentSelection.append(index)
+        debugPrint("Current selection: \(currentSelection)")
     }
 
     func selectElementDidDeselectItemAt(index: Int) {
-        debugPrint("didDeselect \(index)")
+        if let deselectedIndex = currentSelection.index(of: index) {
+            currentSelection.remove(at: deselectedIndex)
+        }
+        debugPrint("Current selection: \(currentSelection)")
     }
 }
