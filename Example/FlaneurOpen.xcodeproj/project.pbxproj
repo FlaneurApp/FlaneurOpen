@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		000D5B9A1F8E55B4008BFED7 /* SegmentedCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000D5B991F8E55B4008BFED7 /* SegmentedCollectionViewController.swift */; };
 		00135CD7201A299200002BF7 /* PortraitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00135CD6201A299200002BF7 /* PortraitCollectionViewCell.swift */; };
+		0013B4E820208630005C15B1 /* MenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0013B4E720208630005C15B1 /* MenuNavigationController.swift */; };
+		0013B4EA20208D6C005C15B1 /* GrayscalingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0013B4E920208D6C005C15B1 /* GrayscalingViewController.swift */; };
 		002E9D321ED5E13D0046326C /* GooglePlacesDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002E9D311ED5E13D0046326C /* GooglePlacesDemoViewController.swift */; };
 		00880B9B1EC3502A00AD5B64 /* ListKitDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00880B9A1EC3502A00AD5B64 /* ListKitDemoViewController.swift */; };
 		0092AB631F867D6D0030E1D7 /* FlaneurModalProgressDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092AB621F867D6D0030E1D7 /* FlaneurModalProgressDemoViewController.swift */; };
@@ -41,6 +43,8 @@
 /* Begin PBXFileReference section */
 		000D5B991F8E55B4008BFED7 /* SegmentedCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedCollectionViewController.swift; sourceTree = "<group>"; };
 		00135CD6201A299200002BF7 /* PortraitCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortraitCollectionViewCell.swift; sourceTree = "<group>"; };
+		0013B4E720208630005C15B1 /* MenuNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuNavigationController.swift; sourceTree = "<group>"; };
+		0013B4E920208D6C005C15B1 /* GrayscalingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayscalingViewController.swift; sourceTree = "<group>"; };
 		002E9D311ED5E13D0046326C /* GooglePlacesDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlacesDemoViewController.swift; sourceTree = "<group>"; };
 		00880B9A1EC3502A00AD5B64 /* ListKitDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListKitDemoViewController.swift; sourceTree = "<group>"; };
 		0092AB621F867D6D0030E1D7 /* FlaneurModalProgressDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlaneurModalProgressDemoViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 		607FACD21AFB9204008FA782 /* Example for FlaneurOpen */ = {
 			isa = PBXGroup;
 			children = (
+				0013B4E720208630005C15B1 /* MenuNavigationController.swift */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				00D943601EBB338E00631E8E /* MapDemoViewController.swift */,
 				00880B9A1EC3502A00AD5B64 /* ListKitDemoViewController.swift */,
@@ -139,6 +144,7 @@
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				00EC49871F73BBD300CC4667 /* DemoCollectionViewCell.swift */,
 				00DAAB7E1ECC5D9B00E40141 /* DemoCollectionViewCell.xib */,
+				0013B4E920208D6C005C15B1 /* GrayscalingViewController.swift */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
@@ -248,7 +254,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = P76F9A8U26;
+						DevelopmentTeam = BLSC88J9HQ;
 						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -446,10 +452,12 @@
 				00D943611EBB338E00631E8E /* MapDemoViewController.swift in Sources */,
 				00880B9B1EC3502A00AD5B64 /* ListKitDemoViewController.swift in Sources */,
 				000D5B9A1F8E55B4008BFED7 /* SegmentedCollectionViewController.swift in Sources */,
+				0013B4EA20208D6C005C15B1 /* GrayscalingViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				00A36F2A1F618F3400F05418 /* FlaneurNavigationBarDemoViewController.swift in Sources */,
 				00E3BCDC1F7D32C200D046C5 /* FormDemoViewController.swift in Sources */,
 				00135CD7201A299200002BF7 /* PortraitCollectionViewCell.swift in Sources */,
+				0013B4E820208630005C15B1 /* MenuNavigationController.swift in Sources */,
 				0092AB631F867D6D0030E1D7 /* FlaneurModalProgressDemoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -602,7 +610,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = P76F9A8U26;
+				DEVELOPMENT_TEAM = BLSC88J9HQ;
 				INFOPLIST_FILE = FlaneurOpen/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -626,7 +634,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = P76F9A8U26;
+				DEVELOPMENT_TEAM = BLSC88J9HQ;
 				INFOPLIST_FILE = FlaneurOpen/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
