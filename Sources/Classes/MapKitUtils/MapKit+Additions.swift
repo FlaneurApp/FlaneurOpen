@@ -58,16 +58,19 @@ public extension MKMapView {
     /// Submits the request to create a snapshot of the map view
     /// and delivers the results to the specified block.
     ///
-    /// - Parameter completionHandler: The block to call with the resulting snapshot.
-    ///   This block is executed on the app’s main thread and must not be nil.
-    func snapshot(completionHandler: @escaping (MKMapSnapshot?, Error?) -> Void) {
-        guard !self.frame.isEmpty else {
+    /// - Parameters:
+    ///   - defaultSize: An optional size to use in case the view has an empty frame.
+    ///   - completionHandler: The block to call with the resulting snapshot. This block is executed on the app’s main thread and must not be nil.
+    func snapshot(defaultSize: CGSize? = nil,
+                  completionHandler: @escaping (MKMapSnapshot?, Error?) -> Void) {
+        guard let snapshotSize = (self.frame.isEmpty ? defaultSize : self.frame.size) else {
+            debugPrint("Skipping snapshot of zero-sized map")
             return
         }
 
         let options = MKMapSnapshotOptions()
         options.region = self.region
-        options.size = self.frame.size
+        options.size = snapshotSize
         options.scale = UIScreen.main.scale
 
         let snapshotter = MKMapSnapshotter(options: options)
