@@ -5,11 +5,11 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - FlaneurImagePicker (0.5.0):
+  - FlaneurImagePicker (0.5.1):
     - ActionKit (~> 2.1)
     - IGListKit (~> 3.0)
     - Kingfisher (~> 4.0)
-  - FlaneurOpen (0.8.0-beta):
+  - FlaneurOpen (0.8.0):
     - FlaneurImagePicker (~> 0.4)
     - IGListKit (~> 3.0)
     - Kingfisher (~> 4.0)
@@ -55,8 +55,8 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   ActionKit: cf7ca5781f4a43342384d872105fadd58985f416
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  FlaneurImagePicker: 367d42347c389d23ffc9802c7112b8235c6862bc
-  FlaneurOpen: a4613dafe75ae61be8efcfe415cfedc73b5d51d4
+  FlaneurImagePicker: dd267bce52e685a1523f49603cc9463fba3cf815
+  FlaneurOpen: 62d57647ffc7bd0bca4a6425ff7431c96a58771b
   GoogleMaps: c087b8e5dfe87ca6ebf59adb9b4894a4146bec4f
   GooglePlacePicker: 1573e644ab54564d95c2643edc0f29091609e966
   GooglePlaces: dd70d9d71ea1c7944846afe67de3712c99b30a77

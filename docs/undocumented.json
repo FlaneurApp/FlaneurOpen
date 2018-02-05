@@ -1175,6 +1175,55 @@
       "symbol": "FlaneurCollectionItemCellStyle.cellClass",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/TableViewUtils/ItemsTableViewController.swift",
+      "line": 16,
+      "symbol": "TableViewCellDescriptor.init(reuseIdentifier:configure:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/TableViewUtils/ItemsTableViewController.swift",
+      "line": 31,
+      "symbol": "ItemsViewController.didSelect",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/TableViewUtils/ItemsTableViewController.swift",
+      "line": 34,
+      "symbol": "ItemsViewController.init(items:cellDescriptor:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/TableViewUtils/ItemsTableViewController.swift",
+      "line": 40,
+      "symbol": "ItemsViewController.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/TableViewUtils/ItemsTableViewController.swift",
+      "line": 44,
+      "symbol": "ItemsViewController.tableView(_:didSelectRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/TableViewUtils/ItemsTableViewController.swift",
+      "line": 49,
+      "symbol": "ItemsViewController.tableView(_:numberOfRowsInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/TableViewUtils/ItemsTableViewController.swift",
+      "line": 53,
+      "symbol": "ItemsViewController.tableView(_:cellForRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
     }
   ],
   "source_directory": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen"
