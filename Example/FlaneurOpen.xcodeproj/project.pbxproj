@@ -12,6 +12,7 @@
 		0013B4E820208630005C15B1 /* MenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0013B4E720208630005C15B1 /* MenuNavigationController.swift */; };
 		0013B4EA20208D6C005C15B1 /* GrayscalingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0013B4E920208D6C005C15B1 /* GrayscalingViewController.swift */; };
 		002E9D321ED5E13D0046326C /* GooglePlacesDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002E9D311ED5E13D0046326C /* GooglePlacesDemoViewController.swift */; };
+		00755721202B49BE00BC7700 /* DemoSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00755720202B49BE00BC7700 /* DemoSearchViewController.swift */; };
 		00880B9B1EC3502A00AD5B64 /* ListKitDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00880B9A1EC3502A00AD5B64 /* ListKitDemoViewController.swift */; };
 		0092AB631F867D6D0030E1D7 /* FlaneurModalProgressDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092AB621F867D6D0030E1D7 /* FlaneurModalProgressDemoViewController.swift */; };
 		009DAAEB1F3B795F0051E258 /* FlaneurOpenSecretInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 009DAAEA1F3B795F0051E258 /* FlaneurOpenSecretInfo.plist */; };
@@ -46,6 +47,7 @@
 		0013B4E720208630005C15B1 /* MenuNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuNavigationController.swift; sourceTree = "<group>"; };
 		0013B4E920208D6C005C15B1 /* GrayscalingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayscalingViewController.swift; sourceTree = "<group>"; };
 		002E9D311ED5E13D0046326C /* GooglePlacesDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlacesDemoViewController.swift; sourceTree = "<group>"; };
+		00755720202B49BE00BC7700 /* DemoSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoSearchViewController.swift; sourceTree = "<group>"; };
 		00880B9A1EC3502A00AD5B64 /* ListKitDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListKitDemoViewController.swift; sourceTree = "<group>"; };
 		0092AB621F867D6D0030E1D7 /* FlaneurModalProgressDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlaneurModalProgressDemoViewController.swift; sourceTree = "<group>"; };
 		009DAAEA1F3B795F0051E258 /* FlaneurOpenSecretInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FlaneurOpenSecretInfo.plist; sourceTree = SOURCE_ROOT; };
@@ -145,6 +147,7 @@
 				00EC49871F73BBD300CC4667 /* DemoCollectionViewCell.swift */,
 				00DAAB7E1ECC5D9B00E40141 /* DemoCollectionViewCell.xib */,
 				0013B4E920208D6C005C15B1 /* GrayscalingViewController.swift */,
+				00755720202B49BE00BC7700 /* DemoSearchViewController.swift */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
@@ -458,6 +461,7 @@
 				00E3BCDC1F7D32C200D046C5 /* FormDemoViewController.swift in Sources */,
 				00135CD7201A299200002BF7 /* PortraitCollectionViewCell.swift in Sources */,
 				0013B4E820208630005C15B1 /* MenuNavigationController.swift in Sources */,
+				00755721202B49BE00BC7700 /* DemoSearchViewController.swift in Sources */,
 				0092AB631F867D6D0030E1D7 /* FlaneurModalProgressDemoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
