@@ -1193,6 +1193,7 @@
 				00755724202B596000BC7700 /* FlaneurSearchViewController.swift */,
 			);
 			name = SearchViewController;
+			path = "Sources/Classes/Search View Controller";
 			sourceTree = "<group>";
 		};
 		0C496A1484CE2C01AD2B6E73EBA88FBE /* GooglePlacePicker */ = {
