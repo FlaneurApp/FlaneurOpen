@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Unreleased
 
+* Added `segmentedCollectionView(_:willDisplayHeader:)` to `SegmentedCollectionViewDelegate`
+* Improved documentation of `SegmentedCollectionViewDelegate`
+
 ## [0.8.0] - 2018-02-05
 
 * Created `MultiSelectDelegate` and `MultiSelectCollectionViewController` based on [objc.io's Generic Table View Controllers](https://talk.objc.io/episodes/S01E26-generic-table-view-controllers-part-2)
