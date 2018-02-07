@@ -10,10 +10,21 @@ import UIKit
 import FlaneurOpen
 
 class SegmentedCollectionViewController: UIViewController {
-    @IBOutlet weak var collectionView: SegmentedCollectionView!
+    let collectionView: SegmentedCollectionView = SegmentedCollectionView()
+    let padding: CGFloat = 8.0
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        view.addSubview(collectionView)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
+            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
+            collectionView.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor, constant: padding),
+            collectionView.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor, constant: -padding)
+            ])
+
         self.view.backgroundColor = .black
 
         collectionView.itemsSections = [
@@ -32,12 +43,6 @@ class SegmentedCollectionViewController: UIViewController {
                                        items: [
                                         FilterableLocation(id: "7", name: "New York", categories:     ["États-Unis", "Amériques"]),
                                         FilterableLocation(id: "8", name: "Los Angeles", categories:  ["États-Unis", "Amériques"]),
-//                                        FilterableLocation(id: "9", name: "Buenos Aires", categories: ["Argentine",  "Amériques"]),
-//                                        FilterableLocation(id: "10", name: "Brasilia", categories:    ["Brésil",     "Amériques"]),
-//                                        FilterableLocation(id: "27", name: "Boston", categories:     ["États-Unis", "Amériques"]),
-//                                        FilterableLocation(id: "28", name: "Houston", categories:  ["États-Unis", "Amériques"]),
-//                                        FilterableLocation(id: "29", name: "Rosario", categories: ["Argentine",  "Amériques"]),
-//                                        FilterableLocation(id: "30", name: "Rio de Janeiro", categories:    ["Brésil",     "Amériques"]),
                                         ]),
             SegmentedCollectionSection(title: "Others",
                                        items: [

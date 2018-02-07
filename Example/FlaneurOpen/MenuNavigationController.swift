@@ -12,6 +12,7 @@ import FlaneurOpen
 enum MenuOption: String {
     case legacyMenu = "Legacy Menu"
     case grayscaleDemo = "Grayscale Views"
+    case segmentedCollectionView = "SegmentedCollectionView"
 }
 
 extension MenuOption {
@@ -39,7 +40,8 @@ class MenuNavigationController: UINavigationController {
     let optionsViewController: ItemsViewController<MenuOption> = {
         let menuOptionItems: [MenuOption] = [
             .legacyMenu,
-            .grayscaleDemo
+            .grayscaleDemo,
+            .segmentedCollectionView
         ]
         let result = ItemsViewController<MenuOption>(items: menuOptionItems, cellDescriptor: { $0.cellDescriptor })
         result.navigationItem.title = "Flaneur Open Demos"
@@ -56,6 +58,8 @@ class MenuNavigationController: UINavigationController {
                 self.performSegue(withIdentifier: "legacyMenueSegue", sender: self)
             case .grayscaleDemo:
                 self.pushViewController(GrayscalingViewController(), animated: true)
+            case .segmentedCollectionView:
+                self.pushViewController(SegmentedCollectionViewController(), animated: true)
             default:
                 debugPrint("Unhandled menu option.")
             }
