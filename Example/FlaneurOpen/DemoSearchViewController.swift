@@ -22,9 +22,9 @@ final class DemoSearchViewController: FlaneurSearchViewController {
             return SearchResultsViewController()
         }
 
-        searchBarStyle = { searchBar in
-            searchBar.tintColor = .blue
-            searchBar.barTintColor = .yellow
+        searchControllerWillBecomeActive = { searchController in
+            searchController.searchBar.tintColor = .blue
+            searchController.searchBar.barTintColor = .yellow
         }
 
         // Constraints
