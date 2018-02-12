@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00755725202B596000BC7700 /* FlaneurSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00755724202B596000BC7700 /* FlaneurSearchViewController.swift */; };
+		0086BE9C2031CF38000E16CF /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0086BE9B2031CF38000E16CF /* KeyboardObserver.swift */; };
 		00F28DBCBFD3A8E0C1A6F810AD639E8B /* IGListAdapterDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = A89AEB475D420A787CF612E1F78A0A23 /* IGListAdapterDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		017FA43A9979E6A57002489BDF5682C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 700A0564C9781AF6F8FF03059449FC2B /* Foundation.framework */; };
 		03F731C3031C5F85EDCD9B3CC2716537 /* FlaneurFormDeleteElementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F837E61ACB4E23ED41C615980B961 /* FlaneurFormDeleteElementCollectionViewCell.swift */; };
@@ -522,6 +523,7 @@
 		0046FDE3AD8DF694FA649082908A1AD0 /* Pods-FlaneurOpen_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FlaneurOpen_Example-umbrella.h"; sourceTree = "<group>"; };
 		004ED293891FC434E6D30A07D713C21A /* IGListReloadDataUpdater.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListReloadDataUpdater.h; path = Source/IGListReloadDataUpdater.h; sourceTree = "<group>"; };
 		00755724202B596000BC7700 /* FlaneurSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlaneurSearchViewController.swift; sourceTree = "<group>"; };
+		0086BE9B2031CF38000E16CF /* KeyboardObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KeyboardObserver.swift; path = Sources/Classes/KeyboardObserver.swift; sourceTree = "<group>"; };
 		00C0050AEF51EC9798CA046244918F8A /* LayoutBorderManager.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = LayoutBorderManager.html; path = docs/docsets/FlaneurOpen.docset/Contents/Resources/Documents/Classes/LayoutBorderManager.html; sourceTree = "<group>"; };
 		0101D86CF45175DA80B274D816226296 /* search.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; name = search.json; path = docs/search.json; sourceTree = "<group>"; };
 		015FA3F185710E5D197F2A164D341E85 /* IGListDiffKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListDiffKit.h; path = Source/Common/IGListDiffKit.h; sourceTree = "<group>"; };
@@ -2079,6 +2081,7 @@
 				8F3B6C74C252774F4698DC04CA3319C0 /* Resources */,
 				980FEB133A1C7F40E8E12200DAA44B78 /* Support Files */,
 				EAF7F9D3C1151DDCB927E041FAD8FF5B /* TableViewUtils */,
+				0086BE9B2031CF38000E16CF /* KeyboardObserver.swift */,
 			);
 			name = FlaneurOpen;
 			path = ../..;
@@ -2919,6 +2922,7 @@
 				D6385B1A07105D707567876FB4C57009 /* FlaneurFilterCollectionViewCell.swift in Sources */,
 				7FF5CC0CB5C860C791964F11B7FD1323 /* FlaneurFormButtonCollectionViewCell.swift in Sources */,
 				03F731C3031C5F85EDCD9B3CC2716537 /* FlaneurFormDeleteElementCollectionViewCell.swift in Sources */,
+				0086BE9C2031CF38000E16CF /* KeyboardObserver.swift in Sources */,
 				A1D1EF8044ADA999B9725DE803B37FEB /* FlaneurFormElement.swift in Sources */,
 				8867B9D334CCBFF293DD945DE4DD9A0B /* FlaneurFormElementCollectionViewCell.swift in Sources */,
 				DEFDB75B71B73A0344D0F72E57B52D4F /* FlaneurFormElementSectionController.swift in Sources */,

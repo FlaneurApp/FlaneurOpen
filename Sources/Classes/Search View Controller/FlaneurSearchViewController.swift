@@ -88,7 +88,6 @@ open class FlaneurSearchViewController: UIViewController {
         searchBarContainerHeightConstraint?.constant = searchController.searchBar.frame.height
 
         searchController.hidesNavigationBarDuringPresentation = false
-        // TODO: do something about the height of the status bar?
         self.definesPresentationContext = true
 
         searchController.searchBar.becomeFirstResponder()
