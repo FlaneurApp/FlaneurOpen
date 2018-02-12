@@ -43,6 +43,8 @@ open class FlaneurSearchViewController: UIViewController {
     /// information about its height, etc.
     public var searchControllerWillBecomeActive: (UISearchController) -> () = { _ in () }
 
+    private var transient = false
+
     override open func viewDidLoad() {
         super.viewDidLoad()
 
@@ -69,10 +71,17 @@ open class FlaneurSearchViewController: UIViewController {
         super.viewWillDisappear(animated)
     }
 
-    /// Calls this method when the subclass is ready to show the search bar.
+    /// Calls this method when the subclass is ready to show the search bar **transiently** (ie after a user action).
     ///
     /// - Parameter sender: the sender of the action
     @IBAction public func startSearchAction(_ sender: Any? = nil) {
+        transient = true
+        presentSearchBar()
+        searchController?.searchBar.becomeFirstResponder()
+    }
+
+    /// Calls this method when the subclass is ready to show the search bar **permanently**.
+    public func presentSearchBar() {
         let searchController = UISearchController(searchResultsController: instanciateSearchResultsController())
         self.searchController = searchController
         if let searchResultsUpdater = searchController.searchResultsController as? UISearchResultsUpdating {
@@ -82,15 +91,13 @@ open class FlaneurSearchViewController: UIViewController {
         searchController.searchBar.delegate = self
 
         searchControllerWillBecomeActive(searchController)
-
+        
         // Add the search bar to the view...
         searchBarContainer.addSubview(searchController.searchBar)
         searchBarContainerHeightConstraint?.constant = searchController.searchBar.frame.height
 
         searchController.hidesNavigationBarDuringPresentation = false
         self.definesPresentationContext = true
-
-        searchController.searchBar.becomeFirstResponder()
     }
 }
 
@@ -98,9 +105,12 @@ extension FlaneurSearchViewController: UISearchControllerDelegate {
     public func willDismissSearchController(_ searchController: UISearchController) {
         view.backgroundColor = .white
         view.alpha = 1.0
-        searchBarContainer.removeAllSubviews()
-        searchBarContainerHeightConstraint?.constant = 0
-        self.searchController = nil
+
+        if transient {
+            searchBarContainer.removeAllSubviews()
+            searchBarContainerHeightConstraint?.constant = 0
+            self.searchController = nil
+        }
     }
 
     public func willPresentSearchController(_ searchController: UISearchController) {

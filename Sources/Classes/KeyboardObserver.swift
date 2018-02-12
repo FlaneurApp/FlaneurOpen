@@ -15,6 +15,11 @@ import Foundation
 /// The object will stop observing notifications so as long as you don't have memory leaks, you don't
 /// need to handle it anywhere else. Otherwise, just reinit your keyboard observer to `nil` and it will
 /// stop observing.
+///
+/// ## Inspiration
+///
+/// * [Text Programming Guide for iOS - Moving Content That Is Located Under the Keyboard](https://developer.apple.com/library/content/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/KeyboardManagement/KeyboardManagement.html#//apple_ref/doc/uid/TP40009542-CH5-SW7)
+/// * [Swift Talk #27 - Typed Notifications (Part 1)](https://talk.objc.io/episodes/S01E27-typed-notifications-part-1)
 final public class KeyboardObserver {
     private let observer1: NSObjectProtocol
     private let observer2: NSObjectProtocol
