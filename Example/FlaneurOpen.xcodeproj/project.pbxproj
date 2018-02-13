@@ -12,6 +12,7 @@
 		0013B4E820208630005C15B1 /* MenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0013B4E720208630005C15B1 /* MenuNavigationController.swift */; };
 		0013B4EA20208D6C005C15B1 /* GrayscalingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0013B4E920208D6C005C15B1 /* GrayscalingViewController.swift */; };
 		002E9D321ED5E13D0046326C /* GooglePlacesDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002E9D311ED5E13D0046326C /* GooglePlacesDemoViewController.swift */; };
+		0054D9A5203332D500F20C15 /* StringFlaneurSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0054D9A4203332D500F20C15 /* StringFlaneurSpec.swift */; };
 		00755721202B49BE00BC7700 /* DemoSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00755720202B49BE00BC7700 /* DemoSearchViewController.swift */; };
 		00880B9B1EC3502A00AD5B64 /* ListKitDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00880B9A1EC3502A00AD5B64 /* ListKitDemoViewController.swift */; };
 		0092AB631F867D6D0030E1D7 /* FlaneurModalProgressDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092AB621F867D6D0030E1D7 /* FlaneurModalProgressDemoViewController.swift */; };
@@ -27,7 +28,6 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		EBAEB7C8EB0BC8311B35EFAD /* Pods_FlaneurOpen_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4961D0E5936A11B1F3DEB27A /* Pods_FlaneurOpen_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +47,7 @@
 		0013B4E720208630005C15B1 /* MenuNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuNavigationController.swift; sourceTree = "<group>"; };
 		0013B4E920208D6C005C15B1 /* GrayscalingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayscalingViewController.swift; sourceTree = "<group>"; };
 		002E9D311ED5E13D0046326C /* GooglePlacesDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlacesDemoViewController.swift; sourceTree = "<group>"; };
+		0054D9A4203332D500F20C15 /* StringFlaneurSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringFlaneurSpec.swift; sourceTree = "<group>"; };
 		00755720202B49BE00BC7700 /* DemoSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoSearchViewController.swift; sourceTree = "<group>"; };
 		00880B9A1EC3502A00AD5B64 /* ListKitDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListKitDemoViewController.swift; sourceTree = "<group>"; };
 		0092AB621F867D6D0030E1D7 /* FlaneurModalProgressDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlaneurModalProgressDemoViewController.swift; sourceTree = "<group>"; };
@@ -69,7 +70,6 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* FlaneurOpen_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlaneurOpen_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		7AFD04225B7E7BE454A20D6B /* Pods-FlaneurOpen_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlaneurOpen_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlaneurOpen_Example/Pods-FlaneurOpen_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		8BB2795F214A99FA77F62C50 /* Pods-FlaneurOpen_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlaneurOpen_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlaneurOpen_Tests/Pods-FlaneurOpen_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A853C1FC5DB1F804DDD45A54 /* Pods-FlaneurOpen_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlaneurOpen_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlaneurOpen_Example/Pods-FlaneurOpen_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -168,7 +168,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				0054D9A4203332D500F20C15 /* StringFlaneurSpec.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -470,7 +470,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				0054D9A5203332D500F20C15 /* StringFlaneurSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

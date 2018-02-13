@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0054D9A6203334C600F20C15 /* String+Flaneur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0054D9A22033328800F20C15 /* String+Flaneur.swift */; };
 		00755725202B596000BC7700 /* FlaneurSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00755724202B596000BC7700 /* FlaneurSearchViewController.swift */; };
 		0086BE9C2031CF38000E16CF /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0086BE9B2031CF38000E16CF /* KeyboardObserver.swift */; };
 		00F28DBCBFD3A8E0C1A6F810AD639E8B /* IGListAdapterDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = A89AEB475D420A787CF612E1F78A0A23 /* IGListAdapterDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -522,6 +523,7 @@
 		001ED8E43017124D5DEF36DFAA6BBDCC /* IGListSectionControllerInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListSectionControllerInternal.h; path = Source/Internal/IGListSectionControllerInternal.h; sourceTree = "<group>"; };
 		0046FDE3AD8DF694FA649082908A1AD0 /* Pods-FlaneurOpen_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FlaneurOpen_Example-umbrella.h"; sourceTree = "<group>"; };
 		004ED293891FC434E6D30A07D713C21A /* IGListReloadDataUpdater.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListReloadDataUpdater.h; path = Source/IGListReloadDataUpdater.h; sourceTree = "<group>"; };
+		0054D9A22033328800F20C15 /* String+Flaneur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Flaneur.swift"; sourceTree = "<group>"; };
 		00755724202B596000BC7700 /* FlaneurSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlaneurSearchViewController.swift; sourceTree = "<group>"; };
 		0086BE9B2031CF38000E16CF /* KeyboardObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KeyboardObserver.swift; path = Sources/Classes/KeyboardObserver.swift; sourceTree = "<group>"; };
 		00C0050AEF51EC9798CA046244918F8A /* LayoutBorderManager.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = LayoutBorderManager.html; path = docs/docsets/FlaneurOpen.docset/Contents/Resources/Documents/Classes/LayoutBorderManager.html; sourceTree = "<group>"; };
@@ -1478,6 +1480,7 @@
 				27797919C302F7D597916723E9075378 /* UIImage+Flaneur.swift */,
 				F3169AAB4EED64E059EA2B949B5847B2 /* UILabel+Flaneur.swift */,
 				BB03034B10914673D7951B9349FB087F /* UIView+Flaneur.swift */,
+				0054D9A22033328800F20C15 /* String+Flaneur.swift */,
 			);
 			name = Extensions;
 			path = Sources/Classes/Extensions;
@@ -2928,6 +2931,7 @@
 				DEFDB75B71B73A0344D0F72E57B52D4F /* FlaneurFormElementSectionController.swift in Sources */,
 				AFE8E5B83B94ACB08948E5477BC780A1 /* FlaneurFormImagePickerElementCollectionViewCell.swift in Sources */,
 				661253C533B3E1269757B2213299EEF5 /* FlaneurFormSelectElementCollectionViewCell.swift in Sources */,
+				0054D9A6203334C600F20C15 /* String+Flaneur.swift in Sources */,
 				0D8EE60FCDC648FD5BB3B8D0756C1301 /* FlaneurFormTextAreaElementCollectionViewCell.swift in Sources */,
 				DEC2F1DA49ABE80C4A33F043BFEBEF8B /* FlaneurFormTextFieldElementCollectionViewCell.swift in Sources */,
 				00755725202B596000BC7700 /* FlaneurSearchViewController.swift in Sources */,

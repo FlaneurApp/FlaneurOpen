@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 * Improved documentation of `SegmentedCollectionViewDelegate`
 * Added `FlaneurSearchViewController` and the associated demo
 * Added `KeyboardObserver` to delegate keyboard notification observations
+* Added initials extension to String
 
 ## [0.8.0] - 2018-02-05
 
