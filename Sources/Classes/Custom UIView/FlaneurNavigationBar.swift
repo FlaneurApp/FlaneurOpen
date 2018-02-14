@@ -133,6 +133,10 @@ final public class FlaneurNavigationBar: UIView {
 
     /// Common init code.
     func didLoad() {
+        #if DEBUG
+            debug = true
+        #endif
+
         translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = .white
 

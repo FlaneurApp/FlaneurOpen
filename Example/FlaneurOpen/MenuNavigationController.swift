@@ -14,7 +14,6 @@ enum MenuOption: String {
     case grayscaleDemo = "Grayscale Views"
     case segmentedCollectionView = "SegmentedCollectionView"
     case searchViewController = "Search view controller"
-    case circleButton = "Circle Button"
 }
 
 extension MenuOption {
@@ -44,8 +43,7 @@ class MenuNavigationController: UINavigationController {
             .legacyMenu,
             .grayscaleDemo,
             .segmentedCollectionView,
-            .searchViewController,
-            .circleButton
+            .searchViewController
         ]
         let result = ItemsViewController<MenuOption>(items: menuOptionItems, cellDescriptor: { $0.cellDescriptor })
         result.navigationItem.title = "Flaneur Open Demos"
@@ -66,8 +64,6 @@ class MenuNavigationController: UINavigationController {
                 self.pushViewController(SegmentedCollectionViewController(), animated: true)
             case .searchViewController:
                 self.pushViewController(DemoSearchViewController(), animated: true)
-            case .circleButton:
-                self.pushViewController(DemoCircleButtonViewController(), animated: true)
             default:
                 debugPrint("Unhandled menu option.")
             }
