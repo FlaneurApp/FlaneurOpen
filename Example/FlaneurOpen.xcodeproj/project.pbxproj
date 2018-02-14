@@ -18,6 +18,7 @@
 		0092AB631F867D6D0030E1D7 /* FlaneurModalProgressDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092AB621F867D6D0030E1D7 /* FlaneurModalProgressDemoViewController.swift */; };
 		009DAAEB1F3B795F0051E258 /* FlaneurOpenSecretInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 009DAAEA1F3B795F0051E258 /* FlaneurOpenSecretInfo.plist */; };
 		00A36F2A1F618F3400F05418 /* FlaneurNavigationBarDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A36F291F618F3400F05418 /* FlaneurNavigationBarDemoViewController.swift */; };
+		00C6CA4F203495CB00CF7B67 /* DateFlaneurSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C6CA4E203495CB00CF7B67 /* DateFlaneurSpec.swift */; };
 		00D943611EBB338E00631E8E /* MapDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D943601EBB338E00631E8E /* MapDemoViewController.swift */; };
 		00DAAB7F1ECC5D9B00E40141 /* DemoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00DAAB7E1ECC5D9B00E40141 /* DemoCollectionViewCell.xib */; };
 		00E3BCDC1F7D32C200D046C5 /* FormDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E3BCDB1F7D32C200D046C5 /* FormDemoViewController.swift */; };
@@ -53,6 +54,7 @@
 		0092AB621F867D6D0030E1D7 /* FlaneurModalProgressDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlaneurModalProgressDemoViewController.swift; sourceTree = "<group>"; };
 		009DAAEA1F3B795F0051E258 /* FlaneurOpenSecretInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FlaneurOpenSecretInfo.plist; sourceTree = SOURCE_ROOT; };
 		00A36F291F618F3400F05418 /* FlaneurNavigationBarDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlaneurNavigationBarDemoViewController.swift; sourceTree = "<group>"; };
+		00C6CA4E203495CB00CF7B67 /* DateFlaneurSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFlaneurSpec.swift; sourceTree = "<group>"; };
 		00D943601EBB338E00631E8E /* MapDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapDemoViewController.swift; sourceTree = "<group>"; };
 		00DAAB7E1ECC5D9B00E40141 /* DemoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoCollectionViewCell.xib; sourceTree = "<group>"; };
 		00E3BCDB1F7D32C200D046C5 /* FormDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormDemoViewController.swift; sourceTree = "<group>"; };
@@ -168,8 +170,9 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				0054D9A4203332D500F20C15 /* StringFlaneurSpec.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
+				0054D9A4203332D500F20C15 /* StringFlaneurSpec.swift */,
+				00C6CA4E203495CB00CF7B67 /* DateFlaneurSpec.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -470,6 +473,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00C6CA4F203495CB00CF7B67 /* DateFlaneurSpec.swift in Sources */,
 				0054D9A5203332D500F20C15 /* StringFlaneurSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

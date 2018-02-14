@@ -10,6 +10,7 @@
 		0054D9A6203334C600F20C15 /* String+Flaneur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0054D9A22033328800F20C15 /* String+Flaneur.swift */; };
 		00755725202B596000BC7700 /* FlaneurSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00755724202B596000BC7700 /* FlaneurSearchViewController.swift */; };
 		0086BE9C2031CF38000E16CF /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0086BE9B2031CF38000E16CF /* KeyboardObserver.swift */; };
+		00C6CA4D2034958600CF7B67 /* Date+Flaneur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C6CA4B2034958300CF7B67 /* Date+Flaneur.swift */; };
 		00F28DBCBFD3A8E0C1A6F810AD639E8B /* IGListAdapterDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = A89AEB475D420A787CF612E1F78A0A23 /* IGListAdapterDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		017FA43A9979E6A57002489BDF5682C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 700A0564C9781AF6F8FF03059449FC2B /* Foundation.framework */; };
 		03F731C3031C5F85EDCD9B3CC2716537 /* FlaneurFormDeleteElementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F837E61ACB4E23ED41C615980B961 /* FlaneurFormDeleteElementCollectionViewCell.swift */; };
@@ -527,6 +528,7 @@
 		00755724202B596000BC7700 /* FlaneurSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlaneurSearchViewController.swift; sourceTree = "<group>"; };
 		0086BE9B2031CF38000E16CF /* KeyboardObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KeyboardObserver.swift; path = Sources/Classes/KeyboardObserver.swift; sourceTree = "<group>"; };
 		00C0050AEF51EC9798CA046244918F8A /* LayoutBorderManager.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = LayoutBorderManager.html; path = docs/docsets/FlaneurOpen.docset/Contents/Resources/Documents/Classes/LayoutBorderManager.html; sourceTree = "<group>"; };
+		00C6CA4B2034958300CF7B67 /* Date+Flaneur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Flaneur.swift"; sourceTree = "<group>"; };
 		0101D86CF45175DA80B274D816226296 /* search.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; name = search.json; path = docs/search.json; sourceTree = "<group>"; };
 		015FA3F185710E5D197F2A164D341E85 /* IGListDiffKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListDiffKit.h; path = Source/Common/IGListDiffKit.h; sourceTree = "<group>"; };
 		01783F36CE3FEE208178C02E7C87F481 /* NSString+IGListDiffable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+IGListDiffable.h"; path = "Source/Common/NSString+IGListDiffable.h"; sourceTree = "<group>"; };
@@ -1481,6 +1483,7 @@
 				F3169AAB4EED64E059EA2B949B5847B2 /* UILabel+Flaneur.swift */,
 				BB03034B10914673D7951B9349FB087F /* UIView+Flaneur.swift */,
 				0054D9A22033328800F20C15 /* String+Flaneur.swift */,
+				00C6CA4B2034958300CF7B67 /* Date+Flaneur.swift */,
 			);
 			name = Extensions;
 			path = Sources/Classes/Extensions;
@@ -2918,6 +2921,7 @@
 				FED9DC8DA8C560B458C52D6F618EBD4D /* ContainerCollectionViewCell.swift in Sources */,
 				29B781BADA79793391DCB8CAACEC92C7 /* FlaneurCollectionFilter.swift in Sources */,
 				4852C2C1CD48D18BB470D55192050A5A /* FlaneurCollectionFilterSectionController.swift in Sources */,
+				00C6CA4D2034958600CF7B67 /* Date+Flaneur.swift in Sources */,
 				5A55351C062222278D4CE04105F5E618 /* FlaneurCollectionItem.swift in Sources */,
 				46AE189FB1C3E57DBAA342158B743815 /* FlaneurCollectionItemSectionController.swift in Sources */,
 				50731ECF3B0039584028C6E8D84B8DDE /* FlaneurCollectionView.swift in Sources */,
