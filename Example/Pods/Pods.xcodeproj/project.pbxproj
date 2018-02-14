@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		001BBF422033393C005FAB27 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001BBF412033393C005FAB27 /* CircleButton.swift */; };
 		0054D9A6203334C600F20C15 /* String+Flaneur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0054D9A22033328800F20C15 /* String+Flaneur.swift */; };
 		00755725202B596000BC7700 /* FlaneurSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00755724202B596000BC7700 /* FlaneurSearchViewController.swift */; };
 		0086BE9C2031CF38000E16CF /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0086BE9B2031CF38000E16CF /* KeyboardObserver.swift */; };
@@ -520,6 +521,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		001BBF412033393C005FAB27 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		001ED8E43017124D5DEF36DFAA6BBDCC /* IGListSectionControllerInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListSectionControllerInternal.h; path = Source/Internal/IGListSectionControllerInternal.h; sourceTree = "<group>"; };
 		0046FDE3AD8DF694FA649082908A1AD0 /* Pods-FlaneurOpen_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FlaneurOpen_Example-umbrella.h"; sourceTree = "<group>"; };
 		004ED293891FC434E6D30A07D713C21A /* IGListReloadDataUpdater.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IGListReloadDataUpdater.h; path = Source/IGListReloadDataUpdater.h; sourceTree = "<group>"; };
@@ -1860,6 +1862,7 @@
 				76937914BA43464AE7F2B464A3937FE0 /* FlaneurNavigationBar.swift */,
 				07D9CD8DEA0CCF0DFFE2787C2545102E /* FullWidthNavigationItemTitle.swift */,
 				A7E424BCD5E9083FD6C8FD2FC6E9F912 /* LayoutBorderManager.swift */,
+				001BBF412033393C005FAB27 /* CircleButton.swift */,
 			);
 			name = "Custom UIView";
 			path = "Sources/Classes/Custom UIView";
@@ -2940,6 +2943,7 @@
 				D0D82BB0EAC8972497F87E76CA65B5C9 /* FlaneurMapItem.swift in Sources */,
 				2F65ED715664D3EDFC424383A4A32F98 /* FlaneurMapView.swift in Sources */,
 				D802BF20D4C3B83D20C49E98510F3B87 /* FlaneurModalProgressViewController.swift in Sources */,
+				001BBF422033393C005FAB27 /* CircleButton.swift in Sources */,
 				4307EE67DF418AA7811C4D37140ED2A9 /* FlaneurNavigationBar.swift in Sources */,
 				D901CB092943ADC5327B3521C8B8A9F4 /* FlaneurOpen-dummy.m in Sources */,
 				34CFCD29E71F369B6AF3D438947F15F6 /* FlaneurOpenTheme.swift in Sources */,

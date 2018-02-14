@@ -11,6 +11,7 @@
 		00135CD7201A299200002BF7 /* PortraitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00135CD6201A299200002BF7 /* PortraitCollectionViewCell.swift */; };
 		0013B4E820208630005C15B1 /* MenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0013B4E720208630005C15B1 /* MenuNavigationController.swift */; };
 		0013B4EA20208D6C005C15B1 /* GrayscalingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0013B4E920208D6C005C15B1 /* GrayscalingViewController.swift */; };
+		001BBF4420333B4E005FAB27 /* DemoCircleButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001BBF4320333B4E005FAB27 /* DemoCircleButtonViewController.swift */; };
 		002E9D321ED5E13D0046326C /* GooglePlacesDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002E9D311ED5E13D0046326C /* GooglePlacesDemoViewController.swift */; };
 		0054D9A5203332D500F20C15 /* StringFlaneurSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0054D9A4203332D500F20C15 /* StringFlaneurSpec.swift */; };
 		00755721202B49BE00BC7700 /* DemoSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00755720202B49BE00BC7700 /* DemoSearchViewController.swift */; };
@@ -46,6 +47,7 @@
 		00135CD6201A299200002BF7 /* PortraitCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortraitCollectionViewCell.swift; sourceTree = "<group>"; };
 		0013B4E720208630005C15B1 /* MenuNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuNavigationController.swift; sourceTree = "<group>"; };
 		0013B4E920208D6C005C15B1 /* GrayscalingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayscalingViewController.swift; sourceTree = "<group>"; };
+		001BBF4320333B4E005FAB27 /* DemoCircleButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoCircleButtonViewController.swift; sourceTree = "<group>"; };
 		002E9D311ED5E13D0046326C /* GooglePlacesDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlacesDemoViewController.swift; sourceTree = "<group>"; };
 		0054D9A4203332D500F20C15 /* StringFlaneurSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringFlaneurSpec.swift; sourceTree = "<group>"; };
 		00755720202B49BE00BC7700 /* DemoSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoSearchViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				00DAAB7E1ECC5D9B00E40141 /* DemoCollectionViewCell.xib */,
 				0013B4E920208D6C005C15B1 /* GrayscalingViewController.swift */,
 				00755720202B49BE00BC7700 /* DemoSearchViewController.swift */,
+				001BBF4320333B4E005FAB27 /* DemoCircleButtonViewController.swift */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
@@ -463,6 +466,7 @@
 				0013B4E820208630005C15B1 /* MenuNavigationController.swift in Sources */,
 				00755721202B49BE00BC7700 /* DemoSearchViewController.swift in Sources */,
 				0092AB631F867D6D0030E1D7 /* FlaneurModalProgressDemoViewController.swift in Sources */,
+				001BBF4420333B4E005FAB27 /* DemoCircleButtonViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
