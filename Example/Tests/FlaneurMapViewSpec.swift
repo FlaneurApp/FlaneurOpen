@@ -3,7 +3,6 @@ import Nimble
 import Nimble_Snapshots
 import UIKit
 import FlaneurOpen
-@testable import FlaneurOpenExample
 
 class FlaneurMapViewSpec: QuickSpec {
     override func spec() {
@@ -39,7 +38,7 @@ class FlaneurMapViewSpec: QuickSpec {
                             guard let view = vc?.view else {
                                 return fail("No view")
                             }
-                            📷(view)
+                            // 📷(view)
                             expect(view).to(haveValidSnapshot())
                         }
                         done()
