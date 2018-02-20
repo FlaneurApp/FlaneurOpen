@@ -65,7 +65,16 @@ open class FlaneurMapView: UIView {
     /// - Parameter frame: The frame rectangle for the view, measured in points.
     public override init(frame: CGRect) {
         super.init(frame: frame)
+        didLoad()
+    }
 
+    /// Not implemented.
+    public required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        didLoad()
+    }
+
+    private func didLoad() {
         mapView.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(mapView)
 
@@ -77,11 +86,6 @@ open class FlaneurMapView: UIView {
             ])
         mapView.delegate = self
         showsUserLocation = true
-    }
-
-    /// Not implemented.
-    public required init?(coder: NSCoder) {
-        fatalError("Not implemented")
     }
 
     // MARK: - Reloading annotations
