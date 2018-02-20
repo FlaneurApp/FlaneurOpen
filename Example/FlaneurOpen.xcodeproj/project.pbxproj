@@ -136,7 +136,6 @@
 			children = (
 				0013B4E720208630005C15B1 /* MenuNavigationController.swift */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				00D943601EBB338E00631E8E /* MapDemoViewController.swift */,
 				00880B9A1EC3502A00AD5B64 /* ListKitDemoViewController.swift */,
 				002E9D311ED5E13D0046326C /* GooglePlacesDemoViewController.swift */,
 				00A36F291F618F3400F05418 /* FlaneurNavigationBarDemoViewController.swift */,
@@ -150,6 +149,7 @@
 				00DAAB7E1ECC5D9B00E40141 /* DemoCollectionViewCell.xib */,
 				0013B4E920208D6C005C15B1 /* GrayscalingViewController.swift */,
 				00755720202B49BE00BC7700 /* DemoSearchViewController.swift */,
+				00D943601EBB338E00631E8E /* MapDemoViewController.swift */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
@@ -333,6 +333,7 @@
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble-Snapshots/Nimble_Snapshots.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${BUILT_PRODUCTS_DIR}/iOSSnapshotTestCase/FBSnapshotTestCase.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (

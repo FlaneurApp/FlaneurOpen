@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -38,28 +37,8 @@
                         <sections>
                             <tableViewSection id="cPO-js-nuD">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="cJO-ia-ry0" style="IBUITableViewCellStyleDefault" id="FBt-MO-uhR">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FBt-MO-uhR" id="Lj5-JE-11u">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="FlaneurMapView Demo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cJO-ia-ry0">
-                                                    <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="C8N-zY-lDq" kind="show" id="sSI-Ec-PDq"/>
-                                        </connections>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="q8S-rb-hgH" style="IBUITableViewCellStyleDefault" id="Ghg-Uy-ZoJ">
-                                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ghg-Uy-ZoJ" id="JA7-FL-n9s">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -79,7 +58,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="eQO-hx-rhh" style="IBUITableViewCellStyleDefault" id="1Dc-4I-aNc">
-                                        <rect key="frame" x="0.0" y="88" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Dc-4I-aNc" id="Cij-uO-Wwx">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -99,7 +78,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="b9Z-pd-AEc" style="IBUITableViewCellStyleDefault" id="dht-2B-uFd">
-                                        <rect key="frame" x="0.0" y="132" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="88" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dht-2B-uFd" id="G6z-UM-5Wg">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -119,7 +98,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Nsk-2P-KiB" style="IBUITableViewCellStyleDefault" id="Z7P-KY-cLb">
-                                        <rect key="frame" x="0.0" y="176" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="132" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z7P-KY-cLb" id="RyR-jJ-eed">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -139,7 +118,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="oez-gV-tnl" style="IBUITableViewCellStyleDefault" id="72U-LY-z5s">
-                                        <rect key="frame" x="0.0" y="220" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="176" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="72U-LY-z5s" id="Qp6-Vt-0x4">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -159,7 +138,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="phF-vj-3Ub" style="IBUITableViewCellStyleDefault" id="ePs-4m-1Pv">
-                                        <rect key="frame" x="0.0" y="264" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="220" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ePs-4m-1Pv" id="Dxt-50-4eh">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -191,72 +170,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2uQ-eM-maN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-314" y="-347"/>
-        </scene>
-        <!--FlaneurMapView Demo-->
-        <scene sceneID="l2Z-hX-0H8">
-            <objects>
-                <viewController id="C8N-zY-lDq" customClass="MapDemoViewController" customModule="FlaneurOpen_Example" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="8Zc-Wu-zCH"/>
-                        <viewControllerLayoutGuide type="bottom" id="Fqr-C8-6hh"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ShV-LV-BZj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rc9-ZZ-9Gk" customClass="FlaneurMapView" customModule="FlaneurOpen">
-                                <rect key="frame" x="24" y="170" width="327" height="327"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Rc9-ZZ-9Gk" secondAttribute="height" id="sWi-70-lDo"/>
-                                </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dr0-2Q-jeE">
-                                <rect key="frame" x="120.5" y="621" width="134" height="30"/>
-                                <state key="normal" title="Toggle with spinner"/>
-                                <connections>
-                                    <action selector="toggleWithSpinnerAction:" destination="C8N-zY-lDq" eventType="touchUpInside" id="5lo-C3-Mad"/>
-                                </connections>
-                            </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="9QC-be-4bi">
-                                <rect key="frame" x="32" y="178.5" width="311" height="311"/>
-                                <color key="backgroundColor" red="0.74117647060000003" green="0.91372549020000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="9QC-be-4bi" secondAttribute="height" id="YUP-xH-bWw"/>
-                                </constraints>
-                                <color key="color" red="0.20000000000000001" green="0.20000000000000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </activityIndicatorView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBa-3A-Oqx">
-                                <rect key="frame" x="49" y="583" width="277" height="30"/>
-                                <state key="normal" title="Overlay view with LayoutBorderManager"/>
-                                <connections>
-                                    <action selector="overlayViewAction:" destination="C8N-zY-lDq" eventType="touchUpInside" id="dAv-7H-FJ3"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="0.72156862749999995" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="Fqr-C8-6hh" firstAttribute="top" secondItem="dr0-2Q-jeE" secondAttribute="bottom" constant="16" id="8w9-PJ-Dxm"/>
-                            <constraint firstItem="dr0-2Q-jeE" firstAttribute="centerX" secondItem="ShV-LV-BZj" secondAttribute="centerX" id="E7Q-Jl-JrU"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Rc9-ZZ-9Gk" secondAttribute="trailing" constant="8" id="J2c-qN-Kdv"/>
-                            <constraint firstItem="Rc9-ZZ-9Gk" firstAttribute="leading" secondItem="ShV-LV-BZj" secondAttribute="leadingMargin" constant="8" id="OGd-TV-9DL"/>
-                            <constraint firstItem="Rc9-ZZ-9Gk" firstAttribute="centerY" secondItem="ShV-LV-BZj" secondAttribute="centerY" id="OnL-4a-chD"/>
-                            <constraint firstItem="dr0-2Q-jeE" firstAttribute="top" secondItem="gBa-3A-Oqx" secondAttribute="bottom" constant="8" id="UvA-C9-Glz"/>
-                            <constraint firstItem="9QC-be-4bi" firstAttribute="leading" secondItem="ShV-LV-BZj" secondAttribute="leadingMargin" constant="16" id="VBs-9O-6II"/>
-                            <constraint firstItem="9QC-be-4bi" firstAttribute="centerY" secondItem="ShV-LV-BZj" secondAttribute="centerY" id="oyD-9r-24z"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="9QC-be-4bi" secondAttribute="trailing" constant="16" id="v29-1H-Xod"/>
-                            <constraint firstItem="gBa-3A-Oqx" firstAttribute="centerX" secondItem="ShV-LV-BZj" secondAttribute="centerX" id="z9D-8z-7sc"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="FlaneurMapView Demo" id="Fn2-8w-H3X"/>
-                    <connections>
-                        <outlet property="mapView" destination="Rc9-ZZ-9Gk" id="NhZ-eE-q96"/>
-                        <outlet property="spinner" destination="9QC-be-4bi" id="gal-xq-1xU"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gaC-ld-nho" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="465" y="-348"/>
         </scene>
         <!--Form Demo-->
         <scene sceneID="rOx-5k-txv">
