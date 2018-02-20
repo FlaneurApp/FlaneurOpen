@@ -13,7 +13,7 @@
     <a title="Classes  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">FlaneurOpen Docs</a> (30% documented)</p>
+        <p><a href="index.html">FlaneurOpen Docs</a> (39% documented)</p>
         <p class="header-right"><a href="https://github.com/FlaneurApp/FlaneurOpen"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -61,7 +61,13 @@
                 <a href="Classes/FlaneurOpenThemeManager.html">FlaneurOpenThemeManager</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/FlaneurSearchViewController.html">FlaneurSearchViewController</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/ItemsViewController.html">ItemsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/KeyboardObserver.html">KeyboardObserver</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/LayoutBorderManager.html">LayoutBorderManager</a>
@@ -112,6 +118,9 @@
                 <a href="Extensions/CLLocationCoordinate2D.html">CLLocationCoordinate2D</a>
               </li>
               <li class="nav-group-task">
+                <a href="Extensions/Date.html">Date</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Extensions/FlaneurCollectionWithBorderListAdapter.html">FlaneurCollectionWithBorderListAdapter</a>
               </li>
               <li class="nav-group-task">
@@ -122,6 +131,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Extensions/MKMapView.html">MKMapView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/String.html">String</a>
               </li>
               <li class="nav-group-task">
                 <a href="Extensions/UIImage.html">UIImage</a>
@@ -563,6 +575,53 @@ appearance in your app with unique lines of code.</p>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:@M@FlaneurOpen@objc(cs)FlaneurSearchViewController"></a>
+                    <a name="//apple_ref/swift/Class/FlaneurSearchViewController" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@FlaneurOpen@objc(cs)FlaneurSearchViewController">FlaneurSearchViewController</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This class is a convenience wrapper around <code>UISearchController</code> that view controllers
+can subclass to inherit some behaviors.</p>
+<h2 id='why-this-class' class='heading'>Why this class?</h2>
+
+<p>If you don&rsquo;t use a <code>UITableView</code> or <code>UINavigationItem</code>&lsquo;s <code>searchController</code> introduced in iOS 11.0,
+or any other immediate location for a <code>UISearchController</code>&rsquo;s <code>searchBar</code>, and you want to use
+AutoLayout, things can get weird/hacky/difficult.</p>
+
+<p>This class fixes all positioning problems found in an app using a navigation controller hierarchy
+with hidden navigation bars, and using iOS 9.0.</p>
+
+<p>It will display the search bar right under your view controller&rsquo;s top layout guide.</p>
+<h2 id='subclassing' class='heading'>Subclassing</h2>
+
+<p>To subclass this class, provide your own implementations of <code>instanciateSearchResultsController</code>
+and <code>searchControllerWillBecomeActive</code>, and call <code>startSearchAction</code> when relevant.</p>
+
+                        <a href="Classes/FlaneurSearchViewController.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">FlaneurSearchViewController</span><span class="p">:</span> <span class="kt">UIViewController</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:11FlaneurOpen19ItemsViewControllerC"></a>
                     <a name="//apple_ref/swift/Class/ItemsViewController" class="dashAnchor"></a>
                     <a class="token" href="#/s:11FlaneurOpen19ItemsViewControllerC">ItemsViewController</a>
@@ -584,6 +643,50 @@ appearance in your app with unique lines of code.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">ItemsViewController</span><span class="o">&lt;</span><span class="kt">Item</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">UITableViewController</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11FlaneurOpen16KeyboardObserverC"></a>
+                    <a name="//apple_ref/swift/Class/KeyboardObserver" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11FlaneurOpen16KeyboardObserverC">KeyboardObserver</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This is a convenience helper to manage keyboard appearances and disappearances.</p>
+<h2 id='usage' class='heading'>Usage</h2>
+
+<p>Instanciate the object in your view controller&rsquo;s <code>viewWillAppear</code> to start observing notifications.
+The object will stop observing notifications so as long as you don&rsquo;t have memory leaks, you don&rsquo;t
+need to handle it anywhere else. Otherwise, just reinit your keyboard observer to <code>nil</code> and it will
+stop observing.</p>
+<h2 id='inspiration' class='heading'>Inspiration</h2>
+
+<ul>
+<li><a href="https://developer.apple.com/library/content/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/KeyboardManagement/KeyboardManagement.html#//apple_ref/doc/uid/TP40009542-CH5-SW7">Text Programming Guide for iOS - Moving Content That Is Located Under the Keyboard</a></li>
+<li><a href="https://talk.objc.io/episodes/S01E27-typed-notifications-part-1">Swift Talk #27 - Typed Notifications (Part 1)</a></li>
+</ul>
+
+                        <a href="Classes/KeyboardObserver.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">KeyboardObserver</span></code></pre>
 
                         </div>
                       </div>
@@ -703,7 +806,11 @@ appearance in your app with unique lines of code.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>An object that manages a segmented collection of data items and presents them using a collection view.</p>
+
+<p>It looks like this:</p>
+
+<p>TODO</p>
 
                         <a href="Classes/SegmentedCollectionView.html" class="slightly-smaller">See more</a>
                       </div>
@@ -723,7 +830,7 @@ appearance in your app with unique lines of code.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="http://flaneurapp.com" target="_blank" rel="external">Flâneur</a>. All rights reserved. (Last updated: 2018-02-05)</p>
+          <p>&copy; 2018 <a class="link" href="http://flaneurapp.com" target="_blank" rel="external">Flâneur</a>. All rights reserved. (Last updated: 2018-02-20)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

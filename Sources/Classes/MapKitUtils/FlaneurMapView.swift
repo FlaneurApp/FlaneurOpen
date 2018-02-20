@@ -10,36 +10,46 @@ import MapKit
 import Kingfisher
 
 /// The protocol to implement to get callbacks from a `FlaneurMapView` instance.
-@objc public protocol FlaneurMapViewDelegate {
+public protocol FlaneurMapViewDelegate {
     /// Tells the delegate that the specified map item's annotation callout was tapped.
     ///
     /// - Parameter mapItem: the map item for which the annotation was tapped
     func flaneurMapViewDidSelect(mapItem: FlaneurMapItem)
+
+    /// Tells the delegate that the specified map view successfully loaded the needed map data.
+    ///
+    /// - Parameters:
+    ///   - mapView: The map view that started the load operation.
+    func flaneurMapViewDidFinishLoadingMap(_ mapView: FlaneurMapView)
 }
 
 /// Utility class to display a map view with annotations with very little effort.
-///
-/// ## Overview
-///
-/// A map view controller... TODO
 open class FlaneurMapView: UIView {
-    /// The map view (useful only if a Storyboard is used)
-    public var mapView: MKMapView!
+    fileprivate var mapView = MKMapView(frame: .zero)
 
-    /// The delegate
+    // MARK: - Locations data & receiving events
+
+    /// The receiver’s delegate.
     public var delegate: FlaneurMapViewDelegate?
 
-    /// The items to display on the map
+    /// The items to display on the map.
     public var mapItems: [FlaneurMapItem] = [] {
         didSet {
             self.reloadAnnotations()
         }
     }
 
-    /// The image diplayed
-    public var annotationImage: UIImage? = UIImage(named: "FlaneurMapViewControllerAnnotationImage")
-
     // MARK: - Customizing annotations
+
+    /// A Boolean value indicating whether the map should try to display the user’s location.
+    public var showsUserLocation = true {
+        didSet {
+            mapView.showsUserLocation = showsUserLocation
+        }
+    }
+
+    /// The image displayed
+    public var annotationImage: UIImage? = UIImage(named: "FlaneurMapViewControllerAnnotationImage")
 
     /// The right image to display on the annotation for each item
     public var rightCalloutImage: UIImage? = UIImage(named: "FlaneurMapViewControllerRightCalloutImage")
@@ -47,65 +57,34 @@ open class FlaneurMapView: UIView {
     /// The left image to display on the annotation for each item
     public var leftCalloutPlaceholderImage: UIImage? = UIImage(named: "FlaneurMapViewControllerLeftCalloutPlaceholderImage")
 
+    // MARK: - Lifecycle
+
     /// Initializes and returns a newly allocated map view object
     /// with the specified frame rectangle.
     ///
     /// - Parameter frame: The frame rectangle for the view, measured in points.
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        didLoad()
-    }
 
-    /// Returns an object initialized from data in a given unarchiver.
-    ///
-    /// - Parameter coder: An unarchiver object.
-    public required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        didLoad()
-    }
+        mapView.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(mapView)
 
-    /// Overriden
-    func didLoad() {
-        mapView = MKMapView(frame: .zero)
-        mapView?.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(mapView!)
-
-        // Place the filters collection view on top
-        NSLayoutConstraint(item: mapView,
-                           attribute: .leading,
-                           relatedBy: .equal,
-                           toItem: self,
-                           attribute: .leading,
-                           multiplier: 1.0,
-                           constant: 0.0).isActive = true
-        NSLayoutConstraint(item: mapView,
-                           attribute: .trailing,
-                           relatedBy: .equal,
-                           toItem: self,
-                           attribute: .trailing,
-                           multiplier: 1.0,
-                           constant: 0.0).isActive = true
-        NSLayoutConstraint(item: mapView,
-                           attribute: .top,
-                           relatedBy: .equal,
-                           toItem: self,
-                           attribute: .top,
-                           multiplier: 1.0,
-                           constant: 0.0).isActive = true
-        NSLayoutConstraint(item: mapView,
-                           attribute: .bottom,
-                           relatedBy: .equal,
-                           toItem: self,
-                           attribute: .bottom,
-                           multiplier: 1.0,
-                           constant: 0.0).isActive = true
-
+        NSLayoutConstraint.activate([
+            mapView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            mapView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            mapView.topAnchor.constraint(equalTo: self.topAnchor),
+            mapView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            ])
         mapView.delegate = self
+        showsUserLocation = true
     }
 
-    public func configure(showsUserLocation: Bool = true) {
-        mapView.showsUserLocation = showsUserLocation
+    /// Not implemented.
+    public required init?(coder: NSCoder) {
+        fatalError("Not implemented")
     }
+
+    // MARK: - Reloading annotations
 
     func reloadAnnotations() {
         mapView.removeAnnotations(mapView.annotations)
@@ -115,6 +94,8 @@ open class FlaneurMapView: UIView {
 }
 
 extension FlaneurMapView: MKMapViewDelegate {
+    // MARK: - MKMapViewDelegate
+
     /// Overriden
     public func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if annotation is MKUserLocation {
@@ -157,5 +138,26 @@ extension FlaneurMapView: MKMapViewDelegate {
         if let annotation = view.annotation as? FlaneurMapAnnotation {
             delegate?.flaneurMapViewDidSelect(mapItem: annotation.mapItem)
         }
+    }
+
+    /// Overriden
+    public func mapViewWillStartLoadingMap(_ mapView: MKMapView) {
+        debugPrint("mapViewWillStartLoadingMap")
+    }
+
+    /// Overriden
+    public func mapViewDidFinishLoadingMap(_ mapView: MKMapView) {
+        delegate?.flaneurMapViewDidFinishLoadingMap(self)
+    }
+
+    /// Overriden
+    public func mapViewDidFailLoadingMap(_ mapView: MKMapView, withError error: Error) {
+        print("ERROR: \(error)")
+    }
+}
+
+public extension FlaneurMapViewDelegate {
+    func flaneurMapViewDidFinishLoadingMap(_ mapView: FlaneurMapView) {
+        debugPrint("mapViewDidFinishLoadingMap")
     }
 }

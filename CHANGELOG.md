@@ -12,6 +12,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 * Added `FlaneurSearchViewController` and the associated demo
 * Added `KeyboardObserver` to delegate keyboard notification observations
 * Added `initials` extension to `String`
+* Started ignoring Pods in repository (because GoogleMaps is unmanageable and diffs were getting too hard to read)
+* `FlaneurMapView` updates:
+    * `FlaneurMapView` is not compatible with Storyboards anymore
+    * Updated the `FlaneurMapView` demo to make it simpler
+    * Made code simpler and improved documentation
+* Added some sample code for screenshot testing
 
 ## [0.8.0] - 2018-02-05
 

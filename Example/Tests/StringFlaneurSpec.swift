@@ -1,11 +1,3 @@
-//
-//  String+FlaneurSpec.swift
-//  FlaneurOpen_Tests
-//
-//  Created by Mickaël Floc'hlay on 13/02/2018.
-//  Copyright © 2018 CocoaPods. All rights reserved.
-//
-
 import Quick
 import Nimble
 @testable import FlaneurOpen

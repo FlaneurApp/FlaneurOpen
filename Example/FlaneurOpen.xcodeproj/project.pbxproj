@@ -12,6 +12,7 @@
 		0013B4E820208630005C15B1 /* MenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0013B4E720208630005C15B1 /* MenuNavigationController.swift */; };
 		0013B4EA20208D6C005C15B1 /* GrayscalingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0013B4E920208D6C005C15B1 /* GrayscalingViewController.swift */; };
 		002E9D321ED5E13D0046326C /* GooglePlacesDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002E9D311ED5E13D0046326C /* GooglePlacesDemoViewController.swift */; };
+		003C085D203C3C9200008707 /* FlaneurMapViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003C085C203C3C9200008707 /* FlaneurMapViewSpec.swift */; };
 		0054D9A5203332D500F20C15 /* StringFlaneurSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0054D9A4203332D500F20C15 /* StringFlaneurSpec.swift */; };
 		00755721202B49BE00BC7700 /* DemoSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00755720202B49BE00BC7700 /* DemoSearchViewController.swift */; };
 		00880B9B1EC3502A00AD5B64 /* ListKitDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00880B9A1EC3502A00AD5B64 /* ListKitDemoViewController.swift */; };
@@ -48,6 +49,7 @@
 		0013B4E720208630005C15B1 /* MenuNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuNavigationController.swift; sourceTree = "<group>"; };
 		0013B4E920208D6C005C15B1 /* GrayscalingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayscalingViewController.swift; sourceTree = "<group>"; };
 		002E9D311ED5E13D0046326C /* GooglePlacesDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlacesDemoViewController.swift; sourceTree = "<group>"; };
+		003C085C203C3C9200008707 /* FlaneurMapViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlaneurMapViewSpec.swift; sourceTree = "<group>"; };
 		0054D9A4203332D500F20C15 /* StringFlaneurSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringFlaneurSpec.swift; sourceTree = "<group>"; };
 		00755720202B49BE00BC7700 /* DemoSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoSearchViewController.swift; sourceTree = "<group>"; };
 		00880B9A1EC3502A00AD5B64 /* ListKitDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListKitDemoViewController.swift; sourceTree = "<group>"; };
@@ -136,7 +138,6 @@
 			children = (
 				0013B4E720208630005C15B1 /* MenuNavigationController.swift */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				00D943601EBB338E00631E8E /* MapDemoViewController.swift */,
 				00880B9A1EC3502A00AD5B64 /* ListKitDemoViewController.swift */,
 				002E9D311ED5E13D0046326C /* GooglePlacesDemoViewController.swift */,
 				00A36F291F618F3400F05418 /* FlaneurNavigationBarDemoViewController.swift */,
@@ -150,6 +151,7 @@
 				00DAAB7E1ECC5D9B00E40141 /* DemoCollectionViewCell.xib */,
 				0013B4E920208D6C005C15B1 /* GrayscalingViewController.swift */,
 				00755720202B49BE00BC7700 /* DemoSearchViewController.swift */,
+				00D943601EBB338E00631E8E /* MapDemoViewController.swift */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
@@ -173,6 +175,7 @@
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 				0054D9A4203332D500F20C15 /* StringFlaneurSpec.swift */,
 				00C6CA4E203495CB00CF7B67 /* DateFlaneurSpec.swift */,
+				003C085C203C3C9200008707 /* FlaneurMapViewSpec.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -475,6 +478,7 @@
 			files = (
 				00C6CA4F203495CB00CF7B67 /* DateFlaneurSpec.swift in Sources */,
 				0054D9A5203332D500F20C15 /* StringFlaneurSpec.swift in Sources */,
+				003C085D203C3C9200008707 /* FlaneurMapViewSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
