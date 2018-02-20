@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>FlaneurFormImagePickerElementCollectionViewCellDelegate Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/FlaneurFormImagePickerElementCollectionViewCellDelegate" class="dashAnchor"></a>
+    <a title="FlaneurFormImagePickerElementCollectionViewCellDelegate Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">FlaneurOpen Docs</a> (41% documented)</p>
+        <p class="header-right"><a href="https://github.com/FlaneurApp/FlaneurOpen"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">FlaneurOpen Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        FlaneurFormImagePickerElementCollectionViewCellDelegate Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/FlaneurCollectionFilter.html">FlaneurCollectionFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlaneurCollectionView.html">FlaneurCollectionView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlaneurFilterCollectionViewCell.html">FlaneurFilterCollectionViewCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlaneurFormElement.html">FlaneurFormElement</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlaneurFormView.html">FlaneurFormView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlaneurMapAnnotation.html">FlaneurMapAnnotation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlaneurMapView.html">FlaneurMapView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlaneurModalProgressViewController.html">FlaneurModalProgressViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlaneurNavigationBar.html">FlaneurNavigationBar</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlaneurOpenThemeManager.html">FlaneurOpenThemeManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlaneurSearchViewController.html">FlaneurSearchViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ItemsViewController.html">ItemsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/KeyboardObserver.html">KeyboardObserver</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LayoutBorderManager.html">LayoutBorderManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LoadingCollectionViewCell.html">LoadingCollectionViewCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MultiSelectCollectionViewController.html">MultiSelectCollectionViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SegmentedCollectionView.html">SegmentedCollectionView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:11FlaneurOpen20defaultCellSizeRatio12CoreGraphics7CGFloatVv">defaultCellSizeRatio</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:11FlaneurOpen16defaultNbColumnsSiv">defaultNbColumns</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/FlaneurCollectionItemCellStyle.html">FlaneurCollectionItemCellStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/FlaneurFormElementType.html">FlaneurFormElementType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/FlaneurNavigationBarActionFaceView.html">FlaneurNavigationBarActionFaceView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Result.html">Result</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/CLLocationCoordinate2D.html">CLLocationCoordinate2D</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Date.html">Date</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/FlaneurCollectionWithBorderListAdapter.html">FlaneurCollectionWithBorderListAdapter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/MKCoordinateRegion.html">MKCoordinateRegion</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/MKCoordinateSpan.html">MKCoordinateSpan</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/MKMapView.html">MKMapView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIImage.html">UIImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UILabel.html">UILabel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIView.html">UIView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/FlaneurCollectionItem.html">FlaneurCollectionItem</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlaneurCollectionViewDelegate.html">FlaneurCollectionViewDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlaneurFormDeleteElementCollectionViewCellDelegate.html">FlaneurFormDeleteElementCollectionViewCellDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlaneurFormImagePickerElementCollectionViewCellDelegate.html">FlaneurFormImagePickerElementCollectionViewCellDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlaneurFormSelectElementCollectionViewCellDelegate.html">FlaneurFormSelectElementCollectionViewCellDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlaneurMapItem.html">FlaneurMapItem</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlaneurMapViewDelegate.html">FlaneurMapViewDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlaneurModalProgressViewControllerDelegate.html">FlaneurModalProgressViewControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/MultiSelectable.html">MultiSelectable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SegmentedCollectionViewDelegate.html">SegmentedCollectionViewDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/CollectionViewCellDescriptor.html">CollectionViewCellDescriptor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/FlaneurNavigationBarAction.html">FlaneurNavigationBarAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/FlaneurOpenTheme.html">FlaneurOpenTheme</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SegmentedCollectionSection.html">SegmentedCollectionSection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TableViewCellDescriptor.html">TableViewCellDescriptor</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>FlaneurFormImagePickerElementCollectionViewCellDelegate</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">FlaneurFormImagePickerElementCollectionViewCellDelegate</span><span class="p">:</span> <span class="kt">FlaneurImagePickerControllerDelegate</span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11FlaneurOpen0A48FormImagePickerElementCollectionViewCellDelegateP06buttonD0So7UIImageCyF"></a>
+                    <a name="//apple_ref/swift/Method/buttonImage()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11FlaneurOpen0A48FormImagePickerElementCollectionViewCellDelegateP06buttonD0So7UIImageCyF">buttonImage()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">buttonImage</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">UIImage</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11FlaneurOpen0A48FormImagePickerElementCollectionViewCellDelegateP14numberOfImagesSiyF"></a>
+                    <a name="//apple_ref/swift/Method/numberOfImages()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11FlaneurOpen0A48FormImagePickerElementCollectionViewCellDelegateP14numberOfImagesSiyF">numberOfImages()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">numberOfImages</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11FlaneurOpen0A48FormImagePickerElementCollectionViewCellDelegateP16initialSelectionSay0adE00aD11DescriptionCGyF"></a>
+                    <a name="//apple_ref/swift/Method/initialSelection()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11FlaneurOpen0A48FormImagePickerElementCollectionViewCellDelegateP16initialSelectionSay0adE00aD11DescriptionCGyF">initialSelection()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">initialSelection</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">FlaneurImageDescription</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11FlaneurOpen0A48FormImagePickerElementCollectionViewCellDelegateP15sourceDelegatesSay0adE00aD6SourceOGyF"></a>
+                    <a name="//apple_ref/swift/Method/sourceDelegates()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11FlaneurOpen0A48FormImagePickerElementCollectionViewCellDelegateP15sourceDelegatesSay0adE00aD6SourceOGyF">sourceDelegates()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">sourceDelegates</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">FlaneurImageSource</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11FlaneurOpen0A48FormImagePickerElementCollectionViewCellDelegateP33localizedAttributedStringForTitleSo012NSAttributedM0CyF"></a>
+                    <a name="//apple_ref/swift/Method/localizedAttributedStringForTitle()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11FlaneurOpen0A48FormImagePickerElementCollectionViewCellDelegateP33localizedAttributedStringForTitleSo012NSAttributedM0CyF">localizedAttributedStringForTitle()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">localizedAttributedStringForTitle</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">NSAttributedString</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11FlaneurOpen0A48FormImagePickerElementCollectionViewCellDelegateP30localizedStringForCancelActionSSyF"></a>
+                    <a name="//apple_ref/swift/Method/localizedStringForCancelAction()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11FlaneurOpen0A48FormImagePickerElementCollectionViewCellDelegateP30localizedStringForCancelActionSSyF">localizedStringForCancelAction()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">localizedStringForCancelAction</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11FlaneurOpen0A48FormImagePickerElementCollectionViewCellDelegateP28localizedStringForDoneActionSSyF"></a>
+                    <a name="//apple_ref/swift/Method/localizedStringForDoneAction()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11FlaneurOpen0A48FormImagePickerElementCollectionViewCellDelegateP28localizedStringForDoneActionSSyF">localizedStringForDoneAction()</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">localizedStringForDoneAction</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="http://flaneurapp.com" target="_blank" rel="external">Flâneur</a>. All rights reserved. (Last updated: 2018-02-20)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

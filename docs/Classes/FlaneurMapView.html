@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>FlaneurMapView Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/FlaneurMapView" class="dashAnchor"></a>
+    <a title="FlaneurMapView Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">FlaneurOpen Docs</a> (41% documented)</p>
+        <p class="header-right"><a href="https://github.com/FlaneurApp/FlaneurOpen"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">FlaneurOpen Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        FlaneurMapView Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/FlaneurCollectionFilter.html">FlaneurCollectionFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlaneurCollectionView.html">FlaneurCollectionView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlaneurFilterCollectionViewCell.html">FlaneurFilterCollectionViewCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlaneurFormElement.html">FlaneurFormElement</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlaneurFormView.html">FlaneurFormView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlaneurMapAnnotation.html">FlaneurMapAnnotation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlaneurMapView.html">FlaneurMapView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlaneurModalProgressViewController.html">FlaneurModalProgressViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlaneurNavigationBar.html">FlaneurNavigationBar</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlaneurOpenThemeManager.html">FlaneurOpenThemeManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlaneurSearchViewController.html">FlaneurSearchViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ItemsViewController.html">ItemsViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/KeyboardObserver.html">KeyboardObserver</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LayoutBorderManager.html">LayoutBorderManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LoadingCollectionViewCell.html">LoadingCollectionViewCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MultiSelectCollectionViewController.html">MultiSelectCollectionViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SegmentedCollectionView.html">SegmentedCollectionView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:11FlaneurOpen20defaultCellSizeRatio12CoreGraphics7CGFloatVv">defaultCellSizeRatio</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:11FlaneurOpen16defaultNbColumnsSiv">defaultNbColumns</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/FlaneurCollectionItemCellStyle.html">FlaneurCollectionItemCellStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/FlaneurFormElementType.html">FlaneurFormElementType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/FlaneurNavigationBarActionFaceView.html">FlaneurNavigationBarActionFaceView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Result.html">Result</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/CLLocationCoordinate2D.html">CLLocationCoordinate2D</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Date.html">Date</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/FlaneurCollectionWithBorderListAdapter.html">FlaneurCollectionWithBorderListAdapter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/MKCoordinateRegion.html">MKCoordinateRegion</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/MKCoordinateSpan.html">MKCoordinateSpan</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/MKMapView.html">MKMapView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIImage.html">UIImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UILabel.html">UILabel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIView.html">UIView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/FlaneurCollectionItem.html">FlaneurCollectionItem</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlaneurCollectionViewDelegate.html">FlaneurCollectionViewDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlaneurFormDeleteElementCollectionViewCellDelegate.html">FlaneurFormDeleteElementCollectionViewCellDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlaneurFormImagePickerElementCollectionViewCellDelegate.html">FlaneurFormImagePickerElementCollectionViewCellDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlaneurFormSelectElementCollectionViewCellDelegate.html">FlaneurFormSelectElementCollectionViewCellDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlaneurMapItem.html">FlaneurMapItem</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlaneurMapViewDelegate.html">FlaneurMapViewDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FlaneurModalProgressViewControllerDelegate.html">FlaneurModalProgressViewControllerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/MultiSelectable.html">MultiSelectable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SegmentedCollectionViewDelegate.html">SegmentedCollectionViewDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/CollectionViewCellDescriptor.html">CollectionViewCellDescriptor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/FlaneurNavigationBarAction.html">FlaneurNavigationBarAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/FlaneurOpenTheme.html">FlaneurOpenTheme</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SegmentedCollectionSection.html">SegmentedCollectionSection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TableViewCellDescriptor.html">TableViewCellDescriptor</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>FlaneurMapView</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">FlaneurMapView</span><span class="p">:</span> <span class="kt">UIView</span></code></pre>
+
+                </div>
+              </div>
+            <p>Utility class to display a map view with annotations with very little effort.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Locations%20data%20&amp;%20receiving%20events"></a>
+                <a name="//apple_ref/swift/Section/Locations data &amp; receiving events" class="dashAnchor"></a>
+                <a href="#/Locations%20data%20&amp;%20receiving%20events">
+                  <h3 class="section-name">Locations data &amp; receiving events</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11FlaneurOpen0A7MapViewC8delegateAA0acD8Delegate_pSgv"></a>
+                    <a name="//apple_ref/swift/Property/delegate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11FlaneurOpen0A7MapViewC8delegateAA0acD8Delegate_pSgv">delegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The receiver’s delegate.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/FlaneurMapViewDelegate.html">FlaneurMapViewDelegate</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11FlaneurOpen0A7MapViewC8mapItemsSayAA0aC4Item_pGv"></a>
+                    <a name="//apple_ref/swift/Property/mapItems" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11FlaneurOpen0A7MapViewC8mapItemsSayAA0aC4Item_pGv">mapItems</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The items to display on the map.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">mapItems</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/FlaneurMapItem.html">FlaneurMapItem</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Customizing%20annotations"></a>
+                <a name="//apple_ref/swift/Section/Customizing annotations" class="dashAnchor"></a>
+                <a href="#/Customizing%20annotations">
+                  <h3 class="section-name">Customizing annotations</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11FlaneurOpen0A7MapViewC17showsUserLocationSbv"></a>
+                    <a name="//apple_ref/swift/Property/showsUserLocation" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11FlaneurOpen0A7MapViewC17showsUserLocationSbv">showsUserLocation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A Boolean value indicating whether the map should try to display the user’s location.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">showsUserLocation</span> <span class="o">=</span> <span class="kc">true</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11FlaneurOpen0A7MapViewC15annotationImageSo7UIImageCSgv"></a>
+                    <a name="//apple_ref/swift/Property/annotationImage" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11FlaneurOpen0A7MapViewC15annotationImageSo7UIImageCSgv">annotationImage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The image displayed</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">annotationImage</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="s">"FlaneurMapViewControllerAnnotationImage"</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11FlaneurOpen0A7MapViewC17rightCalloutImageSo7UIImageCSgv"></a>
+                    <a name="//apple_ref/swift/Property/rightCalloutImage" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11FlaneurOpen0A7MapViewC17rightCalloutImageSo7UIImageCSgv">rightCalloutImage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The right image to display on the annotation for each item</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">rightCalloutImage</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="s">"FlaneurMapViewControllerRightCalloutImage"</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11FlaneurOpen0A7MapViewC27leftCalloutPlaceholderImageSo7UIImageCSgv"></a>
+                    <a name="//apple_ref/swift/Property/leftCalloutPlaceholderImage" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11FlaneurOpen0A7MapViewC27leftCalloutPlaceholderImageSo7UIImageCSgv">leftCalloutPlaceholderImage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The left image to display on the annotation for each item</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">leftCalloutPlaceholderImage</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="s">"FlaneurMapViewControllerLeftCalloutPlaceholderImage"</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Lifecycle"></a>
+                <a name="//apple_ref/swift/Section/Lifecycle" class="dashAnchor"></a>
+                <a href="#/Lifecycle">
+                  <h3 class="section-name">Lifecycle</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@FlaneurOpen@objc(cs)FlaneurMapView(im)initWithFrame:"></a>
+                    <a name="//apple_ref/swift/Method/init(frame:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@FlaneurOpen@objc(cs)FlaneurMapView(im)initWithFrame:">init(frame:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes and returns a newly allocated map view object
+with the specified frame rectangle.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="nf">init</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>frame</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The frame rectangle for the view, measured in points.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@FlaneurOpen@objc(cs)FlaneurMapView(im)initWithCoder:"></a>
+                    <a name="//apple_ref/swift/Method/init(coder:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@FlaneurOpen@objc(cs)FlaneurMapView(im)initWithCoder:">init(coder:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Not implemented.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">required</span> <span class="nf">init</span><span class="p">?(</span><span class="nv">coder</span><span class="p">:</span> <span class="kt">NSCoder</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/MKMapViewDelegate"></a>
+                <a name="//apple_ref/swift/Section/MKMapViewDelegate" class="dashAnchor"></a>
+                <a href="#/MKMapViewDelegate">
+                  <h3 class="section-name">MKMapViewDelegate</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@FlaneurOpen@objc(cs)FlaneurMapView(im)mapView:viewForAnnotation:"></a>
+                    <a name="//apple_ref/swift/Method/mapView(_:viewFor:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@FlaneurOpen@objc(cs)FlaneurMapView(im)mapView:viewForAnnotation:">mapView(_:viewFor:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Overriden</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">mapView</span><span class="p">(</span><span class="n">_</span> <span class="nv">mapView</span><span class="p">:</span> <span class="kt">MKMapView</span><span class="p">,</span> <span class="n">viewFor</span> <span class="nv">annotation</span><span class="p">:</span> <span class="kt">MKAnnotation</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">MKAnnotationView</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@FlaneurOpen@objc(cs)FlaneurMapView(im)mapView:annotationView:calloutAccessoryControlTapped:"></a>
+                    <a name="//apple_ref/swift/Method/mapView(_:annotationView:calloutAccessoryControlTapped:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@FlaneurOpen@objc(cs)FlaneurMapView(im)mapView:annotationView:calloutAccessoryControlTapped:">mapView(_:annotationView:calloutAccessoryControlTapped:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Overriden</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">mapView</span><span class="p">(</span><span class="n">_</span> <span class="nv">mapView</span><span class="p">:</span> <span class="kt">MKMapView</span><span class="p">,</span> <span class="n">annotationView</span> <span class="nv">view</span><span class="p">:</span> <span class="kt">MKAnnotationView</span><span class="p">,</span> <span class="n">calloutAccessoryControlTapped</span> <span class="nv">control</span><span class="p">:</span> <span class="kt">UIControl</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@FlaneurOpen@objc(cs)FlaneurMapView(im)mapViewWillStartLoadingMap:"></a>
+                    <a name="//apple_ref/swift/Method/mapViewWillStartLoadingMap(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@FlaneurOpen@objc(cs)FlaneurMapView(im)mapViewWillStartLoadingMap:">mapViewWillStartLoadingMap(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Overriden</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">mapViewWillStartLoadingMap</span><span class="p">(</span><span class="n">_</span> <span class="nv">mapView</span><span class="p">:</span> <span class="kt">MKMapView</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@FlaneurOpen@objc(cs)FlaneurMapView(im)mapViewDidFinishLoadingMap:"></a>
+                    <a name="//apple_ref/swift/Method/mapViewDidFinishLoadingMap(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@FlaneurOpen@objc(cs)FlaneurMapView(im)mapViewDidFinishLoadingMap:">mapViewDidFinishLoadingMap(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Overriden</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">mapViewDidFinishLoadingMap</span><span class="p">(</span><span class="n">_</span> <span class="nv">mapView</span><span class="p">:</span> <span class="kt">MKMapView</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@FlaneurOpen@objc(cs)FlaneurMapView(im)mapViewDidFailLoadingMap:withError:"></a>
+                    <a name="//apple_ref/swift/Method/mapViewDidFailLoadingMap(_:withError:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@FlaneurOpen@objc(cs)FlaneurMapView(im)mapViewDidFailLoadingMap:withError:">mapViewDidFailLoadingMap(_:withError:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Overriden</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">mapViewDidFailLoadingMap</span><span class="p">(</span><span class="n">_</span> <span class="nv">mapView</span><span class="p">:</span> <span class="kt">MKMapView</span><span class="p">,</span> <span class="n">withError</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="http://flaneurapp.com" target="_blank" rel="external">Flâneur</a>. All rights reserved. (Last updated: 2018-02-20)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

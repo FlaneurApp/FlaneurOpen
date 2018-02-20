@@ -1,3 +1,5 @@
+![FlaneurOpen logo](https://raw.githubusercontent.com/FlaneurApp/FlaneurOpen/master/Image.png)
+
 # FlaneurOpen
 
 [![CI Status](http://img.shields.io/travis/dirtyhenry/FlaneurOpen.svg?style=flat)](https://travis-ci.org/dirtyhenry/FlaneurOpen)
@@ -10,6 +12,14 @@
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+
+### Google Maps API Key
+
+This application requires a Google Maps API Key. It will be read from a file at
+`Example/FlaneurOpenSecretInfo.plist`. For security reasons, this file does not
+exist in this repository. To create it, please set your API Key as `GOOGLE_PLACES_FLANEUR_API_KEY`
+in your environment variables and run the script `./createAPIKeysPlist.sh` from
+the `Example` directory.
 
 ## Installation
 
@@ -30,4 +40,5 @@ FlaneurOpen is available under the MIT license. See the LICENSE file for more in
 
 ## Credits
 
-[Icons from Glyphish](http://www.glyphish.com).
+* [Icons from Glyphish](http://www.glyphish.com).
+* [Photo by Pawel Nolbert](https://unsplash.com/@hellocolor)

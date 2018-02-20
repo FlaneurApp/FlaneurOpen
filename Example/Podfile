@@ -5,12 +5,18 @@ platform :ios, '9.0'
 target 'FlaneurOpen_Example' do
   pod 'FlaneurOpen', :path => '../'
 
+  # Google Places API
+  pod 'GooglePlaces'
+  pod 'GooglePlacePicker'
+  pod 'GoogleMaps'
+
+  pod 'FlaneurImagePicker'
+
   target 'FlaneurOpen_Tests' do
     inherit! :search_paths
 
-    pod 'Quick', '~> 1.0.0'
-    pod 'Nimble', '~> 5.1.1'
-    pod 'FBSnapshotTestCase'
+    pod 'Quick', '~> 1.2.0'
+    pod 'Nimble', '~> 7.0.0'
     pod 'Nimble-Snapshots'
   end
 end
