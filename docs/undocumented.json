@@ -995,13 +995,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/MapKitUtils/FlaneurMapView.swift",
-      "line": 80,
-      "symbol": "FlaneurMapView.init(coder:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Modal Progress View/FlaneurModalProgressViewController.swift",
       "line": 10,
       "symbol": "FlaneurModalProgressViewControllerDelegate",
