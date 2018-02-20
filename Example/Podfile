@@ -17,7 +17,6 @@ target 'FlaneurOpen_Example' do
 
     pod 'Quick', '~> 1.2.0'
     pod 'Nimble', '~> 7.0.0'
-    pod 'iOSSnapshotTestCase'
     pod 'Nimble-Snapshots'
   end
 end

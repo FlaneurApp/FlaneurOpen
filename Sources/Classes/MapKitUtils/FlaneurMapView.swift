@@ -10,18 +10,20 @@ import MapKit
 import Kingfisher
 
 /// The protocol to implement to get callbacks from a `FlaneurMapView` instance.
-@objc public protocol FlaneurMapViewDelegate {
+public protocol FlaneurMapViewDelegate {
     /// Tells the delegate that the specified map item's annotation callout was tapped.
     ///
     /// - Parameter mapItem: the map item for which the annotation was tapped
     func flaneurMapViewDidSelect(mapItem: FlaneurMapItem)
+
+    /// Tells the delegate that the specified map view successfully loaded the needed map data.
+    ///
+    /// - Parameters:
+    ///   - mapView: The map view that started the load operation.
+    func flaneurMapViewDidFinishLoadingMap(_ mapView: FlaneurMapView)
 }
 
 /// Utility class to display a map view with annotations with very little effort.
-///
-/// ## Overview
-///
-/// A map view controller... TODO
 open class FlaneurMapView: UIView {
     fileprivate var mapView = MKMapView(frame: .zero)
 
@@ -77,6 +79,7 @@ open class FlaneurMapView: UIView {
         showsUserLocation = true
     }
 
+    /// Not implemented.
     public required init?(coder: NSCoder) {
         fatalError("Not implemented")
     }
@@ -91,6 +94,8 @@ open class FlaneurMapView: UIView {
 }
 
 extension FlaneurMapView: MKMapViewDelegate {
+    // MARK: - MKMapViewDelegate
+
     /// Overriden
     public func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if annotation is MKUserLocation {
@@ -133,5 +138,26 @@ extension FlaneurMapView: MKMapViewDelegate {
         if let annotation = view.annotation as? FlaneurMapAnnotation {
             delegate?.flaneurMapViewDidSelect(mapItem: annotation.mapItem)
         }
+    }
+
+    /// Overriden
+    public func mapViewWillStartLoadingMap(_ mapView: MKMapView) {
+        debugPrint("mapViewWillStartLoadingMap")
+    }
+
+    /// Overriden
+    public func mapViewDidFinishLoadingMap(_ mapView: MKMapView) {
+        delegate?.flaneurMapViewDidFinishLoadingMap(self)
+    }
+
+    /// Overriden
+    public func mapViewDidFailLoadingMap(_ mapView: MKMapView, withError error: Error) {
+        print("ERROR: \(error)")
+    }
+}
+
+public extension FlaneurMapViewDelegate {
+    func flaneurMapViewDidFinishLoadingMap(_ mapView: FlaneurMapView) {
+        debugPrint("mapViewDidFinishLoadingMap")
     }
 }

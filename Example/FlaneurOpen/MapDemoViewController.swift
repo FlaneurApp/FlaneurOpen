@@ -1,11 +1,3 @@
-//
-//  MapDemoViewController.swift
-//  FlaneurOpen
-//
-//  Created by Mickaël Floc'hlay on 04/05/2017.
-//  Copyright © 2017 CocoaPods. All rights reserved.
-//
-
 import UIKit
 import FlaneurOpen
 import MapKit
@@ -55,7 +47,7 @@ class DemoMapItem: FlaneurMapItem {
     }
 }
 
-class MapDemoViewController: UIViewController, FlaneurMapViewDelegate {
+final class MapDemoViewController: UIViewController, FlaneurMapViewDelegate {
     let mapView: FlaneurMapView = FlaneurMapView()
 
     override func viewDidLoad() {

@@ -17,7 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
     * `FlaneurMapView` is not compatible with Storyboards anymore
     * Updated the `FlaneurMapView` demo to make it simpler
     * Made code simpler and improved documentation
-
+* Added some sample code for screenshot testing
 
 ## [0.8.0] - 2018-02-05
 

@@ -28,11 +28,6 @@ PODS:
   - IGListKit/Default (3.2.0):
     - IGListKit/Diffing
   - IGListKit/Diffing (3.2.0)
-  - iOSSnapshotTestCase (2.2.0):
-    - iOSSnapshotTestCase/SwiftSupport (= 2.2.0)
-  - iOSSnapshotTestCase/Core (2.2.0)
-  - iOSSnapshotTestCase/SwiftSupport (2.2.0):
-    - iOSSnapshotTestCase/Core
   - Kingfisher (4.6.2)
   - Nimble (7.0.3)
   - Nimble-Snapshots (6.3.0):
@@ -48,7 +43,6 @@ DEPENDENCIES:
   - GoogleMaps
   - GooglePlacePicker
   - GooglePlaces
-  - iOSSnapshotTestCase
   - Nimble (~> 7.0.0)
   - Nimble-Snapshots
   - Quick (~> 1.2.0)
@@ -66,12 +60,11 @@ SPEC CHECKSUMS:
   GooglePlacePicker: e4488625effb006f59de49e14b7a603e463e4261
   GooglePlaces: f6ddf33b75cef69e888907d9947c57198ed845f3
   IGListKit: ffe6f98a728ab0250aceea22e7957aa5477c5048
-  iOSSnapshotTestCase: 415bd84f9dbba4ff45fede49d800bc7332fbedac
   Kingfisher: 55b9c395bf8d3949676ad3861111923990ab68cf
   Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
   Nimble-Snapshots: f5459b5b091678dc942d03ec4741cacb58ba4a52
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
 
-PODFILE CHECKSUM: 3a76c0e0326558c94a78273cf09560e24ad20372
+PODFILE CHECKSUM: 860ca38850a7aac2a19bcd0c30722c74fb77f1cc
 
 COCOAPODS: 1.4.0
