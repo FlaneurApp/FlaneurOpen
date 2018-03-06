@@ -11,7 +11,7 @@ import FlaneurImagePicker
 public protocol FlaneurFormImagePickerElementCollectionViewCellDelegate: FlaneurImagePickerControllerDelegate {
     func buttonImage() -> UIImage
     func numberOfImages() -> Int
-    func initialSelection() -> [FlaneurImageDescription]
+    func initialSelection() -> [FlaneurImageDescriptor]
     func sourceDelegates() -> [FlaneurImageSource]
 
     func localizedAttributedStringForTitle() -> NSAttributedString
@@ -24,7 +24,7 @@ public extension FlaneurFormImagePickerElementCollectionViewCellDelegate where S
         return 1
     }
 
-    func initialSelection() -> [FlaneurImageDescription] {
+    func initialSelection() -> [FlaneurImageDescriptor] {
         return []
     }
 
@@ -60,7 +60,7 @@ final class FlaneurFormImagePickerElementCollectionViewCell: FlaneurFormElementC
         return result
     }()
 
-    var currentSelection: [FlaneurImageDescription] = [] {
+    var currentSelection: [FlaneurImageDescriptor] = [] {
         didSet {
             photosCollectionView.reloadData()
         }
@@ -230,7 +230,7 @@ final class FlaneurFormImagePickerElementCollectionViewCell: FlaneurFormElementC
 }
 
 extension FlaneurFormImagePickerElementCollectionViewCell: FlaneurImagePickerControllerDelegate {
-    func flaneurImagePickerController(_ picker: FlaneurImagePickerController, didFinishPickingImages images: [FlaneurImageDescription], userInfo: Any?) {
+    func flaneurImagePickerController(_ picker: FlaneurImagePickerController, didFinishPickingImages images: [FlaneurImageDescriptor], userInfo: Any?) {
         self.currentSelection = images
 
         if let imageDelegate = imageDelegate {
@@ -253,7 +253,7 @@ extension FlaneurFormImagePickerElementCollectionViewCell: FlaneurImagePickerCon
         debugPrint("ERROR: \(error)")
     }
 
-    func flaneurImagePickerController(_ picker: FlaneurImagePickerController, withCurrentSelectionOfSize count: Int, actionForNewImageSelection newImage: FlaneurImageDescription) -> FlaneurImagePickerControllerAction {
+    func flaneurImagePickerController(_ picker: FlaneurImagePickerController, withCurrentSelectionOfSize count: Int, actionForNewImageSelection newImage: FlaneurImageDescriptor) -> FlaneurImagePickerControllerAction {
         guard let imageDelegate = imageDelegate else {
             return .add
         }
