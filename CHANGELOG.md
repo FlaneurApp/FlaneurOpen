@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## Unreleased
 
 * Added `dismissSearchBar` in `FlaneurSearchViewController` so that the search bar can be dismissed without the need of another view controller being presented
+* Refactored/renamed `ProgressModalViewController` so that it is easier to implement
+* Added a cancel button to `ProgressModalViewController`
 
 ## [0.9.0] - 2018-02-20
 
