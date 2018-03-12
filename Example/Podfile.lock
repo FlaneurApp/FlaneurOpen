@@ -5,11 +5,11 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - FlaneurImagePicker (0.7.0):
+  - FlaneurImagePicker (0.8.0-beta):
     - ActionKit (~> 2.1)
     - IGListKit (~> 3.0)
     - Kingfisher (~> 4.0)
-  - FlaneurOpen (0.10.0):
+  - FlaneurOpen (0.11.0-beta):
     - FlaneurImagePicker (~> 0.7)
     - IGListKit (~> 3.0)
     - Kingfisher (~> 4.0)
@@ -28,7 +28,7 @@ PODS:
   - IGListKit/Default (3.2.0):
     - IGListKit/Diffing
   - IGListKit/Diffing (3.2.0)
-  - Kingfisher (4.6.2)
+  - Kingfisher (4.6.3)
   - Nimble (7.0.3)
   - Nimble-Snapshots (6.3.0):
     - Nimble-Snapshots/Core (= 6.3.0)
@@ -38,7 +38,7 @@ PODS:
   - Quick (1.2.0)
 
 DEPENDENCIES:
-  - FlaneurImagePicker
+  - FlaneurImagePicker (from `../../FlaneurImagePicker`)
   - FlaneurOpen (from `../`)
   - GoogleMaps
   - GooglePlacePicker
@@ -48,23 +48,25 @@ DEPENDENCIES:
   - Quick (~> 1.2.0)
 
 EXTERNAL SOURCES:
+  FlaneurImagePicker:
+    :path: ../../FlaneurImagePicker
   FlaneurOpen:
     :path: ../
 
 SPEC CHECKSUMS:
   ActionKit: cf7ca5781f4a43342384d872105fadd58985f416
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  FlaneurImagePicker: fb52c1704b215088a885691ace7588bd5625a46c
-  FlaneurOpen: e37b249e9c98068e1eee256ec784c8a323a0962a
+  FlaneurImagePicker: ad31b4f1580ab53057f2f3bdab8576c88096ae9e
+  FlaneurOpen: af4fe4abf73797f94f8b83389c9f7b368c87bfcb
   GoogleMaps: 42f91c68b7fa2f84d5c86597b18ceb99f5414c7f
   GooglePlacePicker: e4488625effb006f59de49e14b7a603e463e4261
   GooglePlaces: f6ddf33b75cef69e888907d9947c57198ed845f3
   IGListKit: ffe6f98a728ab0250aceea22e7957aa5477c5048
-  Kingfisher: 55b9c395bf8d3949676ad3861111923990ab68cf
+  Kingfisher: 98e6d5b5e807645743e8ed5ececd25d688d38452
   Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
   Nimble-Snapshots: f5459b5b091678dc942d03ec4741cacb58ba4a52
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
 
-PODFILE CHECKSUM: 438d66e9ceff3a1ba6de15990997702d5b066e95
+PODFILE CHECKSUM: 04fd3eeb61f2dc336c8ef50bc6d73e78cd64fbd3
 
 COCOAPODS: 1.4.0
