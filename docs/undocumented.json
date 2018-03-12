@@ -995,37 +995,114 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Modal Progress View/FlaneurModalProgressViewController.swift",
-      "line": 10,
-      "symbol": "FlaneurModalProgressViewControllerDelegate",
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Modal Progress View/ProgressModalViewController.swift",
+      "line": null,
+      "symbol": "ProgressModalViewControllerDelegate",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Modal Progress View/ProgressModalViewController.swift",
+      "line": 3,
+      "symbol": "ProgressModalViewControllerDelegate",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Modal Progress View/FlaneurModalProgressViewController.swift",
-      "line": 11,
-      "symbol": "FlaneurModalProgressViewControllerDelegate.modalProgressControllerDidComplete(_:)",
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Modal Progress View/ProgressModalViewController.swift",
+      "line": 4,
+      "symbol": "ProgressModalViewControllerDelegate.progressModalViewControllerWillStartObservingProgress(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Modal Progress View/FlaneurModalProgressViewController.swift",
-      "line": 38,
-      "symbol": "FlaneurModalProgressViewController.viewDidLoad()",
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Modal Progress View/ProgressModalViewController.swift",
+      "line": 5,
+      "symbol": "ProgressModalViewControllerDelegate.progressModalViewControllerDidComplete(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Modal Progress View/FlaneurModalProgressViewController.swift",
-      "line": 91,
-      "symbol": "FlaneurModalProgressViewController.configureWithInProgressState(title:body:progress:)",
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Modal Progress View/ProgressModalViewController.swift",
+      "line": 7,
+      "symbol": "ProgressModalViewControllerDelegate.progressModalViewControllerDidAppear(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Modal Progress View/FlaneurModalProgressViewController.swift",
-      "line": 101,
-      "symbol": "FlaneurModalProgressViewController.configureWithFinalState(title:body:hideProgress:)",
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Modal Progress View/ProgressModalViewController.swift",
+      "line": 8,
+      "symbol": "ProgressModalViewControllerDelegate.progressModalViewControllerDidDisappear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Modal Progress View/ProgressModalViewController.swift",
+      "line": 10,
+      "symbol": "ProgressModalViewControllerDelegate.progressModalViewControllerDidCancel(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Modal Progress View/ProgressModalViewController.swift",
+      "line": 14,
+      "symbol": "ProgressModalViewControllerDelegate.progressModalViewControllerWillStartObservingProgress(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Modal Progress View/ProgressModalViewController.swift",
+      "line": 18,
+      "symbol": "ProgressModalViewControllerDelegate.progressModalViewControllerDidComplete(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Modal Progress View/ProgressModalViewController.swift",
+      "line": 22,
+      "symbol": "ProgressModalViewControllerDelegate.progressModalViewControllerDidAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Modal Progress View/ProgressModalViewController.swift",
+      "line": 26,
+      "symbol": "ProgressModalViewControllerDelegate.progressModalViewControllerDidDisappear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Modal Progress View/ProgressModalViewController.swift",
+      "line": 30,
+      "symbol": "ProgressModalViewControllerDelegate.progressModalViewControllerDidCancel(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Modal Progress View/ProgressModalViewController.swift",
+      "line": 89,
+      "symbol": "ProgressModalViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Modal Progress View/ProgressModalViewController.swift",
+      "line": 137,
+      "symbol": "ProgressModalViewController.viewDidAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Modal Progress View/ProgressModalViewController.swift",
+      "line": 142,
+      "symbol": "ProgressModalViewController.viewDidDisappear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Modal Progress View/ProgressModalViewController.swift",
+      "line": 147,
+      "symbol": "ProgressModalViewController.observeProgress(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -1052,35 +1129,28 @@
     },
     {
       "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Search View Controller/FlaneurSearchViewController.swift",
-      "line": 48,
-      "symbol": "FlaneurSearchViewController.viewDidLoad()",
+      "line": 111,
+      "symbol": "FlaneurSearchViewController.dismissSearchBar()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Search View Controller/FlaneurSearchViewController.swift",
-      "line": 67,
-      "symbol": "FlaneurSearchViewController.viewWillDisappear(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Search View Controller/FlaneurSearchViewController.swift",
-      "line": 105,
+      "line": 119,
       "symbol": "FlaneurSearchViewController.willDismissSearchController(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Search View Controller/FlaneurSearchViewController.swift",
-      "line": 116,
+      "line": 130,
       "symbol": "FlaneurSearchViewController.willPresentSearchController(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Search View Controller/FlaneurSearchViewController.swift",
-      "line": 123,
+      "line": 139,
       "symbol": "FlaneurSearchViewController.searchBarSearchButtonClicked(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
