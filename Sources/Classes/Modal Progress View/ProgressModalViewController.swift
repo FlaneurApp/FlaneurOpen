@@ -10,7 +10,7 @@ public protocol ProgressModalViewControllerDelegate: AnyObject {
     func progressModalViewControllerDidCancel(_ viewController: ProgressModalViewController)
 }
 
-extension ProgressModalViewControllerDelegate where Self: NSObject {
+public extension ProgressModalViewControllerDelegate where Self: NSObject {
     func progressModalViewControllerWillStartObservingProgress(_ viewController: ProgressModalViewController) {
         ()
     }
