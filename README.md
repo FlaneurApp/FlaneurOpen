@@ -30,9 +30,13 @@ it, simply add the following line to your Podfile:
 pod "FlaneurOpen"
 ```
 
+## Release
+
+To release a version of this pod, please follow [these instructions at Cocoapods](https://guides.cocoapods.org/making/making-a-cocoapod.html#release).
+
 ## Author
 
-Flâneur.
+FlaneurApp, dev@flaneurapp.com.
 
 ## License
 

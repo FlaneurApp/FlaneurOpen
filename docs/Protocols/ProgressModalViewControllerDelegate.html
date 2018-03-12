@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>FlaneurModalProgressViewControllerDelegate Protocol Reference</title>
+    <title>ProgressModalViewControllerDelegate Protocol Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,11 +10,11 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Protocol/FlaneurModalProgressViewControllerDelegate" class="dashAnchor"></a>
-    <a title="FlaneurModalProgressViewControllerDelegate Protocol Reference"></a>
+    <a name="//apple_ref/swift/Protocol/ProgressModalViewControllerDelegate" class="dashAnchor"></a>
+    <a title="ProgressModalViewControllerDelegate Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">FlaneurOpen Docs</a> (41% documented)</p>
+        <p><a href="../index.html">FlaneurOpen Docs</a> (40% documented)</p>
         <p class="header-right"><a href="https://github.com/FlaneurApp/FlaneurOpen"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">FlaneurOpen Reference</a>
         <img id="carat" src="../img/carat.png" />
-        FlaneurModalProgressViewControllerDelegate Protocol Reference
+        ProgressModalViewControllerDelegate Protocol Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -53,9 +53,6 @@
                 <a href="../Classes/FlaneurMapView.html">FlaneurMapView</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/FlaneurModalProgressViewController.html">FlaneurModalProgressViewController</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Classes/FlaneurNavigationBar.html">FlaneurNavigationBar</a>
               </li>
               <li class="nav-group-task">
@@ -78,6 +75,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/MultiSelectCollectionViewController.html">MultiSelectCollectionViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ProgressModalViewController.html">ProgressModalViewController</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/SegmentedCollectionView.html">SegmentedCollectionView</a>
@@ -172,10 +172,10 @@
                 <a href="../Protocols/FlaneurMapViewDelegate.html">FlaneurMapViewDelegate</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/FlaneurModalProgressViewControllerDelegate.html">FlaneurModalProgressViewControllerDelegate</a>
+                <a href="../Protocols/MultiSelectable.html">MultiSelectable</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/MultiSelectable.html">MultiSelectable</a>
+                <a href="../Protocols/ProgressModalViewControllerDelegate.html">ProgressModalViewControllerDelegate</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/SegmentedCollectionViewDelegate.html">SegmentedCollectionViewDelegate</a>
@@ -207,10 +207,10 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>FlaneurModalProgressViewControllerDelegate</h1>
+            <h1>ProgressModalViewControllerDelegate</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">FlaneurModalProgressViewControllerDelegate</span><span class="p">:</span> <span class="kt">AnyObject</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ProgressModalViewControllerDelegate</span><span class="p">:</span> <span class="kt">AnyObject</span></code></pre>
 
                 </div>
               </div>
@@ -223,10 +223,13 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11FlaneurOpen0A35ModalProgressViewControllerDelegateP05modaldF11DidCompleteyAA0acdeF0CF"></a>
-                    <a name="//apple_ref/swift/Method/modalProgressControllerDidComplete(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11FlaneurOpen0A35ModalProgressViewControllerDelegateP05modaldF11DidCompleteyAA0acdeF0CF">modalProgressControllerDidComplete(_:)</a>
+                    <a name="/s:11FlaneurOpen35ProgressModalViewControllerDelegateP08progressdef18WillStartObservingC0yAA0cdeF0CF"></a>
+                    <a name="//apple_ref/swift/Method/progressModalViewControllerWillStartObservingProgress(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11FlaneurOpen35ProgressModalViewControllerDelegateP08progressdef18WillStartObservingC0yAA0cdeF0CF">progressModalViewControllerWillStartObservingProgress(_:)</a>
                     </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
@@ -236,11 +239,156 @@
                         <p>Undocumented</p>
 
                       </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>Undocumented</p>
+
+                      </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">modalProgressControllerDidComplete</span><span class="p">(</span><span class="n">_</span> <span class="nv">viewController</span><span class="p">:</span> <span class="kt"><a href="../Classes/FlaneurModalProgressViewController.html">FlaneurModalProgressViewController</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">progressModalViewControllerWillStartObservingProgress</span><span class="p">(</span><span class="n">_</span> <span class="nv">viewController</span><span class="p">:</span> <span class="kt"><a href="../Classes/ProgressModalViewController.html">ProgressModalViewController</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11FlaneurOpen35ProgressModalViewControllerDelegateP08progressdeF11DidCompleteyAA0cdeF0CF"></a>
+                    <a name="//apple_ref/swift/Method/progressModalViewControllerDidComplete(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11FlaneurOpen35ProgressModalViewControllerDelegateP08progressdeF11DidCompleteyAA0cdeF0CF">progressModalViewControllerDidComplete(_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">progressModalViewControllerDidComplete</span><span class="p">(</span><span class="n">_</span> <span class="nv">viewController</span><span class="p">:</span> <span class="kt"><a href="../Classes/ProgressModalViewController.html">ProgressModalViewController</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11FlaneurOpen35ProgressModalViewControllerDelegateP08progressdeF9DidAppearyAA0cdeF0CF"></a>
+                    <a name="//apple_ref/swift/Method/progressModalViewControllerDidAppear(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11FlaneurOpen35ProgressModalViewControllerDelegateP08progressdeF9DidAppearyAA0cdeF0CF">progressModalViewControllerDidAppear(_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">progressModalViewControllerDidAppear</span><span class="p">(</span><span class="n">_</span> <span class="nv">viewController</span><span class="p">:</span> <span class="kt"><a href="../Classes/ProgressModalViewController.html">ProgressModalViewController</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11FlaneurOpen35ProgressModalViewControllerDelegateP08progressdeF12DidDisappearyAA0cdeF0CF"></a>
+                    <a name="//apple_ref/swift/Method/progressModalViewControllerDidDisappear(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11FlaneurOpen35ProgressModalViewControllerDelegateP08progressdeF12DidDisappearyAA0cdeF0CF">progressModalViewControllerDidDisappear(_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">progressModalViewControllerDidDisappear</span><span class="p">(</span><span class="n">_</span> <span class="nv">viewController</span><span class="p">:</span> <span class="kt"><a href="../Classes/ProgressModalViewController.html">ProgressModalViewController</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11FlaneurOpen35ProgressModalViewControllerDelegateP08progressdeF9DidCancelyAA0cdeF0CF"></a>
+                    <a name="//apple_ref/swift/Method/progressModalViewControllerDidCancel(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11FlaneurOpen35ProgressModalViewControllerDelegateP08progressdeF9DidCancelyAA0cdeF0CF">progressModalViewControllerDidCancel(_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">progressModalViewControllerDidCancel</span><span class="p">(</span><span class="n">_</span> <span class="nv">viewController</span><span class="p">:</span> <span class="kt"><a href="../Classes/ProgressModalViewController.html">ProgressModalViewController</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -252,7 +400,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="http://flaneurapp.com" target="_blank" rel="external">Flâneur</a>. All rights reserved. (Last updated: 2018-02-20)</p>
+          <p>&copy; 2018 <a class="link" href="http://flaneurapp.com" target="_blank" rel="external">Flâneur</a>. All rights reserved. (Last updated: 2018-03-12)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

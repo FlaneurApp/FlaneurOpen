@@ -37,7 +37,7 @@ class PhotoCollectionViewCell: UICollectionViewCell {
                                 right: 0.0)
     }
 
-    func configureWith(imageDescription: FlaneurImageDescription) {
+    func configureWith(imageDescription: FlaneurImageDescriptor) {
         photoImageView.setImage(with: imageDescription)
     }
 

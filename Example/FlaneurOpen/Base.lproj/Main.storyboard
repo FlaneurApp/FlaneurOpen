@@ -153,9 +153,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="JhK-JZ-xIG" kind="show" id="kKy-9V-a7v"/>
-                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -211,51 +208,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0fF-CY-y3r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="465" y="3170"/>
-        </scene>
-        <!--Modal Demo-->
-        <scene sceneID="Xtz-lc-MRD">
-            <objects>
-                <viewController id="JhK-JZ-xIG" customClass="FlaneurModalProgressDemoViewController" customModule="FlaneurOpen_Example" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="bpB-CQ-ee8"/>
-                        <viewControllerLayoutGuide type="bottom" id="DXU-3d-ZVy"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="cfh-YE-IXI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radial-gradient" translatesAutoresizingMaskIntoConstraints="NO" id="ZHg-dE-yhS">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jX4-2m-rRU">
-                                <rect key="frame" x="79" y="310.5" width="217" height="46"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <inset key="contentEdgeInsets" minX="60" minY="14" maxX="60" maxY="14"/>
-                                <state key="normal" title="Launch Modal"/>
-                                <connections>
-                                    <action selector="launchModalAction:" destination="JhK-JZ-xIG" eventType="touchUpInside" id="FYc-NJ-iiG"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="ZHg-dE-yhS" firstAttribute="top" secondItem="cfh-YE-IXI" secondAttribute="top" id="8C3-sD-wja"/>
-                            <constraint firstItem="jX4-2m-rRU" firstAttribute="centerX" secondItem="cfh-YE-IXI" secondAttribute="centerX" id="N3U-0h-b2C"/>
-                            <constraint firstItem="ZHg-dE-yhS" firstAttribute="leading" secondItem="cfh-YE-IXI" secondAttribute="leading" id="aYM-V5-9fi"/>
-                            <constraint firstItem="jX4-2m-rRU" firstAttribute="centerY" secondItem="cfh-YE-IXI" secondAttribute="centerY" id="qeW-ik-9AB"/>
-                            <constraint firstItem="DXU-3d-ZVy" firstAttribute="top" secondItem="ZHg-dE-yhS" secondAttribute="bottom" id="w2Y-aA-r1D"/>
-                            <constraint firstAttribute="trailing" secondItem="ZHg-dE-yhS" secondAttribute="trailing" id="zl8-Z7-4qJ"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Modal Demo" largeTitleDisplayMode="always" id="0EA-RZ-ceA"/>
-                    <connections>
-                        <outlet property="backgroundImageView" destination="ZHg-dE-yhS" id="PF0-Vc-x5j"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AHQ-5G-iyV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="464.80000000000001" y="3856.8215892053977"/>
         </scene>
         <!--Google Places Demo View Controller-->
         <scene sceneID="irV-yH-CI0">
@@ -504,7 +456,4 @@
             <point key="canvasLocation" x="465" y="1760"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="radial-gradient" width="512" height="512"/>
-    </resources>
 </document>

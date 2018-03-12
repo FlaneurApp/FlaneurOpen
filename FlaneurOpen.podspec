@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FlaneurOpen'
-  s.version          = '0.9.0'
+  s.version          = '0.10.0'
   s.summary          = 'A collection of convenient classes for Swift iOS development.'
 
 # This description is used to generate tags and improve search results.
@@ -48,5 +48,5 @@ MapKit extension, etc.
   # Dependencies
   s.dependency 'Kingfisher', '~> 4.0' # Asynchronous image downloads
   s.dependency 'IGListKit', '~> 3.0' #IGListKit for managing collection views
-  s.dependency 'FlaneurImagePicker', '~> 0.4'
+  s.dependency 'FlaneurImagePicker', '~> 0.7'
 end

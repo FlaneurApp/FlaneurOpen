@@ -17,8 +17,8 @@ class FormDemoViewController: UIViewController {
     var nameTextField: UITextField?
     var descriptionTextArea: UITextView?
     var didAppear = false
-    var currentPictureSelection: [FlaneurImageDescription] = [
-        FlaneurImageDescription(imageURLString: "https://images.unsplash.com/photo-1427434991195-f42379e2139d")!
+    var currentPictureSelection: [FlaneurImageDescriptor] = [
+        .url(URL(string: "https://images.unsplash.com/photo-1427434991195-f42379e2139d")!)
     ]
 
     let categoriesDelegate = CategoriesSelectDelegate()
@@ -178,7 +178,7 @@ class FormDemoViewController: UIViewController {
 }
 
 extension FormDemoViewController: FlaneurFormImagePickerElementCollectionViewCellDelegate {
-    func flaneurImagePickerController(_ picker: FlaneurImagePickerController, didFinishPickingImages images: [FlaneurImageDescription], userInfo: Any?) {
+    func flaneurImagePickerController(_ picker: FlaneurImagePickerController, didFinishPickingImages images: [FlaneurImageDescriptor], userInfo: Any?) {
         print("didPickImages: \(images.count)")
         self.currentPictureSelection = images
     }
@@ -191,7 +191,7 @@ extension FormDemoViewController: FlaneurFormImagePickerElementCollectionViewCel
         print("ERROR: \(error)")
     }
 
-    func flaneurImagePickerController(_ picker: FlaneurImagePickerController, withCurrentSelectionOfSize count: Int, actionForNewImageSelection newImage: FlaneurImageDescription) -> FlaneurImagePickerControllerAction {
+    func flaneurImagePickerController(_ picker: FlaneurImagePickerController, withCurrentSelectionOfSize count: Int, actionForNewImageSelection newImage: FlaneurImageDescriptor) -> FlaneurImagePickerControllerAction {
         fatalError("We shouldn't reach this")
     }
 
@@ -207,7 +207,7 @@ extension FormDemoViewController: FlaneurFormImagePickerElementCollectionViewCel
         return 2
     }
 
-    func initialSelection() -> [FlaneurImageDescription] {
+    func initialSelection() -> [FlaneurImageDescriptor] {
         return currentPictureSelection
     }
 }

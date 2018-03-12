@@ -11,6 +11,7 @@ target 'FlaneurOpen_Example' do
   pod 'GoogleMaps'
 
   pod 'FlaneurImagePicker'
+  # pod 'FlaneurImagePicker', :path => '../../FlaneurImagePicker'
 
   target 'FlaneurOpen_Tests' do
     inherit! :search_paths

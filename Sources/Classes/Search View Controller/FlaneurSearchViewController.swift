@@ -31,6 +31,8 @@ open class FlaneurSearchViewController: UIViewController {
     private var searchBarContainerHeightConstraint: NSLayoutConstraint? = nil
     private var searchController: UISearchController?
 
+    // MARK: - Customizing behavior
+
     /// This property provides the intended search results controller of `UISearchController`.
     /// Please refer to `UISearchController` documentation for details.
     ///
@@ -45,6 +47,10 @@ open class FlaneurSearchViewController: UIViewController {
 
     private var transient = false
 
+    // - MARK: Lifecycle
+
+    /// Calling this method adds the search bar container within the view and sets up constraints
+    /// to reveal the search bar when relevant.
     override open func viewDidLoad() {
         super.viewDidLoad()
 
@@ -64,12 +70,14 @@ open class FlaneurSearchViewController: UIViewController {
             ])
     }
 
+    /// Deactivates the search controller before calling `super`.
     override open func viewWillDisappear(_ animated: Bool) {
         // Dismiss the search before leaving the screen - Cf. #297
-        searchController?.isActive = false
-
+        dismissSearchBar()
         super.viewWillDisappear(animated)
     }
+
+    // - MARK: Searching
 
     /// Calls this method when the subclass is ready to show the search bar **transiently** (ie after a user action).
     ///
@@ -99,9 +107,15 @@ open class FlaneurSearchViewController: UIViewController {
         searchController.hidesNavigationBarDuringPresentation = false
         self.definesPresentationContext = true
     }
+
+    public func dismissSearchBar() {
+        searchController?.isActive = false
+    }
 }
 
 extension FlaneurSearchViewController: UISearchControllerDelegate {
+    // - MARK: UISearchControllerDelegate
+
     public func willDismissSearchController(_ searchController: UISearchController) {
         view.backgroundColor = .white
         view.alpha = 1.0
@@ -120,6 +134,8 @@ extension FlaneurSearchViewController: UISearchControllerDelegate {
 }
 
 extension FlaneurSearchViewController: UISearchBarDelegate {
+    // - MARK: UISearchBarDelegate
+
     public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
     }

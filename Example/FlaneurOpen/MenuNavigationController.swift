@@ -15,6 +15,7 @@ enum MenuOption: String {
     case segmentedCollectionView = "SegmentedCollectionView"
     case searchViewController = "Search view controller"
     case simpleMapView = "Simple Map View"
+    case progressModalViewController = "Progress Modal view controller"
 }
 
 extension MenuOption {
@@ -45,7 +46,8 @@ class MenuNavigationController: UINavigationController {
             .grayscaleDemo,
             .segmentedCollectionView,
             .searchViewController,
-            .simpleMapView
+            .simpleMapView,
+            .progressModalViewController
         ]
         let result = ItemsViewController<MenuOption>(items: menuOptionItems, cellDescriptor: { $0.cellDescriptor })
         result.navigationItem.title = "Flaneur Open Demos"
@@ -68,6 +70,8 @@ class MenuNavigationController: UINavigationController {
                 self.pushViewController(DemoSearchViewController(), animated: true)
             case .simpleMapView:
                 self.pushViewController(MapDemoViewController(), animated: true)
+            case .progressModalViewController:
+                self.pushViewController(DemoProgressModalViewController(), animated: true)
             default:
                 debugPrint("Unhandled menu option.")
             }
