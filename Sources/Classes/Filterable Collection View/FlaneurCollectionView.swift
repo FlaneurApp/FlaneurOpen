@@ -15,7 +15,7 @@ public let defaultCellSizeRatio: CGFloat = 1.0
 
 fileprivate let filtersViewHeight: CGFloat = 44.0
 
-public protocol FlaneurCollectionViewDelegate {
+public protocol FlaneurCollectionViewDelegate: AnyObject {
     func flaneurCollectionView(_ collectionView: FlaneurCollectionView, didSelectItem item: FlaneurCollectionItem)
     func flaneurCollectionView(_ collectionView: FlaneurCollectionView, didDeselectItem item: FlaneurCollectionItem)
     func flaneurCollectionView(_ collectionView: FlaneurCollectionView, didDeselectFilter filter: FlaneurCollectionFilter)
@@ -44,7 +44,7 @@ final public class FlaneurCollectionView: UIView {
     ///
     /// The delegate must adopt the `FlaneurCollectionContainerViewDelegate` protocol.
     /// The delegate is not retained.
-    public var delegate: FlaneurCollectionViewDelegate? = nil
+    public weak var delegate: FlaneurCollectionViewDelegate? = nil
 
     /// The filters of the collection view.
     ///

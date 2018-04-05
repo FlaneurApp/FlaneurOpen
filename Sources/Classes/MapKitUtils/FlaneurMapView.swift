@@ -10,7 +10,7 @@ import MapKit
 import Kingfisher
 
 /// The protocol to implement to get callbacks from a `FlaneurMapView` instance.
-public protocol FlaneurMapViewDelegate {
+public protocol FlaneurMapViewDelegate: AnyObject {
     /// Tells the delegate that the specified map item's annotation callout was tapped.
     ///
     /// - Parameter mapItem: the map item for which the annotation was tapped
@@ -30,7 +30,7 @@ open class FlaneurMapView: UIView {
     // MARK: - Locations data & receiving events
 
     /// The receiver’s delegate.
-    public var delegate: FlaneurMapViewDelegate?
+    public weak var delegate: FlaneurMapViewDelegate?
 
     /// The items to display on the map.
     public var mapItems: [FlaneurMapItem] = [] {
