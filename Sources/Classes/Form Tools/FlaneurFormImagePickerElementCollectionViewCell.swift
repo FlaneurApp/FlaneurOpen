@@ -29,7 +29,7 @@ public extension FlaneurFormImagePickerElementCollectionViewCellDelegate where S
     }
 
     func sourceProviders() -> [FlaneurImageProvider] {
-        return []
+        return FlaneurImagePickerConfig.defaultSources
     }
 
     func localizedAttributedStringForTitle() -> NSAttributedString {
