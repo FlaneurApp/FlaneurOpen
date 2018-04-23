@@ -199,8 +199,11 @@ extension FormDemoViewController: FlaneurFormImagePickerElementCollectionViewCel
         return UIImage(named: "sample-405-test-tube")!
     }
 
-    func sourceDelegates() -> [FlaneurImageSource] {
-        return [ .library, .camera ]
+    func sourceProviders() -> [FlaneurImageProvider] {
+        return [
+            FlaneurImageLibraryProvider(),
+            FlaneurImageCameraProvider()
+        ]
     }
 
     func numberOfImages() -> Int {

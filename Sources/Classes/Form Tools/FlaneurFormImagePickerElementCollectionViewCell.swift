@@ -12,7 +12,7 @@ public protocol FlaneurFormImagePickerElementCollectionViewCellDelegate: Flaneur
     func buttonImage() -> UIImage
     func numberOfImages() -> Int
     func initialSelection() -> [FlaneurImageDescriptor]
-    func sourceDelegates() -> [FlaneurImageSource]
+    func sourceProviders() -> [FlaneurImageProvider]
 
     func localizedAttributedStringForTitle() -> NSAttributedString
     func localizedStringForCancelAction() -> String
@@ -28,7 +28,7 @@ public extension FlaneurFormImagePickerElementCollectionViewCellDelegate where S
         return []
     }
 
-    func sourceDelegates() -> [FlaneurImageSource] {
+    func sourceProviders() -> [FlaneurImageProvider] {
         return []
     }
 
@@ -160,7 +160,7 @@ final class FlaneurFormImagePickerElementCollectionViewCell: FlaneurFormElementC
         _ = self.becomeFirstResponder()
 
         let flaneurPicker = FlaneurImagePickerController(userInfo: nil,
-                                                         sourcesDelegate: imageDelegate!.sourceDelegates(),
+                                                         imageProviders: imageDelegate!.sourceProviders(),
                                                          selectedImages: currentSelection)
 
         // Picker Configuration
@@ -206,14 +206,16 @@ final class FlaneurFormImagePickerElementCollectionViewCell: FlaneurFormElementC
         let selfBundle = Bundle(for: FlaneurFormView.self)
         if let imageBundleURL = selfBundle.url(forResource: "FlaneurOpen", withExtension: "bundle") {
             if let imageBundle = Bundle(url: imageBundleURL) {
-                flaneurPicker.config.imageForImageSource = { imageSource in
-                    switch imageSource {
-                    case .library:
+                flaneurPicker.config.imageForImageProvider = { imageProvider in
+                    switch imageProvider.name {
+                    case "library":
                         return UIImage(named: "libraryImageSource", in: imageBundle, compatibleWith: nil)
-                    case .camera:
+                    case "camera":
                         return UIImage(named: "cameraImageSource", in: imageBundle, compatibleWith: nil)
-                    case .instagram:
+                    case "instagram":
                         return UIImage(named: "instagramImageSource", in: imageBundle, compatibleWith: nil)
+                    default:
+                        fatalError("found undefined imageProvider: \(imageProvider.name)")
                     }
                 }
             } else {
