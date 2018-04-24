@@ -8,14 +8,30 @@
 import UIKit
 import FlaneurImagePicker
 
+/// The delegate of a `FlaneurFormImagePickerElementCollectionViewCell` object must adopt the
+/// `FlaneurFormImagePickerElementCollectionViewCellDelegate` protocol.
 public protocol FlaneurFormImagePickerElementCollectionViewCellDelegate: FlaneurImagePickerControllerDelegate {
+    /// The image to use on the button presenting the image picker.
     func buttonImage() -> UIImage
+
+    // MARK: - Configuring the image picker
+
+    /// The maximum number of images the user can pick.
     func numberOfImages() -> Int
+
+    /// The initial image selection.
     func initialSelection() -> [FlaneurImageDescriptor]
+
+    /// The available image providers for the image picker.
     func sourceProviders() -> [FlaneurImageProvider]
 
+    /// The localized title of the picker view controller.
     func localizedAttributedStringForTitle() -> NSAttributedString
+
+    /// The localized string for the cancel action of the picker view controller.
     func localizedStringForCancelAction() -> String
+
+    /// The localized string for the done action of the picker view controller.
     func localizedStringForDoneAction() -> String
 }
 
@@ -45,7 +61,7 @@ public extension FlaneurFormImagePickerElementCollectionViewCellDelegate where S
     }
 }
 
-final class FlaneurFormImagePickerElementCollectionViewCell: FlaneurFormElementCollectionViewCell {
+final public class FlaneurFormImagePickerElementCollectionViewCell: FlaneurFormElementCollectionViewCell {
     weak var imageDelegate: FlaneurFormImagePickerElementCollectionViewCellDelegate?
     let launcherButton: UIButton = UIButton()
     let photosCollectionView: UICollectionView = {
@@ -136,7 +152,7 @@ final class FlaneurFormImagePickerElementCollectionViewCell: FlaneurFormElementC
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func configureWith(formElement: FlaneurFormElement) {
+    override public func configureWith(formElement: FlaneurFormElement) {
         super.configureWith(formElement: formElement)
 
         if case FlaneurFormElementType.imagePicker(let cellDelegate) = formElement.type {
@@ -150,13 +166,17 @@ final class FlaneurFormImagePickerElementCollectionViewCell: FlaneurFormElementC
         formElement.didLoadHandler?(launcherButton)
     }
 
-    override func becomeFirstResponder() -> Bool {
+    override public func becomeFirstResponder() -> Bool {
         delegate?.scrollToVisibleSection(cell: self)
         launcherButton.isSelected = true
         return true
     }
 
     @objc func buttonPressed(_ sender: Any? = nil) {
+        guard let delegate = delegate else {
+            return print("buttonPressed: please set a delegate to present the image picker")
+        }
+
         _ = self.becomeFirstResponder()
 
         let flaneurPicker = FlaneurImagePickerController(userInfo: nil,
@@ -215,7 +235,7 @@ final class FlaneurFormImagePickerElementCollectionViewCell: FlaneurFormElementC
                     case "instagram":
                         return UIImage(named: "instagramImageSource", in: imageBundle, compatibleWith: nil)
                     default:
-                        fatalError("found undefined imageProvider: \(imageProvider.name)")
+                        return nil
                     }
                 }
             } else {
@@ -227,12 +247,12 @@ final class FlaneurFormImagePickerElementCollectionViewCell: FlaneurFormElementC
 
         flaneurPicker.delegate = self
 
-        delegate?.presentViewController(viewController: flaneurPicker)
+        delegate.presentViewController(viewController: flaneurPicker)
     }
 }
 
 extension FlaneurFormImagePickerElementCollectionViewCell: FlaneurImagePickerControllerDelegate {
-    func flaneurImagePickerController(_ picker: FlaneurImagePickerController, didFinishPickingImages images: [FlaneurImageDescriptor], userInfo: Any?) {
+    public func flaneurImagePickerController(_ picker: FlaneurImagePickerController, didFinishPickingImages images: [FlaneurImageDescriptor], userInfo: Any?) {
         self.currentSelection = images
 
         if let imageDelegate = imageDelegate {
@@ -244,18 +264,18 @@ extension FlaneurFormImagePickerElementCollectionViewCell: FlaneurImagePickerCon
         picker.dismiss(animated: true)
     }
 
-    func flaneurImagePickerControllerDidCancel(_ picker: FlaneurImagePickerController) {
+    public func flaneurImagePickerControllerDidCancel(_ picker: FlaneurImagePickerController) {
         if let imageDelegate = imageDelegate {
             imageDelegate.flaneurImagePickerControllerDidCancel(picker)
         }
         picker.dismiss(animated: true)
     }
 
-    func flaneurImagePickerControllerDidFail(_ error: FlaneurImagePickerError) {
+    public func flaneurImagePickerControllerDidFail(_ error: FlaneurImagePickerError) {
         debugPrint("ERROR: \(error)")
     }
 
-    func flaneurImagePickerController(_ picker: FlaneurImagePickerController, withCurrentSelectionOfSize count: Int, actionForNewImageSelection newImage: FlaneurImageDescriptor) -> FlaneurImagePickerControllerAction {
+    public func flaneurImagePickerController(_ picker: FlaneurImagePickerController, withCurrentSelectionOfSize count: Int, actionForNewImageSelection newImage: FlaneurImageDescriptor) -> FlaneurImagePickerControllerAction {
         guard let imageDelegate = imageDelegate else {
             return .add
         }
@@ -277,11 +297,11 @@ extension FlaneurFormImagePickerElementCollectionViewCell: UICollectionViewDeleg
 }
 
 extension FlaneurFormImagePickerElementCollectionViewCell: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return currentSelection.count
     }
 
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCollectionViewCell", for: indexPath) as! PhotoCollectionViewCell
         cell.configureWith(imageDescription: currentSelection[indexPath.row])
         return cell
@@ -289,7 +309,7 @@ extension FlaneurFormImagePickerElementCollectionViewCell: UICollectionViewDataS
 }
 
 extension FlaneurFormImagePickerElementCollectionViewCell: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 80.0, height: 80.0)
     }
 }

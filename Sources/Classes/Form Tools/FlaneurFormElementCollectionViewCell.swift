@@ -7,23 +7,23 @@
 
 import UIKit
 
-protocol FlaneurFormElementCollectionViewCellDelegate: AnyObject {
+public protocol FlaneurFormElementCollectionViewCellDelegate: AnyObject {
     func nextElementShouldBecomeFirstResponder(cell: FlaneurFormElementCollectionViewCell)
     func scrollToVisibleSection(cell: FlaneurFormElementCollectionViewCell)
     func presentViewController(viewController: UIViewController)
     func cacheValue(forLabel: String) -> String?
 }
 
-class FlaneurFormElementCollectionViewCell: UICollectionViewCell {
+public class FlaneurFormElementCollectionViewCell: UICollectionViewCell {
     let label = UILabel()
-    var delegate: FlaneurFormElementCollectionViewCellDelegate? = nil
+    public var delegate: FlaneurFormElementCollectionViewCellDelegate? = nil
 
     override init(frame: CGRect) {
         super.init(frame: frame)
 
         label.font = FlaneurOpenThemeManager.shared.theme.formLabelsFont
         label.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(label)
+        self.contentView.addSubview(label)
 
         _ = LayoutBorderManager(item: label,
                                 toItem: self,

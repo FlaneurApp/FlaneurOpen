@@ -14,7 +14,7 @@
     <a title="FlaneurFormImagePickerElementCollectionViewCellDelegate Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">FlaneurOpen Docs</a> (40% documented)</p>
+        <p><a href="../index.html">FlaneurOpen Docs</a> (48% documented)</p>
         <p class="header-right"><a href="https://github.com/FlaneurApp/FlaneurOpen"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -42,6 +42,12 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/FlaneurFormElement.html">FlaneurFormElement</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlaneurFormElementCollectionViewCell.html">FlaneurFormElementCollectionViewCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FlaneurFormImagePickerElementCollectionViewCell.html">FlaneurFormImagePickerElementCollectionViewCell</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/FlaneurFormView.html">FlaneurFormView</a>
@@ -88,10 +94,10 @@
             <a href="../Global Variables.html">Global Variables</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Global Variables.html#/s:11FlaneurOpen20defaultCellSizeRatio12CoreGraphics7CGFloatVv">defaultCellSizeRatio</a>
+                <a href="../Global Variables.html#/s:11FlaneurOpen20defaultCellSizeRatio12CoreGraphics7CGFloatVvp">defaultCellSizeRatio</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Global Variables.html#/s:11FlaneurOpen16defaultNbColumnsSiv">defaultNbColumns</a>
+                <a href="../Global Variables.html#/s:11FlaneurOpen16defaultNbColumnsSivp">defaultNbColumns</a>
               </li>
             </ul>
           </li>
@@ -160,6 +166,9 @@
                 <a href="../Protocols/FlaneurFormDeleteElementCollectionViewCellDelegate.html">FlaneurFormDeleteElementCollectionViewCellDelegate</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Protocols/FlaneurFormElementCollectionViewCellDelegate.html">FlaneurFormElementCollectionViewCellDelegate</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Protocols/FlaneurFormImagePickerElementCollectionViewCellDelegate.html">FlaneurFormImagePickerElementCollectionViewCellDelegate</a>
               </li>
               <li class="nav-group-task">
@@ -214,7 +223,8 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>The delegate of a <code><a href="../Classes/FlaneurFormImagePickerElementCollectionViewCell.html">FlaneurFormImagePickerElementCollectionViewCell</a></code> object must adopt the
+<code>FlaneurFormImagePickerElementCollectionViewCellDelegate</code> protocol.</p>
 
           </section>
           <section class="section task-group-section">
@@ -233,7 +243,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The image to use on the button presenting the image picker.</p>
 
                       </div>
                       <div class="declaration">
@@ -247,6 +257,17 @@
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Configuring%20the%20image%20picker"></a>
+                <a name="//apple_ref/swift/Section/Configuring the image picker" class="dashAnchor"></a>
+                <a href="#/Configuring%20the%20image%20picker">
+                  <h3 class="section-name">Configuring the image picker</h3>
+                </a>
+              </div>
+              <ul>
                 <li class="item">
                   <div>
                     <code>
@@ -263,13 +284,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The maximum number of images the user can pick.</p>
 
                       </div>
                       <h4>Default Implementation</h4>
                       <div class="default_impl abstract">
-                        <p>Undocumented</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -298,13 +318,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The initial image selection.</p>
 
                       </div>
                       <h4>Default Implementation</h4>
                       <div class="default_impl abstract">
-                        <p>Undocumented</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -320,9 +339,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11FlaneurOpen0A48FormImagePickerElementCollectionViewCellDelegateP15sourceDelegatesSay0adE00aD6SourceOGyF"></a>
-                    <a name="//apple_ref/swift/Method/sourceDelegates()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11FlaneurOpen0A48FormImagePickerElementCollectionViewCellDelegateP15sourceDelegatesSay0adE00aD6SourceOGyF">sourceDelegates()</a>
+                    <a name="/s:11FlaneurOpen0A48FormImagePickerElementCollectionViewCellDelegateP15sourceProvidersXeXeF"></a>
+                    <a name="//apple_ref/swift/Method/sourceProviders()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11FlaneurOpen0A48FormImagePickerElementCollectionViewCellDelegateP15sourceProvidersXeXeF">sourceProviders()</a>
                     </code>
                       <span class="declaration-note">
                         Default implementation
@@ -333,19 +352,18 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The available image providers for the image picker.</p>
 
                       </div>
                       <h4>Default Implementation</h4>
                       <div class="default_impl abstract">
-                        <p>Undocumented</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">sourceDelegates</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">FlaneurImageSource</span><span class="p">]</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">sourceProviders</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">FlaneurImageProvider</span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
@@ -368,13 +386,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The localized title of the picker view controller.</p>
 
                       </div>
                       <h4>Default Implementation</h4>
                       <div class="default_impl abstract">
-                        <p>Undocumented</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -403,13 +420,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The localized string for the cancel action of the picker view controller.</p>
 
                       </div>
                       <h4>Default Implementation</h4>
                       <div class="default_impl abstract">
-                        <p>Undocumented</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -438,13 +454,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The localized string for the done action of the picker view controller.</p>
 
                       </div>
                       <h4>Default Implementation</h4>
                       <div class="default_impl abstract">
-                        <p>Undocumented</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -462,7 +477,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="http://flaneurapp.com" target="_blank" rel="external">Flâneur</a>. All rights reserved. (Last updated: 2018-03-12)</p>
+          <p>&copy; 2018 <a class="link" href="http://flaneurapp.com" target="_blank" rel="external">Flâneur</a>. All rights reserved. (Last updated: 2018-04-24)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

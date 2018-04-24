@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>FlaneurCollectionItem Protocol Reference</title>
+    <title>FlaneurFormElementCollectionViewCellDelegate Protocol Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Protocol/FlaneurCollectionItem" class="dashAnchor"></a>
-    <a title="FlaneurCollectionItem Protocol Reference"></a>
+    <a name="//apple_ref/swift/Protocol/FlaneurFormElementCollectionViewCellDelegate" class="dashAnchor"></a>
+    <a title="FlaneurFormElementCollectionViewCellDelegate Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">FlaneurOpen Docs</a> (48% documented)</p>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">FlaneurOpen Reference</a>
         <img id="carat" src="../img/carat.png" />
-        FlaneurCollectionItem Protocol Reference
+        FlaneurFormElementCollectionViewCellDelegate Protocol Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -216,14 +216,14 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>FlaneurCollectionItem</h1>
+            <h1>FlaneurFormElementCollectionViewCellDelegate</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">FlaneurCollectionItem</span><span class="p">:</span> <span class="kt">ListDiffable</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">FlaneurFormElementCollectionViewCellDelegate</span><span class="p">:</span> <span class="kt">AnyObject</span></code></pre>
 
                 </div>
               </div>
-            <p>Protocol that items of a <code>FlaneurCollectionContainerView</code> must conform to.</p>
+            <p>Undocumented</p>
 
           </section>
           <section class="section task-group-section">
@@ -232,9 +232,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11FlaneurOpen0A14CollectionItemP9cellStyleAA0acd4CellF0Ovp"></a>
-                    <a name="//apple_ref/swift/Property/cellStyle" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11FlaneurOpen0A14CollectionItemP9cellStyleAA0acd4CellF0Ovp">cellStyle</a>
+                    <a name="/s:11FlaneurOpen0A37FormElementCollectionViewCellDelegateP04nextD26ShouldBecomeFirstResponderyAA0acdefG0C4cell_tF"></a>
+                    <a name="//apple_ref/swift/Method/nextElementShouldBecomeFirstResponder(cell:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11FlaneurOpen0A37FormElementCollectionViewCellDelegateP04nextD26ShouldBecomeFirstResponderyAA0acdefG0C4cell_tF">nextElementShouldBecomeFirstResponder(cell:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -242,14 +242,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The style of instanciation for the cell.</p>
+                        <p>Undocumented</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">cellStyle</span><span class="p">:</span> <span class="kt"><a href="../Enums/FlaneurCollectionItemCellStyle.html">FlaneurCollectionItemCellStyle</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">nextElementShouldBecomeFirstResponder</span><span class="p">(</span><span class="nv">cell</span><span class="p">:</span> <span class="kt"><a href="../Classes/FlaneurFormElementCollectionViewCell.html">FlaneurFormElementCollectionViewCell</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -259,9 +259,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:11FlaneurOpen0A14CollectionItemP13configureCellySo016UICollectionViewF0C4cell_tF"></a>
-                    <a name="//apple_ref/swift/Method/configureCell(cell:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:11FlaneurOpen0A14CollectionItemP13configureCellySo016UICollectionViewF0C4cell_tF">configureCell(cell:)</a>
+                    <a name="/s:11FlaneurOpen0A37FormElementCollectionViewCellDelegateP22scrollToVisibleSectionyAA0acdefG0C4cell_tF"></a>
+                    <a name="//apple_ref/swift/Method/scrollToVisibleSection(cell:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11FlaneurOpen0A37FormElementCollectionViewCellDelegateP22scrollToVisibleSectionyAA0acdefG0C4cell_tF">scrollToVisibleSection(cell:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -269,35 +269,70 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Configures the cell</p>
+                        <p>Undocumented</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">configureCell</span><span class="p">(</span><span class="nv">cell</span><span class="p">:</span> <span class="kt">UICollectionViewCell</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">scrollToVisibleSection</span><span class="p">(</span><span class="nv">cell</span><span class="p">:</span> <span class="kt"><a href="../Classes/FlaneurFormElementCollectionViewCell.html">FlaneurFormElementCollectionViewCell</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>cell</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>a cell from the NIB file given by <code>nibName</code>.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11FlaneurOpen0A37FormElementCollectionViewCellDelegateP07presentF10ControllerySo06UIViewJ0C04viewJ0_tF"></a>
+                    <a name="//apple_ref/swift/Method/presentViewController(viewController:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11FlaneurOpen0A37FormElementCollectionViewCellDelegateP07presentF10ControllerySo06UIViewJ0C04viewJ0_tF">presentViewController(viewController:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">presentViewController</span><span class="p">(</span><span class="nv">viewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11FlaneurOpen0A37FormElementCollectionViewCellDelegateP10cacheValueSSSgSS8forLabel_tF"></a>
+                    <a name="//apple_ref/swift/Method/cacheValue(forLabel:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11FlaneurOpen0A37FormElementCollectionViewCellDelegateP10cacheValueSSSgSS8forLabel_tF">cacheValue(forLabel:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">cacheValue</span><span class="p">(</span><span class="nv">forLabel</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>

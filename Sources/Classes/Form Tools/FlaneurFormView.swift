@@ -179,7 +179,7 @@ extension FlaneurFormView: ListDisplayDelegate {
 }
 
 extension FlaneurFormView: FlaneurFormElementCollectionViewCellDelegate {
-    func nextElementShouldBecomeFirstResponder(cell: FlaneurFormElementCollectionViewCell) {
+    public func nextElementShouldBecomeFirstResponder(cell: FlaneurFormElementCollectionViewCell) {
         if let thisIndex = self.collectionView.indexPath(for: cell) {
             let nextSection = (thisIndex.section + 1) % formElements.count
             let nextIndexPath = IndexPath(row: 0, section: nextSection)
@@ -191,7 +191,7 @@ extension FlaneurFormView: FlaneurFormElementCollectionViewCellDelegate {
         }
     }
 
-    func scrollToVisibleSection(cell: FlaneurFormElementCollectionViewCell) {
+    public func scrollToVisibleSection(cell: FlaneurFormElementCollectionViewCell) {
         respondingCell = cell
 
         guard let indexPath = self.collectionView.indexPath(for: cell) else { return }
@@ -199,11 +199,11 @@ extension FlaneurFormView: FlaneurFormElementCollectionViewCellDelegate {
         collectionView.scrollRectToVisible(layoutAttributes.frame, animated: true)
     }
 
-    func presentViewController(viewController: UIViewController) {
+    public func presentViewController(viewController: UIViewController) {
         self.viewController?.present(viewController, animated: true)
     }
 
-    func cacheValue(forLabel label: String) -> String? {
+    public func cacheValue(forLabel label: String) -> String? {
         if let cacheValue = self.textCache[label] {
             return cacheValue
         } else {
