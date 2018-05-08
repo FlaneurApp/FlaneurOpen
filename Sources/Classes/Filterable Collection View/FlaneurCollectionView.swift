@@ -221,6 +221,13 @@ final public class FlaneurCollectionView: UIView {
         filtersListAdapter.dataSource = self
     }
 
+    /// Reload some items.
+    ///
+    /// - Parameter items: the items to reload.
+    public func reloadItems(_ items: [FlaneurCollectionItem]) {
+        itemsListAdapter.reloadObjects(items)
+    }
+
     // MARK: - Private Code
 
     /// Common init code.

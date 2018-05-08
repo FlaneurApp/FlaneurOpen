@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 * Upgraded form components to be compatible with FlaneurImagePicker 1.0
 * Documented classes around the `FlaneurFormView` component.
 * Made FlaneurFormImagePickerElementCollectionViewCell public.
+* Added `reloadItems` to `FlaneurCollectionView`.
 
 ## [0.10.0] - 2018-03-12
 
