@@ -16,7 +16,7 @@ public protocol FlaneurFormElementCollectionViewCellDelegate: AnyObject {
 
 public class FlaneurFormElementCollectionViewCell: UICollectionViewCell {
     let label = UILabel()
-    public var delegate: FlaneurFormElementCollectionViewCellDelegate? = nil
+    public weak var delegate: FlaneurFormElementCollectionViewCellDelegate? = nil
 
     override init(frame: CGRect) {
         super.init(frame: frame)

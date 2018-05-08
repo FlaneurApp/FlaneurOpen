@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class FlaneurFormTextFieldElementCollectionViewCell: FlaneurFormElementCollectionViewCell {
+final public class FlaneurFormTextFieldElementCollectionViewCell: FlaneurFormElementCollectionViewCell {
     let textField: UITextField = UITextField()
 
     public override init(frame: CGRect) {
@@ -38,24 +38,26 @@ final class FlaneurFormTextFieldElementCollectionViewCell: FlaneurFormElementCol
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func configureWith(formElement: FlaneurFormElement) {
+    override public func configureWith(formElement: FlaneurFormElement) {
         super.configureWith(formElement: formElement)
         formElement.didLoadHandler?(textField)
     }
 
-    override func becomeFirstResponder() -> Bool {
+    override public func becomeFirstResponder() -> Bool {
         delegate?.scrollToVisibleSection(cell: self)
         return self.textField.becomeFirstResponder()
     }
 }
 
 extension FlaneurFormTextFieldElementCollectionViewCell: UITextFieldDelegate {
-    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+    // MARK: - UITextFieldDelegate
+
+    public func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         delegate?.scrollToVisibleSection(cell: self)
         return true
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         delegate?.nextElementShouldBecomeFirstResponder(cell: self)
         return true
     }
