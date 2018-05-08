@@ -1,21 +1,33 @@
-//
-//  FlaneurFormView.swift
-//  FlaneurOpen
-//
-//  Created by Mickaël Floc'hlay on 28/09/2017.
-//
-
 import UIKit
 import IGListKit
 import FlaneurImagePicker
 
+/// View in charge of displaying form elements.
+///
+/// It is quite poorly designed as many problems arose late in the implementation:
+///
+/// 1. Instead of a form, it would probably make more sense to use a table view controller
+/// 1. Using a `IGListKit`-backed collection view is a terrible idea, it should be
+///    a simple table view
+/// 1. Since we design a form, we should skip reusable cells and just keep stong references
+///    of every cell: we wouldn't need a cache anymore
+///
+/// objc.io's Swit Talks addressed the problems of reusable form components design in a
+/// series. It is a good inspiration to redesign this component.
+///
+/// Also, `FlaneurImagePicker` is actually a form component library. It would probably make
+/// sense that other form components belong to the same library, that should then be renamed
+/// `FlaneurForm` or something similar.
 public final class FlaneurFormView: UIView {
+    // MARK: - Internal Attributes
     var listAdapter: ListAdapter!
     weak var viewController: UIViewController?
     fileprivate var textCache: [String: String?] = [:]
     var respondingCell: UICollectionViewCell? = nil
 
-    // The collection view of form elements
+    // MARK: - Subviews
+
+    // The collection view of form elements.
     public let collectionView: UICollectionView = {
         let collectionViewLayout = UICollectionViewFlowLayout()
         collectionViewLayout.scrollDirection = .vertical
@@ -32,6 +44,8 @@ public final class FlaneurFormView: UIView {
             listAdapter.performUpdates(animated: true)
         }
     }
+
+    // MARK: - View Lifecycle
 
     /// Initializes and returns a newly allocated navigation bar object with the specified frame rectangle.
     ///
@@ -51,6 +65,9 @@ public final class FlaneurFormView: UIView {
 
     // MARK: - Public API
 
+    /// Calls this exactly once.
+    ///
+    /// - Parameter viewController: the view controller presenting the form.
     public func configure(viewController: UIViewController) {
         self.viewController = viewController
 
@@ -68,16 +85,22 @@ public final class FlaneurFormView: UIView {
         collectionView.backgroundColor = .white
         self.addSubview(collectionView)
 
-        _ = LayoutBorderManager(item: collectionView,
-                                toItem: self,
-                                top: 0.0,
-                                left: 0.0,
-                                bottom: 0.0,
-                                right: 0.0)
+        NSLayoutConstraint.activate([
+            collectionView.topAnchor.constraint(equalTo: self.topAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+            ])
     }
 
-    public func addFormElement(_ formElement: FlaneurFormElement,
-                               cacheValue: String? = nil) {
+    /// Adds a form element.
+    ///
+    /// - Parameters:
+    ///   - formElement: the form element to add to the form.
+    ///   - cacheValue: the cache value in case the form element is textual (this is terrible design).
+    ///
+    /// - SeeAlso: FlaneurFormElement
+    public func addFormElement(_ formElement: FlaneurFormElement, cacheValue: String? = nil) {
         formElements.append(formElement)
         textCache[formElement.label] = cacheValue
     }
@@ -90,6 +113,8 @@ public final class FlaneurFormView: UIView {
 }
 
 extension FlaneurFormView: ListAdapterDataSource {
+    // MARK: - ListAdapterDataSource Protocol
+
     public func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
         return formElements
     }
@@ -113,6 +138,8 @@ extension FlaneurFormView: ListAdapterDataSource {
 }
 
 extension FlaneurFormView: ListDisplayDelegate {
+    // MARK: - ListDisplayDelegate
+
     public func listAdapter(_ listAdapter: ListAdapter, willDisplay sectionController: ListSectionController) {
     }
 
@@ -152,7 +179,7 @@ extension FlaneurFormView: ListDisplayDelegate {
 }
 
 extension FlaneurFormView: FlaneurFormElementCollectionViewCellDelegate {
-    func nextElementShouldBecomeFirstResponder(cell: FlaneurFormElementCollectionViewCell) {
+    public func nextElementShouldBecomeFirstResponder(cell: FlaneurFormElementCollectionViewCell) {
         if let thisIndex = self.collectionView.indexPath(for: cell) {
             let nextSection = (thisIndex.section + 1) % formElements.count
             let nextIndexPath = IndexPath(row: 0, section: nextSection)
@@ -164,7 +191,7 @@ extension FlaneurFormView: FlaneurFormElementCollectionViewCellDelegate {
         }
     }
 
-    func scrollToVisibleSection(cell: FlaneurFormElementCollectionViewCell) {
+    public func scrollToVisibleSection(cell: FlaneurFormElementCollectionViewCell) {
         respondingCell = cell
 
         guard let indexPath = self.collectionView.indexPath(for: cell) else { return }
@@ -172,11 +199,11 @@ extension FlaneurFormView: FlaneurFormElementCollectionViewCellDelegate {
         collectionView.scrollRectToVisible(layoutAttributes.frame, animated: true)
     }
 
-    func presentViewController(viewController: UIViewController) {
+    public func presentViewController(viewController: UIViewController) {
         self.viewController?.present(viewController, animated: true)
     }
 
-    func cacheValue(forLabel label: String) -> String? {
+    public func cacheValue(forLabel label: String) -> String? {
         if let cacheValue = self.textCache[label] {
             return cacheValue
         } else {

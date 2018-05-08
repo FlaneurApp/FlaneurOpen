@@ -72,8 +72,6 @@ class MenuNavigationController: UINavigationController {
                 self.pushViewController(MapDemoViewController(), animated: true)
             case .progressModalViewController:
                 self.pushViewController(DemoProgressModalViewController(), animated: true)
-            default:
-                debugPrint("Unhandled menu option.")
             }
         }
     }

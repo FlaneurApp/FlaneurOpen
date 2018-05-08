@@ -590,211 +590,148 @@
     },
     {
       "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormElement.swift",
-      "line": null,
-      "symbol": "FlaneurFormElement",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormElement.swift",
-      "line": null,
-      "symbol": "FlaneurFormElement",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormElement.swift",
-      "line": null,
-      "symbol": "FlaneurFormElementType",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormElement.swift",
-      "line": 11,
-      "symbol": "FlaneurFormElementType",
-      "symbol_kind": "source.lang.swift.decl.enum",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormElement.swift",
-      "line": 12,
-      "symbol": "FlaneurFormElementType.textField",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormElement.swift",
-      "line": 13,
-      "symbol": "FlaneurFormElementType.textArea",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormElement.swift",
-      "line": 14,
-      "symbol": "FlaneurFormElementType.imagePicker",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormElement.swift",
-      "line": 15,
-      "symbol": "FlaneurFormElementType.select",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormElement.swift",
-      "line": 16,
-      "symbol": "FlaneurFormElementType.selectBis",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormElement.swift",
-      "line": 17,
-      "symbol": "FlaneurFormElementType.delete",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormElement.swift",
-      "line": 18,
-      "symbol": "FlaneurFormElementType.button",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormElement.swift",
-      "line": 44,
-      "symbol": "FlaneurFormElement",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormElement.swift",
-      "line": 49,
-      "symbol": "FlaneurFormElement.init(type:label:didLoadHandler:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormElement.swift",
-      "line": 65,
+      "line": 94,
       "symbol": "FlaneurFormElement.diffIdentifier()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormElement.swift",
-      "line": 69,
+      "line": 98,
       "symbol": "FlaneurFormElement.isEqual(toDiffableObject:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormElementCollectionViewCell.swift",
+      "line": 10,
+      "symbol": "FlaneurFormElementCollectionViewCellDelegate",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormElementCollectionViewCell.swift",
+      "line": 11,
+      "symbol": "FlaneurFormElementCollectionViewCellDelegate.nextElementShouldBecomeFirstResponder(cell:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormElementCollectionViewCell.swift",
+      "line": 12,
+      "symbol": "FlaneurFormElementCollectionViewCellDelegate.scrollToVisibleSection(cell:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormElementCollectionViewCell.swift",
+      "line": 13,
+      "symbol": "FlaneurFormElementCollectionViewCellDelegate.presentViewController(viewController:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormElementCollectionViewCell.swift",
+      "line": 14,
+      "symbol": "FlaneurFormElementCollectionViewCellDelegate.cacheValue(forLabel:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormElementCollectionViewCell.swift",
+      "line": 17,
+      "symbol": "FlaneurFormElementCollectionViewCell",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormElementCollectionViewCell.swift",
+      "line": 19,
+      "symbol": "FlaneurFormElementCollectionViewCell.delegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormElementCollectionViewCell.swift",
+      "line": 37,
+      "symbol": "FlaneurFormElementCollectionViewCell.init(coder:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormImagePickerElementCollectionViewCell.swift",
       "line": null,
-      "symbol": "FlaneurFormImagePickerElementCollectionViewCellDelegate",
+      "symbol": "FlaneurFormImagePickerElementCollectionViewCell",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormImagePickerElementCollectionViewCell.swift",
-      "line": 11,
-      "symbol": "FlaneurFormImagePickerElementCollectionViewCellDelegate",
-      "symbol_kind": "source.lang.swift.decl.protocol",
+      "line": null,
+      "symbol": "FlaneurFormImagePickerElementCollectionViewCell",
+      "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormImagePickerElementCollectionViewCell.swift",
-      "line": 12,
-      "symbol": "FlaneurFormImagePickerElementCollectionViewCellDelegate.buttonImage()",
+      "line": null,
+      "symbol": "FlaneurFormImagePickerElementCollectionViewCell",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormImagePickerElementCollectionViewCell.swift",
+      "line": 64,
+      "symbol": "FlaneurFormImagePickerElementCollectionViewCell",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormImagePickerElementCollectionViewCell.swift",
+      "line": 85,
+      "symbol": "FlaneurFormImagePickerElementCollectionViewCell.init(frame:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormImagePickerElementCollectionViewCell.swift",
-      "line": 13,
-      "symbol": "FlaneurFormImagePickerElementCollectionViewCellDelegate.numberOfImages()",
+      "line": 151,
+      "symbol": "FlaneurFormImagePickerElementCollectionViewCell.init(coder:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormImagePickerElementCollectionViewCell.swift",
-      "line": 14,
-      "symbol": "FlaneurFormImagePickerElementCollectionViewCellDelegate.initialSelection()",
+      "line": 155,
+      "symbol": "FlaneurFormImagePickerElementCollectionViewCell.configureWith(formElement:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormImagePickerElementCollectionViewCell.swift",
-      "line": 15,
-      "symbol": "FlaneurFormImagePickerElementCollectionViewCellDelegate.sourceDelegates()",
+      "line": 169,
+      "symbol": "FlaneurFormImagePickerElementCollectionViewCell.becomeFirstResponder()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormImagePickerElementCollectionViewCell.swift",
-      "line": 17,
-      "symbol": "FlaneurFormImagePickerElementCollectionViewCellDelegate.localizedAttributedStringForTitle()",
+      "line": 300,
+      "symbol": "FlaneurFormImagePickerElementCollectionViewCell.collectionView(_:numberOfItemsInSection:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormImagePickerElementCollectionViewCell.swift",
-      "line": 18,
-      "symbol": "FlaneurFormImagePickerElementCollectionViewCellDelegate.localizedStringForCancelAction()",
+      "line": 304,
+      "symbol": "FlaneurFormImagePickerElementCollectionViewCell.collectionView(_:cellForItemAt:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormImagePickerElementCollectionViewCell.swift",
-      "line": 19,
-      "symbol": "FlaneurFormImagePickerElementCollectionViewCellDelegate.localizedStringForDoneAction()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormImagePickerElementCollectionViewCell.swift",
-      "line": 23,
-      "symbol": "FlaneurFormImagePickerElementCollectionViewCellDelegate.numberOfImages()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormImagePickerElementCollectionViewCell.swift",
-      "line": 27,
-      "symbol": "FlaneurFormImagePickerElementCollectionViewCellDelegate.initialSelection()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormImagePickerElementCollectionViewCell.swift",
-      "line": 31,
-      "symbol": "FlaneurFormImagePickerElementCollectionViewCellDelegate.sourceDelegates()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormImagePickerElementCollectionViewCell.swift",
-      "line": 35,
-      "symbol": "FlaneurFormImagePickerElementCollectionViewCellDelegate.localizedAttributedStringForTitle()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormImagePickerElementCollectionViewCell.swift",
-      "line": 39,
-      "symbol": "FlaneurFormImagePickerElementCollectionViewCellDelegate.localizedStringForCancelAction()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormImagePickerElementCollectionViewCell.swift",
-      "line": 43,
-      "symbol": "FlaneurFormImagePickerElementCollectionViewCellDelegate.localizedStringForDoneAction()",
+      "line": 312,
+      "symbol": "FlaneurFormImagePickerElementCollectionViewCell.collectionView(_:layout:sizeForItemAt:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -877,99 +814,92 @@
     },
     {
       "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormView.swift",
-      "line": null,
-      "symbol": "FlaneurFormView",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormView.swift",
-      "line": null,
-      "symbol": "FlaneurFormView",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormView.swift",
-      "line": 12,
-      "symbol": "FlaneurFormView",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormView.swift",
-      "line": 19,
+      "line": 31,
       "symbol": "FlaneurFormView.collectionView",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormView.swift",
-      "line": 54,
-      "symbol": "FlaneurFormView.configure(viewController:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormView.swift",
-      "line": 79,
-      "symbol": "FlaneurFormView.addFormElement(_:cacheValue:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormView.swift",
-      "line": 93,
+      "line": 118,
       "symbol": "FlaneurFormView.objects(for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormView.swift",
-      "line": 97,
+      "line": 122,
       "symbol": "FlaneurFormView.listAdapter(_:sectionControllerFor:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormView.swift",
-      "line": 107,
+      "line": 132,
       "symbol": "FlaneurFormView.emptyView(for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormView.swift",
-      "line": 116,
+      "line": 143,
       "symbol": "FlaneurFormView.listAdapter(_:willDisplay:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormView.swift",
-      "line": 119,
+      "line": 146,
       "symbol": "FlaneurFormView.listAdapter(_:didEndDisplaying:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormView.swift",
-      "line": 122,
+      "line": 149,
       "symbol": "FlaneurFormView.listAdapter(_:willDisplay:cell:at:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormView.swift",
-      "line": 125,
+      "line": 152,
       "symbol": "FlaneurFormView.listAdapter(_:didEndDisplaying:cell:at:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormView.swift",
-      "line": 148,
+      "line": 175,
       "symbol": "FlaneurFormView.scrollCurrentFieldToVisible()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormView.swift",
+      "line": 182,
+      "symbol": "FlaneurFormView.nextElementShouldBecomeFirstResponder(cell:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormView.swift",
+      "line": 194,
+      "symbol": "FlaneurFormView.scrollToVisibleSection(cell:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormView.swift",
+      "line": 202,
+      "symbol": "FlaneurFormView.presentViewController(viewController:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/mick/Developer/Projects/Flaneur/Code/FlaneurOpen/Sources/Classes/Form Tools/FlaneurFormView.swift",
+      "line": 206,
+      "symbol": "FlaneurFormView.cacheValue(forLabel:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },

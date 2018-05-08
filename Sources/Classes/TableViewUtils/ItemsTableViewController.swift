@@ -1,10 +1,3 @@
-//
-//  ItemsTableViewController.swift
-//  FlaneurOpen
-//
-//  Created by Mickaël Floc'hlay on 30/01/2018.
-//
-
 import UIKit
 
 /// The descriptor for a table view cell.

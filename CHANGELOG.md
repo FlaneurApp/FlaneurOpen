@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## Unreleased
 
 * Constrained `FlaneurMapViewDelegate` and `FlaneurCollectionViewDelegate` to be `AnyObject` so that delegate references can be made weak to avoid memory leaks.
+* Upgraded form components to be compatible with FlaneurImagePicker 1.0
+* Documented classes around the `FlaneurFormView` component.
+* Made FlaneurFormImagePickerElementCollectionViewCell public.
 
 ## [0.10.0] - 2018-03-12
 
